@@ -332,6 +332,7 @@
     </ul>
 
   </div>
+    <!--
     <div class="icons row">
         <div class="front-icon catering"></div>
         <div class="front-icon music"></div>
@@ -345,6 +346,7 @@
         <div class="front-icon florist"></div>
         <div class="front-icon funerals"></div>
     </div>
+    -->
   <!-- HTML Markup -->
   <div class="two-boxes">
     <div class="box-search box-left" id="aa-input-container">
