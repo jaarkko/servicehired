@@ -162,8 +162,30 @@ p.in_and_around_text, p.in_and_around_subtext {
   padding: 0;
   margin: 0;
 }
+.in_and_around h3 {
+  border-bottom: 1px solid;
+  padding-bottom: 0.5em;
+}
+h3 {
+  font-family: 'rubik', sans-serif;
+  font-size: 25px;
+  color: #333;
+}
+
+.in_and_around_text a {
+  color: #00BED1;
+  text-decoration: none;
+}
+
 .tab-pane .col-sm-4 {
   float: left;
   width: 16%;
-  padding: 10px 0;
+  padding: 6px 0;
+}
+
+p.in_and_around_subtext {
+  font-size: 0.8em;
+}
+.marketing.row.cities {
+  padding: 2em 0;
 }

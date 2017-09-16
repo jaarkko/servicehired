@@ -237,6 +237,7 @@
       ul#searchinsides {
           padding-top: 0;
           margin-top: -15px;
+          padding-left: 0;
       }
       li.box.open {
           width: 100% !important;
