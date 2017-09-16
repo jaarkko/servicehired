@@ -17,12 +17,13 @@
           padding-top: 20vh;
           background-image: url(/sites/all/themes/servicehired/images/ocean-glass-ripple.jpg);
           background-size: cover;
+          transition: 0.25s ease-in-out;
       }
       .overthefold.searched {
           height: 400px;
           padding-top: 0;
       }
-      .overthefold .logo {
+      .overthefold.searched .logo {
           height: 65px;
       }
       body {
@@ -50,6 +51,7 @@
       }
       .logo {
           max-height: 20vh;
+          transition: 0.25s ease-in-out;
       }
       .bottom-menu li, .selection-category li {
           list-style: none;
