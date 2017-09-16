@@ -244,8 +244,6 @@
 
 
 <script>
-
-
   var client1 = algoliasearch("N4C3NC4744", "fda98971857f13213af8ee5654b5f47e");
   var index1 = client1.initIndex('new');
   //initialize autocomplete on search input (ID selector must match)
@@ -264,6 +262,54 @@
       }
     });
 
+
+  function initialize2(helper) {
+    var geocoder = {},
+      autocomplete = {};
+
+    var input = (document.getElementById('map-box'));
+
+    var options = {
+      types: ['geocode']
+    };
+    geocoder = new google.maps.Geocoder();
+
+    // WL input type check
+    if (input.tagName == 'INPUT')
+      autocomplete = new google.maps.places.Autocomplete(input, options);
+    else if (input.tagName == 'SELECT') {
+      $(input).change(function () {
+        geocodeAddress2(helper,geocoder);
+      })
+    }
+
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+      geocodeAddress2(helper,geocoder);
+    });
+
+    if (input.value)
+      geocodeAddress2(helper,geocoder);
+  }
+
+  // Geocode the address provided.
+  function geocodeAddress2(helper,geocoder) {
+    var address = document.getElementById('map-box').value;
+
+    geocoder.geocode({ 'address': address }, function (results, status) {
+      if (status === google.maps.GeocoderStatus.OK) {
+        var location = results[0].geometry.location.lat() + "," + results[0].geometry.location.lng();
+        console.log(location);
+        // Start with results near your IP.
+        helper.setQueryParameter('aroundLatLngViaIP', false);
+        helper.setQueryParameter('aroundRadius', radius);
+        helper.setQueryParameter('aroundLatLng', location).search();
+      } else {
+        // not good
+
+      }
+    });
+  }
+
   //Config
   var applicationID = 'N4C3NC4744';
   var apiKey = 'fda98971857f13213af8ee5654b5f47e';
@@ -274,6 +320,9 @@
     hitsPerPage: 12,
     facets: ['field_organisation_type'],
   });
+
+  initialize2(helper);
+
 
   $('.socent').click(function(){
     $('.active').removeClass('active');
