@@ -196,6 +196,15 @@
           padding-top: 0;
           margin-top: -15px;
       }
+      li.box.open {
+          width: 100% !important;
+          height: 500px;
+      }
+      li.box.open .text {
+          float: left;
+          width: 50%;
+          height: 484px;
+      }
       li.box .text {
           background-size: cover !important;
       }
