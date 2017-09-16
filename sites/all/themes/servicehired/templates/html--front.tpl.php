@@ -240,6 +240,7 @@
 <script src="https://cdn.jsdelivr.net/g/algoliasearch@3.22.1,algoliasearch.helper@2.20.1,hogan.js@3.0.2(hogan.min.common.js),js-cookie@2.2.0,cookieconsent3@3.0.4"></script>
 <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD-tXblrfyR3thTR8DGuM3NreZ9qGLtT8&libraries=places"></script>
 <!-- Initialize autocomplete menu -->
 
 
