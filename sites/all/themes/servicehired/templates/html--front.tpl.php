@@ -11,10 +11,10 @@
           font-family: 'Rubik', sans-serif;
           background:#191F33;
           text-align: center;
-          height: 80vh;
+          height: 75vh;
           color: white;
           position: relative;
-          padding-top: 20vh;
+          padding-top: 15vh;
           background-image: url(/sites/all/themes/servicehired/images/ocean-glass-ripple.jpg);
           background-size: cover;
       }
@@ -58,7 +58,7 @@
           background-color: rgba(255,255,255,0.1);
       }
       .logo {
-          max-height: 20vh;
+          max-height: 15vh;
       }
       .search-buttons .btn {
           background: #f04e23;
