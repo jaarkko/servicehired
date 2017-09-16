@@ -20,11 +20,15 @@
           transition: 0.25s ease-in-out;
       }
       .overthefold.searched {
-          height: 400px;
+          height: 280px;
           padding-top: 0;
       }
       .overthefold.searched .logo {
-          height: 65px;
+          height: 45px;
+          padding-bottom: 35px;
+      }
+      .searched h1, .searched h2 {
+          display: none;
       }
       body {
           margin: 0;
@@ -188,6 +192,7 @@
           text-align: right;
           padding: 25px;
           padding-bottom: 0;
+          font-family: 'Rubik', sans-serif;
       }
       ul#searchinsides:after {
           content: ' ';
