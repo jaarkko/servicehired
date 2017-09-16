@@ -171,7 +171,12 @@
           text-align: center;
           background: none;
           padding: 0 15px;
+          position: relative;
+          width: 31%;
+          float: left;
       }
+
+
       li.box .text {
           background-size: cover !important;
       }
@@ -193,6 +198,20 @@
       }
 
 
+      .description {
+          color: black;
+          text-align: left;
+          text-transform: none;
+          padding: 11px 15px;
+          height: 58px;
+          overflow: hidden;
+          font-size: 16px;
+      }
+      .open .description {
+          height: calc(100% - 40px);
+          background: #f7f7f7;
+          border: 1px solid #d1d1d1;
+      }
   </style>
 </head>
 <body>
