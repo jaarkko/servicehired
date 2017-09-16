@@ -275,14 +275,9 @@
     };
     geocoder = new google.maps.Geocoder();
 
-    // WL input type check
-    if (input.tagName == 'INPUT')
-      autocomplete = new google.maps.places.Autocomplete(input, options);
-    else if (input.tagName == 'SELECT') {
       $(input).change(function () {
         geocodeAddress2(helper,geocoder);
-      })
-    }
+      });
 
     google.maps.event.addListener(autocomplete, 'place_changed', function () {
       geocodeAddress2(helper,geocoder);
