@@ -157,3 +157,13 @@ li.footer-logo {
   display: block;
   clear: both;
 }
+
+p.in_and_around_text, p.in_and_around_subtext {
+  padding: 0;
+  margin: 0;
+}
+.tab-pane .col-sm-4 {
+  float: left;
+  width: 16%;
+  padding: 10px 0;
+}
