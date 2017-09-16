@@ -231,6 +231,11 @@
   else window.addEventListener('load', loadDeferredStyles);
 </script>
 <!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/instantsearch.js@1.10.3(instantsearch.min.css),jquery.ui@1.11.4(jquery-ui.min.css),bootstrap.select@1.12.2(css/bootstrap-select.min.css),cookieconsent3@3.0.4(cookieconsent.min.css)">
 <script src="https://cdn.jsdelivr.net/g/algoliasearch@3.22.1,algoliasearch.helper@2.20.1,hogan.js@3.0.2(hogan.min.common.js),js-cookie@2.2.0,cookieconsent3@3.0.4"></script>
 <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
