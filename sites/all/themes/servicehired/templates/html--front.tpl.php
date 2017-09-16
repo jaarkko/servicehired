@@ -18,6 +18,13 @@
           background-image: url(/sites/all/themes/servicehired/images/ocean-glass-ripple.jpg);
           background-size: cover;
       }
+      .overthefold.searched {
+          height: 400px;
+          padding-top: 0;
+      }
+      .overthefold .logo {
+          height: 65px;
+      }
       body {
           margin: 0;
       }
