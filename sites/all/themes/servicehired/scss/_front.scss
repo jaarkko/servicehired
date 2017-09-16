@@ -1,0 +1,135 @@
+.overthefold {
+  font-family: 'Rubik', sans-serif;
+  background:#191F33;
+  text-align: center;
+  height: 80vh;
+  color: white;
+  position: relative;
+  padding-top: 20vh;
+  background-image: url(images/ocean-glass-ripple.jpg);
+  background-size: cover;
+}
+body {
+  margin: 0;
+}
+.leftmenu {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.rightmenu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.overthefold a {
+  color: white;
+  text-decoration: none;
+}
+.bottom-menu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255,255,255,0.1);
+}
+.logo {
+  max-height: 20vh;
+}
+.bottom-menu li, .selection-category li {
+  list-style: none;
+  display: inline;
+  padding: 0 30px;
+}
+.aa-input-container {
+  display: none;
+}
+.two-boxes {
+  max-width: 720px;
+  margin: 20px auto;
+}
+.box-search {
+  display: inline-block;
+  float: left;
+  position: relative;
+}
+.aa-input-container {
+  display: inline-block;
+  position: relative; }
+
+.box-search input {
+  width: 100%;
+  border: 1px solid rgba(228, 228, 228, 0.6);
+  padding: 10px 30px 10px 15px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+}
+.aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button, .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
+  display: none; }
+.aa-input-icon {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  fill: #e4e4e4; }
+.aa-dropdown-menu {
+  background-color: #fff;
+  border: 1px solid rgba(228, 228, 228, 0.6);
+  min-width: 300px;
+  margin-top: 10px;
+  box-sizing: border-box; }
+.aa-suggestion {
+  padding: 12px;
+  cursor: pointer;
+}
+.aa-suggestion + .aa-suggestion {
+  border-top: 1px solid rgba(228, 228, 228, 0.6);
+}
+.aa-suggestion:hover, .aa-suggestion.aa-cursor {
+  background-color: rgba(241, 241, 241, 0.35); }
+.aa-input-container {
+  display: block;
+}
+.selection-category {
+  max-width: 720px;
+  margin: 0 auto;
+  border: 1px solid white;
+}
+
+.selection-category li {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  width: 32.5%;
+  width: calc(98.5%/3);
+}
+.selection-category ul {
+  padding: 0;
+  margin: 0;
+}
+.selection-category a {
+  padding: 10px;
+}
+.selection-category li.active a {
+  background: white;
+  color: #191F33;
+  display: block;
+}
+span.algolia-autocomplete {
+  display: block !important;
+}
+.box-left, .box-right {
+  width: calc(50% - 15px);
+}
+.box-left {
+  margin-right: 15px;
+}
+.box-right {
+  margin-left: 15px;
+}
