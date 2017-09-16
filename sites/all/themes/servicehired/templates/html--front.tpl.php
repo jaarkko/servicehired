@@ -156,6 +156,12 @@
       }
       .selection-category a {
           padding: 10px;
+          display: block;
+      }
+      .selection-category a:hover {
+          background: #0098ad;
+          color: white;
+          cursor: pointer;
       }
       .selection-category li.active a {
           background: white;
