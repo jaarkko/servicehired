@@ -97,7 +97,7 @@ img.ft-logo {
   width: 40px;
   position: absolute;
   left: -6px;
-  top: -2px;
+  top: -19px;
 }
 
 li.footer-logo {
@@ -129,11 +129,14 @@ footer i.material-icons {
 .footer li {
   color: #c4c7ca;
 }
-
+li.footer-logo {
+  position: relative;
+}
 .region.region-footer {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0px auto;
   position: relative;
+  padding: 20px 0;
 }
 .col-sm-3 {
   width: 25%;
@@ -142,4 +145,9 @@ footer i.material-icons {
 .col-sm-2 {
   width: 20%;
   float: left;
+}
+.row:after {
+  content: '';
+  display: block;
+  clear: both;
 }
