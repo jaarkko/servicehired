@@ -268,7 +268,7 @@
     var geocoder = {},
       autocomplete = {};
 
-    var input = (document.getElementById('map-box'));
+    var input = (document.getElementById('google-search-input'));
 
     var options = {
       types: ['geocode']
