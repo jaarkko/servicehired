@@ -11,7 +11,7 @@
           font-family: 'Rubik', sans-serif;
           background:#191F33;
           text-align: center;
-          height: 75vh;
+          height: 85vh;
           color: white;
           position: relative;
           padding-top: 15vh;
