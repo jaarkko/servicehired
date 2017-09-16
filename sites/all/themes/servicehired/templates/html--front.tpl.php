@@ -394,7 +394,7 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <ul>
-                            <li class="footer-logo"><img class="ft-logo" src="https://www.inventshift.com/sites/default/files/inventshift-icon.png">ServiceHired</li>
+                            <li class="footer-logo"><img class="ft-logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png">ServiceHired</li>
                             <li class="small">ServiceHired makes booking services online simple. Find, compare and book. Simple as that.</li>
                         </ul>
                     </div>

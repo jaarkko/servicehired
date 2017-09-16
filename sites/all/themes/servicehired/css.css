@@ -129,3 +129,12 @@ footer i.material-icons {
 .footer li {
   color: #c4c7ca;
 }
+
+.region.region-footer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.col-sm-3 {
+  width: 25%;
+  float: left;
+}
