@@ -234,25 +234,304 @@
 <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <!-- Initialize autocomplete menu -->
+
+
 <script>
-  var client = algoliasearch("N4C3NC4744", "fda98971857f13213af8ee5654b5f47e");
-  var index = client.initIndex('YourIndex');
+
+
+  var client1 = algoliasearch("N4C3NC4744", "fda98971857f13213af8ee5654b5f47e");
+  var index1 = client1.initIndex('new');
   //initialize autocomplete on search input (ID selector must match)
-  autocomplete('#aa-search-input',
+
+  var autocmplt = autocomplete('#search-box',
     { hint: false }, {
-      source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
+      source: autocomplete.sources.hits(index1, {hitsPerPage: 5}),
       //value to be displayed in input control after user's suggestion selection
-      displayKey: 'name',
+      displayKey: 'Keyword',
       //hash of templates used when rendering dataset
       templates: {
         //'suggestion' templating function used to render a single suggestion
-        suggestion: function(suggestion) {
-          return '<span>' +
-            suggestion._highlightResult.name.value + '</span><span>' +
-            suggestion._highlightResult.team.value + '</span>';
+        suggestion: function (suggestion) {
+          return '<span>' + suggestion._highlightResult.Keyword.value + '</span>';
         }
       }
     });
+
+  //Config
+  var applicationID = 'N4C3NC4744';
+  var apiKey = 'fda98971857f13213af8ee5654b5f47e';
+  var index = 'Multiindex';
+
+  var client = algoliasearch(applicationID, apiKey);
+  var helper = algoliasearchHelper(client, index, {
+    hitsPerPage: 12,
+    facets: ['field_organisation_type'],
+  });
+
+  $('.socent').click(function(){
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+    helper.setIndex('Multiindex').addFacetRefinement('field_organisation_type', 'Social Enterprise').search();
+  });
+
+  $('.businesses').click(function(){
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+    helper.setIndex('Multiindex').removeFacetRefinement('field_organisation_type', 'Social Enterprise').search();
+  });
+
+  $('.packages').click(function(){
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+    helper.setIndex('products').clearRefinements().search();
+  });
+
+  initialize2(helper);
+
+  // Start with results near your IP.
+  helper.setQueryParameter('aroundLatLngViaIP', true);
+  helper.setQueryParameter('aroundRadius', radius);
+
+  helper.on('result', function(content) {
+    console.log(content);
+
+    renderHits(content);
+
+    $('.showing').remove();
+    var html = '<div class="col-md-12 text-right showing">Found '+ content.nbHits +' results in '+ content.processingTimeMS +' ms</div>';
+    $('#searchinsides').before(html);
+  });
+
+  function getSize(i){
+    var size = 'col-md-4';
+    if (i == 1){
+      size = 'col-md-5';
+    }
+    if (i == 2){
+      size = 'col-md-3';
+    }
+    if (i == 4){
+      size = 'col-md-3';
+    }
+    if (i == 6){
+      size = 'col-md-5';
+    }
+    if (i == 8){
+      size = 'col-md-5';
+    }
+    if (i == 9){
+      size = 'col-md-3';
+    }
+    if (i == 10){
+      size = 'col-md-5';
+    }
+    if (i == 12){
+      size = 'col-md-3';
+    }
+    return size;
+  }
+
+  $('.searchinsides h4').click(function(){
+    $('#searchinsides').toggle();
+    $(this).find('.glyphicon').toggleClass('glyphicon-chevron-right');
+    $(this).find('.glyphicon').toggleClass('glyphicon-chevron-down');
+  });
+
+  $('.supply h4').click(function () {
+    $('#suppliers').toggle();
+    $(this).find('.glyphicon').toggleClass('glyphicon-chevron-right');
+    $(this).find('.glyphicon').toggleClass('glyphicon-chevron-down');
+  });
+
+
+  function typeform(hit){
+    if (hit.type == 'photography'){
+      return 'zoNsrr';
+    }
+    if (hit.type =='marketplace_bands_and_artists'){
+      return 'VJKoBC';
+    }
+    if (hit.field_organisation_industry == 'Catering'){
+      return 'aOIx8b';
+    }
+
+    return 'zoNsrr';
+  }
+
+  function renderHits(content) {
+    var i = 0;
+    $('#searchinsides').html(function() {
+      return $.map(content.hits, function(hit) {
+
+        if ($('.packages').hasClass('active')) {
+          console.log(hit);
+          i++;
+
+          if (hit.currency == 'EUR'){
+            hit.currency = '€';
+          }
+          if (hit.price){
+            hit.price = (hit.price/100).toFixed(2);
+          }
+          return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
+            '<div class="hidden dataid">' + hit.objectID + '</div>' +
+            '<div style="background-image:url(https://inventshift.com/' + hit.optimized_product[1] + ') !important" class="text">' +
+            '<div class="inside">' + hit._highlightResult.title.value +
+            '</div>' +
+            '</div>' +
+            '<div class="description"><span class="price">'+ hit.price +'</span> <span class="currency">'+ hit.currency +'</span> ' + hit.venue_summary + '' +
+            '<div class="actions"><a href="' + '"><div class="btn btn-info portfolio">Portfolio & More information</div></a>' +
+            '<div class="btn btn-primary enquiry" typeform="">Quick Enquiry</div></div></div>' +
+            '</li>';
+        } else {
+          hit.rating = 0;
+          if (hit.field_organisation_rating) {
+            hit.rating = hit.field_organisation_rating;
+          }
+
+          var reviews = '<div class="rating rating-' + hit.rating + '"> ' +
+            '<span class="rating-count">' + hit.field_organisation_review_count + ' Reviews</span> ' +
+            '<span class="stars-container stars-' + hit.rating + '">★★★★★</span> ' +
+            '</div>';
+
+          var backgroundimg = '';
+          if (hit.imageurl !== '') {
+            backgroundimg = 'background-image:url(' + hit.imageurl + ') !important';
+          }
+          i++;
+          return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
+            '<div class="hidden dataid">' + hit.objectID + '</div>' +
+            '<div style="background-image:url(https://inventshift.com/' + hit.optimized_square_image[1] + ') !important" class="text">' +
+            '<div class="inside">' + hit._highlightResult.title.value +
+            '</div>' +
+            '</div>' +
+            '<div class="description">' + hit.venue_summary + '' +
+            '<div class="list"><ul class="tags"><h5>Categories:</h5></ul></div>' + reviews +
+            '<div class="actions"><a href="' + hit.url + '"><div class="btn btn-info portfolio">Portfolio & More information</div></a>' +
+            '<div class="btn btn-primary enquiry" typeform="' + typeform(hit) + '" >Quick Enquiry</div></div></div>' +
+            '</li>';
+        }
+      });
+
+    });
+
+    initTypeform();
+    initBoxes();
+  }
+
+  function initBoxes() {
+    $('.types .box').click(function(){
+      if(!$(this).hasClass('open')){
+        $('.open').removeClass('open');
+        $(this).toggleClass('open');
+        $('html, body').animate({
+          scrollTop: $(this).offset().top - 15
+        }, 50);
+
+        var nid = $(this).find('.dataid').text();
+
+        if (!$(this).hasClass('added')) {
+          $.get('/developers/api/getdata/' + nid).done(function (data) {
+            for (var i = 0, len = data.length; i < len; i++) {
+              $('.box-' + nid + ' ul.tags').append('<li>' + data[i] + '</li>');
+            }
+          });
+        }
+        $(this).addClass('added');
+      }
+    });
+  }
+
+
+  function initTypeform(){
+    $('.types .box .enquiry').click(function(){
+      var typeform = $(this).attr('typeform');
+      console.log(typeform);
+      typeformEmbed.makePopup(
+        'https://inventshift.typeform.com/to/'+typeform,
+        {
+          mode: 'drawer_right',
+          autoOpen: true,
+          autoClose: 350,
+          hideScrollbars: true
+        }
+      )
+    });
+  }
+
+
+  //Config
+  var otherapplicationID = 'N4C3NC4744';
+  var otherapiKey = 'fda98971857f13213af8ee5654b5f47e';
+  var otherindex = 'Multiindex';
+  var radius = '100000';
+
+  var otherclient = algoliasearch(otherapplicationID, otherapiKey);
+  var otherhelper = algoliasearchHelper(otherclient, otherindex, {
+    hitsPerPage: 8,
+    disjunctiveFacets: ['field_organisation_directories']
+  });
+
+  // Start with results near your IP.
+  otherhelper.setQueryParameter('aroundLatLngViaIP', true);
+  otherhelper.setQueryParameter('aroundRadius', radius);
+
+  otherhelper.addDisjunctiveFacetRefinement('field_organisation_directories', '0');
+  otherhelper.addDisjunctiveFacetRefinement('field_organisation_directories', '1');
+
+  otherhelper.on('result', function(content) {
+    console.log(content);
+    otherrenderHits(content);
+  });
+
+  function getSizeSecond(i){
+    var size = 'col-md-2';
+    if (i == 1){
+      size = 'col-md-4';
+    }
+    if (i == 3){
+      size = 'col-md-2';
+    }
+    if (i == 6){
+      size = 'col-md-4';
+    }
+    if (i == 8){
+      size = 'col-md-4';
+    }
+    if (i == 7){
+      size = 'col-md-4';
+    }
+    return size;
+  }
+
+  function otherrenderHits(content) {
+    var i = 0;
+    $('#suppliers').html(function() {
+      return $.map(content.hits, function(hit) {
+        i ++;
+        var hexArray = ['#FFB91A','#F34D10','#00BED1', '#0098AE', '#0098AE', '#191F2F'];
+        var randomColor = hexArray[Math.floor(Math.random() * hexArray.length)];
+        return '<a href="'+hit.url+'"><li class="box col-xs-6 '+getSizeSecond(i)+'"><div style="background-image:url(https://inventshift.com/'+hit.optimized_square_image[1]+') !important" class="text"><div class="inside">' + hit._highlightResult.title.value + '</div></div></li></a>';
+      });
+    });
+  }
+
+  $('#search-box').on('keyup', function() {
+    // $('#search-box').scrollTop();
+    helper.setQuery($(this).val()).search();
+    //otherhelper.setQuery($(this).val()).search();
+  });
+
+  var autocompleteChangeEvents = ['selected', 'autocompleted'];
+
+  autocompleteChangeEvents.forEach(function (eventName) {
+    autocmplt.on('autocomplete:' + eventName, function (event, suggestion, datasetName) {
+      helper.setQuery(suggestion.Keyword).search();
+    });
+  });
+
+
+  helper.search();
 </script>
 </body>
 </html>
