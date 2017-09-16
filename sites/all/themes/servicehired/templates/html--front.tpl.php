@@ -718,6 +718,7 @@
   $('.search-buttons .btn').click(function(){
     helper.setQuery($('#search-box').val()).search();
     $('.overthefold').addClass('searched');
+    $(this).hide();
   });
 
   $('#search-box').on('keyup', function() {
