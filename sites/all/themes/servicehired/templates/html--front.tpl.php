@@ -214,6 +214,15 @@
 
   </div>
 </div>
+<div class="marketing row">
+    <div class="types">
+        <ul id="searchinsides" class="">
+        </ul>
+    </div>
+    <div class="suppliers">
+
+    </div>
+</div>
 <noscript id="deferred-styles">
   <link rel="stylesheet" type="text/css" href="css.css"/>
 </noscript>
