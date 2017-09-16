@@ -716,7 +716,7 @@
 
   // Geocode the address provided.
   function geocodeAddress2(helper,geocoder) {
-    var address = document.getElementById('map-box').value;
+    var address = document.getElementById('google-search-input').value;
 
     geocoder.geocode({ 'address': address }, function (results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
