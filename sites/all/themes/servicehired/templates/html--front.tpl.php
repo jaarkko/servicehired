@@ -151,6 +151,48 @@
       .box-right {
           margin-left: 15px;
       }
+
+      li.box .text {
+          background: #0097ab;
+          height: 230px;
+          width: 100%;
+          cursor: pointer;
+      }
+
+      li.box {
+          height: 270px;
+          margin: 20px 0;
+          display: inline-block;
+          vertical-align: top;
+          color: white;
+          text-transform: uppercase;
+          font-family: helvetica;
+          font-size: 19px;
+          text-align: center;
+          background: none;
+          padding: 0 15px;
+      }
+      li.box .text {
+          background-size: cover !important;
+      }
+      li.box .text {
+          background: #0097ab;
+          height: 230px;
+          width: 100%;
+          cursor: pointer;
+      }
+      .text .inside {
+          position: absolute;
+          padding: 15px 25px 15px 15px;
+          text-align: left;
+          bottom: 40px;
+          margin: 0;
+          min-height: 0;
+          text-transform: capitalize;
+          background: rgba(0, 0, 0, 0.5);
+      }
+
+
   </style>
 </head>
 <body>
