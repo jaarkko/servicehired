@@ -208,6 +208,20 @@ p.in_and_around_subtext {
   background-position: center;
   cursor: pointer;
 }
+.front-icon {
+  height: 49px;
+  width: 65px;
+  background: white;
+  float: left;
+  margin: 7px 6px;
+  background-image: url(/sites/all/themes/servicehired/icons/010-people-5.png);
+  background-color: #1dbecf;
+  border-radius: 5px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
 .front-icon.catering {
   background-image: url(/sites/all/themes/servicehired/icons/catering.png);
 }
