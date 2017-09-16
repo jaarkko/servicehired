@@ -192,6 +192,7 @@
           display: block;
           clear: both;
       }
+
       ul#searchinsides {
           padding-top: 0;
           margin-top: -15px;
@@ -231,7 +232,7 @@
           text-align: left;
           text-transform: none;
           padding: 11px 15px;
-          height: 58px;
+          height: 26px;
           overflow: hidden;
           font-size: 16px;
       }
@@ -239,6 +240,28 @@
           height: calc(100% - 40px);
           background: #f7f7f7;
           border: 1px solid #d1d1d1;
+      }
+      .btn {
+          display: inline-block;
+          padding: 6px 12px;
+          margin-bottom: 0;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.42857143;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+          -ms-touch-action: manipulation;
+          touch-action: manipulation;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          background-image: none;
+          border: 1px solid transparent;
+          border-radius: 4px;
+          background-color: lightblue;
       }
   </style>
 </head>
