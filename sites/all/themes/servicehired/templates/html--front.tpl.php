@@ -65,7 +65,6 @@
           border-radius: 0;
           padding: 11px 80px;
           margin-top: 20px;
-          border: 1px solid;
       }
       .search-buttons .btn:hover {
           background: #f04e23;
@@ -74,6 +73,10 @@
           list-style: none;
           display: inline;
           padding: 0 30px;
+
+      }
+      .selection-category li {
+          border-radius: 5px;
       }
       .aa-input-container {
           display: none;
@@ -101,6 +104,7 @@
           appearance: none;
           font-family: 'Rubik', sans-serif;
           font-size: 15px;
+          border-radius: 5px;
       }
       .aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button, .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
           display: none; }
@@ -287,6 +291,9 @@
       }
       .searched .bottom-menu {
           display: none;
+      }
+      input {
+          border-radius: 5px;
       }
   </style>
 </head>
@@ -723,7 +730,7 @@
 
   $('#search-box').on('keyup', function() {
     // $('#search-box').scrollTop();
-    if(!$('.overthefold').hasClass('searched')) {
+    if($('.overthefold').hasClass('searched')) {
       helper.setQuery($(this).val()).search();
     }
     //otherhelper.setQuery($(this).val()).search();

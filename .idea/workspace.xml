@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5e7f914-9776-41bd-b385-00fa1b7129d9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,12 +64,12 @@
       <file leaf-file-name="html--front.tpl.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="283" column="4" lean-forward="false" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="4" />
+            <state relative-caret-position="331">
+              <caret line="78" column="29" lean-forward="false" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
               <folding>
-                <marker date="1505586934000" expanded="true" signature="16705:16794" ph="..." />
-                <marker date="1505586934000" expanded="true" signature="18180:18274" ph="..." />
-                <marker date="1505586934000" expanded="true" signature="21557:21647" ph="..." />
+                <marker date="1505588241000" expanded="true" signature="17159:17248" ph="..." />
+                <marker date="1505588241000" expanded="true" signature="18634:18728" ph="..." />
+                <marker date="1505588241000" expanded="true" signature="22011:22101" ph="..." />
               </folding>
             </state>
           </provider>
@@ -96,6 +97,10 @@
       <find>search-box</find>
       <find>searched</find>
       <find>logo</find>
+      <find>two</find>
+      <find>search-buttons</find>
+      <find>input</find>
+      <find>selection-category</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -428,12 +433,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505569273020</updated>
-      <workItem from="1505569279281" duration="4228000" />
+      <workItem from="1505569279281" duration="5107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4228000" />
+    <option name="totallyTimeSpent" value="5107000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -538,12 +543,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="283" column="4" lean-forward="false" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="4" />
+        <state relative-caret-position="331">
+          <caret line="78" column="29" lean-forward="false" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
           <folding>
-            <marker date="1505586934000" expanded="true" signature="16705:16794" ph="..." />
-            <marker date="1505586934000" expanded="true" signature="18180:18274" ph="..." />
-            <marker date="1505586934000" expanded="true" signature="21557:21647" ph="..." />
+            <marker date="1505588241000" expanded="true" signature="17159:17248" ph="..." />
+            <marker date="1505588241000" expanded="true" signature="18634:18728" ph="..." />
+            <marker date="1505588241000" expanded="true" signature="22011:22101" ph="..." />
           </folding>
         </state>
       </provider>
