@@ -277,6 +277,9 @@
           border-radius: 4px;
           background-color: lightblue;
       }
+      .searched .bottom-menu {
+          display: none;
+      }
   </style>
 </head>
 <body>
