@@ -65,6 +65,7 @@
           border-radius: 0;
           padding: 11px 80px;
           margin-top: 20px;
+          border-radius: 5px;
       }
       .search-buttons .btn:hover {
           background: #f04e23;
