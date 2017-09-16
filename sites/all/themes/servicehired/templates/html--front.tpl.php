@@ -140,6 +140,7 @@
           max-width: 720px;
           margin: 0 auto;
           border: 1px solid white;
+          border-radius: 5px;
       }
 
       .selection-category li {
