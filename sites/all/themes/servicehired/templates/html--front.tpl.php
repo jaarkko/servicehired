@@ -139,6 +139,10 @@
           color: #191F33;
           display: block;
       }
+      .aa-dropdown-menu {
+          color: black;
+          text-align: left;
+      }
       span.algolia-autocomplete {
           display: block !important;
       }
