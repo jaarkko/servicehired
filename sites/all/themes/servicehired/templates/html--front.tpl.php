@@ -293,8 +293,6 @@
     helper.setIndex('products').clearRefinements().search();
   });
 
-  initialize2(helper);
-
   // Start with results near your IP.
   helper.setQueryParameter('aroundLatLngViaIP', true);
   helper.setQueryParameter('aroundRadius', radius);
