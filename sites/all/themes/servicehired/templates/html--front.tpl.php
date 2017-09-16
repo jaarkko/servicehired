@@ -20,8 +20,13 @@
           transition: 0.25s ease-in-out;
       }
       .overthefold.searched {
-          height: 280px;
+          height: 215px;
           padding-top: 0;
+      }
+      .searched .topbar {
+          background: rgba(255,255,255,0.1);
+          height: 50px;
+          margin-bottom: 30px;
       }
       .overthefold.searched .logo {
           height: 45px;
@@ -276,7 +281,7 @@
 </head>
 <body>
 <div class="overthefold">
-  <img class="logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png">
+    <div class="topbar"><img class="logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png"></div>
   <h1>ServiceHired</h1>
   <h2>Find, compare and book local services anywhere.</h2>
   <div class="selection-category">
