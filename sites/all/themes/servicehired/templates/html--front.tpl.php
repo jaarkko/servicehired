@@ -60,6 +60,16 @@
       .logo {
           max-height: 20vh;
       }
+      .search-buttons .btn {
+          background: #f04e23;
+          border-radius: 0;
+          padding: 11px 80px;
+          margin-top: 20px;
+          border: 1px solid;
+      }
+      .search-buttons .btn:hover {
+          background: #f04e23;
+      }
       .bottom-menu li, .selection-category li {
           list-style: none;
           display: inline;
@@ -702,11 +712,15 @@
     });
   }
 
+  $('.search-buttons .btn').click(function(){
+    helper.setQuery($('#search-box').val()).search();
+    $('.overthefold').addClass('searched');
+  });
+
   $('#search-box').on('keyup', function() {
     // $('#search-box').scrollTop();
-    helper.setQuery($(this).val()).search();
     if(!$('.overthefold').hasClass('searched')) {
-      $('.overthefold').addClass('searched');
+      helper.setQuery($(this).val()).search();
     }
     //otherhelper.setQuery($(this).val()).search();
   });
