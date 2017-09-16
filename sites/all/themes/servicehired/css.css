@@ -96,7 +96,7 @@ span.rights {
 img.ft-logo {
   width: 40px;
   position: absolute;
-  left: 10px;
+  left: -6px;
   top: -2px;
 }
 
@@ -133,8 +133,13 @@ footer i.material-icons {
 .region.region-footer {
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
 }
 .col-sm-3 {
   width: 25%;
+  float: left;
+}
+.col-sm-2 {
+  width: 20%;
   float: left;
 }
