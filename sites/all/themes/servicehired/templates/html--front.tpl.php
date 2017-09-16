@@ -176,7 +176,26 @@
           float: left;
       }
 
-
+      .marketing.row {
+          max-width: 1400px;
+          margin: 0 auto;
+      }
+      .col-md-12.text-right.showing {
+          text-align: right;
+          padding: 25px;
+          padding-bottom: 0;
+      }
+      ul#searchinsides:after {
+          content: ' ';
+          width: 10px;
+          height: 10px;
+          display: block;
+          clear: both;
+      }
+      ul#searchinsides {
+          padding-top: 0;
+          margin-top: -15px;
+      }
       li.box .text {
           background-size: cover !important;
       }
