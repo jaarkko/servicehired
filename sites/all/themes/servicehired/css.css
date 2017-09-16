@@ -109,7 +109,13 @@ li.footer-logo {
   background-repeat: no-repeat;
   color: white;
 }
-
+.col-sm-3.col-sm-offset-1 {
+  padding-left: 5%;
+}
+.col-sm-8 {
+  float: left;
+  width: 60%;
+}
 footer {
   background-color: #191F2E;
 }
