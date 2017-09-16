@@ -332,6 +332,19 @@
     </ul>
 
   </div>
+    <div class="icons row">
+        <div class="front-icon catering"></div>
+        <div class="front-icon music"></div>
+        <div class="front-icon photographers"></div>
+        <div class="front-icon removals"></div>
+        <div class="front-icon foodtruck"></div>
+        <div class="front-icon plumber"></div>
+        <div class="front-icon petcare"></div>
+        <div class="front-icon cleaning"></div>
+        <div class="front-icon entertainment"></div>
+        <div class="front-icon florist"></div>
+        <div class="front-icon funerals"></div>
+    </div>
   <!-- HTML Markup -->
   <div class="two-boxes">
     <div class="box-search box-left" id="aa-input-container">
