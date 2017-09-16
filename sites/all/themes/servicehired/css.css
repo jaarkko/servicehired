@@ -1,0 +1,131 @@
+.front footer {
+  margin-top: 0 !important;
+}
+
+footer {
+  background-image: url(/sites/all/themes/custom/inventshift/images/white-icon.png);
+  background-color: #00869E;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
+  color: white;
+}
+footer a {
+  color: #ffffff;
+}
+footer .menuheader {
+  font-size: 1em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  color: white;
+}
+footer .text-muted.pull-right {
+  color: #ffffff;
+}
+footer li {
+  color: #ffffff;
+  list-style: outside none none !important;
+}
+footer ul {
+  padding: 0;
+}
+footer i.material-icons {
+  font-size: 28px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+footer .social a {
+  background: white;
+  display: inline-block;
+  color: #00869E;
+  border-radius: 100%;
+  text-align: center;
+  width: 25px;
+  padding: 2px 0 1px 0;
+  margin-bottom: 0.25em;
+}
+footer .social a:hover {
+  background: #FDAC16;
+  color: white;
+}
+
+.footer-width {
+  margin: 0 auto;
+}
+
+.region-footer .col-sm-3:first-child li:first-child {
+  font-size: 22px;
+  line-height: 0;
+  margin-top: 14px;
+}
+
+.trademark {
+  float: right;
+  font-size: 0.8em !important;
+  vertical-align: bottom;
+  text-align: right;
+}
+
+span.rights {
+  font-size: 0.9em !important;
+}
+
+.region-footer .col-sm-3 a, .region-footer .col-sm-2 a {
+  padding-bottom: 0.5em;
+  display: block;
+  font-size: 0.9em;
+}
+
+.region-footer ul li:first-child {
+  font-family: 'rubik';
+  font-size: 1.24em;
+  color: #FFB91A;
+  padding-bottom: 0.5em;
+}
+
+.region-footer ul li:first-child.footer-logo {
+  color: white;
+  padding: 5px 26px 30px 38px;
+}
+
+.region-footer .material-icons {
+  color: white;
+}
+
+img.ft-logo {
+  width: 40px;
+  position: absolute;
+  left: 10px;
+  top: -2px;
+}
+
+li.footer-logo {
+  padding-left: initial;
+  padding: 5px 26px 30px 38px;
+  display: block;
+  background-size: 38px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+footer {
+  background-color: #191F2E;
+}
+
+footer i.material-icons {
+  font-size: 24px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+
+.footer .social a {
+  background: none;
+  color: white;
+}
+
+.footer li {
+  color: #c4c7ca;
+}

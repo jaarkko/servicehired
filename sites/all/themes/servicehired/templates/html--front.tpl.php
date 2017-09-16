@@ -386,8 +386,72 @@
 
     </div>
 </div>
+
+<footer class="footer container-fluid">
+    <div class="region region-footer">
+        <section id="block-block-1" class="block block-block clearfix">
+            <div class="footer-width">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <ul>
+                            <li class="footer-logo"><img class="ft-logo" src="https://www.inventshift.com/sites/default/files/inventshift-icon.png">ServiceHired</li>
+                            <li class="small">ServiceHired makes booking services online simple. Find, compare and book. Simple as that.</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <ul>
+                            <li> Marketplace</li>
+                            <li></li>
+                            <li><a href="/packages-and-pricing">Pricing</a></li>
+                            <li><a href="/about-us">About Us and Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <ul>
+                            <li> Resources</li>
+                            <li><a href="/social-enterprise-jobs">Social enterprise jobs</a></li>
+
+
+                            <li><a href="/contact-us">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul>
+                            <li> Fund</li>
+                            <li><a href="/social-enterprise-fund">What is it?</a></li>
+
+                            <li><a href="/social-enterprise-fund">Charities</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <ul>
+                            <li><a href="/terms">Terms</a></li>
+                            <li><a href="/terms">Privacy policy</a></li>
+                            <li><a href="/terms">Terms of use</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="social text-right"><a target="_blank" href="https://www.facebook.com/inventshift/"><i class=" fa fa-facebook"></i></a>
+                            <a target="_blank" href="https://twitter.com/inventshift_"><i class="fa fa-twitter"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/inventshift/"><i class="fa fa-instagram"></i></a>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCr5fTxF0qprW61P8sBetZ4Q"><i class="fa fa-youtube-play"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/company-beta/12900724/"><i class="fa fa-linkedin"></i></a>
+                        </div><p class="trademark">Copyright © 2017 Inventshift<br><span class="rights">All rights reserved</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="block-block-11" class="block block-block clearfix">
+            <div class="hidden">www.inventshift.com</div>
+        </section>
+    </div>
+</footer>
 <noscript id="deferred-styles">
-  <link rel="stylesheet" type="text/css" href="css.css"/>
+  <link rel="stylesheet" type="text/css" href="/sites/all/themes/servicehired/css.css"/>
 </noscript>
 <script>
   var loadDeferredStyles = function() {
