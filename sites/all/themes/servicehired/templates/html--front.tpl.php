@@ -255,9 +255,13 @@
           display: block;
       }
       .price {
-          float: left;
+          float: right;
           padding-right: 5px;
           font-weight: bold;
+      }
+      span.currency {
+          font-size: 0.9em;
+          padding-right: 1px;
       }
       a.listyourbusiness {
           background: #f04e23;
