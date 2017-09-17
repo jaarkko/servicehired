@@ -336,8 +336,9 @@
           padding-left: 0;
       }
       li.box.open {
-          width: 100% !important;
+          width: 100%;
           height: 500px;
+          max-width: 1365px;
       }
       li.box.open .text {
           float: left;
