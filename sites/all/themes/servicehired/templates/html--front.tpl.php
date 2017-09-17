@@ -259,15 +259,15 @@
       }
       .text .inside {
           position: absolute;
-          padding: 15px 25px 15px 15px;
+          padding: 15px 0px 15px 15px;
           text-align: left;
           bottom: 40px;
           margin: 0;
           min-height: 0;
           text-transform: capitalize;
           background: rgba(0, 0, 0, 0.5);
+          max-width: 67%;
       }
-
 
       .description {
           color: black;
@@ -862,10 +862,13 @@
           if (hit.price){
             hit.price = (hit.price/100).toFixed(2);
           }
+
           return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
             '<div style="background-image:url(' + hit.optimized_product[1] + ') !important" class="text">' +
-            '<div class="inside">' + hit._highlightResult.title.value +
+            '<div class="inside">' +
+            '<span class="product">'+ hit._highlightResult.title.value +'</span>' +
+            '<span class="product">'+ hit._highlightResult.business_name.value +'</span>' +
             '</div>' +
             '</div>' +
             '<div class="description"><span class="price">'+ hit.price +'</span> <span class="currency">'+ hit.currency +'</span> ' + hit.venue_summary + '' +
