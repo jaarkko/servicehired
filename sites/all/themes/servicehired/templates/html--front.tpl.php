@@ -507,6 +507,33 @@
           }
           li.box.open {
               height: 100% !important;
+              width: 100%;
+              padding: 0;
+          }
+          .open .pricing {
+              position: absolute;
+              right: 183px;
+              bottom: 30px;
+              font-size: 24px;
+          }
+          .pricing {
+              position: relative !important;
+              right: unset !important;
+              bottom: unset !important;
+          }
+          .pricing {
+              max-width: 110px;
+              padding: 18px !important;
+              background: #1d2331;
+              float: left !important;
+              margin: 5px 20px 5px 0px;
+              color: white;
+          }
+          .open .actions {
+              position: inherit;
+          }
+          .open span.vat {
+              text-align: left;
           }
       }
 
