@@ -393,3 +393,12 @@ p.in_and_around_subtext {
 .open .descript {
   line-height: 1.5;
 }
+.searched .categories, .searched .front-icon {
+  display: none;
+}
+.searched .selection-category {
+  max-width: 500px;
+}
+.searched .selection-category li {
+  width: 49.6%;
+}
