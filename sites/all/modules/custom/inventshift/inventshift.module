@@ -536,6 +536,16 @@ function inventshift_optimized_image($item) {
       $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
       $images[$number] = $imageUrl;
     }
+  } else {
+    $item = node_load($item->field_supplier_id['und'][0]['value']);
+    if (isset($item->field_business_image['und'][0]['fid'])) {
+      foreach($item->field_business_image['und'] as $delta => $row){
+        $number ++;
+        $imageUrl = image_style_url('logo_list', $row['uri']);
+        $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+        $images[$number] = $imageUrl;
+      }
+    }
   }
   return $images;
 }
