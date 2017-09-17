@@ -28,6 +28,7 @@ function inventshift_entity_property_info_alter(&$info) {
     'sanitized' => TRUE,
     'getter callback' => 'inventshift_optimized_image',
   );
+
   $properties['optimized_header_image'] = array(
     'type' => 'list<text>',
     'label' => t('Organisation Header Image'),
@@ -471,17 +472,8 @@ function inventshift_optimized_image($item) {
   $number = 0;
 
   $images = array();
-  if (isset($item->field_image['und'][0]['fid'])) {
-    foreach($item->field_image['und'] as $delta => $row){
-      $number ++;
-      $imageUrl = image_style_url('logo_list', $row['uri']);
-      $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
-      $images[$number] = $imageUrl;
-    }
-  }
-
-  if (isset($item->field_organisation_image['und'][0]['fid'])) {
-    foreach($item->field_organisation_image['und'] as $delta => $row){
+  if (isset($item->field_product_image['und'][0]['fid'])) {
+    foreach($item->field_product_image['und'] as $delta => $row){
       $number ++;
       $imageUrl = image_style_url('logo_list', $row['uri']);
       $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
