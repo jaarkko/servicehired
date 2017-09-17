@@ -575,7 +575,7 @@ function inventshift_optimized_large_image($item) {
   if (isset($item->field_product_image['und'][0]['fid'])) {
     foreach($item->field_product_image['und'] as $delta => $row){
       $number ++;
-      $imageUrl = image_style_url('carousel_front', $row['uri']);
+      $imageUrl = image_style_url('carousel-front', $row['uri']);
       $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
       $images[$number] = $imageUrl;
     }
@@ -584,7 +584,7 @@ function inventshift_optimized_large_image($item) {
     if (isset($item->field_business_image['und'][0]['fid'])) {
       foreach($item->field_business_image['und'] as $delta => $row){
         $number ++;
-        $imageUrl = image_style_url('carousel_front', $row['uri']);
+        $imageUrl = image_style_url('carousel-front', $row['uri']);
         $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
         $images[$number] = $imageUrl;
       }
