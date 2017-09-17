@@ -502,6 +502,12 @@
               padding: 0px 5% !important;
               margin: 0 !important;
           }
+          li.box.open .text {
+              width: 100% !important;
+          }
+          li.box.open {
+              height: 100% !important;
+          }
       }
 
   </style>
