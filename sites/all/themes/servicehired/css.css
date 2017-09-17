@@ -350,3 +350,38 @@ p.in_and_around_subtext {
   border-radius: 0;
   color: black;
 }
+
+.tooltiptext:after {
+  width: 20px;
+  height: 6px;
+  content: '';
+  position: absolute;
+  background: #1e202d;
+  z-index: 2;
+  width: 6px;
+  display: block;
+  left: 46%;
+  bottom: -7px;
+  border-radius: 0 0 100% 100%;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+.tooltiptext {
+  position: absolute;
+  background: #1b1e2d;
+  padding: 6px;
+  margin-left: -12px;
+  width: 95px;
+  font-size: 0.8em;
+  vertical-align: bottom;
+  bottom: 50px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.tooltiptext {
+  display: none;
+}
+.front-icon:hover .tooltiptext {
+  display: block;
+}
