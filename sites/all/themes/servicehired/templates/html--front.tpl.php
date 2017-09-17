@@ -463,7 +463,11 @@
 </head>
 <body>
 <div class="overthefold">
-    <div class="topbar"><img class="logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png"></div>
+    <div class="topbar">
+        <a href="/">
+            <img class="logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png">
+        </a>
+    </div>
   <h1>ServiceHired</h1>
   <h2>Find, compare and book local services anywhere.</h2>
   <div class="selection-category">
