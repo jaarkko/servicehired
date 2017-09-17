@@ -1,0 +1,743 @@
+<?php
+/**
+ * @file
+ * Code for the Inventshift Core feature.
+ */
+
+// Core info alter.
+function inventshift_entity_property_info_alter(&$info) {
+  $properties = &$info['node']['bundles']['organisation']['properties'];
+
+  $properties['_geoloc'] = array(
+    'type' => 'list<integer>',
+    'label' => t('Geolocation - Algolia'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_real_latlng',
+  );
+
+  $properties['catering_tags'] = array(
+    'type' => 'list<text>',
+    'label' => t('Custom: Catering Tags'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_search_new_equipment',
+  );
+
+  $properties['optimized_image'] = array(
+    'type' => 'list<text>',
+    'label' => t('Organisation Image'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_optimized_image',
+  );
+  $properties['optimized_header_image'] = array(
+    'type' => 'list<text>',
+    'label' => t('Organisation Header Image'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_optimized_header_image',
+  );
+  $properties['optimized_square_image'] = array(
+    'type' => 'list<text>',
+    'label' => t('Organisation Square Image'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_optimized_square_image',
+  );
+
+  $properties['venue_summary'] = array(
+    'type' => 'text',
+    'label' => t('Venue: Summary'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_search_summary'
+  );
+
+  $info['product']['properties']['venue_summary'] = array(
+    'type' => 'list<text>',
+    'label' => t('Product: Summary'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_search_summary_supplier',
+  );
+  $info['commerce_product']['properties']['venue_summary'] = array(
+    'type' => 'list<text>',
+    'label' => t('Product: Summary'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_search_summary_supplier',
+  );
+
+  $info['product']['properties']['optimized_product'] = array(
+    'type' => 'list<text>',
+    'label' => t('Product Image'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_optimized_product',
+  );
+
+  $info['product']['properties']['_geoloc'] = array(
+    'type' => 'list<integer>',
+    'label' => t('Product Geolocation from Venue'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_real_latlng_supplier',
+  );
+
+  $info['commerce_product']['properties']['optimized_product'] = array(
+    'type' => 'list<text>',
+    'label' => t('Product Image'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_optimized_product',
+  );
+
+  $info['commerce_product']['properties']['_geoloc'] = array(
+    'type' => 'list<integer>',
+    'label' => t('Product Geolocation from Venue'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_real_latlng_supplier',
+  );
+
+
+  $info['product']['properties']['price'] = array(
+    'type' => 'text',
+    'label' => t('Price'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_price',
+  );
+
+  $info['commerce_product']['properties']['price'] = array(
+    'type' => 'text',
+    'label' => t('Price'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_price',
+  );
+
+  $info['product']['properties']['currency'] = array(
+    'type' => 'text',
+    'label' => t('Currency'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_currency',
+  );
+
+
+  $info['commerce_product']['properties']['currency'] = array(
+    'type' => 'text',
+    'label' => t('Currency'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_currency',
+  );
+
+}
+
+/**
+ * Returns all of the equipment.
+ */
+function inventshift_search_new_equipment($item) {
+  $facilities = array();
+  if (isset($item->field_organisation_main_tag['und']) && is_array($item->field_organisation_main_tag['und'])) {
+    foreach($item->field_organisation_main_tag['und'] as $delta => $row) {
+      $term = taxonomy_term_load($row['tid']);
+      $name = $term->name;
+      $facilities[] = $name;
+    }
+  }
+  return $facilities;
+}
+
+// Real latlang.
+function inventshift_real_latlng($venue) {
+  if (!isset($venue->field_organisation_geocode['und'][0])) {
+    watchdog('Inventshift',
+      t('A Venue is missing its geocoded location, !venue [nid: !nid]', array('!venue' => $venue->title, '!nid' => $venue->nid))
+      . "<a href='/node/{$venue->nid}/edit'>edit venue</a>" );
+    return null;
+  }
+  else if( $venue->field_organisation_geocode['und'][0]['lat'] !== ''
+    && $venue->field_organisation_geocode['und'][0]['lon'] !== ''
+    && strlen($venue->field_organisation_geocode['und'][0]['lat']) > 3
+    && strlen($venue->field_organisation_geocode['und'][0]['lon']) > 3) {
+    watchdog('Inventshift',
+      t('A Venue is had its geocoded location, !venue [nid: !nid]', array('!venue' => $venue->title, '!nid' => $venue->nid))
+      . "<a href='/node/{$venue->nid}/edit'>edit venue</a>" );
+    $latlon = array('lat' => floatval($venue->field_organisation_geocode['und'][0]['lat']), 'lng' => floatval($venue->field_organisation_geocode['und'][0]['lon']));
+    return $latlon;
+  }
+  else {
+    watchdog('Inventshift',
+      t('A Venue is missing its geocoded location, !venue [nid: !nid]', array('!venue' => $venue->title, '!nid' => $venue->nid))
+      . "<a href='/node/{$venue->nid}/edit'>edit venue</a>" );
+    return null;
+  }
+}
+
+// Inventshift Currency.
+function inventshift_currency($item){
+  if(isset($item->commerce_price)){
+    $total = $item->commerce_price['und'][0]['currency_code'];
+  } else {
+    $total = NULL;
+  }
+  return $total;
+}
+
+// Inventshift Price.
+function inventshift_price ($item){
+  if(isset($item->commerce_price)){
+    $total = $item->commerce_price['und'][0]['amount'];
+  } else {
+    $total = NULL;
+  }
+  return $total;
+}
+
+// Real latlang.
+function inventshift_real_latlng_supplier($item) {
+  if(isset($item->field_product_supplier_id)) {
+    $id = $item->field_product_supplier_id['und'][0]['target_id'];
+    $venue = node_load($id);
+    if (!isset($venue->field_organisation_geocode['und'][0])) {
+      watchdog('Inventshift',
+        t('A Venue is missing its geocoded location, !venue [nid: !nid]', array(
+          '!venue' => $venue->title,
+          '!nid' => $venue->nid
+        ))
+        . "<a href='/node/{$venue->nid}/edit'>edit venue</a>");
+      return NULL;
+    }
+    else if ($venue->field_organisation_geocode['und'][0]['lat'] !== ''
+      && $venue->field_organisation_geocode['und'][0]['lon'] !== ''
+      && strlen($venue->field_organisation_geocode['und'][0]['lat']) > 3
+      && strlen($venue->field_organisation_geocode['und'][0]['lon']) > 3
+    ) {
+      watchdog('Inventshift',
+        t('A Venue is had its geocoded location, !venue [nid: !nid]', array(
+          '!venue' => $venue->title,
+          '!nid' => $venue->nid
+        ))
+        . "<a href='/node/{$venue->nid}/edit'>edit venue</a>");
+      $latlon = array(
+        'lat' => floatval($venue->field_organisation_geocode['und'][0]['lat']),
+        'lng' => floatval($venue->field_organisation_geocode['und'][0]['lon'])
+      );
+      return $latlon;
+    }
+    else {
+      watchdog('Inventshift',
+        t('A Venue is missing its geocoded location, !venue [nid: !nid]', array(
+          '!venue' => $venue->title,
+          '!nid' => $venue->nid
+        ))
+        . "<a href='/node/{$venue->nid}/edit'>edit venue</a>");
+      return NULL;
+    }
+  } else {
+    return NULL;
+  }
+
+}
+/**
+ * Implements hook_block_info
+ */
+function inventshift_block_info() {
+  return array(
+    'inventshift_search' => array(
+      'info' => t('Search Form')
+    ),
+    'inventshift_front' => array(
+      'info' => t('Inventshift Front HTML')
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_view
+ */
+function inventshift_block_view($delta = '') {
+  switch($delta) {
+    case 'inventshift_search':
+      return array(
+        'content' => drupal_get_form('inventshift_front_page_search_form')
+      );
+    case 'inventshift_front':
+      return array(
+        'content' => theme('inventshift_front_html')
+      );
+  }
+}
+
+
+/**
+ * Placeholder search form.
+ */
+function inventshift_front_page_search_form($form, &$form_state) {
+  $form['#theme'] = 'inventshift_front_page_search_form';
+
+  $form['query'] = [
+    '#type' => 'textfield',
+    //'#title' => t('What venue?'),
+    '#id' => 'search-yep',
+    '#name' => 'query',
+    'arguments' => ['form' => NULL],
+    '#attributes' => [
+      'placeholder' => t('Address, city or post code'),
+      'autocomplete' => 'off'
+    ]
+  ];
+
+  $form['type'] = array(
+    '#type' => 'select',
+    //'#title' => t('Search for'),
+    '#options' => array(
+      'catering' => t('Catering'),
+      'coffee-cart' => t('Coffee Catering'),
+      'photography' => t('Photography & Videography'),
+      'bands' => t('Bands and Artists')
+    ),
+    '#empty_option' => t('What are you looking for?'),
+    '#required' => 'true',
+    '#attributes' => [
+      'class' => array('selectpicker'),
+      'data-live-search' => array('true'),
+      'title' => array('What do you need?')
+    ]
+  );
+
+  $form['pt'] = array(
+    '#type' => 'hidden',
+    '#value' => '0',
+    '#id' => 'geocoded-pt',
+    '#attributes' => array( 'class' => 'long')
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Search')
+  );
+
+  return $form;
+}
+
+
+/**
+ * Inventshift Search summary.
+ */
+function inventshift_search_summary($item) {
+  $node = $item;
+  $short = '';
+  if(isset($node->body)){
+    $body = $node->body['und'][0]['safe_value'];
+    $body = strip_tags($body);
+    $body = preg_replace('/[\x00-\x1F\x7F]/', '', $body);
+    $short = truncate($body, '900');
+  }
+  return $short;
+}
+
+/**
+ * Inventshift Search summary.
+ */
+function inventshift_search_summary_supplier($item) {
+  if(isset($item->field_product_supplier_id)) {
+    $id = $item->field_product_supplier_id['und'][0]['target_id'];
+    $node = node_load($id);
+    $short = '';
+    if (isset($node->body)) {
+      $body = $node->body['und'][0]['safe_value'];
+      $body = strip_tags($body);
+      $body = preg_replace('/[\x00-\x1F\x7F]/', '', $body);
+      $short = truncate($body, '900');
+    }
+    return $short;
+  }
+}
+
+
+/**
+ * Form submit handler.
+ */
+function inventshift_front_page_search_form_submit($form, &$form_state) {
+  global $language;
+  $lang = $language->language;
+  $search_url = 'browse';
+
+    $text_query = $form_state['input']['query'];
+    $location = $form_state['input']['pt'];
+    $type = $form_state['values']['type'];
+
+    $options = array('query' => array(
+      'query' => $text_query,
+      'pt' => $location,
+      'facet' => $type
+    )
+    );
+    $nourl = 0;
+
+    if ($text_query == "") {
+      $text_query = 'search';
+      $nourl = 1;
+    }
+
+    if ($text_query !== "") {
+      // Unaccent.
+      $text_query = unaccent($text_query);
+      // Lowercase.
+      $text_query = strtolower($text_query);
+      $type = strtolower($type);
+
+      // Make alphanumeric (removes all other characters).
+      $text_query = preg_replace("/[^a-z0-9_\s-]/", "", $text_query);
+      // Clean up multiple dashes or whitespaces
+      $text_query = preg_replace("/[\s-]+/", " ", $text_query);
+      // Convert whitespaces and underscore to dash
+      $text_query = preg_replace("/[\s_]/", "-", $text_query);
+      $search_url = $type . '-' . $text_query;
+
+      // Write to locations DB.
+      $result = db_select('locations', 'c')
+        ->fields('c')
+        ->condition('url', $search_url, '=')
+        ->execute()
+        ->fetchAssoc();
+
+      if (!$result) {
+
+        if ($lang == 'en') {
+          $savedUrl = $search_url;
+        } else {
+          $savedUrl = $lang . '/' . $search_url;
+        }
+
+        if ($nourl == 0) {
+          // Insert location to DB.
+          db_insert('locations')
+            ->fields(array(
+              'latlng' => $location,
+              'url' => $savedUrl,
+            ))
+            ->execute();
+        }
+      }
+    }
+
+    if ($nourl == 1) {
+      drupal_goto($search_url);
+    } else {
+      drupal_goto($search_url, $options);
+    }
+
+    /**
+    if (defined('WHITELABEL') && WHITELABEL){
+    } else {
+      if ($text_query !== "") {
+        // Unaccent.
+        $text_query = unaccent($text_query);
+        // Lowercase.
+        $text_query = strtolower($text_query);
+        // Make alphanumeric (removes all other characters).
+        $text_query = preg_replace("/[^a-z0-9_\s-]/", "", $text_query);
+        // Clean up multiple dashes or whitespaces
+        $text_query = preg_replace("/[\s-]+/", " ", $text_query);
+        // Convert whitespaces and underscore to dash
+        $text_query = preg_replace("/[\s_]/", "-", $text_query);
+        $search_url = $search_url . '-' . $text_query;
+
+        // Write to locations DB.
+        $result = db_select('locations', 'c')
+          ->fields('c')
+          ->condition('url', $search_url, '=')
+          ->execute()
+          ->fetchAssoc();
+
+        if (!$result) {
+
+          if ($lang == 'en'){
+            $savedUrl = $search_url;
+          } else {
+            $savedUrl = $lang . '/' . $search_url;
+          }
+          // Insert location to DB.
+          db_insert('locations')
+            ->fields(array(
+              'latlng' => $location,
+              'url' => $savedUrl,
+            ))
+            ->execute();
+        }
+      }
+    }
+
+    if ($lang !== 'en' && $_SERVER['REQUEST_URI'] == '/') {
+      drupal_goto($lang .'/'. $search_url, $options);
+    } else {**/
+}
+
+
+/**
+ * Used to return the optimized image
+ */
+function inventshift_optimized_image($item) {
+  $number = 0;
+
+  $images = array();
+  if (isset($item->field_image['und'][0]['fid'])) {
+    foreach($item->field_image['und'] as $delta => $row){
+      $number ++;
+      $imageUrl = image_style_url('logo_list', $row['uri']);
+      $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+      $images[$number] = $imageUrl;
+    }
+  }
+
+  if (isset($item->field_organisation_image['und'][0]['fid'])) {
+    foreach($item->field_organisation_image['und'] as $delta => $row){
+      $number ++;
+      $imageUrl = image_style_url('logo_list', $row['uri']);
+      $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+      $images[$number] = $imageUrl;
+    }
+  }
+  return $images;
+}
+
+/**
+ * Used to return the optimized image
+ */
+function inventshift_optimized_header_image($item) {
+
+  $number = 0;
+
+  $images = array();
+
+  if (isset($item->field_organisation_header_image['und'][0]['fid'])) {
+    foreach($item->field_organisation_header_image['und'] as $delta => $row){
+      $number ++;
+      $imageUrl = image_style_url('header_image', $row['uri']);
+      $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+      $images[$number] = $imageUrl;
+    }
+  }
+  return $images;
+}
+/**
+ * Used to return the optimized image
+ */
+function inventshift_optimized_product($item) {
+
+  $number = 0;
+  $images = array();
+
+  if (isset($item->field_product_images['und'][0]['fid'])) {
+    foreach($item->field_product_images['und'] as $delta => $row){
+      $number ++;
+      $imageUrl = image_style_url('search-style', $row['uri']);
+      $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+      $images[$number] = $imageUrl;
+    }
+  } else {
+    if(isset($item->field_product_supplier_id)) {
+      $id = $item->field_product_supplier_id['und'][0]['target_id'];
+      $item = node_load($id);
+      if (isset($item->field_organisation_header_image['und'][0]['fid'])) {
+        foreach($item->field_organisation_header_image['und'] as $delta => $row){
+          $number ++;
+          $imageUrl = image_style_url('search-style', $row['uri']);
+          $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+          $images[$number] = $imageUrl;
+        }
+      }
+    }
+  }
+  return $images;
+}
+/**
+ * Used to return the optimized image
+ */
+function inventshift_optimized_square_image($item) {
+
+  $number = 0;
+
+  $images = array();
+
+  if (isset($item->field_organisation_header_image['und'][0]['fid'])) {
+    foreach($item->field_organisation_header_image['und'] as $delta => $row){
+      $number ++;
+      $imageUrl = image_style_url('search-style', $row['uri']);
+      $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+      $images[$number] = $imageUrl;
+    }
+  }
+  return $images;
+}
+
+/**
+ * Implements hook_menu
+ */
+function inventshift_menu() {
+  $items['browse'] = array(
+    'title' => t('Search'),
+    'page arguments' => array(),
+    'page callback' => 'inventshift_view',
+    'access arguments' => array('access content'),
+  );
+
+  $items['list-of-social-enterprises'] = array(
+    'title' => t('List of Social Enterprises'),
+    'page arguments' => array(),
+    'page callback' => 'inventshift_socent',
+    'access arguments' => array('access content'),
+  );
+
+  // Add a product.
+  $items['management/%/products/add'] = array(
+    'title' => 'Add a product',
+    'description' => 'Add a new product for sale.',
+    'page callback' => 'commerce_product_ui_add_page',
+    'access callback' => 'commerce_product_ui_product_add_any_access',
+    'weight' => 10,
+    'file' => 'includes/commerce_product_ui.products.inc',
+    'file path' => drupal_get_path('module', 'commerce_product'),
+  );
+
+  foreach (commerce_product_types() as $type => $product_type) {
+    $items['management/%/products/add/' . strtr($type, array('_' => '-'))] = array(
+      'title' => 'Add a Product or Service',
+      'title arguments' => array('!name' => $product_type['name']),
+      'description' => $product_type['description'],
+      'page callback' => 'commerce_product_ui_product_form_wrapper',
+      'page arguments' => array(commerce_product_new($type)),
+      'access callback' => 'commerce_product_access',
+      'access arguments' => array('create', commerce_product_new($type)),
+      'file' => 'includes/commerce_product_ui.products.inc',
+      'file path' => drupal_get_path('module', 'commerce_product'),
+    );
+  }
+
+  $items['management/%/products/%commerce_product'] = array(
+    'title' => 'Edit your product or service',
+    'page callback' => 'commerce_product_ui_product_form_wrapper',
+    'page arguments' => array(3),
+    'access callback' => 'commerce_product_access',
+    'access arguments' => array('update', 3),
+    'weight' => 0,
+    'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
+    'file' => 'includes/commerce_product_ui.products.inc',
+    'file path' => drupal_get_path('module', 'commerce_product'),
+  );
+
+  $items['management/%/products/%commerce_product/edit'] = array(
+    'title' => 'Edit',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -10,
+    'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
+  );
+
+  return $items;
+}
+
+
+/**
+ * Search callback function.
+ */
+function inventshift_socent() {
+  return theme('inventshift_socent');
+}
+
+/**
+ * Search callback function.
+ */
+function inventshift_view() {
+  return theme('inventshift_search_page');
+}
+
+/**
+ * Implements hook_theme
+ */
+function inventshift_theme() {
+  $themes = array(
+    'inventshift_service_view_test' => array(
+      'template' => 'inventshift-services-view-test', // your template file called custompage.tpl.php
+      'arguments' => array(),
+    ),
+    'inventshift_photographers_join' => array(
+      'template' => 'inventshift-new-photographers', // your template file called custompage.tpl.php
+      'arguments' => array(),
+    ),
+    'inventshift_service_view_english' => array(
+      'template' => 'inventshift-service-view-english', // your template file called custompage.tpl.php
+      'arguments' => array(),
+    ),
+    'inventshift_service_view_english_2' => array(
+      'template' => 'inventshift-service-view-english-2', // your template file called custompage.tpl.php
+      'arguments' => array(),
+    ),
+    'inventshift_service_view' => array(
+      'template' => 'inventshift-services-view', // your template file called custompage.tpl.php
+      'arguments' => array(),
+    ),
+    'inventshift_city_landing' => array(
+      'template' => 'inventshift-city-landing', // your template file called custompage.tpl.php
+      'arguments' => array(),
+    ),
+    'inventshift_search_page' => array(
+      'template' => 'inventshift-search-page', // your template file called custompage.tpl.php
+      'arguments' => array(),
+    ),
+    'inventshift_front_html' => array(
+      'template' => 'inventshift-front-html', // your template file called custompage.tpl.php
+      'arguments' => array(),
+    ),
+    'inventshift_search_page_only' => array(
+      'template' => 'inventshift-search-page-only', // your template file called custompage.tpl.php
+      'arguments' => array(),
+    ),
+    'inventshift_socent' => array(
+      'template' => 'inventshift-social-enterprises', // your template file called custompage.tpl.php
+      'arguments' => array(),
+    ),
+    'inventshift_front_page_search_form' => array(
+      'render element' => 'form',
+      'template' => 'inventshift-front-page-search-form',
+    )
+  );
+  return $themes;
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function inventshift_user_login(&$edit, $account) {
+  global $base_url;
+
+  $data = "payload=" . json_encode(array(
+    "channel"       =>  "#notifications",
+    "text"          =>  "A New User just Joined" ,
+    "icon_emoji"    =>   ":+1:",
+    "username"      => "Inventshift Website",
+    "attachments"    => NULL,
+  ));
+
+  $ch = curl_init("https://hooks.slack.com/services/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");
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  $result = curl_exec($ch);
+  curl_close($ch);
+
+  // If this is user's first time log-in.
+  if ($account->access == 0) {
+    drupal_goto('/welcome-to-inventshift');
+  }
+}
+
+
+
+/**
+ * Helper function to have all chars in url friendly, and not remove.
+ */
+function unaccent($string) {
+  if (strpos($string = htmlentities($string, ENT_QUOTES, 'UTF-8'), '&') !== false) {
+    $string = html_entity_decode(preg_replace('~&([a-z]{1,2})(?:acute|cedil|circ|grave|lig|orn|ring|slash|tilde|uml);~i', '$1', $string), ENT_QUOTES, 'UTF-8');
+  }
+  return $string;
+}
+
+// Truncate a string only at a whitespace.
+function truncate($text, $length) {
+  $length = abs((int)$length);
+  if(strlen($text) > $length) {
+    $text = preg_replace("/^(.{1,$length})(\s.*|$)/s", '\\1...', $text);
+  }
+  return($text);
+}
