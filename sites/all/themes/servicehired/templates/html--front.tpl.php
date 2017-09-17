@@ -1026,6 +1026,8 @@
           console.log(hit);
           i++;
 
+          hit.price = hit.field_product_price.toFixed(2);
+
           return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
             '<div style="background-image:url(' + hit.optimized_large_image[1] + ') !important" firstimage="' + hit.optimized_large_image[1] + '" secondimage="' + hit.optimized_large_image[2] + '" thirdimage="' + hit.optimized_large_image[3] + '" class="text">' +
@@ -1038,7 +1040,7 @@
             '</div>' +
             '<div class="description">' +
             '<span class="hidden title">'+ hit._highlightResult.title.value +'</span>' +
-            '<div class="pricing"><span class="currency">'+ hit.currency +'</span><span class="price">'+ hit.field_product_price +'</span>' +
+            '<div class="pricing"><span class="currency">'+ hit.currency +'</span><span class="price">'+ hit.price +'</span>' +
             '<span class="vat">Incl. Vat</span></div>' +
             '<div class="descript">' + hit.venue_summary + '</div>' +
             '<span class="tags"><label>Tags:</label> Coffee cart, peppermint, coffee, cart</span></span>' +
