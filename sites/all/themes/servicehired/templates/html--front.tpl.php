@@ -200,6 +200,29 @@
           color: white;
           cursor: pointer;
       }
+      .arrow-left {
+          width: 46px;
+          height: 63px;
+          vertical-align: middle;
+          background: rgba(0,0,0,0.2);
+          padding-top: 100px;
+          position: absolute;
+
+      }
+      .arrow-right {
+          width: 46px;
+          height: 130px;
+          vertical-align: middle;
+          background: rgba(0,0,0,0.2);
+          padding-top: 100px;
+          position: absolute;
+          right: 15px;
+      }
+
+      .arrow-right:hover, .arrow-left:hover{
+          background: rgba(0,0,0,0.8);
+
+      }
 
       span.business, span.product {
           font-size: 0.7em;
@@ -1001,6 +1024,8 @@
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
             '<div style="background-image:url(' + hit.optimized_large_image[1] + ') !important" secondimage="' + hit.optimized_large_image[2] + '" thirdimage="' + hit.optimized_large_image[3] + '" class="text">' +
             '<div class="inside">' +
+            '<div class="arrow-left">&lt;</div>' +
+            '<div class="arrow-right">&gt;</div>' +
             '<span class="product">'+ hit._highlightResult.title.value +'</span>' +
             '<span class="business">'+ hit._highlightResult.business_name.value +'</span>' +
             '</div>' +
