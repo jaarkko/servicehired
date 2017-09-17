@@ -849,6 +849,8 @@
 
     var input = (document.getElementById('google-search-input'));
 
+    autocomplete = new google.maps.places.Autocomplete(input, options);
+
     var options = {
       types: ['geocode']
     };
