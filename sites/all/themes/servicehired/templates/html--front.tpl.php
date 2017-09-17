@@ -210,6 +210,9 @@
       span.product {
           font-size: 1em;
       }
+      .hidden {
+          display: none;
+      }
       .pricing {
           float: left;
           padding-right: 5px;
@@ -433,20 +436,19 @@
   <h2>Find, compare and book local services anywhere.</h2>
   <div class="selection-category">
     <ul>
-      <li>
+        <li class="businesses">
         <a href="#">Businesses</a>
       </li>
         <li class="packages active">
             <a href="#">Packages</a>
         </li>
-      <li>
+      <li class="categories">
         <a href="#">Categories</a>
       </li>
     </ul>
 
   </div>
-    <!--
-    <div class="icons row">
+    <div class="icons row hidden">
         <div class="front-icon catering"></div>
         <div class="front-icon music"></div>
         <div class="front-icon photographers"></div>
@@ -459,7 +461,6 @@
         <div class="front-icon florist"></div>
         <div class="front-icon funerals"></div>
     </div>
-    -->
   <!-- HTML Markup -->
   <div class="two-boxes">
     <div class="box-search box-left" id="aa-input-container">
@@ -875,17 +876,20 @@
   initialize2(helper);
 
 
-  $('.socent').click(function(){
+  $('.categories').click(function(){
     $('.active').removeClass('active');
+    $('.icons').removeClass('hidden');
     $(this).addClass('active');
   });
 
   $('.businesses').click(function(){
     $('.active').removeClass('active');
+    $('.icons').addClass('hidden');
     $(this).addClass('active');
   });
 
   $('.packages').click(function(){
+    $('.icons').addClass('hidden');
     $('.active').removeClass('active');
     $(this).addClass('active');
   });
