@@ -19,50 +19,6 @@
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-76@2x.png" sizes="152x152" />
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-60@3x.png" sizes="180x180" />
   <style>
-      @media all and (max-width: 768px) {
-          a.listyourbusiness {
-              display: none;
-          }
-          li.categories {
-              display: none;
-          }
-          .selection-category li {
-              width: 49%;
-          }
-          .cities {
-              display: none;
-          }
-          .overthefold {
-              padding: 15px;
-          }
-          .bottom-menu {
-              display: none;
-          }
-          .box-search {
-              width: 100%;
-              margin: 0px 0 !important;
-          }
-          .box-right {
-              display: none;
-          }
-          .searched .overthefold {
-              padding: 0px 0px;
-          }
-          li.box {
-              width: 91%;
-          }
-          .two-boxes, .selection-category {
-              margin: 20px 20px;
-          }
-          .searched .selection-category li {
-              width: 45%;
-          }
-          .col-sm-3, .col-sm-2, .col-sm-8, .col-sm-4 {
-              width: 90%;
-              padding: 0px 5% !important;
-              margin: 0 !important;
-          }
-      }
       body {
           font-family: 'Rubik', sans-serif;
       }
@@ -503,6 +459,51 @@
       span.tags label {
           font-weight: bold;
       }
+      @media all and (max-width: 768px) {
+          a.listyourbusiness {
+              display: none;
+          }
+          li.categories {
+              display: none;
+          }
+          .selection-category li {
+              width: 49%;
+          }
+          .cities {
+              display: none;
+          }
+          .overthefold {
+              padding: 15px;
+          }
+          .bottom-menu {
+              display: none;
+          }
+          .box-search {
+              width: 100%;
+              margin: 0px 0 !important;
+          }
+          .box-right {
+              display: none;
+          }
+          .searched .overthefold {
+              padding: 0px 0px;
+          }
+          li.box {
+              width: 91%;
+          }
+          .two-boxes, .selection-category {
+              margin: 20px 20px;
+          }
+          .searched .selection-category li {
+              width: 45%;
+          }
+          .col-sm-3, .col-sm-2, .col-sm-8, .col-sm-4 {
+              width: 90%;
+              padding: 0px 5% !important;
+              margin: 0 !important;
+          }
+      }
+
   </style>
 </head>
 <body>
