@@ -1046,8 +1046,7 @@
       }
     });
     $('.close').click(function(){
-      var parent = $(this).closest('.box');
-      parent.removeClass('open');
+      $('.open').removeClass('open');
     });
   }
 
