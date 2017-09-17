@@ -1202,6 +1202,7 @@
 
   $('.front-icon').click(function(){
     $('.overthefold').addClass('searched');
+    $('.search-buttons').hide();
   });
 
   $('#search-box').on('keyup', function() {
