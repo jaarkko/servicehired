@@ -383,6 +383,10 @@ p.in_and_around_subtext {
   border-radius: 5px;
   margin-left: -21px;
 }
+.open .arrow-right {
+  padding-top: 220px;
+  height: 264px;
+}
 .tooltiptext {
   display: none;
 }
