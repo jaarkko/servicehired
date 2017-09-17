@@ -298,6 +298,14 @@
           max-width: 67%;
       }
 
+      span.hidden.title {
+          display: none;
+      }
+
+      .open span.hidden.title {
+          display: block;
+      }
+
       .description {
           color: black;
           text-align: left;
