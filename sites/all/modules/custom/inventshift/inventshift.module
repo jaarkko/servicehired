@@ -49,11 +49,31 @@ function inventshift_entity_property_info_alter(&$info) {
     'getter callback' => 'inventshift_search_summary'
   );
 
+  $properties['supplier_description'] = array(
+    'type' => 'text',
+    'label' => t('Supplier: Description'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_supplier_description'
+  );
+  $properties['supplier_tags'] = array(
+    'type' => 'text',
+    'label' => t('Supplier: Tags'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_supplier_tags'
+  );
+
   $properties['currency'] = array(
     'type' => 'text',
     'label' => t('Currency: From country'),
     'sanitized' => TRUE,
     'getter callback' => 'inventshift_currency'
+  );
+
+  $properties['business_name'] = array(
+    'type' => 'text',
+    'label' => t('Business name: From package'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_business_Name'
   );
 
   $info['product']['properties']['venue_summary'] = array(
@@ -306,6 +326,46 @@ function inventshift_currency($item) {
 
   return $currency;
 }
+
+/**
+ * Inventshift Currency summary.
+ */
+function inventshift_business_name($item) {
+  $venue = node_load($item->field_supplier_id['und'][0]['value']);
+  return $venue->title;
+}
+
+
+/**
+ * Inventshift Search summary.
+ */
+function inventshift_supplier_tags($item) {
+  $node = node_load($item->field_supplier_id['und'][0]['value']);
+  $short = '';
+  if(isset($node->body)){
+    $body = $node->body['und'][0]['safe_value'];
+    $body = strip_tags($body);
+    $body = preg_replace('/[\x00-\x1F\x7F]/', '', $body);
+    $short = truncate($body, '900');
+  }
+  return $short;
+}
+
+/**
+ * Inventshift Search summary.
+ */
+function inventshift_supplier_description($item) {
+  $node = node_load($item->field_supplier_id['und'][0]['value']);
+  $short = '';
+  if(isset($node->field_business_tags)){
+    $body = $node->field_business_tags['und'][0]['safe_value'];
+    $body = strip_tags($body);
+    $body = preg_replace('/[\x00-\x1F\x7F]/', '', $body);
+    $short = truncate($body, '2000');
+  }
+  return $short;
+}
+
 
 
 /**

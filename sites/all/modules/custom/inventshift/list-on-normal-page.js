@@ -97,7 +97,7 @@ $(document).ready(function () {
       suggestion: function (suggestion) {
         return '<div class="ad-example-suggestion">' +
           '<a target="_blank" href="' + suggestion.url + '">' +
-          '<img src="' + site_url + '/' + suggestion.optimized_image[1] + '" />' +
+          '<img src="/" ' + site_url + '/' + suggestion.optimized_image[1] + '>' +
           '<div>' +
           suggestion._highlightResult.title.value + '<br />' +
           '<small>' + suggestion.vcity + '</small>' +
