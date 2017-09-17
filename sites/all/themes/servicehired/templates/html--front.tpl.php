@@ -163,6 +163,15 @@
           color: white;
           cursor: pointer;
       }
+      span.product {
+          font-size: 1em;
+      }
+      span.business, span.product {
+          font-size: 0.7em;
+          clear: both;
+          width: 100%;
+          display: block;
+      }
       a.listyourbusiness {
           background: #f04e23;
           padding: 7px 17px;
