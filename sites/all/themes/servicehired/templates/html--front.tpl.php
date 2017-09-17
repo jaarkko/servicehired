@@ -864,7 +864,7 @@
           }
           return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
-            '<div style="background-image:url(https://inventshift.com/' + hit.optimized_product[1] + ') !important" class="text">' +
+            '<div style="background-image:url(' + hit.optimized_product[1] + ') !important" class="text">' +
             '<div class="inside">' + hit._highlightResult.title.value +
             '</div>' +
             '</div>' +
@@ -890,7 +890,7 @@
           i++;
           return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
-            '<div style="background-image:url(https://inventshift.com/' + hit.optimized_image[1] + ') !important" class="text">' +
+            '<div style="background-image:url(' + hit.optimized_image[1] + ') !important" class="text">' +
             '<div class="inside">' + hit._highlightResult.title.value +
             '</div>' +
             '</div>' +
