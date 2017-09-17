@@ -210,6 +210,7 @@
           background: rgba(0,0,0,0.2);
           padding-top: 100px;
           position: absolute;
+          display: none;
 
       }
       .arrow-right {
@@ -219,6 +220,7 @@
           background: rgba(0,0,0,0.2);
           padding-top: 100px;
           position: absolute;
+          right: 0;
       }
 
       .arrow-right:hover, .arrow-left:hover{
@@ -360,6 +362,7 @@
           text-transform: capitalize;
           background: rgba(0, 0, 0, 0.5);
           max-width: 67%;
+          bottom: 0;
       }
 
       span.hidden.title {
