@@ -139,20 +139,20 @@ function inventshift_search_new_equipment($item) {
 
 // Real latlang.
 function inventshift_real_latlng($venue) {
-  if (!isset($venue->field_organisation_geocode['und'][0])) {
+  if (!isset($venue->field_geocode['und'][0])) {
     watchdog('Inventshift',
       t('A Venue is missing its geocoded location, !venue [nid: !nid]', array('!venue' => $venue->title, '!nid' => $venue->nid))
       . "<a href='/node/{$venue->nid}/edit'>edit venue</a>" );
     return null;
   }
-  else if( $venue->field_organisation_geocode['und'][0]['lat'] !== ''
-    && $venue->field_organisation_geocode['und'][0]['lon'] !== ''
-    && strlen($venue->field_organisation_geocode['und'][0]['lat']) > 3
-    && strlen($venue->field_organisation_geocode['und'][0]['lon']) > 3) {
+  else if( $venue->field_geocode['und'][0]['lat'] !== ''
+    && $venue->field_geocode['und'][0]['lon'] !== ''
+    && strlen($venue->field_geocode['und'][0]['lat']) > 3
+    && strlen($venue->field_geocode['und'][0]['lon']) > 3) {
     watchdog('Inventshift',
       t('A Venue is had its geocoded location, !venue [nid: !nid]', array('!venue' => $venue->title, '!nid' => $venue->nid))
       . "<a href='/node/{$venue->nid}/edit'>edit venue</a>" );
-    $latlon = array('lat' => floatval($venue->field_organisation_geocode['und'][0]['lat']), 'lng' => floatval($venue->field_organisation_geocode['und'][0]['lon']));
+    $latlon = array('lat' => floatval($venue->field_geocode['und'][0]['lat']), 'lng' => floatval($venue->field_geocode['und'][0]['lon']));
     return $latlon;
   }
   else {
