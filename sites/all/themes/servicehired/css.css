@@ -375,13 +375,13 @@ p.in_and_around_subtext {
   position: absolute;
   background: #1b1e2d;
   padding: 6px;
-  margin-left: -12px;
   width: 95px;
   font-size: 0.8em;
   vertical-align: bottom;
-  bottom: 50px;
+  bottom: 52px;
   border: 1px solid;
   border-radius: 5px;
+  margin-left: -21px;
 }
 .tooltiptext {
   display: none;
