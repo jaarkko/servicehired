@@ -945,14 +945,14 @@
   $('.businesses').click(function(){
     $('.active').removeClass('active');
     $('.icons').addClass('hidden');
-    algoliaHelper.setIndex('Suppliers').search();
+    helper.setIndex('Suppliers').search();
     $(this).addClass('active');
   });
 
   $('.packages').click(function(){
     $('.icons').addClass('hidden');
     $('.active').removeClass('active');
-    algoliaHelper.setIndex('Package').search();
+    helper.setIndex('Package').search();
     $(this).addClass('active');
   });
 
