@@ -195,6 +195,7 @@ p.in_and_around_subtext {
   max-width: 847px;
 }
 .front-icon {
+  position: relative;
   height: 49px;
   width: 65px;
   background: white;
