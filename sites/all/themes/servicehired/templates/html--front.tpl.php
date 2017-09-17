@@ -933,12 +933,6 @@
     $(this).addClass('active');
   });
 
-  $('.arrow-right').click(function(){
-    var parent = $(this).closest('.text');
-    var image = parent.attr('secondimage');
-    parent.attr('style','background-image:url('+image'+) !important');
-  });
-
   $('.businesses').click(function(){
     $('.active').removeClass('active');
     $('.icons').addClass('hidden');
