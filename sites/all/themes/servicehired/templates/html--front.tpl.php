@@ -200,6 +200,9 @@
           color: white;
           cursor: pointer;
       }
+      .text {
+          position: relative;
+      }
       .arrow-left {
           width: 46px;
           height: 63px;
@@ -216,7 +219,6 @@
           background: rgba(0,0,0,0.2);
           padding-top: 100px;
           position: absolute;
-          right: 15px;
       }
 
       .arrow-right:hover, .arrow-left:hover{
@@ -353,7 +355,6 @@
           position: absolute;
           padding: 15px 15px 15px 15px;
           text-align: left;
-          bottom: 40px;
           margin: 0;
           min-height: 0;
           text-transform: capitalize;
