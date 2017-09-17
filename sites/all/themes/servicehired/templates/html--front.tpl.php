@@ -513,8 +513,8 @@
               padding: 0;
           }
           .open .arrow-right {
-              padding-top: 150px;
-              height: 150px;
+              padding-top: 150px !important;
+              height: 150px !important;
           }
 
           .open .pricing {
