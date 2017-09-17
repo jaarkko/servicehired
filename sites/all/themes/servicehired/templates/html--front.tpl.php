@@ -173,6 +173,20 @@
       span.product {
           font-size: 1em;
       }
+      .pricing {
+          float: left;
+          padding-right: 5px;
+      }
+      .open .pricing {
+          float: unset;
+          padding-right: 0px;
+      }
+      span.vat {
+          display: none;
+      }
+      .open span.vat {
+          display: block;
+      }
       .price {
           float: left;
           padding-right: 5px;
@@ -274,7 +288,7 @@
       }
       .text .inside {
           position: absolute;
-          padding: 15px 0px 15px 15px;
+          padding: 15px 15px 15px 15px;
           text-align: left;
           bottom: 40px;
           margin: 0;
