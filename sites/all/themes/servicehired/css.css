@@ -255,3 +255,98 @@ p.in_and_around_subtext {
 .front-icon.funerals {
   background-image: url(/sites/all/themes/servicehired/icons/funerals.png);
 }
+
+
+.page-user.not-logged-in .form-item-mail {
+  max-width: 270px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.page-user.not-logged-in {
+  background: #F7F7F7;
+  /* Tooltip */
+}
+.page-user.not-logged-in h1.page-header {
+  background: white;
+  padding: 0;
+  color: black;
+  border: 0;
+  display: none;
+}
+.page-user.not-logged-in button#edit-submit {
+  border: 0;
+  border-radius: 0;
+  padding: 10px 15px;
+  color: white;
+}
+.page-user.not-logged-in .hybridauth-widget .btn {
+  border: none;
+  border-radius: 0;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 100;
+}
+.page-user.not-logged-in .main-container {
+  width: 427px;
+  margin: 100px auto;
+  text-align: center;
+  border: 1px solid #E7E7E7;
+  padding: 0px;
+  background: white;
+}
+.page-user.not-logged-in .form-item-name, .page-user.not-logged-in .form-item-pass {
+  max-width: 265px;
+  margin: 20px auto;
+}
+.page-user.not-logged-in .hybridauth-widget-wrapper:after {
+  content: '- Or -';
+  padding: 1em 0 0;
+  display: block;
+  margin: 1em 0 auto;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.page-user.not-logged-in .form-item-name input, .page-user.not-logged-in .form-item-pass input {
+  padding: 20px;
+  border-radius: 0;
+}
+.page-user.not-logged-in ul.tabs--primary.nav.nav-tabs {
+  max-width: 100%;
+}
+.page-user.not-logged-in .page-user.not-logged-in .form-item-mail {
+  margin: 0 auto;
+}
+.page-user.not-logged-in .form-type-password-confirm .form-type-password {
+  float: none;
+  width: 300px;
+}
+.page-user.not-logged-in #user-register-form input {
+  padding: 20px;
+  border-radius: 0;
+}
+.page-user.not-logged-in #user-register-form .password-help {
+  display: none !important;
+}
+.page-user.not-logged-in .ui-tooltip {
+  background-color: #FFFFFF;
+  color: black;
+  border: 1px solid #CCCCCC;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 0;
+  font-family: 'rubik';
+  max-width: 265px;
+  margin: 0;
+}
+.page-user.not-logged-in .nav-tabs > li.active > a, .page-user.not-logged-in .nav-tabs > li.active > a:focus, .page-user.not-logged-in .nav-tabs > li.active > a:hover {
+  border-radius: 0;
+  border-top: 0;
+  margin-bottom: -2px;
+  z-index: 1;
+  background: #F7F7F7;
+}
+.page-user.not-logged-in .nav-tabs > li > a {
+  border-radius: 0;
+  color: black;
+}
