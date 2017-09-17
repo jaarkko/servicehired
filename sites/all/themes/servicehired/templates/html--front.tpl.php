@@ -172,6 +172,11 @@
           width: 100%;
           display: block;
       }
+      .price {
+          float: left;
+          padding-right: 5px;
+          font-weight: bold;
+      }
       a.listyourbusiness {
           background: #f04e23;
           padding: 7px 17px;
@@ -332,7 +337,7 @@
       <li>
         <a href="#">Businesses</a>
       </li>
-        <li class="active">
+        <li class="packages active">
             <a href="#">Packages</a>
         </li>
       <li>
