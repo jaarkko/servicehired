@@ -406,3 +406,22 @@ p.in_and_around_subtext {
 .searched .selection-category li {
   width: 49.6%;
 }
+
+.logo {
+  padding: 0 !important;
+  margin: 0;
+}
+.logo img {
+  max-height: 45px;
+}
+header#navbar {
+  background: #1B1E2E;
+  color: white !important;
+  border: 0 !important;
+}
+a.name.navbar-brand {
+  color: white;
+}
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
