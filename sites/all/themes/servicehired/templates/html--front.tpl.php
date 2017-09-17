@@ -1025,6 +1025,10 @@
   }
 
   function initBoxes() {
+    $('.close').click(function(){
+      var parent = $(this).closest('box');
+      parent.removeClass('open');
+    });
     $('.types .box').click(function(){
       if(!$(this).hasClass('open')){
         $('.open').removeClass('open');
