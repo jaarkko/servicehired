@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ServiceHired - Find, compare and book local services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ServiceHired - Find, compare and book local services</title>
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/ldpi.png" sizes="32x32" />
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/xhdpi.png" sizes="96x96" />
@@ -515,6 +516,7 @@
               padding-top: 150px;
               height: 150px;
           }
+
           .open .pricing {
               position: absolute;
               right: 183px;
