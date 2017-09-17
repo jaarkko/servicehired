@@ -325,6 +325,31 @@
       input {
           border-radius: 5px;
       }
+      .open span.title {
+          width: 100%;
+          display: block;
+          font-size: 22px;
+          padding: 0px 0 5px 0;
+          font-weight: bold;
+          border-bottom: 1px solid #f04e23;
+          margin-bottom: 15px;
+      }
+      .open .pricing {
+          position: absolute;
+          right: 183px;
+          bottom: 30px;
+          font-size: 24px;
+      }
+      .open span.vat {
+          display: block;
+          font-size: 14px;
+          text-align: right;
+      }
+      .open .actions {
+          position: absolute;
+          right: 30px;
+          bottom: 30px;
+      }
   </style>
 </head>
 <body>
@@ -869,7 +894,7 @@
         if ($('.packages').hasClass('active')) {
           console.log(hit);
           i++;
-          
+
           return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
             '<div style="background-image:url(' + hit.optimized_image[1] + ') !important" class="text">' +
