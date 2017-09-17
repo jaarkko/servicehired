@@ -498,7 +498,7 @@
               width: 45%;
           }
           .col-sm-3, .col-sm-2, .col-sm-8, .col-sm-4 {
-              width: 90%;
+              width: 90% !important;
               padding: 0px 5% !important;
               margin: 0 !important;
           }
