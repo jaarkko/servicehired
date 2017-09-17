@@ -869,7 +869,7 @@
         if ($('.packages').hasClass('active')) {
           console.log(hit);
           i++;
-
+          
           return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
             '<div style="background-image:url(' + hit.optimized_image[1] + ') !important" class="text">' +
@@ -878,9 +878,14 @@
             '<span class="product">'+ hit._highlightResult.business_name.value +'</span>' +
             '</div>' +
             '</div>' +
-            '<div class="description"><span class="price">'+ hit.field_product_price +'</span> <span class="currency">'+ hit.currency +'</span> ' + hit.venue_summary + '' +
-            '<div class="actions"><a href="' + '"><div class="btn btn-info portfolio">Portfolio & More information</div></a>' +
-            '<div class="btn btn-primary enquiry" typeform="">Quick Enquiry</div></div></div>' +
+            '<div class="description">' +
+            '<span class="hidden title">'+ hit._highlightResult.title.value +'</span>' +
+            '<div class="pricing"><span class="price">'+ hit.field_product_price +'</span> <span class="currency">'+ hit.currency +'</span>' +
+            '<span class="vat">Incl. Vat</span></div>' +
+            '<div class="descript">' + hit.venue_summary + '</div>' +
+            '<span class="tags"><label>Tags:</label> Coffee cart, peppermint, coffee, cart</span></span>' +
+            '<div class="actions">' +
+            '<div class="btn btn-primary enquiry" typeform="">Buy now</div></div></div>' +
             '</li>';
         } else {
           hit.rating = 0;
