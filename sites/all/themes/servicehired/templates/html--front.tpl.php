@@ -945,12 +945,6 @@
     $(this).addClass('active');
   });
 
-  // Arrow right.
-  $('.arrow-right').click(function(){
-    var parent = $(this).closest('.text');
-    var image = parent.attr('secondimage');
-    parent.attr('style','background-image:url('+image+') !important');
-  });
 
   // Start with results near your IP.
   helper.setQueryParameter('aroundLatLngViaIP', true);
@@ -1112,6 +1106,12 @@
         }
         $(this).addClass('added');
       }
+    });
+    // Arrow right.
+    $('.arrow-right').click(function(){
+      var parent = $(this).closest('.text');
+      var image = parent.attr('secondimage');
+      parent.attr('style','background-image:url('+image+') !important');
     });
   }
 
