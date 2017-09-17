@@ -999,7 +999,7 @@
 
           return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
-            '<div style="background-image:url(' + hit.optimized_image[1] + ') !important" class="text">' +
+            '<div style="background-image:url(' + hit.optimized_large_image[1] + ') !important" class="text">' +
             '<div class="inside">' +
             '<span class="product">'+ hit._highlightResult.title.value +'</span>' +
             '<span class="business">'+ hit._highlightResult.business_name.value +'</span>' +
