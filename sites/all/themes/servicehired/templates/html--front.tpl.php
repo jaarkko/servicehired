@@ -350,6 +350,17 @@
           right: 30px;
           bottom: 30px;
       }
+      .btn.btn-primary.enquiry {
+          border-radius: 0;
+          padding: 10px 37px;
+          background: #f04e23;
+          color: white;
+          border-radius: 5px;
+      }
+      span.tags {
+          display: block;
+          padding: 1em 0;
+      }
   </style>
 </head>
 <body>
