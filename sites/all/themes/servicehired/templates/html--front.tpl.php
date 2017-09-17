@@ -19,8 +19,19 @@
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-76@2x.png" sizes="152x152" />
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-60@3x.png" sizes="180x180" />
   <style>
-      .overthefold {
+      body {
           font-family: 'Rubik', sans-serif;
+      }
+      h1 {
+          font-weight: 500;
+      }
+      h2 {
+          font-weight: 400;
+      }
+      h3 {
+          font-weight: 400;
+      }
+      .overthefold {
           background:#191F33;
           text-align: center;
           height: 85vh;
