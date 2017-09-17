@@ -49,6 +49,13 @@ function inventshift_entity_property_info_alter(&$info) {
     'getter callback' => 'inventshift_search_summary'
   );
 
+  $properties['currency'] = array(
+    'type' => 'text',
+    'label' => t('Currency: From country'),
+    'sanitized' => TRUE,
+    'getter callback' => 'inventshift_currency'
+  );
+
   $info['product']['properties']['venue_summary'] = array(
     'type' => 'list<text>',
     'label' => t('Product: Summary'),
@@ -105,20 +112,6 @@ function inventshift_entity_property_info_alter(&$info) {
     'getter callback' => 'inventshift_price',
   );
 
-  $info['product']['properties']['currency'] = array(
-    'type' => 'text',
-    'label' => t('Currency'),
-    'sanitized' => TRUE,
-    'getter callback' => 'inventshift_currency',
-  );
-
-
-  $info['commerce_product']['properties']['currency'] = array(
-    'type' => 'text',
-    'label' => t('Currency'),
-    'sanitized' => TRUE,
-    'getter callback' => 'inventshift_currency',
-  );
 
 }
 
@@ -165,25 +158,6 @@ function inventshift_real_latlng($venue) {
   }
 }
 
-// Inventshift Currency.
-function inventshift_currency($item){
-  if(isset($item->commerce_price)){
-    $total = $item->commerce_price['und'][0]['currency_code'];
-  } else {
-    $total = NULL;
-  }
-  return $total;
-}
-
-// Inventshift Price.
-function inventshift_price ($item){
-  if(isset($item->commerce_price)){
-    $total = $item->commerce_price['und'][0]['amount'];
-  } else {
-    $total = NULL;
-  }
-  return $total;
-}
 
 // Real latlang.
 function inventshift_real_latlng_supplier($item) {
@@ -310,6 +284,27 @@ function inventshift_front_page_search_form($form, &$form_state) {
   );
 
   return $form;
+}
+
+/**
+ * Inventshift Currency summary.
+ */
+function inventshift_currency($item) {
+  $venue = node_load($item->field_supplier_id['und'][0]['value']);
+  $country = $venue->field_location['und'][0]['country'];
+  $currency = '$';
+
+  switch ($country) {
+    case 'AU':
+      break;
+    case 'US':
+      break;
+    case 'FI':
+      $currency = '€';
+      break;
+  }
+
+  return $currency;
 }
 
 
