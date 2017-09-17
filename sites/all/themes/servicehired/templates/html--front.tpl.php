@@ -1037,7 +1037,7 @@
             '</div>' +
             '<div class="description">' +
             '<span class="hidden title">'+ hit._highlightResult.title.value +'</span>' +
-            '<div class="pricing"><span class="price">'+ hit.field_product_price +'</span> <span class="currency">'+ hit.currency +'</span>' +
+            '<div class="pricing"><span class="currency">'+ hit.currency +'</span><span class="price">'+ hit.field_product_price +'</span>' +
             '<span class="vat">Incl. Vat</span></div>' +
             '<div class="descript">' + hit.venue_summary + '</div>' +
             '<span class="tags"><label>Tags:</label> Coffee cart, peppermint, coffee, cart</span></span>' +
