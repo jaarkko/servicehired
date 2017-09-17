@@ -1149,10 +1149,59 @@
     });
   }
 
+  $('.plumber').click(function(){
+    $('#search-box').val('Plumbers');
+    helper.setQuery('Plumbers').search();
+  });
+  $('.petcare').click(function(){
+    $('#search-box').val('Pet Care & Pet Boarding');
+    helper.setQuery('Pet Care & Pet Boarding').search();
+  });
+  $('.cleaning').click(function(){
+    $('#search-box').val('Cleaning');
+    helper.setQuery('Cleaning').search();
+  });
+  $('.entertainment').click(function(){
+    $('#search-box').val('Entertainers');
+    helper.setQuery('Entertainers').search();
+  });
+  $('.florist').click(function(){
+    $('#search-box').val('Florists');
+    helper.setQuery('Florists').search();
+  });
+  $('.funerals').click(function(){
+    $('#search-box').val('Funeral Assistance');
+    helper.setQuery('Funeral Assistance').search();
+  });
+  $('.catering').click(function(){
+    $('#search-box').val('Catering');
+    helper.setQuery('Catering').search();
+  });
+  $('.music').click(function(){
+    $('#search-box').val('Musicians & Bands');
+    helper.setQuery('Musicians & Bands').search();
+  });
+  $('.photographers').click(function(){
+    $('#search-box').val('Photographers');
+    helper.setQuery('Photographers').search();
+  });
+  $('.removals').click(function(){
+    $('#search-box').val('Movers & Removalists');
+    helper.setQuery('Movers & Removalists').search();
+  });
+  $('.foodtruck').click(function(){
+    $('#search-box').val('Foodtruck');
+    helper.setQuery('Foodtruck').search();
+  });
+
   $('.search-buttons .btn').click(function(){
     helper.setQuery($('#search-box').val()).search();
     $('.overthefold').addClass('searched');
     $(this).hide();
+  });
+
+  $('.front-icon').click(function(){
+    $('.overthefold').addClass('searched');
   });
 
   $('#search-box').on('keyup', function() {
