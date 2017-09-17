@@ -386,6 +386,7 @@ function inventshift_supplier_description($item) {
  * Inventshift Search summary.
  */
 function inventshift_search_summary($item) {
+
   $node = $item;
   $short = '';
   if(isset($node->body)){
@@ -541,20 +542,31 @@ function inventshift_front_page_search_form_submit($form, &$form_state) {
  */
 function inventshift_optimized_image($item) {
   $number = 0;
-
-  $images = array();
-  if (isset($item->field_product_image['und'][0]['fid'])) {
-    foreach($item->field_product_image['und'] as $delta => $row){
-      $number ++;
-      $imageUrl = image_style_url('logo_list', $row['uri']);
-      $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
-      $images[$number] = $imageUrl;
+  if ($item->type == 'product') {
+    $images = array();
+    if (isset($item->field_product_image['und'][0]['fid'])) {
+      foreach ($item->field_product_image['und'] as $delta => $row) {
+        $number++;
+        $imageUrl = image_style_url('logo_list', $row['uri']);
+        $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+        $images[$number] = $imageUrl;
+      }
+    }
+    else {
+      $item = node_load($item->field_supplier_id['und'][0]['value']);
+      if (isset($item->field_business_image['und'][0]['fid'])) {
+        foreach ($item->field_business_image['und'] as $delta => $row) {
+          $number++;
+          $imageUrl = image_style_url('logo_list', $row['uri']);
+          $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+          $images[$number] = $imageUrl;
+        }
+      }
     }
   } else {
-    $item = node_load($item->field_supplier_id['und'][0]['value']);
     if (isset($item->field_business_image['und'][0]['fid'])) {
-      foreach($item->field_business_image['und'] as $delta => $row){
-        $number ++;
+      foreach ($item->field_business_image['und'] as $delta => $row) {
+        $number++;
         $imageUrl = image_style_url('logo_list', $row['uri']);
         $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
         $images[$number] = $imageUrl;
@@ -570,23 +582,34 @@ function inventshift_optimized_image($item) {
  */
 function inventshift_optimized_large_image($item) {
   $number = 0;
-
-  $images = array();
-  if (isset($item->field_product_image['und'][0]['fid'])) {
-    foreach($item->field_product_image['und'] as $delta => $row){
-      $number ++;
-      $imageUrl = image_style_url('carousel-front', $row['uri']);
-      $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
-      $images[$number] = $imageUrl;
-    }
-  } else {
-    $item = node_load($item->field_supplier_id['und'][0]['value']);
+  if ($item->type == 'product') {
     if (isset($item->field_business_image['und'][0]['fid'])) {
-      foreach($item->field_business_image['und'] as $delta => $row){
-        $number ++;
+      foreach ($item->field_business_image['und'] as $delta => $row) {
+        $number++;
         $imageUrl = image_style_url('carousel-front', $row['uri']);
         $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
         $images[$number] = $imageUrl;
+      }
+    }
+  } else {
+    $images = array();
+    if (isset($item->field_product_image['und'][0]['fid'])) {
+      foreach ($item->field_product_image['und'] as $delta => $row) {
+        $number++;
+        $imageUrl = image_style_url('carousel-front', $row['uri']);
+        $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+        $images[$number] = $imageUrl;
+      }
+    }
+    else {
+      $item = node_load($item->field_supplier_id['und'][0]['value']);
+      if (isset($item->field_business_image['und'][0]['fid'])) {
+        foreach ($item->field_business_image['und'] as $delta => $row) {
+          $number++;
+          $imageUrl = image_style_url('carousel-front', $row['uri']);
+          $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
+          $images[$number] = $imageUrl;
+        }
       }
     }
   }
@@ -597,11 +620,8 @@ function inventshift_optimized_large_image($item) {
  * Used to return the optimized image
  */
 function inventshift_optimized_header_image($item) {
-
   $number = 0;
-
   $images = array();
-
   if (isset($item->field_organisation_header_image['und'][0]['fid'])) {
     foreach($item->field_organisation_header_image['und'] as $delta => $row){
       $number ++;
