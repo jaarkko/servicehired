@@ -504,17 +504,40 @@
           }
           li.box.open .text {
               width: 100% !important;
+              max-height: 300px;
           }
           li.box.open {
               height: 100% !important;
               width: 100%;
               padding: 0;
           }
+          .open .arrow-right {
+              padding-top: 150px;
+              height: 150px;
+          }
           .open .pricing {
               position: absolute;
               right: 183px;
               bottom: 30px;
               font-size: 24px;
+          }
+          .open .close {
+              position: absolute;
+              top: 15px;
+              left: 15px;
+              font-size: 28px;
+              height: 30px;
+              width: 30px;
+              background: #f04e23;
+              color: white;
+              font-size: 23px;
+              text-align: center;
+              cursor: pointer;
+              border-radius: 50px;
+          }
+          .btn.btn-primary.enquiry {
+              width: 100%;
+              padding: 10px 0px;
           }
           .pricing {
               position: relative !important;
@@ -534,6 +557,9 @@
           }
           .open span.vat {
               text-align: left;
+          }
+          .description {
+              height: 45px;
           }
       }
 
