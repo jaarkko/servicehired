@@ -31,6 +31,20 @@
       h3 {
           font-weight: 400;
       }
+      .open .close {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          font-size: 28px;
+          height: 30px;
+          width: 30px;
+          background: #f04e23;
+          color: white;
+          font-size: 23px;
+          text-align: center;
+          cursor: pointer;
+          border-radius: 50px;
+      }
       .overthefold {
           background:#191F33;
           text-align: center;
@@ -970,7 +984,9 @@
             '<div class="descript">' + hit.venue_summary + '</div>' +
             '<span class="tags"><label>Tags:</label> Coffee cart, peppermint, coffee, cart</span></span>' +
             '<div class="actions">' +
-            '<div class="btn btn-primary enquiry" typeform="">Buy now</div></div></div>' +
+            '<div class="btn btn-primary enquiry" typeform="">Buy now</div></div>' +
+            '<div class="close">x</div>' +
+            '</div>' +
             '</li>';
         } else {
           hit.rating = 0;
