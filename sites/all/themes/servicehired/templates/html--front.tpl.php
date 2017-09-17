@@ -885,7 +885,7 @@
             '<span class="product">'+ hit._highlightResult.business_name.value +'</span>' +
             '</div>' +
             '</div>' +
-            '<div class="description"><span class="price">'+ hit.price +'</span> <span class="currency">'+ hit.currency +'</span> ' + hit.venue_summary + '' +
+            '<div class="description"><span class="price">'+ hit.field_product_price +'</span> <span class="currency">'+ hit.currency +'</span> ' + hit.venue_summary + '' +
             '<div class="actions"><a href="' + '"><div class="btn btn-info portfolio">Portfolio & More information</div></a>' +
             '<div class="btn btn-primary enquiry" typeform="">Quick Enquiry</div></div></div>' +
             '</li>';
