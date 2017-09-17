@@ -933,6 +933,12 @@
     $(this).addClass('active');
   });
 
+  $('.arrow-right').click(function(){
+    var parent = $(this).closest('.text');
+    var image = parent.attr('secondimage');
+    parent.attr('style','background-image:url('+image'+) !important');
+  });
+
   $('.businesses').click(function(){
     $('.active').removeClass('active');
     $('.icons').addClass('hidden');
@@ -943,6 +949,13 @@
     $('.icons').addClass('hidden');
     $('.active').removeClass('active');
     $(this).addClass('active');
+  });
+
+  // Arrow right.
+  $('.arrow-right').click(function(){
+    var parent = $(this).closest('.text');
+    var image = parent.attr('secondimage');
+    parent.attr('style','background-image:url('+image+') !important');
   });
 
   // Start with results near your IP.
