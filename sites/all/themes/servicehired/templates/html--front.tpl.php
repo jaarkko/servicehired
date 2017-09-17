@@ -449,17 +449,39 @@
 
   </div>
     <div class="icons row hidden">
-        <div class="front-icon catering"></div>
-        <div class="front-icon music"></div>
-        <div class="front-icon photographers"></div>
-        <div class="front-icon removals"></div>
-        <div class="front-icon foodtruck"></div>
-        <div class="front-icon plumber"></div>
-        <div class="front-icon petcare"></div>
-        <div class="front-icon cleaning"></div>
-        <div class="front-icon entertainment"></div>
-        <div class="front-icon florist"></div>
-        <div class="front-icon funerals"></div>
+        <div class="front-icon catering">
+            <div class="tooltiptext">Catering</div>
+        </div>
+        <div class="front-icon music">
+            <div class="tooltiptext">Musicians & Bands</div>
+        </div>
+        <div class="front-icon photographers">
+            <div class="tooltiptext">Photographers</div>
+        </div>
+        <div class="front-icon removals">
+            <div class="tooltiptext">Movers & Removalists</div>
+        </div>
+        <div class="front-icon foodtruck">
+            <div class="tooltiptext">Food trucks</div>
+        </div>
+        <div class="front-icon plumber">
+            <div class="tooltiptext">Plumbers</div>
+        </div>
+        <div class="front-icon petcare">
+            <div class="tooltiptext">Pet Care & Pet Boarding</div>
+        </div>
+        <div class="front-icon cleaning">
+            <div class="tooltiptext">Cleaning</div>
+        </div>
+        <div class="front-icon entertainment">
+            <div class="tooltiptext">Entertainers</div>
+        </div>
+        <div class="front-icon florist">
+            <div class="tooltiptext">Florists</div>
+        </div>
+        <div class="front-icon funerals">
+            <div class="tooltiptext">Funeral Assistance</div>
+        </div>
     </div>
   <!-- HTML Markup -->
   <div class="two-boxes">
