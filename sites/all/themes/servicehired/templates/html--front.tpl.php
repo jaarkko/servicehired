@@ -320,12 +320,12 @@
   <h2>Find, compare and book local services anywhere.</h2>
   <div class="selection-category">
     <ul>
-      <li class="active">
-        <a href="#">Packages</a>
-      </li>
       <li>
         <a href="#">Businesses</a>
       </li>
+        <li class="active">
+            <a href="#">Packages</a>
+        </li>
       <li>
         <a href="#">Categories</a>
       </li>
@@ -752,12 +752,11 @@
   //Config
   var applicationID = 'N4C3NC4744';
   var apiKey = 'fda98971857f13213af8ee5654b5f47e';
-  var index = 'Multiindex';
+  var index = 'Package';
 
   var client = algoliasearch(applicationID, apiKey);
   var helper = algoliasearchHelper(client, index, {
     hitsPerPage: 12,
-    facets: ['field_organisation_type'],
   });
 
   initialize2(helper);
@@ -766,19 +765,16 @@
   $('.socent').click(function(){
     $('.active').removeClass('active');
     $(this).addClass('active');
-    helper.setIndex('Multiindex').addFacetRefinement('field_organisation_type', 'Social Enterprise').search();
   });
 
   $('.businesses').click(function(){
     $('.active').removeClass('active');
     $(this).addClass('active');
-    helper.setIndex('Multiindex').removeFacetRefinement('field_organisation_type', 'Social Enterprise').search();
   });
 
   $('.packages').click(function(){
     $('.active').removeClass('active');
     $(this).addClass('active');
-    helper.setIndex('products').clearRefinements().search();
   });
 
   // Start with results near your IP.
@@ -894,7 +890,7 @@
           i++;
           return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
-            '<div style="background-image:url(https://inventshift.com/' + hit.optimized_square_image[1] + ') !important" class="text">' +
+            '<div style="background-image:url(https://inventshift.com/' + hit.optimized_image[1] + ') !important" class="text">' +
             '<div class="inside">' + hit._highlightResult.title.value +
             '</div>' +
             '</div>' +
@@ -956,21 +952,17 @@
   //Config
   var otherapplicationID = 'N4C3NC4744';
   var otherapiKey = 'fda98971857f13213af8ee5654b5f47e';
-  var otherindex = 'Multiindex';
+  var otherindex = 'Package';
   var radius = '100000';
 
   var otherclient = algoliasearch(otherapplicationID, otherapiKey);
   var otherhelper = algoliasearchHelper(otherclient, otherindex, {
-    hitsPerPage: 8,
-    disjunctiveFacets: ['field_organisation_directories']
+    hitsPerPage: 8
   });
 
   // Start with results near your IP.
   otherhelper.setQueryParameter('aroundLatLngViaIP', true);
   otherhelper.setQueryParameter('aroundRadius', radius);
-
-  otherhelper.addDisjunctiveFacetRefinement('field_organisation_directories', '0');
-  otherhelper.addDisjunctiveFacetRefinement('field_organisation_directories', '1');
 
   otherhelper.on('result', function(content) {
     console.log(content);
@@ -1004,7 +996,7 @@
         i ++;
         var hexArray = ['#FFB91A','#F34D10','#00BED1', '#0098AE', '#0098AE', '#191F2F'];
         var randomColor = hexArray[Math.floor(Math.random() * hexArray.length)];
-        return '<a href="'+hit.url+'"><li class="box col-xs-6 '+getSizeSecond(i)+'"><div style="background-image:url(https://inventshift.com/'+hit.optimized_square_image[1]+') !important" class="text"><div class="inside">' + hit._highlightResult.title.value + '</div></div></li></a>';
+        return '<a href="'+hit.url+'"><li class="box col-xs-6 '+getSizeSecond(i)+'"><div style="background-image:url('+hit.optimized_image[1]+') !important" class="text"><div class="inside">' + hit._highlightResult.title.value + '</div></div></li></a>';
       });
     });
   }
