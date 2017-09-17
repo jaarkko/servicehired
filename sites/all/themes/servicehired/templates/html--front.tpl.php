@@ -163,14 +163,15 @@
           color: white;
           cursor: pointer;
       }
-      span.product {
-          font-size: 1em;
-      }
+
       span.business, span.product {
           font-size: 0.7em;
           clear: both;
           width: 100%;
           display: block;
+      }
+      span.product {
+          font-size: 1em;
       }
       .price {
           float: left;
@@ -360,6 +361,9 @@
       span.tags {
           display: block;
           padding: 1em 0;
+      }
+      span.tags label {
+          font-weight: bold;
       }
   </style>
 </head>
@@ -911,7 +915,7 @@
             '<div style="background-image:url(' + hit.optimized_image[1] + ') !important" class="text">' +
             '<div class="inside">' +
             '<span class="product">'+ hit._highlightResult.title.value +'</span>' +
-            '<span class="product">'+ hit._highlightResult.business_name.value +'</span>' +
+            '<span class="business">'+ hit._highlightResult.business_name.value +'</span>' +
             '</div>' +
             '</div>' +
             '<div class="description">' +
