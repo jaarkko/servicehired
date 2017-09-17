@@ -1027,7 +1027,7 @@
 
           return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
-            '<div style="background-image:url(' + hit.optimized_large_image[1] + ') !important" secondimage="' + hit.optimized_large_image[2] + '" thirdimage="' + hit.optimized_large_image[3] + '" class="text">' +
+            '<div style="background-image:url(' + hit.optimized_large_image[1] + ') !important" firstimage="' + hit.optimized_large_image[1] + '" secondimage="' + hit.optimized_large_image[2] + '" thirdimage="' + hit.optimized_large_image[3] + '" class="text">' +
             '<div class="arrow-left">&lt;</div>' +
             '<div class="arrow-right">&gt;</div>' +
             '<div class="inside">' +
@@ -1110,8 +1110,15 @@
     // Arrow right.
     $('.arrow-right').click(function(){
       var parent = $(this).closest('.text');
-      var image = parent.attr('secondimage');
-      parent.attr('style','background-image:url('+image+') !important');
+      if(!$(this).hasClass('first')){
+        $(this).addClass('first');
+        var image = parent.attr('secondimage');
+        parent.attr('style','background-image:url('+image+') !important');
+      } else {
+        $(this).removeClass('first');
+        var image = parent.attr('firstimage');
+        parent.attr('style','background-image:url('+image+') !important');
+      }
     });
   }
 
