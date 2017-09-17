@@ -385,3 +385,6 @@ p.in_and_around_subtext {
 .front-icon:hover .tooltiptext {
   display: block;
 }
+.open .descript {
+  line-height: 1.5;
+}
