@@ -319,6 +319,12 @@ function inventshift_currency($item) {
       break;
     case 'US':
       break;
+    case 'GB':
+      $currency = '£';
+      break;
+    case 'UK':
+      $currency = '£';
+      break;
     case 'FI':
       $currency = '€';
       break;
