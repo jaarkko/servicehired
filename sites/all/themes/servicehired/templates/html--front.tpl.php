@@ -475,6 +475,14 @@
       span.tags label {
           font-weight: bold;
       }
+      .col-sm-8 ul, .trademark {
+          margin: 0;
+          font-size: 12px !important;
+      }
+      .region-footer ul li:first-child {
+          font-size: 1em;
+          padding-bottom: 1em;
+      }
       @media all and (max-width: 768px) {
           a.listyourbusiness {
               display: none;
