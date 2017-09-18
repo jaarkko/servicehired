@@ -897,27 +897,30 @@
                     </div>
                     <div class="col-sm-3 col-sm-offset-1">
                         <ul>
-                            <li> Marketplace</li>
+                            <li> Company</li>
                             <li></li>
-                            <li><a href="/packages-and-pricing">Pricing</a></li>
-                            <li><a href="/about-us">About Us and Team</a></li>
+                            <li><a href="/about-us">About Us</a></li>
+                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/press">Press & Media</a></li>
+                            <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-3">
                         <ul>
-                            <li> Resources</li>
-                            <li><a href="/social-enterprise-jobs">Social enterprise jobs</a></li>
-
-
+                            <li> Finding a service</li>
+                            <li><a href="/social-enterprise-jobs">How it works</a></li>
+                            <li><a href="/social-enterprise-jobs">Browse suppliers</a></li>
+                            <li><a href="/social-enterprise-jobs">Sustainable business</a></li>
                             <li><a href="/contact-us">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-2">
                         <ul>
-                            <li> Fund</li>
-                            <li><a href="/social-enterprise-fund">What is it?</a></li>
-
-                            <li><a href="/social-enterprise-fund">Charities</a></li>
+                            <li> Finding customers</li>
+                            <li><a href="/social-enterprise-jobs">List your business</a></li>
+                            <li><a href="/social-enterprise-jobs">How it works</a></li>
+                            <li><a href="/social-enterprise-jobs">Tools for business</a></li>
+                            <li><a href="/social-enterprise-jobs">Sustainable business</a></li>
                         </ul>
                     </div>
                 </div>
