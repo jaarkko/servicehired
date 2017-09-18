@@ -896,13 +896,13 @@
         <section id="block-block-1" class="block block-block clearfix">
             <div class="footer-width">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-sm-offset-1">
                         <ul>
                             <li class="footer-logo"><img class="ft-logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png">ServiceHired</li>
                             <li class="small">ServiceHired makes booking services online simple. Find, compare and book. Simple as that.</li>
                         </ul>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <ul>
                             <li> Finding a service</li>
                             <li><a href="/social-enterprise-jobs">How it works</a></li>
@@ -920,7 +920,7 @@
                             <li><a href="/social-enterprise-jobs">Sustainable business</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-3 col-sm-offset-1">
+                    <div class="col-sm-2">
                         <ul>
                             <li> Company</li>
                             <li></li>
