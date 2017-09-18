@@ -21,6 +21,17 @@
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-76@2x.png" sizes="152x152" />
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-60@3x.png" sizes="180x180" />
   <style>
+      footer li a {
+          text-decoration: none;
+          font-size: 0.8em !important;
+      }
+      li.small {
+          font-size: 13px;
+          font-weight: lighter;
+      }
+      .col-sm-3:first-child {
+          padding: 15px 0;
+      }
       body {
           font-family: 'Rubik', sans-serif;
       }
