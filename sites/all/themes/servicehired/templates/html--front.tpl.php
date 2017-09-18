@@ -465,6 +465,9 @@
           color: white;
           border-radius: 5px;
       }
+      .region-footer .col-sm-8 ul li:first-child {
+          display: none;
+      }
       span.tags {
           display: block;
           padding: 1em 0;
@@ -935,12 +938,7 @@
                         </ul>
                     </div>
                     <div class="col-sm-4">
-                        <div class="social text-right"><a target="_blank" href="https://www.facebook.com/inventshift/"><i class=" fa fa-facebook"></i></a>
-                            <a target="_blank" href="https://twitter.com/inventshift_"><i class="fa fa-twitter"></i></a>
-                            <a target="_blank" href="https://www.instagram.com/inventshift/"><i class="fa fa-instagram"></i></a>
-                            <a target="_blank" href="https://www.youtube.com/channel/UCr5fTxF0qprW61P8sBetZ4Q"><i class="fa fa-youtube-play"></i></a>
-                            <a target="_blank" href="https://www.linkedin.com/company-beta/12900724/"><i class="fa fa-linkedin"></i></a>
-                        </div><p class="trademark">Copyright © 2017 Inventshift<br><span class="rights">All rights reserved</span></p>
+                        <p class="trademark">Copyright © 2017 Inventshift<br><span class="rights">All rights reserved</span></p>
                     </div>
                 </div>
             </div>
