@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google-site-verification" content="bEFC0Jbc6hIVdp6QtiZOAdiExxTG_f_4IN5L8K06wFo" />
     <title>ServiceHired - Find, compare and book local services</title>
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/ldpi.png" sizes="32x32" />
