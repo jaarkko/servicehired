@@ -902,16 +902,6 @@
                             <li class="small">ServiceHired makes booking services online simple. Find, compare and book. Simple as that.</li>
                         </ul>
                     </div>
-                    <div class="col-sm-3 col-sm-offset-1">
-                        <ul>
-                            <li> Company</li>
-                            <li></li>
-                            <li><a href="/about-us">About Us</a></li>
-                            <li><a href="/faq">FAQ</a></li>
-                            <li><a href="/press">Press & Media</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                        </ul>
-                    </div>
                     <div class="col-sm-3">
                         <ul>
                             <li> Finding a service</li>
@@ -928,6 +918,16 @@
                             <li><a href="/social-enterprise-jobs">How it works</a></li>
                             <li><a href="/social-enterprise-jobs">Tools for business</a></li>
                             <li><a href="/social-enterprise-jobs">Sustainable business</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <ul>
+                            <li> Company</li>
+                            <li></li>
+                            <li><a href="/about-us">About Us</a></li>
+                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/press">Press & Media</a></li>
+                            <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
