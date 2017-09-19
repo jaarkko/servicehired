@@ -571,6 +571,7 @@ a.name.navbar-brand {
 
 .checkout .buy {
   display: block;
+  height: auto !important;
 }
 
 .checkout #searchinsides {
@@ -588,7 +589,7 @@ a.name.navbar-brand {
 .checkout li.box.open .text {
   width: 100%;
   height: 490px;
-  height: 50vh;
+  height: 35vh;
 }
 
 .checkout .open .description {
