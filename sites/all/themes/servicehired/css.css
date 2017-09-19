@@ -556,7 +556,8 @@ a.name.navbar-brand {
   color: white;
 }
 
-.checkout .two-boxes, .checkout .selection-category, .checkout .icons, .checkout .close {
+.checkout .two-boxes, .checkout .selection-category, .checkout .icons, .checkout .close,
+.checkout .showing, .checkout .cities {
   display: none;
 }
 
