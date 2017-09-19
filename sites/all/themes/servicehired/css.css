@@ -107,6 +107,9 @@ li.done {
 .stripeform button:active {
   background: #E17422;
 }
+.stripeform h4 {
+  margin-bottom: 0.5em;
+}
 
 .stripeform .outcome {
   float: left;
