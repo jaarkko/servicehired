@@ -1270,6 +1270,7 @@
     });
 
     $('.enquiry').click(function(){
+      console.log('here');
       var parent = $(this).closest('.box');
       parent.addClass('buy');
       $('body').addClass('checkout');
