@@ -1312,6 +1312,9 @@
       parent.addClass('buy');
       $('body').addClass('checkout');
       $('.overthefold').addClass('searched');
+      $('html, body').animate({
+        scrollTop: $('body').offset().top - 15
+      }, 50);
     });
     /** Typeform click.
     $('.types .box .enquiry').click(function(){
