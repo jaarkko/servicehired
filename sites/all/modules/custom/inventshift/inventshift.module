@@ -4,6 +4,8 @@
  * Code for the Inventshift Core feature.
  */
 
+
+
 // Core info alter.
 function inventshift_entity_property_info_alter(&$info) {
   $properties = &$info['node']['bundles']['organisation']['properties'];
@@ -570,8 +572,8 @@ function inventshift_optimized_image($item) {
     }
     else {
       $item = node_load($item->field_supplier_id['und'][0]['value']);
-      if (isset($item->field_business_image['und'][0]['fid'])) {
-        foreach ($item->field_business_image['und'] as $delta => $row) {
+      if (isset($item->field_business_profile_image['und'][0]['fid'])) {
+        foreach ($item->field_business_profile_image['und'] as $delta => $row) {
           $number++;
           $imageUrl = image_style_url('logo_list', $row['uri']);
           $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
@@ -580,8 +582,8 @@ function inventshift_optimized_image($item) {
       }
     }
   } else {
-    if (isset($item->field_business_image['und'][0]['fid'])) {
-      foreach ($item->field_business_image['und'] as $delta => $row) {
+    if (isset($item->field_business_profile_image['und'][0]['fid'])) {
+      foreach ($item->field_business_profile_image['und'] as $delta => $row) {
         $number++;
         $imageUrl = image_style_url('logo_list', $row['uri']);
         $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
@@ -610,8 +612,8 @@ function inventshift_optimized_large_image($item) {
     }
     else {
       $item = node_load($item->field_supplier_id['und'][0]['value']);
-      if (isset($item->field_business_image['und'][0]['fid'])) {
-        foreach ($item->field_business_image['und'] as $delta => $row) {
+      if (isset($item->field_business_profile_image['und'][0]['fid'])) {
+        foreach ($item->field_business_profile_image['und'] as $delta => $row) {
           $number++;
           $imageUrl = image_style_url('carousel-front', $row['uri']);
           $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
@@ -620,8 +622,8 @@ function inventshift_optimized_large_image($item) {
       }
     }
   } else {
-    if (isset($item->field_business_image['und'][0]['fid'])) {
-      foreach ($item->field_business_image['und'] as $delta => $row) {
+    if (isset($item->field_business_profile_image['und'][0]['fid'])) {
+      foreach ($item->field_business_profile_image['und'] as $delta => $row) {
         $number++;
         $imageUrl = image_style_url('carousel-front', $row['uri']);
         $imageUrl = substr($imageUrl, stripos($imageUrl, '/site'));
