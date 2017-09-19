@@ -80,7 +80,7 @@ span.rights {
 .region-footer ul li:first-child {
   color: #FFB91A;
   font-size: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 10px;
 }
 
 .region-footer ul li:first-child.footer-logo {

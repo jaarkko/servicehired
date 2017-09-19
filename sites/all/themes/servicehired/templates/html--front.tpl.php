@@ -942,13 +942,10 @@
                         </ul>
                     </div>
                     <div class="col-sm-4">
-                        <p class="trademark">Copyright © 2017 Inventshift<br><span class="rights">All rights reserved</span></p>
+                        <p class="trademark">Copyright © 2017 ServiceHired<br><span class="rights">All rights reserved</span></p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="block-block-11" class="block block-block clearfix">
-            <div class="hidden">www.inventshift.com</div>
         </section>
     </div>
 </footer>
