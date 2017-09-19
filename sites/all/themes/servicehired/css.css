@@ -156,6 +156,10 @@ footer {
   background-position: 50% 80%;
   color: white;
 }
+.done:hover {
+  background: #088b9f !important;
+  cursor: pointer;
+}
 footer a {
   color: #ffffff;
 }
