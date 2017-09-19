@@ -52,6 +52,10 @@
   margin-bottom: 0;
 }
 
+li.future {
+  border: none !important;
+}
+
 .breadcrumb {
   padding: 0;
   margin: 5px 15px 15px 15px;
@@ -62,8 +66,10 @@
 
 li.done {
   background: #fdb834;
+  color: white;
+  border-radius: 0 0px 16px 0;
+  padding-right: 10px !important;
 }
-
 .breadcrumb ul li {
   list-style: none;
   display: inline-block;
@@ -585,6 +591,7 @@ a.name.navbar-brand {
   width: 50%;
   float: left;
 }
+
 
 .checkout .stripeform {
   display: block ;

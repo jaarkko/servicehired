@@ -693,8 +693,8 @@
 <div class="marketing row">
     <div class="breadcrumb"><ul>
             <li class="done">Search </li>
-            <li class="future">Add your details</li>
-            <li class="future">Manage your request</li>
+            <li class="future servicebread">Choose a service</li>
+            <li class="future checkoutbread hidden">Add details to continue</li>
         </ul></div>
     <div class="types">
         <ul id="searchinsides" class="">
@@ -1312,6 +1312,8 @@
       parent.addClass('buy');
       $('body').addClass('checkout');
       $('.overthefold').addClass('searched');
+      $('.checkoutbread').removeClass('hidden');
+      $('.servicebread').removeClass('future');
       $('html, body').animate({
         scrollTop: $('body').offset().top - 15
       }, 50);
