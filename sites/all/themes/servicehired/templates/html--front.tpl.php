@@ -1304,7 +1304,7 @@
     });
   }
 
-  $('.searchbread').click(function(){
+  $('.searchbread, .servicebread').click(function(){
     $('.buy').removeClass('buy');
     $('body').removeClass('checkout');
     $('.overthefold').removeClass('searched');
