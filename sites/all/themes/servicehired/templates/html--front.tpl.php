@@ -1260,21 +1260,13 @@
 
     });
 
-    initTypeform();
+    initAction();
     initBoxes();
   }
 
   function initBoxes() {
     $('.close').click(function(){
       $('.open').removeClass('open');
-    });
-
-    $('.enquiry').click(function(){
-      console.log('here');
-      var parent = $(this).closest('.box');
-      parent.addClass('buy');
-      $('body').addClass('checkout');
-      $('.overthefold').addClass('searched');
     });
 
     $('.types .box').click(function(){
@@ -1313,7 +1305,15 @@
   }
 
 
-  function initTypeform(){
+  function initAction(){
+    $('.box .enquiry').click(function(){
+      console.log('here');
+      var parent = $(this).closest('.box');
+      parent.addClass('buy');
+      $('body').addClass('checkout');
+      $('.overthefold').addClass('searched');
+    });
+    /** Typeform click.
     $('.types .box .enquiry').click(function(){
       var typeform = $(this).attr('typeform');
       console.log(typeform);
@@ -1327,6 +1327,7 @@
         }
       )
     });
+     */
   }
 
 
