@@ -694,7 +694,7 @@
     <div class="breadcrumb"><ul>
             <li class="done">Search </li>
             <li class="future">Add your details</li>
-            <li class="future">>Manage your request</li>
+            <li class="future">Manage your request</li>
         </ul></div>
     <div class="types">
         <ul id="searchinsides" class="">
