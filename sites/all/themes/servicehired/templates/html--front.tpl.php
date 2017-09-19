@@ -1314,6 +1314,8 @@
       $('.overthefold').addClass('searched');
       $('.checkoutbread').removeClass('hidden');
       $('.servicebread').removeClass('future');
+      $('.servicebread').addClass('done');
+
       $('html, body').animate({
         scrollTop: $('body').offset().top - 15
       }, 50);
