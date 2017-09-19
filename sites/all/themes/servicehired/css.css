@@ -1,8 +1,8 @@
 .stripeform label {
   position: relative;
   font-weight: 400;
-  height: 48px;
-  line-height: 48px;
+  height: 40px;
+  line-height: 40px;
   margin-bottom: 10px;
   display: block;
 }
@@ -10,7 +10,12 @@
 .stripeform label > span {
   float: left;
 }
-
+.stripeform p {
+  font-size: 0.9em;
+}
+.stripeform h2 {
+  margin-top: 2px;
+}
 .stripeform .field {
   background: white;
   box-sizing: border-box;
@@ -49,7 +54,7 @@
 
 .breadcrumb {
   padding: 0;
-  margin: 0 15px;
+  margin: 5px 15px 15px 15px;
   float: left;
   clear: both;
   min-width: 70%;
