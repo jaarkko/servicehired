@@ -1269,6 +1269,13 @@
       $('.open').removeClass('open');
     });
 
+    $('.enquiry').click(function(){
+      var parent = $(this).closest('.box');
+      parent.addClass('buy');
+      $('body').addClass('checkout');
+      $('.overthefold').addClass('searched');
+    });
+
     $('.types .box').click(function(){
       if(!$(this).hasClass('open')){
         $('.open').removeClass('open');
