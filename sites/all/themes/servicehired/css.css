@@ -55,7 +55,7 @@
   min-width: 70%;
 }
 
-li.done.active {
+li.done {
   background: #fdb834;
 }
 
