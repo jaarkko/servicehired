@@ -691,9 +691,58 @@
   </div>
 </div>
 <div class="marketing row">
+    <div class="breadcrumb"><ul>
+            <li class="done">Search </li>
+            <li class="future">Add your details</li>
+            <li class="future">>Manage your request</li>
+        </ul></div>
     <div class="types">
         <ul id="searchinsides" class="">
         </ul>
+        <form class="stripeform hidden">
+            <h2>Add your details to continue </h2>
+            <p> Making a booking does not tie you to anything. We just send your quote to the supplier, and you will get a full refund if they are not able to confirm your timing. </p>
+            <h4> Your details</h4>
+            <label>
+                <span>Name</span>
+                <input name="cardholder-name" class="field" placeholder="Jane Doe">
+            </label>
+            <label>
+                <span>Name</span>
+                <input name="cardholder-name" class="field" placeholder="Jane Doe">
+            </label>
+            <label>
+                <span>Name</span>
+                <input name="cardholder-name" class="field" placeholder="Jane Doe">
+            </label>
+            <label>
+                <span>Name</span>
+                <input name="cardholder-name" class="field" placeholder="Jane Doe">
+            </label>
+            <h4> Billing details</h4>
+            <label>
+                <span>Phone</span>
+                <input class="field" placeholder="(123) 456-7890" type="tel">
+            </label>
+            <label>
+                <span>ZIP code</span>
+                <input name="address-zip" class="field" placeholder="94110">
+            </label>
+            <label>
+                <span>Card</span>
+                <div id="card-element" class="field"></div>
+            </label>
+            <button type="submit">Make a booking request</button>
+            <div class="text-center small">
+                You wont be charged yet.
+            </div>
+            <div class="outcome">
+                <div class="error" role="alert"></div>
+                <div class="success">
+                    Success! Your Stripe token is <span class="token"></span>
+                </div>
+            </div>
+        </form>
     </div>
     <div class="suppliers">
 
