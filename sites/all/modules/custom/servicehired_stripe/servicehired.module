@@ -33,10 +33,16 @@ function create_customer($first_name, $last_name, $token, $email) {
 
       user_save(NULL, $new_user);
 
+      global $user;
+
+      if($user = user_load(array('uid' => $new_user->uid))){
+        drupal_set_message('Welcome '.$user->name.'!');
+      } else {
+        drupal_set_message('Sorry, you dont have an account.');
+      }
     }
     else {
       // User already exists.
-
     }
   }
 }
