@@ -729,6 +729,10 @@
                 <span>ZIP code</span>
                 <input name="address-zip" class="field" placeholder="94110">
             </label>
+            <label class="hidden">
+                <span>Token</span>
+                <input class="token" name="token" placeholder="94110">
+            </label>
             <label>
                 <span>Card</span>
                 <div id="card-element" class="field"></div>
@@ -1510,6 +1514,8 @@
     if (result.token) {
       // Use the token to create a charge or a customer
       // https://stripe.com/docs/charges
+
+      $('.token').val(result.token.id);
       successElement.querySelector('.token').textContent = result.token.id;
       successElement.classList.add('visible');
 
