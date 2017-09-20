@@ -1526,7 +1526,7 @@
     e.preventDefault();
     var form = document.querySelector('form');
     var extraDetails = {
-      name: form.querySelector('input[name=cardholder-name]').value,
+      name: form.querySelector('input[name=cardholder-first-name]').value,
       address_zip: form.querySelector('input[name=address-zip]').value
     };
     stripe.createToken(card, extraDetails).then(setOutcome);
