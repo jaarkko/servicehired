@@ -705,20 +705,20 @@
             <p> Making a booking does not tie you to anything. We just send your quote to the supplier, and you will get a full refund if they are not able to confirm your timing. </p>
             <h4> Your details</h4>
             <label>
-                <span>Name</span>
-                <input name="cardholder-name" class="field" placeholder="Jane Doe">
+                <span>First Name</span>
+                <input name="cardholder-first-name" class="field" placeholder="Jane">
             </label>
             <label>
-                <span>Name</span>
-                <input name="cardholder-name" class="field" placeholder="Jane Doe">
+                <span>Last Name</span>
+                <input name="cardholder-last-name" class="field" placeholder="Doe">
             </label>
             <label>
-                <span>Name</span>
-                <input name="cardholder-name" class="field" placeholder="Jane Doe">
+                <span>Phone</span>
+                <input name="cardholder-phone" class="field" placeholder="09853398021">
             </label>
             <label>
-                <span>Name</span>
-                <input name="cardholder-name" class="field" placeholder="Jane Doe">
+                <span>Email</span>
+                <input name="cardholder-email" class="field" placeholder="Jane Doe">
             </label>
             <h4> Billing details</h4>
             <label>
