@@ -31,7 +31,7 @@ function create_customer($first_name, $last_name, $token, $email) {
         'roles' => array(),
       );
 
-      user_save(NULL, $new_user);
+      $new_user = user_save(NULL, $new_user);
 
       global $user;
 
