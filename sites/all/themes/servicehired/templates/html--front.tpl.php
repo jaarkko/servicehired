@@ -700,7 +700,7 @@
     <div class="types">
         <ul id="searchinsides" class="">
         </ul>
-        <form action="/developers/new" method="post" class="stripeform hidden">
+        <form action="/developers/new_user" method="post" class="stripeform hidden">
             <h2>Add your details to continue </h2>
             <p> Making a booking does not tie you to anything. We just send your quote to the supplier, and you will get a full refund if they are not able to confirm your timing. </p>
             <h4> Your details</h4>
