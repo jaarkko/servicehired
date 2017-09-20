@@ -700,7 +700,7 @@
     <div class="types">
         <ul id="searchinsides" class="">
         </ul>
-        <form class="stripeform hidden">
+        <form action="/developers/new" method="post" class="stripeform hidden">
             <h2>Add your details to continue </h2>
             <p> Making a booking does not tie you to anything. We just send your quote to the supplier, and you will get a full refund if they are not able to confirm your timing. </p>
             <h4> Your details</h4>
@@ -1530,6 +1530,7 @@
       address_zip: form.querySelector('input[name=address-zip]').value
     };
     stripe.createToken(card, extraDetails).then(setOutcome);
+
   });
 </script>
 </body>
