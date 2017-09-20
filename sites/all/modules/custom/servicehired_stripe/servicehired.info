@@ -1,0 +1,5 @@
+name = Servicehired
+description = Custom module
+core = 7.x
+
+dependencies[] = libraries
