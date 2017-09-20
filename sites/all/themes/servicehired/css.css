@@ -131,7 +131,7 @@ li.done {
   text-align: center;
 }
 
-.stripeform .success, .error {
+.stripeform .success, .stripeform .error {
   display: none;
   font-size: 13px;
 }
@@ -139,8 +139,6 @@ li.done {
 .stripeform .success.visible, .error.visible {
   display: inline;
 }
-
-
 
 .front footer {
   margin-top: 0 !important;
