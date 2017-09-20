@@ -1,12 +1,16 @@
 <?php
 
 // This function removes line items.
-function inventshift_order_create() {
+function servicehired_order_create() {
 
   // Get data from ajax post.
   $postdata = file_get_contents("php://input");
   // Decode data.
 
-  ddl($postdata);
+  dsm($postdata);
+
+  //create_customer($first_name, $last_name, $token, $email);
+
+  //ddl($postdata);
 }
 
