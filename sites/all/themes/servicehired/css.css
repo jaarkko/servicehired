@@ -139,7 +139,9 @@ li.done {
 .stripeform .success.visible, .error.visible {
   display: inline;
 }
-
+label.hidden {
+  display: none;
+}
 .front footer {
   margin-top: 0 !important;
 }
