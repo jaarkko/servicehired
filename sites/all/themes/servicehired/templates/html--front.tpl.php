@@ -1284,13 +1284,13 @@
 
         var nid = $(this).find('.dataid').text();
 
-        if (!$(this).hasClass('added')) {
+        /*if (!$(this).hasClass('added')) {
           $.get('/developers/api/getdata/' + nid).done(function (data) {
             for (var i = 0, len = data.length; i < len; i++) {
               $('.box-' + nid + ' ul.tags').append('<li>' + data[i] + '</li>');
             }
           });
-        }
+        }*/
         $(this).addClass('added');
       }
     });
