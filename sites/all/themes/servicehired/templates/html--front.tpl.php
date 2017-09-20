@@ -1479,7 +1479,7 @@
 
   helper.search();
 
-  var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+  var stripe = Stripe('pk_test_37TKfr9SUQ8MF3qxotmJaa4f');
   var elements = stripe.elements();
 
   var card = elements.create('card', {
