@@ -82,16 +82,16 @@
     <div class="bottom-menu">
         <ul>
             <li>
-                <a href="#">About us</a>
+                <a href="#">Orders</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="#">Account</a>
             </li>
             <li>
-                <a href="#">Join as a business</a>
+                <a href="#">Billing</a>
             </li>
             <li>
-                <a href="#">Inventshift fund</a>
+                <a href="#">Contributions</a>
             </li>
         </ul>
     </div>
@@ -100,7 +100,6 @@
             <a href="https://www.inventshift.com/blog">Blog</a>
         </div>
         <div class="rightmenu">
-            <a class="listyourbusiness" href="/list-your-business">List your business</a>
             <a href="/user">Sign In</a>
         </div>
     </div>
