@@ -1,0 +1,17 @@
+
+<?php
+/**
+ * Implements hook_menu
+ */
+function inventshift_api_menu() {
+
+  // Creates orders.
+  $items['developers/new_user'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' => 'inventshift_order_create',
+    'file' => 'includes/inventshift_order.rest.inc',
+    'access arguments' => array('access content')
+  );
+
+  return $items;
+}
