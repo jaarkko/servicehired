@@ -733,6 +733,10 @@
                 <span>Token</span>
                 <input class="token" name="token" placeholder="94110">
             </label>
+            <label class="hidden">
+                <span>Package</span>
+                <input class="package" name="package" placeholder="94110">
+            </label>
             <label>
                 <span>Card</span>
                 <div id="card-element" class="field"></div>
@@ -1321,9 +1325,7 @@
       scrollTop: $('body').offset().top - 15
     }, 50);
   });
-  function initAction(
-
-  ){
+  function initAction(){
     $('.box .enquiry').click(function(){
       console.log('here');
       var parent = $(this).closest('.box');
@@ -1480,7 +1482,6 @@
     });
   });
 
-
   helper.search();
 
   var stripe = Stripe('pk_test_37TKfr9SUQ8MF3qxotmJaa4f');
@@ -1516,10 +1517,15 @@
       // https://stripe.com/docs/charges
 
       $('.token').val(result.token.id);
+      var dataid = $('.buy .dataid').text();
+      $('.package').val(dataid);
+
       successElement.querySelector('.token').textContent = result.token.id;
+
       successElement.classList.add('visible');
 
       document.getElementById('stripeform').submit();
+
 
     } else if (result.error) {
       errorElement.textContent = result.error.message;

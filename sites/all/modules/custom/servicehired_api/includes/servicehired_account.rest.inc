@@ -11,8 +11,14 @@ function servicehired_order_create() {
   $last_name = $_POST["cardholder-last-name"];
   $email = $_POST["cardholder-email"];
   $token = $_POST["token"];
+  $package = $_POST["package"];
 
-  create_customer($first_name, $last_name, $token, $email);
+  $order = node_load($package);
+  $offer = node_load($order->field_supplier_id['und'][0]['value']);
+
+  $uid = create_customer($first_name, $last_name, $token, $email);
+
+  create_order($offer->title, $uid);
 
   drupal_goto('/user');
 }
@@ -53,10 +59,28 @@ function create_customer($first_name, $last_name, $token, $email) {
       $form_state = array();
       $form_state['uid'] = $uid;
       user_login_submit(array(), $form_state);
+
+      return $uid;
     }
     else {
       // User already exists.
     }
   }
+}
 
+function create_order($order_title, $uid) {
+  $node = new stdClass();
+  $node->type = 'order';
+  $node->language = LANGUAGE_NONE;
+  node_object_prepare($node);
+
+  $node->title = $order_title;
+  $node->status = 1;
+  $node->promote = 0;
+  $node->sticky = 0;
+  $node->comment = 2;
+  $node->uid = $uid;
+
+  // Save the node
+  node_save($node);
 }
