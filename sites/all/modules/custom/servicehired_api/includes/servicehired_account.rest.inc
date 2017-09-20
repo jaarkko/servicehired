@@ -7,8 +7,6 @@ function servicehired_order_create() {
   $postdata = file_get_contents("php://input");
   // Decode data.
 
-  ddl($postdata);
-
   $first_name = $_POST["cardholder-first-name"];
   $last_name = $_POST["cardholder-last-name"];
   $email = $_POST["cardholder-email"];
