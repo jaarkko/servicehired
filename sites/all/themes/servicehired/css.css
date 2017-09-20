@@ -801,3 +801,7 @@ a.name.navbar-brand {
   }
 }
 
+.main-container.container-fluid {
+  max-width: 1400px;
+  margin: 25px auto;
+}
