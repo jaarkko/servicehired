@@ -82,16 +82,16 @@
     <div class="bottom-menu">
         <ul>
             <li>
-                <a href="#">Orders</a>
+                <a href="/orders">Orders</a>
             </li>
             <li>
-                <a href="#">Account</a>
+                <a href="/account">Account</a>
             </li>
             <li>
-                <a href="#">Billing</a>
+                <a href="/billing">Billing</a>
             </li>
             <li>
-                <a href="#">Contributions</a>
+                <a href="/contribution">Contributions</a>
             </li>
         </ul>
     </div>
