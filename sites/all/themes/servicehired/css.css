@@ -626,3 +626,178 @@ a.name.navbar-brand {
   display: none;
 }
 
+
+
+.not-front .overthefold {
+  background: #191F33;
+  text-align: center;
+  color: white;
+  position: relative;
+  background-image: url(/sites/all/themes/servicehired/images/ocean-glass-ripple.jpg);
+  background-size: cover;
+}
+.not-front .overthefold.searched {
+  height: 100px;
+  padding-top: 0;
+}
+.not-front .searched .topbar {
+  height: 50px;
+}
+.not-front .overthefold.searched .logo {
+  height: 45px;
+}
+.not-front .searched h1, .not-front .searched h2 {
+  display: none;
+}
+.not-front .leftmenu {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.not-front .rightmenu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.not-front .overthefold a {
+  color: white;
+  text-decoration: none;
+}
+.not-front .bottom-menu ul {
+  padding: 10px 0 5px 0;
+}
+.not-front .bottom-menu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.not-front .search-buttons .btn {
+  background: #f04e23;
+  border-radius: 5px;
+  padding: 11px 80px;
+  margin-top: 20px;
+}
+.not-front .search-buttons .btn:hover {
+  background: #f04e23;
+}
+.not-front .bottom-menu li, .not-front .selection-category li {
+  list-style: none;
+  display: inline;
+  padding: 0 30px;
+}
+.not-front .box-search input {
+  width: 100%;
+  border: 1px solid rgba(228, 228, 228, 0.6);
+  padding: 10px 30px 10px 15px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+}
+@media all and (max-width: 768px) {
+  .not-front a.listyourbusiness {
+    display: none;
+  }
+  .not-front li.categories {
+    display: none;
+  }
+  .not-front .selection-category li {
+    width: 49%;
+  }
+  .not-front .cities {
+    display: none;
+  }
+  .not-front .overthefold {
+    padding: 15px;
+  }
+  .not-front .bottom-menu {
+    display: none;
+  }
+  .not-front .box-search {
+    width: 100%;
+    margin: 0px 0 !important;
+  }
+  .not-front .box-right {
+    display: none;
+  }
+  .not-front .searched .overthefold {
+    padding: 0px 0px;
+  }
+  .not-front li.box {
+    width: 91%;
+  }
+  .not-front .two-boxes, .not-front .selection-category {
+    margin: 20px 20px;
+  }
+  .not-front .searched .selection-category li {
+    width: 45%;
+  }
+  .not-front .col-sm-3, .not-front .col-sm-2, .not-front .col-sm-8, .not-front .col-sm-4 {
+    width: 90% !important;
+    padding: 0px 5% !important;
+    margin: 0 !important;
+  }
+  .not-front li.box.open .text {
+    width: 100% !important;
+    max-height: 300px;
+  }
+  .not-front li.box.open {
+    height: 100% !important;
+    width: 100%;
+    padding: 0;
+  }
+  .not-front .open .arrow-right {
+    padding-top: 150px !important;
+    height: 150px !important;
+  }
+  .not-front .open .pricing {
+    position: absolute;
+    right: 183px;
+    bottom: 30px;
+    font-size: 24px;
+  }
+  .not-front .open .close {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 28px;
+    height: 30px;
+    width: 30px;
+    background: #f04e23;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+  }
+  .not-front .btn.btn-primary.enquiry {
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .not-front .pricing {
+    position: relative !important;
+    right: unset !important;
+    bottom: unset !important;
+  }
+  .not-front .pricing {
+    max-width: 110px;
+    padding: 18px !important;
+    background: #1d2331;
+    float: left !important;
+    margin: 5px 20px 5px 0px;
+    color: white;
+  }
+  .not-front .open span.vat {
+    text-align: left;
+  }
+  .not-front .description {
+    height: 45px;
+  }
+}
+

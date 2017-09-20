@@ -669,7 +669,6 @@
       <a href="https://www.inventshift.com/blog">Blog</a>
     </div>
     <div class="rightmenu">
-        <a class="listyourbusiness" href="/list-your-business">List your business</a>
       <a href="/user">Sign In</a>
     </div>
   </div>

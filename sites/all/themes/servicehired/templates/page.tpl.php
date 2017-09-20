@@ -74,28 +74,26 @@
  */
 ?>
 <div class="searched overthefold">
-      <div class="topbar">
-          <a href="/">
-              <img class="logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png">
-          </a>
-      </div>
-    <div class="navbar-header">
-        <div class="bottom-menu">
-            <ul>
-                <li>
-                    <a href="#">About us</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li>
-                    <a href="#">Join as a business</a>
-                </li>
-                <li>
-                    <a href="#">Inventshift fund</a>
-                </li>
-            </ul>
-        </div>
+    <div class="topbar">
+        <a href="/">
+            <img class="logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png">
+        </a>
+    </div>
+    <div class="bottom-menu">
+        <ul>
+            <li>
+                <a href="#">About us</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Join as a business</a>
+            </li>
+            <li>
+                <a href="#">Inventshift fund</a>
+            </li>
+        </ul>
     </div>
     <div class="menu">
         <div class="leftmenu">
