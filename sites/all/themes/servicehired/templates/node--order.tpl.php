@@ -84,12 +84,16 @@
 
     <div class="left">
         <div class="cont">
+            <h3>Your order</h3>
+            <?php print $node->title; ?>
+            <?php print $node->body; ?>
         </div>
     </div>
     <div class="mid">
         <div class="cont">
             <div class="top-header">
                 <div class="status status-<?php print $node->status; ?>">
+                    <h3>Project status</h3>
                   <?php print $node->status; ?>
                 </div>
                 <div class="actions">
@@ -97,6 +101,7 @@
                 </div>
             </div>
             <div class="messaging">
+                <h3>Messages</h3>
                 <div class="message">
 
                 </div>
@@ -106,7 +111,7 @@
     </div>
     <div class="right">
         <div class="cont">
-
+            <h3>Suppliers</h3>
         </div>
     </div>
 </article>
