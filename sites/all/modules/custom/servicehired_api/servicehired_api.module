@@ -72,7 +72,7 @@ function servicehired_orders_format() {
   $html = '';
 
   foreach ($key as $res){
-    $html .= '<div class="result"><div class="status">'.$res['created'].'</div><div class="status">'.$res['status'].'</div><div class="res-title">'.$res['title'].'</div></div>';
+    $html .= '<div class="result"><div class="insider"><div class="status">'.$res['created'].'</div><div class="status status-'.$res['status'].'">'.$res['status'].'</div><div class="res-title">'.$res['title'].'</div></div></div>';
   }
   return $html;
 }
