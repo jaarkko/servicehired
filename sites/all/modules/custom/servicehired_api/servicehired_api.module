@@ -59,7 +59,7 @@ function servicehired_get_orders() {
   foreach ($nodes as $node) {
     $i ++;
     $key[$i]['title'] = $node->title;
-    $key[$i]['created'] = $node->created;
+    $key[$i]['created'] = date('d/m/Y', $node->created);
     $key[$i]['body'] = $node->body['und'][0]['value'];
     $key[$i]['status'] = $node->field_status['und'][0]['value'];
   }
@@ -72,8 +72,7 @@ function servicehired_orders_format() {
   $html = '';
 
   foreach ($key as $res){
-    dsm($res);
-    $html .= '<div class="result"><div class="res-title">'.$res['title'].'</div></div>';
+    $html .= '<div class="result"><div class="status">'.$res['created'].'</div><div class="status">'.$res['status'].'</div><div class="res-title">'.$res['title'].'</div></div>';
   }
   return $html;
 }
