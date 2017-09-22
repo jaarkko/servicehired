@@ -64,5 +64,16 @@ function servicehired_get_orders() {
     $key[$i]['status'] = $node->field_status['und'][0]['value'];
   }
 
-  drupal_json_output($key);
+  return $key;
+}
+
+function servicehired_orders_format() {
+  $key = servicehired_get_orders();
+  $html = '';
+
+  foreach ($key as $res){
+    dsm($res);
+    $html .= '<div class="result"><div class="res-title">'.$res['title'].'</div></div>';
+  }
+  return $html;
 }
