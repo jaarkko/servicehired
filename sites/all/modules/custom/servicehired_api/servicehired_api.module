@@ -20,7 +20,8 @@ function servicehired_api_menu() {
 
   // Creates comments through api.
   $items['developers/get_orders'] = array(
-    'page callback' => 'servicehired_get_orders',
+    'access arguments' => array('access content'),
+    'page callback' => 'servicehired_get_orders'
   );
 
   return $items;
