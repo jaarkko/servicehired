@@ -18,7 +18,10 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
-
+  // Creates comments through api.
+  $items['developers/get_orders'] = array(
+    'page callback' => 'servicehired_get_orders',
+  );
 
   return $items;
 }
@@ -37,4 +40,28 @@ function servicehired_api_theme() {
       'template' => 'templates/dashboard',
     ),
   );
+}
+
+
+function servicehired_get_orders() {
+  global $user;
+  $query = new EntityFieldQuery();
+  $result = $query
+    ->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'order')
+    ->propertyCondition('uid', $user->uid);
+  $result = $query->execute();
+  $nids = array_keys($result['node']);
+  $nodes = node_load_multiple($nids);
+  $i = 0;
+  $key = array();
+  foreach ($nodes as $node) {
+    $i ++;
+    $key[$i]['title'] = $node->title;
+    $key[$i]['created'] = $node->created;
+    $key[$i]['body'] = $node->body['und'][0]['value'];
+    $key[$i]['status'] = $node->field_status['und'][0]['value'];
+  }
+
+  drupal_json_output($key);
 }
