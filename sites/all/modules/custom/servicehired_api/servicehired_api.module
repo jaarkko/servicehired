@@ -13,5 +13,28 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
+  $items['menu_url'] = array(
+    'page callback' => 'dashboard_page',
+    'access arguments' => array('access content')
+  );
+
+
+
   return $items;
+}
+
+function dashboard_page(){
+  return theme('dashboard_page');
+}
+
+/**
+ * Implements hook_theme()
+ */
+function servicehired_api_theme() {
+  return array(
+    'dashboard_page' => array(
+      'render element' => 'elements',
+      'template' => 'templates/dashboard',
+    ),
+  );
 }
