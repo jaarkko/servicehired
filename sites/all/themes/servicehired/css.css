@@ -805,3 +805,13 @@ a.name.navbar-brand {
   max-width: 1400px;
   margin: 25px auto;
 }
+
+.result .insider {
+  padding: 20px;
+  border: 1px solid;
+  margin-right: 30px;
+}
+.grid .result {
+  float: left;
+  width: 25%;
+}
