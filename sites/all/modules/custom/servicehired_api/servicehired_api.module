@@ -13,7 +13,7 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
-  $items['menu_url'] = array(
+  $items['dash'] = array(
     'page callback' => 'dashboard_page',
     'access arguments' => array('access content')
   );
