@@ -815,3 +815,34 @@ a.name.navbar-brand {
   float: left;
   width: 25%;
 }
+.left {
+  width: 25%;
+  background: left;
+  height: 16px;
+  float: left;
+  min-height: 300px;
+}
+
+.mid {
+  width: 50%;
+  float: left;
+  background: left;
+  height: 16px;
+  min-height: 300px;
+}
+
+.right {
+  width: 25%;
+  float: left;
+  background: left;
+  height: 16px;
+  min-height: 300px;
+}
+
+.cont {
+  margin: 20px;
+  margin-left: 0;
+  border: 1px solid #f4f4f4;
+  min-height: 300px;
+}
+
