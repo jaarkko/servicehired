@@ -259,5 +259,12 @@ foreach ($results['node'] as $result){
       success: function (data) {
       }
     });
-  })
+    window.location.reload(false);
+  });
+
+  $('#priceconfirm').change(function(){
+    var value = parseFloat($(this).val()).toFixed(2);
+    $(this).val(value);
+  });
+
 </script>
