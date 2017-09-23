@@ -145,8 +145,16 @@ foreach ($results['node'] as $result){
                         <div class="bar last">Service paid</div>
                     </div>
                 </div>
+                <div class="leftend">
+                    <div class="valid-until"><label>Offer valid until: </label>
+                        <input type="date">
+                    </div>
+                    <div class="price-confirm"><label>Confirm price (Incl. Vat): </label>
+                        <input type="date">
+                    </div>
+                </div>
                 <div class="actions">
-                  <btn class="btn">Confirm availability</btn>
+                    <btn class="btn">Confirm availability</btn>
                 </div>
             </div>
             <div class="package">
