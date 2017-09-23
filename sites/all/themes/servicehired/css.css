@@ -853,6 +853,11 @@ a.name.navbar-brand {
   border-radius: 5px;
   padding: 0 15px 15px 15px;
 }
+.user-image img {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
 
 .actions {
   text-align: right;
@@ -958,4 +963,25 @@ textarea#message {
 }
 .vat {
   font-size: 0.8em;
+}
+.message-text {
+  float: right;
+  width: 90%;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.message {
+  clear: both;
+  display: block;
+  padding-bottom: 0.5em;
+  height: auto;
+}
+.user-image {
+  float: left;
+}
+.user-image img {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
 }
