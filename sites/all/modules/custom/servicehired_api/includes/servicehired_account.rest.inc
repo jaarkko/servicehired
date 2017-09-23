@@ -84,3 +84,32 @@ function create_order($order_title, $uid) {
   // Save the node
   node_save($node);
 }
+
+function servicehired_create_comment(){
+  // Get data from ajax post.
+  $postdata = file_get_contents("php://input");
+
+  // Decode data.
+  $data = json_decode($postdata, true);
+
+  $node_id = $data['nodeid'];
+  $commenttext = $data['comment'];
+
+  global $user;
+
+  $comment = new stdClass();
+  $comment->nid = $node_id;
+  $comment->cid = 0;
+  $comment->pid = 0;
+  $comment->uid = $user->uid;
+  $comment->mail = $user->mail;
+  $comment->name = $user->name;
+  $comment->created = time();
+  $comment->is_anonymous = 0;
+  $comment->status = COMMENT_PUBLISHED;
+  $comment->language = LANGUAGE_NONE;
+  $comment->subject = 'Comment subject';
+  $comment->comment_body['und'][0]['value'] = $commenttext;
+  $comment->comment_body['und'][0]['format'] = 'plain_text';
+  comment_save($comment);
+}

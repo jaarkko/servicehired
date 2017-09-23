@@ -171,8 +171,9 @@ foreach ($results['node'] as $result){
                     </div>
                     <div class="new-message">
                         <textarea id="message"></textarea>
+                        <div class="nodeid"><?php print $quote; ?></div>
                         <div class="actions">
-                            <btn class="btn">Send</btn>
+                            <btn class="btn send-comment">Send</btn>
                         </div>
                     </div>
                 </div>
@@ -188,3 +189,35 @@ foreach ($results['node'] as $result){
         </div>
     </div>
 </article>
+
+<script>
+  $('.send-comment').click(function(){
+    var newcomment = $('.old-messages');
+
+    var saveData = {};
+
+    saveData['nodeid'] = $('.nodeid').text();
+    saveData['comment'] = $('.new-message #message').val();
+
+    newcomment.before('<div class="message">' +
+      '<div class="user-image">' + '</div>' +
+    '<div class="message-text">' + saveData['comment'] + '</div> ' +
+    '<div class="clearfix"></div> ' +
+    '</div>');
+
+    var data = JSON.stringify(saveData);
+    $.ajax({
+      url: '/developers/api/create_comment',
+      type: 'post',
+      data: data,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      dataType: 'json',
+      success: function (data) {
+      }
+    });
+
+    parent.find('textarea').val('');
+  });
+</script>
