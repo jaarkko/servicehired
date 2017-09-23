@@ -119,6 +119,7 @@ foreach ($results['node'] as $result){
                 </div>';
 }
 ?>
+    <div class="hidden order-id"><?php print $node->nid; ?></div>
     <div class="left">
         <div class="cont">
             <h3>Your order</h3>
@@ -154,7 +155,7 @@ foreach ($results['node'] as $result){
                     </div>
                 </div>
                 <div class="actions">
-                    <btn class="btn">Confirm availability</btn>
+                    <btn class="confirm btn confirm-<?php print $node->field_status['und'][0]['value']; ?>">Confirm availability</btn>
                 </div>
                 <div class="clearfix"></div>
             </div>
