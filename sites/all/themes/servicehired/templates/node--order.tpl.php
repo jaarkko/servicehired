@@ -146,6 +146,7 @@ foreach ($results['node'] as $result){
                         <div class="bar last">Service paid</div>
                     </div>
                 </div>
+                <?php if($node->field_status['und'][0]['value'] == '0'): ?>
                 <div class="leftend">
                     <div class="valid-until"><label>Offer valid until: </label>
                         <input id="validtill" type="date">
@@ -154,6 +155,7 @@ foreach ($results['node'] as $result){
                         <input id="priceconfirm" type="text">
                     </div>
                 </div>
+                <?php endif; ?>
                 <div class="actions">
                     <?php if($node->field_status['und'][0]['value'] !== '4'): ?>
                         <div class="confirm btn confirm-<?php print $node->field_status['und'][0]['value']; ?>">Confirm</div>
@@ -234,4 +236,28 @@ foreach ($results['node'] as $result){
 
     parent.find('textarea').val('');
   });
+
+  $('.confirm-0').click(function(){
+    var id = $('.order-id').text();
+    var timestamp = $('#validtill').val();
+    var price = $('#priceconfirm').val();
+
+    var saveData = {};
+    saveData['nodeid'] = id;
+    saveData['timestamp'] = timestamp;
+    saveData['price'] = price;
+
+    var data = JSON.stringify(saveData);
+    $.ajax({
+      url: '/developers/api/status_update',
+      type: 'post',
+      data: data,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      dataType: 'json',
+      success: function (data) {
+      }
+    });
+  })
 </script>

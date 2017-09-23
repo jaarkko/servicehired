@@ -85,6 +85,22 @@ function create_order($order_title, $uid) {
   node_save($node);
 }
 
+function servicehired_update_status(){
+  // Get data from ajax post.
+  $postdata = file_get_contents("php://input");
+
+  // Decode data.
+  $data = json_decode($postdata, true);
+
+  $node_id = $data['nodeid'];
+  $commenttext = $data['comment'];
+
+  $node = node_load($node_id);
+  $status = $node->field_status['und'][0]['value'] + 1;
+  $node->field_status['und'][0]['value'] = $status;
+  node_save($node);
+}
+
 function servicehired_cancel(){
     // Cancellation function.
     $nid = arg(2);

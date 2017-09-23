@@ -13,6 +13,14 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
+    // Creates comments through api.
+  $items['developers/api/status_update'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' => 'servicehired_update_status',
+    'file' => 'includes/servicehired_account.rest.inc',
+    'access arguments' => array('access content')
+  );
+
   // Creates comments through api.
   $items['developers/api/create_comment'] = array(
     'type' => MENU_CALLBACK,

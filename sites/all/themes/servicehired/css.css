@@ -1084,3 +1084,6 @@ textarea#message {
   font-size: 0;
   height: 31px;
 }
+.actions a {
+  display: block;
+}
