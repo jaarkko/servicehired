@@ -1046,12 +1046,26 @@ textarea#message {
   margin-bottom: 15px;
 }
 
-.valid-until input[type="date"] {
+.valid-until input[type="date"], .price-confirm input[type="date"] {
   border-radius: 5px;
   border: 0;
   padding: 5px;
+  margin-left: 5px;
 }
+
 .actions {
+  width: 40%;
+  padding: 10px;
+  float: right;
+}
+.leftend {
   width: 60%;
-  padding: 20px;
+  float: left;
+}
+.valid-until, .price-confirm {
+  padding: 7px 0;
+}
+.valid-until label, .price-confirm label {
+  padding: 7px 0;
+  width: 170px;
 }
