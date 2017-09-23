@@ -104,6 +104,23 @@
                   <btn class="btn">Confirm availability</btn>
                 </div>
             </div>
+            <div class="offer">
+                <h3>Service package</h3>
+                <div class="offer">
+                    <div class="description">
+                        Up to a 1 hour photo shoot1 location (we will help you find a truly unique location)1 outfit
+                        Shots include:- Portraits- Close-upsWhat you will receive:- All images will be color corrected
+                        and retouched- High resolution images with personal printing rights- Up to 20 of the best images
+                        of the day color corrected and print ready.
+                    </div>
+                    <div class="pricing">
+                        <div class="price">200.00</div>
+                        <div class="currency">€</div>
+                        <div class="vat">Vat. Included</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
             <div class="messaging">
                 <h3>Messages</h3>
                 <div class="message">
