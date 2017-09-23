@@ -851,7 +851,7 @@ a.name.navbar-brand {
   min-height: 300px !important;
   background: #F6F6F6;
   border-radius: 5px;
-  padding: 15px 0 15px 0;
+  padding: 0 15px 15px 15px;
 }
 
 .actions {
