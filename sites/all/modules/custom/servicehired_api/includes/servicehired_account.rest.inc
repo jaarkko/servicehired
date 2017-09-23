@@ -97,7 +97,7 @@ function servicehired_update_status(){
   $node_id = $data['nodeid'];
   $time = $data['timestamp'];
   $price = $data['price'];
-  $quote_id = $data['quote_id'];
+  $quote_id = $data['quote'];
 
   $quote = node_load($quote_id);
   $quote->field_valid_until['und'][0]['value'] = $time;
