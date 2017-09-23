@@ -85,8 +85,18 @@
     <div class="left">
         <div class="cont">
             <h3>Your order</h3>
-            <?php print $node->title; ?>
             <?php print $node->body; ?>
+            <div class="info">
+                <div class="line">
+                    <div class="order-label">When:</div><div class="insides"> 10.02.2017 - 14.00</div>
+                </div><div class="line">
+                    <div class="order-label">Where:</div><div class="insides"> London - 9532C</div>
+                </div>
+
+                <div class="line">
+                    <div class="order-label">What:</div><div class="insides"> <?php print $node->title; ?></div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="mid">
@@ -148,6 +158,17 @@
     <div class="right">
         <div class="cont">
             <h3>Suppliers</h3>
+            <div class="suppliers">
+                <div class="line">
+                    <div class="supplier-image">
+                        <img src="https://www.maybelline.com/~/media/mny/us/face-makeup/modules/masthead/maybelline-fit-me-foundation-powder-face-herieth-paul-1x1.jpg?h=320&amp;w=320&amp;la=en-US&amp;hash=3B5E9C176BE1DD97CB6BC8F5CD2F5C7BBA440695">
+                    </div>
+                    <div class="right-align">
+                        <div class="name">Photography package</div>
+                        <div class="quote">€ 200.00</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </article>

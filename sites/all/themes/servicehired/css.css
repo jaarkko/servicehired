@@ -980,6 +980,12 @@ textarea#message {
 .user-image {
   float: left;
 }
+.line img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+
 .user-image img {
   height: 50px;
   width: 50px;
@@ -991,4 +997,28 @@ textarea#message {
   border: 0;
   padding: 0.75em 0 0.5em 0;
   margin-bottom: 0;
+}
+.order-label {
+  float: left;
+  padding-right: 5px;
+  font-weight: bold;
+}
+.line {
+  margin-top: 1em;
+}
+.supplier-image {
+  float: left;
+  width: 100px;
+}
+.line img {
+  width: 100px;
+  border-radius: 5px;
+}
+.right-align {
+  float: left;
+  padding: 0 20px;
+  font-size: 15px;
+}
+.quote {
+  font-weight: bold;
 }
