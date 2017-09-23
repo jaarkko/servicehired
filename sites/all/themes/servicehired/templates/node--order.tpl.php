@@ -101,9 +101,9 @@
     <div class="mid">
         <div class="cont">
             <div class="top-header">
-                <div class="status status-<?php print $node->status; ?>">
+                <div class="status">
                     <h3>Project status</h3>
-                    <div class="status-bar status-<?php print $node->status; ?>">
+                    <div class="status-bar status-<?php print $node->field_status['und'][0]['value']; ?>">
                         <div class="bar first">Order made</div>
                         <div class="bar second">Service confirmed</div>
                         <div class="bar last">Service paid</div>
