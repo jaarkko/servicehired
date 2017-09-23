@@ -171,7 +171,7 @@ foreach ($results['node'] as $result){
                     </div>
                     <div class="new-message">
                         <textarea id="message"></textarea>
-                        <div class="nodeid"><?php print $quote->nid; ?></div>
+                        <div class="nodeid hidden"><?php print $quote->nid; ?></div>
                         <div class="actions">
                             <button class="btn send-comment">Send</button>
                         </div>
