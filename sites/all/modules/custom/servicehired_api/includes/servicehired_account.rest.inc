@@ -99,12 +99,16 @@ function servicehired_update_status(){
   $price = $data['price'];
   $quote_id = $data['quote'];
 
-  $quote = node_load($quote_id);
-  $quote->field_valid_until['und'][0]['value'] = $time;
-  $quote->field_price['und'][0]['value'] = $price;
-  node_save($quote);
-
   $node = node_load($node_id);
+
+  $quote = node_load($quote_id);
+
+  if ($node->field_status['und'][0]['value'] === '0') {
+    $quote->field_valid_until['und'][0]['value'] = $time;
+    $quote->field_price['und'][0]['value'] = $price;
+    node_save($quote);
+  }
+
   $status = $node->field_status['und'][0]['value'] + 1;
   $node->field_status['und'][0]['value'] = $status;
   node_save($node);
