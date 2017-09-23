@@ -191,6 +191,7 @@ foreach ($results['node'] as $result){
 </article>
 
 <script>
+  $=jQuery;
   $('.send-comment').click(function(){
     var newcomment = $('.old-messages');
 
