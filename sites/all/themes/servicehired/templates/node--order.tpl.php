@@ -85,7 +85,6 @@
     <div class="left">
         <div class="cont">
             <h3>Your order</h3>
-            <?php print $node->body; ?>
             <div class="info">
                 <div class="line">
                     <div class="order-label">When:</div><div class="insides"> 10.02.2017 - 14.00</div>
