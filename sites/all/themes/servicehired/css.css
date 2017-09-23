@@ -942,7 +942,7 @@ textarea#message {
   color: white ;
   background: #0099A9 ;
 }
-.pricing {
+.not-front .pricing {
   background: #191f2e;
   width: auto;
   float: right;
@@ -962,7 +962,7 @@ textarea#message {
   float: right;
   padding-left: 5px;
 }
-.description {
+.not-front .description {
   width: 75%;
   float: left;
 }
