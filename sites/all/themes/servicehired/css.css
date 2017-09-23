@@ -808,8 +808,10 @@ a.name.navbar-brand {
 
 .result .insider {
   padding: 20px;
-  border: 1px solid;
   margin-right: 30px;
+  background: #F6F6F6;
+  border-radius: 5px;
+  text-align: center;
 }
 .grid .result {
   float: left;
@@ -828,6 +830,9 @@ a.name.navbar-brand {
   float: left;
   background: left;
   min-height: 300px;
+}
+.grid a {
+  color: black;
 }
 
 .right {
