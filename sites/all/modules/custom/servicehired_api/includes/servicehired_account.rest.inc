@@ -93,7 +93,14 @@ function servicehired_update_status(){
   $data = json_decode($postdata, true);
 
   $node_id = $data['nodeid'];
-  $commenttext = $data['comment'];
+  $time = $data['timestamp'];
+  $price = $data['price'];
+  $quote_id = $data['quote_id'];
+
+  $quote = node_load($quote_id);
+  $quote->field_valid_until['und'][0]['value'] = $time;
+  $quote->field_price['und'][0]['value'] = $price;
+  node_save($quote);
 
   $node = node_load($node_id);
   $status = $node->field_status['und'][0]['value'] + 1;

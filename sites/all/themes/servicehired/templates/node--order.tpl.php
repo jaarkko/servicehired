@@ -241,11 +241,13 @@ foreach ($results['node'] as $result){
     var id = $('.order-id').text();
     var timestamp = $('#validtill').val();
     var price = $('#priceconfirm').val();
+    var quote_id = $('.nodeid').text();
 
     var saveData = {};
     saveData['nodeid'] = id;
     saveData['timestamp'] = timestamp;
     saveData['price'] = price;
+    saveData['quote'] = quote_id;
 
     var data = JSON.stringify(saveData);
     $.ajax({
