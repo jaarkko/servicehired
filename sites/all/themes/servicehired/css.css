@@ -1073,3 +1073,14 @@ textarea#message {
   background: #f04e23;
   margin-top: 17px;
 }
+.status-4:before {
+  content: 'Canceled';
+  position: absolute;
+  color: white;
+  padding: 5px;
+  padding-left: 10px;
+}
+.status-4 .bar {
+  font-size: 0;
+  height: 31px;
+}

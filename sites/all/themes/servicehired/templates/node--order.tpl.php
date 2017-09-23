@@ -155,8 +155,10 @@ foreach ($results['node'] as $result){
                     </div>
                 </div>
                 <div class="actions">
-                    <div class="confirm btn confirm-<?php print $node->field_status['und'][0]['value']; ?>">Confirm availability</div>
-                    <a href="/developers/cancel/<?php print $node->nid; ?>"><div class="canceled btn">Cancel service</div></a>
+                    <?php if($node->field_status['und'][0]['value'] !== '4'): ?>
+                        <div class="confirm btn confirm-<?php print $node->field_status['und'][0]['value']; ?>">Confirm</div>
+                        <a href="/developers/cancel/<?php print $node->nid; ?>"><div class="canceled btn">Cancel service</div></a>
+                    <?php endif; ?>
                 </div>
                 <div class="clearfix"></div>
             </div>
