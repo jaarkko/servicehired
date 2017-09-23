@@ -92,6 +92,8 @@ function servicehired_update_status(){
   // Decode data.
   $data = json_decode($postdata, true);
 
+  ddl($data);
+
   $node_id = $data['nodeid'];
   $time = $data['timestamp'];
   $price = $data['price'];
