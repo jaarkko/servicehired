@@ -915,15 +915,20 @@ textarea#message {
 .bar.last {
   border-radius: 0 5px 5px 0;
 }
+.status-1 .bar.first {
+  color: white ;
+  background: #fdb834 ;
+}
 .status-2 .bar.first {
   color: white ;
   background: #fdb834 ;
 }
-.status-3 .bar.first {
+.status-0 .bar.first {
   color: white ;
   background: #fdb834 ;
 }
-.status-1 .bar.first {
+
+.status-1 .bar.second {
   color: white ;
   background: #fdb834 ;
 }
@@ -933,14 +938,13 @@ textarea#message {
   background: #fdb834 ;
 }
 
-.status-3 .bar.second {
-  color: white ;
-  background: #fdb834 ;
-}
-
-.status-3 .bar.last {
+.status-2 .bar.last {
   color: white ;
   background: #0099A9 ;
+}
+.status-4 .bar {
+  color: white ;
+  background: #df4821;
 }
 .not-front .pricing {
   background: #191f2e;
