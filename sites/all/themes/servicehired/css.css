@@ -1022,3 +1022,13 @@ textarea#message {
 .quote {
   font-weight: bold;
 }
+.supplier {
+  font-size: 0.8em;
+}
+.right-align {
+  float: left;
+  padding: 0 20px;
+  font-size: 15px;
+  width: 190px;
+  padding-right: 0;
+}

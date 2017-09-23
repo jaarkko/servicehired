@@ -164,6 +164,7 @@
                     </div>
                     <div class="right-align">
                         <div class="name">Photography package</div>
+                        <div class="supplier">John Photography</div>
                         <div class="quote">€ 200.00</div>
                     </div>
                 </div>
