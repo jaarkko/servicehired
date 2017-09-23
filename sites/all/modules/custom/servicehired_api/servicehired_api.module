@@ -21,6 +21,16 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
+  // Creates comments through api.
+  $items['developers/cancel/%'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' => 'servicehired_cancel',
+    'file' => 'includes/servicehired_account.rest.inc',
+    'page arguments' => array(3),
+    'access arguments' => array('access content')
+  );
+
+
   $items['dash'] = array(
     'page callback' => 'dashboard_page',
     'access arguments' => array('access content')

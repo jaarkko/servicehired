@@ -85,6 +85,15 @@ function create_order($order_title, $uid) {
   node_save($node);
 }
 
+function servicehired_cancel(){
+    // Cancellation function.
+    $nid = arg(2);
+    $node = node_load($nid);
+    $node->field_status['und'][0]['value'] = '4';
+    node_save($node);
+    drupal_goto('node/'.$nid);
+}
+
 function servicehired_create_comment(){
   // Get data from ajax post.
   $postdata = file_get_contents("php://input");

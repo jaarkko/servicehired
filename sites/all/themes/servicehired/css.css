@@ -1069,3 +1069,7 @@ textarea#message {
   padding: 7px 0;
   width: 170px;
 }
+.canceled.btn {
+  background: #f04e23;
+  margin-top: 17px;
+}
