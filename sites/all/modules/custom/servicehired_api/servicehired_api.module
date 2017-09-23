@@ -68,12 +68,29 @@ function servicehired_get_orders() {
   return $key;
 }
 
+
+function status_bar_format($status) {
+  $html = '<div class="status-bar status-'.$status.'">
+  <div class="bar first">Order made</div>
+  <div class="bar second">Confirmed</div>
+  <div class="bar last">Paid</div >
+  </div>';
+
+  return $html;
+}
+
 function servicehired_orders_format() {
   $key = servicehired_get_orders();
   $html = '';
 
   foreach ($key as $res){
-    $html .= '<a href="'.$res['url'].'"><div class="result"><div class="insider"><div class="status">'.$res['created'].'</div><div class="status status-'.$res['status'].'">'.$res['status'].'</div><div class="res-title">'.$res['title'].'</div></div></div></a>';
+    $html .= '<a href="'.$res['url'].'">
+    <div class="result">
+    <div class="insider">
+    <div class="res-title">'.$res['title'].'</div>
+    <div class="status">'.status_bar_format($res['status']).'</div>
+    <div class="created">'.$res['created'].'</div>
+    </div></div></a>';
   }
   return $html;
 }

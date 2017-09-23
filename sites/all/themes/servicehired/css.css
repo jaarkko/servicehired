@@ -843,7 +843,7 @@ a.name.navbar-brand {
   min-height: 300px;
 }
 
-.cont h3 {
+.cont h3, .res-title {
   border-bottom: 5px solid white;
   padding-bottom: 10px;
   font-size: 20px;
@@ -1036,4 +1036,7 @@ textarea#message {
   font-size: 15px;
   width: 190px;
   padding-right: 0;
+}
+.res-title {
+  margin-bottom: 15px;
 }
