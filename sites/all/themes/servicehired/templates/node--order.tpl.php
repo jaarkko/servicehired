@@ -97,6 +97,7 @@ foreach ($results['node'] as $result){
   $user = user_load($quote->uid);
   $img_url = $user->picture->uri;
   $img_url = image_style_url("thumbnail", $img_url);
+  $price = $quote->field_price['und'][0]['value'] / 100;
   foreach ($comments as $comment) {
     $comment_body = $comment->comment_body['und'][0]['value'];
     $comment_html .= '<div class="message">
@@ -105,6 +106,17 @@ foreach ($results['node'] as $result){
                         <div class="clearfix"></div>
                     </div>';
   }
+
+  $supplier = '<div class="line">
+                    <div class="supplier-image">
+                        <img src="'.$img_url.'">
+                    </div>
+                    <div class="right-align">
+                        <div class="name">'.$quote->title.'</div>
+                        <div class="supplier">'.$node->title.'</div>
+                        <div class="quote">€'.$price.'</div>
+                    </div>
+                </div>';
 }
 ?>
     <div class="left">
@@ -171,16 +183,7 @@ foreach ($results['node'] as $result){
         <div class="cont">
             <h3>Suppliers</h3>
             <div class="suppliers">
-                <div class="line">
-                    <div class="supplier-image">
-                        <img src="https://www.maybelline.com/~/media/mny/us/face-makeup/modules/masthead/maybelline-fit-me-foundation-powder-face-herieth-paul-1x1.jpg?h=320&amp;w=320&amp;la=en-US&amp;hash=3B5E9C176BE1DD97CB6BC8F5CD2F5C7BBA440695">
-                    </div>
-                    <div class="right-align">
-                        <div class="name">Photography package</div>
-                        <div class="supplier">John Photography</div>
-                        <div class="quote">€ 200.00</div>
-                    </div>
-                </div>
+                <?php print $supplier; ?>
             </div>
         </div>
     </div>
