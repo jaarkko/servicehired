@@ -94,7 +94,11 @@
             <div class="top-header">
                 <div class="status status-<?php print $node->status; ?>">
                     <h3>Project status</h3>
-                  <?php print $node->status; ?>
+                    <div class="status-bar status-<?php print $node->status; ?>">
+                        <div class="bar first">Order made</div>
+                        <div class="bar second">Service confirmed</div>
+                        <div class="bar last">Service paid</div>
+                    </div>
                 </div>
                 <div class="actions">
                   <btn class="btn">Confirm availability</btn>
@@ -105,7 +109,12 @@
                 <div class="message">
 
                 </div>
-                <textarea id="message"></textarea>
+                <div class="new-message">
+                    <textarea id="message"></textarea>
+                    <div class="actions">
+                        <btn class="btn">Send</btn>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
