@@ -20,7 +20,7 @@ function servicehired_order_create() {
 
   create_order($offer->title, $uid);
 
-  drupal_goto('/user');
+  drupal_goto('/orders');
 }
 
 function create_customer($first_name, $last_name, $token, $email) {

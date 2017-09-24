@@ -668,10 +668,17 @@
     <div class="leftmenu">
       <a href="https://www.inventshift.com/blog">Blog</a>
     </div>
+      <?php if (user_is_logged_in()): ?>
     <div class="rightmenu">
         <a class="listyourbusiness" href="/list-your-business">List your business</a>
       <a href="/user">Sign In</a>
     </div>
+      <?php endif; ?>
+    <?php if (!user_is_logged_in()): ?>
+        <div class="rightmenu">
+            <a href="/user/logout">Log Out</a>
+        </div>
+    <?php endif; ?>
   </div>
   <div class="bottom-menu">
     <ul>
