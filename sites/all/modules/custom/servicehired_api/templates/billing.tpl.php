@@ -3,11 +3,19 @@
 </h2>
 
 <div class="order-flow">
+    <div class="left-col"><h3>How does billing work?</h3>
+        <p>We charge donations and bookings that are directly paid to the business owners after they have completed their job with you.</p>
+
+        <h3>Payment history</h3>
+        <p>No payments recorded yet.</p>
+    </div>
+    <div class="right-col">
   <h3>Your default payment method</h3>
   <div class="grid">
     <?php print formatted_card(); ?>
   </div>
     <div class="btn btn-change">Change payment method</div>
+    </div>
 </div>
 
 <style>
@@ -23,5 +31,15 @@
     }
     .card-Visa {
         background-image: url(https://cdn4.iconfinder.com/data/icons/payment-method/160/payment_method_card_visa-512.png);
+    }
+    .left-col, .right-col {
+        width: 50%;
+        float: left;
+        padding-right: 10%;
+    }
+    .btn.btn-change {
+        color: white;
+        background: #f04e23;
+        margin-top: 15px;
     }
 </style>
