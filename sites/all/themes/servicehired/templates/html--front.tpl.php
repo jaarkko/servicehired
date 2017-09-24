@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<?php
+$logged_in = user_is_logged_in();
+?>
 <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -668,13 +671,13 @@
     <div class="leftmenu">
       <a href="https://www.inventshift.com/blog">Blog</a>
     </div>
-      <?php if (user_is_logged_in()): ?>
+      <?php if ($logged_in): ?>
     <div class="rightmenu">
         <a class="listyourbusiness" href="/list-your-business">List your business</a>
       <a href="/user">Sign In</a>
     </div>
       <?php endif; ?>
-    <?php if (!user_is_logged_in()): ?>
+    <?php if ($logged_in == 0): ?>
         <div class="rightmenu">
             <a href="/user/logout">Log Out</a>
         </div>
