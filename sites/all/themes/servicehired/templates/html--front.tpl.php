@@ -669,20 +669,12 @@
     <div class="leftmenu">
       <a href="https://www.inventshift.com/blog">Blog</a>
     </div>
-       <?php if ($servicehired_logged == 'logged'): ?>
-        <div class="rightmenu">
-            <a class="right-padding" href="/user/logout">Log out</a>
-            <a class="listyourbusiness" href="/dash">Dashboard</a>
-        </div>
-    <?php endif; ?>
-    <?php if ($servicehired_logged == 'anon'): ?>
       <div class="rightmenu">
-            <a class="listyourbusiness" href="/list-your-business">List your business</a>
-            <a href="/user">Sign In</a>
-        </div>
-    <?php endif; ?>
+          <a class="listyourbusiness" href="/list-your-business">List your business</a>
+          <a href="/user">Sign In</a>
+      </div>
   </div>
-  <div class="bottom-menu">
+    <div class="bottom-menu">
     <ul>
       <li>
         <a href="#">About us</a>
