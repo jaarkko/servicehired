@@ -588,6 +588,8 @@
   </style>
 </head>
 <body>
+<div class="service"><?php print $servicehired_logged; ?>
+</div>
 <div class="overthefold">
     <div class="topbar">
         <a href="/">
