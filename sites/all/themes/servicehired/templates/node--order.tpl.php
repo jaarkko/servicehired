@@ -173,6 +173,7 @@ foreach ($results['node'] as $result){
                             <i class="fa fa-lock" aria-hidden="true"></i>
                             <?php print formatted_card(); ?>
                             Payments secured by HTTPS and Stripe
+                            <small><a href="/billing">Change payment card</a></small>
                         </small>
                     </div>
                 </div>
@@ -298,7 +299,7 @@ foreach ($results['node'] as $result){
   });
 
   $('.confirm-1').click(function(){
-    var card = $('.card').html();
+    var card = $('.card')[0].outerHTML;
     $(this).html('<a href="/developers/api/payment/<?php print $node->nid; ?>/1/<?php print $quote->nid; ?>"><div class="confirm btn confirm-1">Confirm payment of 9.00€</div></a>');
     $('.payment').html('<div class="payment">' +
       '<label>Payment of 9.00€ will be processed.</label>' +
