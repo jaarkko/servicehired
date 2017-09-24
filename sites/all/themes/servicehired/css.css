@@ -1087,3 +1087,23 @@ textarea#message {
 .actions a {
   display: block;
 }
+.cancellation-policy {
+  clear: both;
+  text-align: right;
+  padding: 0px 10px;
+  font-size: 0.9em;
+}
+.cancellation-policy a {
+  color: black;
+}
+.leftend .payment {
+  padding: 10px 10px;
+  background: white;
+  border-radius: 5px;
+  margin: 6px 0;
+}
+.payment .radio-inline {
+  clear: both;
+  width: 100%;
+  margin: 5px 0;
+}

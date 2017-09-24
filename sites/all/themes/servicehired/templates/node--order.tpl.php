@@ -152,6 +152,7 @@ foreach ($results['node'] as $result){
                         <div class="bar last">Service paid</div>
                     </div>
                 </div>
+
                 <?php if($node->field_status['und'][0]['value'] == '0'): ?>
                 <div class="leftend">
                     <div class="valid-until"><label>Offer valid until: </label>
@@ -162,6 +163,20 @@ foreach ($results['node'] as $result){
                     </div>
                 </div>
                 <?php endif; ?>
+
+                <?php if($node->field_status['und'][0]['value'] == '0'): ?>
+                <div class="leftend">
+                    <div class="payment"><label>Payment to confirm booking:</label>
+                        <label class="radio-inline"><input type="radio" name="optradio">Pay full amount of € <?php print $quote->field_price['und'][0]['value']/100; ?></label>
+                        <label class="radio-inline"><input type="radio" name="optradio">Pay deposit of € <?php print $quote->field_price['und'][0]['value']/1000; ?></label>
+                        <small>
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            Payments secured by HTTPS and Stripe
+                        </small>
+                    </div>
+                </div>
+                <?php endif; ?>
+
                 <div class="actions">
                   <?php if($node->field_status['und'][0]['value'] == '0' && $author == 0): ?>
                       <div class="confirm btn confirm-<?php print $node->field_status['und'][0]['value']; ?>">Confirm</div>
@@ -172,6 +187,7 @@ foreach ($results['node'] as $result){
                     <?php if($node->field_status['und'][0]['value'] !== '4'): ?>
                         <a href="/developers/cancel/<?php print $node->nid; ?>"><div class="canceled btn">Cancel service</div></a>
                     <?php endif; ?>
+                    <div class="cancellation-policy"><a href="/cancellation">Cancellation Policy</a></div>
                 </div>
                 <div class="clearfix"></div>
             </div>
