@@ -73,6 +73,13 @@
  * @ingroup templates
  */
 ?>
+<?php global $user;
+$anon = $user->roles[1];
+$logged = 1;
+if ($anon = 'anonymous user'){
+  $logged = 0;
+}
+?>
 <div class="searched overthefold">
   <div class="topbar">
     <a href="/">
@@ -100,10 +107,10 @@
       <a href="https://www.inventshift.com/blog">Blog</a>
     </div>
     <div class="rightmenu">
-      <?php if (!user_is_logged_in()): ?>
+      <?php if ($logged == 0): ?>
         <a href="/user">Sign In</a>
       <?php endif; ?>
-      <?php if (user_is_logged_in()): ?>
+      <?php if ($logged == 1): ?>
         <a href="/user/logout">Log Out</a>
       <?php endif; ?>
     </div>
