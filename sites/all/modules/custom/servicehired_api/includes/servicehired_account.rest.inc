@@ -86,9 +86,9 @@ function create_order($order_title, $uid) {
 }
 
 function servicehired_payment (){
-  $order_id = arg(2);
-  $type = arg(3);
-  $quote_id = arg(4);
+  $order_id = arg(3);
+  $type = arg(4);
+  $quote_id = arg(5);
 
   $order = node_load($order_id);
   $quote = node_load($quote_id);
@@ -108,7 +108,7 @@ function servicehired_payment (){
     'amount' => $payment_amount,
     'currency' => 'eur',
     'customer' => $stripe_token,
-    'description' => 'Charge for '.$user->mail.' of '.$order->title
+    'description' => 'Charge for '. $user->mail .' of '. $order->title
   );
 
   $call = stripe_api_call('Charge', 'Create', $charge);
