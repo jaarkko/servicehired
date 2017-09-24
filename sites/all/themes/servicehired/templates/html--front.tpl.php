@@ -679,7 +679,7 @@ $logged_in = user_is_logged_in();
       <?php endif; ?>
     <?php if(user_is_logged_in()): ?>
         <div class="rightmenu">
-            <a href="/dash">Dashboard</a>
+            <a class="listyourbusiness" href="/dashboard">Dashboard</a>
             <a href="/user/logout">Log Out</a>
         </div>
     <?php endif; ?>
