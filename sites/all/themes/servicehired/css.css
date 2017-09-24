@@ -1090,8 +1090,8 @@ textarea#message {
 .cancellation-policy {
   clear: both;
   text-align: right;
-  padding: 0px 10px;
-  font-size: 0.9em;
+  padding: 5px 0px;
+  font-size: 0.8em;
 }
 .cancellation-policy a {
   color: black;

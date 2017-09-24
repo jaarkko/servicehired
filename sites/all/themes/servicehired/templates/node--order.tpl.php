@@ -264,7 +264,7 @@ foreach ($results['node'] as $result){
     parent.find('textarea').val('');
   });
 
-  $('.confirm').click(function(){
+  $('.confirm-0').click(function(){
     var id = $('.order-id').text();
     var timestamp = $('#validtill').val();
     var price = $('#priceconfirm').val();
