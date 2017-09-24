@@ -76,7 +76,7 @@
 <?php global $user;
 $anon = $user->roles[1];
 $logged = 1;
-if ($anon = 'anonymous user'){
+if ($anon == 'anonymous user'){
   $logged = 0;
 }
 ?>
