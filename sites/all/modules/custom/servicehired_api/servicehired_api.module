@@ -164,6 +164,8 @@ function get_users_cards(){
   return($card);
 }
 
+
+
 function formatted_card (){
   $card = get_users_cards();
   $html = '<div class="card card-'.$card['type'].'">
@@ -171,4 +173,23 @@ function formatted_card (){
   <div class="ending">Expiry: '.$card['expmonth'].'-'.$card['expyear'].'</div>
   </div>';
   return $html;
+}
+
+function get_user_billing (){
+  global $user;
+  $user = user_load($user->uid);
+  $customer = array(
+    'customer' => $user->field_stripe_customer_token['und'][0]['value'],
+  );
+  $call = stripe_api_call('Charge', 'all',  $customer);
+
+  // Decode response from Stripe.
+  $account_json = $call->__toJSON();
+  $account_array = json_decode($account_json);
+
+  $list = '';
+  foreach ($account_array->data as $event){
+    $list .= '<li>Amount: '.$event->amount.' Date: '. $event->created. ' Description: '. $event->description. ' Card: '. $event->source->brand .' ending in '. $event->source->last4. '</li>';
+  }
+  return($list);
 }
