@@ -588,8 +588,7 @@
   </style>
 </head>
 <body>
-<div class="service"><?php print $servicehired_logged; ?>
-</div>
+<div class="hidden service"><?php print $servicehired_logged; ?></div>
 <div class="overthefold">
     <div class="topbar">
         <a href="/">
@@ -670,16 +669,18 @@
     <div class="leftmenu">
       <a href="https://www.inventshift.com/blog">Blog</a>
     </div>
-      <!--
+       <?php if ($servicehired_logged == 'logged'): ?>
         <div class="rightmenu">
             <a class="right-padding" href="/user/logout">Log out</a>
             <a class="listyourbusiness" href="/dash">Dashboard</a>
         </div>
-        -->
-        <div class="rightmenu">
+    <?php endif; ?>
+    <?php if ($servicehired_logged == 'anon'): ?>
+      <div class="rightmenu">
             <a class="listyourbusiness" href="/list-your-business">List your business</a>
             <a href="/user">Sign In</a>
         </div>
+    <?php endif; ?>
   </div>
   <div class="bottom-menu">
     <ul>
