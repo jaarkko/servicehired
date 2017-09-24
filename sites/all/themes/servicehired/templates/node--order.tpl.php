@@ -164,7 +164,7 @@ foreach ($results['node'] as $result){
                 </div>
                 <?php endif; ?>
 
-                <?php if($node->field_status['und'][0]['value'] == '1'): ?>
+                <?php if($node->field_status['und'][0]['value'] == '1' && $author): ?>
                 <div class="leftend">
                     <div class="payment"><label>Payment to confirm booking:</label>
                         <label class="radio-inline"><input type="radio" name="optradio">Pay full amount of € <?php print $quote->field_price['und'][0]['value']/100; ?></label>
