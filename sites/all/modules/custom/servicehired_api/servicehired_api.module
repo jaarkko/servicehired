@@ -167,8 +167,8 @@ function get_users_cards(){
 function formatted_card (){
   $card = get_users_cards();
   $html = '<div class="card card-'.$card['type'].'">
-  <div class="number">'.$card['last4'].'</div>
-  <div class="ending">'.$card['expmonth'].'-'.$card['expyear'].'</div>
+  <div class="number">Card ending in '.$card['last4'].'</div>
+  <div class="ending">Expiry: '.$card['expmonth'].'-'.$card['expyear'].'</div>
   </div>';
   return $html;
 }
