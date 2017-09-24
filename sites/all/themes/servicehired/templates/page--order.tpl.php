@@ -80,6 +80,7 @@ if ($anon = 'anonymous user'){
   $logged = 0;
 }
 ?>
+<div class="logged"><?php print $logged; ?></div>
 <div class="searched overthefold">
   <div class="topbar">
     <a href="/">
