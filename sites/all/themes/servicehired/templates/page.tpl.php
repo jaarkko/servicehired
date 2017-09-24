@@ -101,11 +101,10 @@
         </div>
         <div class="rightmenu">
           <?php if (user_is_logged_in()): ?>
-            <a href="/user">Sign In</a>
-          <?php endif; ?>
-          <?php if (!user_is_logged_in()): ?>
               <a href="/user/logout">Log Out</a>
-          <?php endif; ?>
+          <?php else:?>
+              <a href="/user">Sign In</a>
+          <?php endif;?>
         </div>
     </div>
 </div>
