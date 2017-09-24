@@ -52,6 +52,11 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
+  $items['billing'] = array(
+    'page callback' => 'billing_page',
+    'access arguments' => array('access content')
+  );
+
   // Creates comments through api.
   $items['developers/get_orders'] = array(
     'access arguments' => array('access content'),
@@ -64,6 +69,9 @@ function servicehired_api_menu() {
 function dashboard_page(){
   return theme('dashboard_page');
 }
+function billing_page(){
+  return theme('billing_page');
+}
 
 /**
  * Implements hook_theme()
@@ -73,6 +81,10 @@ function servicehired_api_theme() {
     'dashboard_page' => array(
       'render element' => 'elements',
       'template' => 'templates/dashboard',
+    ),
+    'billing_page' => array(
+      'render element' => 'elements',
+      'template' => 'templates/billing',
     ),
   );
 }
