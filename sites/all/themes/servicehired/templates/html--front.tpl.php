@@ -679,8 +679,8 @@ $logged_in = user_is_logged_in();
       <?php endif; ?>
     <?php if(user_is_logged_in()): ?>
         <div class="rightmenu">
+            <a class="right-padding" href="/user/logout">Log out</a>
             <a class="listyourbusiness" href="/dash">Dashboard</a>
-            <a href="/user/logout">Log Out</a>
         </div>
     <?php endif; ?>
   </div>
@@ -711,6 +711,7 @@ $logged_in = user_is_logged_in();
     <div class="types">
         <ul id="searchinsides" class="">
         </ul>
+      <?php if(!user_is_logged_in()): ?>
         <form id="stripeform" action="/developers/new_user" method="post" class="stripeform hidden">
             <h2>Add your details to continue </h2>
             <p> Making a booking does not tie you to anything. We just send your quote to the supplier, and you will get a full refund if they are not able to confirm your timing. </p>
@@ -763,6 +764,61 @@ $logged_in = user_is_logged_in();
                 </div>
             </div>
         </form>
+      <?php endif; ?>
+      <?php if(user_is_logged_in()): ?>
+        <form id="stripeform" action="/developers/new_user" method="post" class="stripeform hidden">
+            <h2>Add your details to continue </h2>
+            <p> Making a booking does not tie you to anything. We just send your quote to the supplier, and you will get a full refund if they are not able to confirm your timing. </p>
+            <h4> Your details</h4>
+            <label>
+                <span>First Name</span>
+                <input name="cardholder-first-name" class="field" placeholder="Jane">
+            </label>
+            <label>
+                <span>Last Name</span>
+                <input name="cardholder-last-name" class="field" placeholder="Doe">
+            </label>
+            <label>
+                <span>Phone</span>
+                <input name="cardholder-phone" class="field" placeholder="09853398021">
+            </label>
+            <label>
+                <span>Email</span>
+                <input name="cardholder-email" class="field" placeholder="Jane Doe">
+            </label>
+            <h4> Billing details</h4>
+            <label>
+                <span>Phone</span>
+                <input class="field" placeholder="(123) 456-7890" type="tel">
+            </label>
+            <label>
+                <span>ZIP code</span>
+                <input name="address-zip" class="field" placeholder="94110">
+            </label>
+            <label class="hidden">
+                <span>Token</span>
+                <input class="token" name="token" placeholder="94110">
+            </label>
+            <label class="hidden">
+                <span>Package</span>
+                <input class="package" name="package" placeholder="94110">
+            </label>
+            <label>
+                <span>Card</span>
+                <div id="card-element" class="field"></div>
+            </label>
+            <button type="submit">Make a booking request</button>
+            <div class="text-center small">
+                You wont be charged yet.
+            </div>
+            <div class="outcome">
+                <div class="error" role="alert"></div>
+                <div class="success">
+                    Success! Your Stripe token is <span class="token"></span>
+                </div>
+            </div>
+        </form>
+      <?php endif; ?>
     </div>
     <div class="suppliers">
 

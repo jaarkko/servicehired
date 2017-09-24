@@ -16,11 +16,12 @@ function servicehired_order_create() {
   $order = node_load($package);
   $offer = node_load($order->field_supplier_id['und'][0]['value']);
 
+
   $uid = create_customer($first_name, $last_name, $token, $email);
 
   create_order($offer->title, $uid);
 
-  drupal_goto('/orders');
+  drupal_goto('/dash');
 }
 
 function create_customer($first_name, $last_name, $token, $email) {

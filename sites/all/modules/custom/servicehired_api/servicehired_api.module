@@ -128,3 +128,35 @@ function servicehired_orders_format() {
   }
   return $html;
 }
+
+function get_users_cards(){
+  global $user;
+  $user = user_load($user->uid);
+  $token = $user->field_stripe_customer_token['und'][0]['value'];
+  $call = stripe_api_call('Customer', 'retrieve', $token);
+
+  // Decode response from Stripe.
+  $account_json = $call->__toJSON();
+  $account_array = json_decode($account_json);
+  $type = $account_array->sources->data[0]->brand;
+  $last4 = $account_array->sources->data[0]->last4;
+  $expyear = $account_array->sources->data[0]->exp_year;
+  $expmonth = $account_array->sources->data[0]->exp_month;
+
+  $card = array();
+  $card['type'] = $type;
+  $card['last4'] = $last4;
+  $card['expyear'] = $expyear;
+  $card['expmonth'] = $expmonth;
+
+  return($card);
+}
+
+function formatted_card (){
+  $card = get_users_cards();
+  $html = '<div class="card card-'.$card['type'].'">
+  <div class="number">'.$card['last4'].'</div>
+  <div class="ending">'.$card['expmonth']-$card['expyear'].'</div>
+  </div>';
+  return $html;
+}

@@ -1107,3 +1107,7 @@ textarea#message {
   width: 100%;
   margin: 5px 0;
 }
+a.right-padding {
+  margin-right: 1em;
+  font-size: 0.8em;
+}
