@@ -1111,3 +1111,17 @@ a.right-padding {
   margin-right: 1em;
   font-size: 0.8em;
 }
+.card-Visa {
+  background-image: url(https://cdn4.iconfinder.com/data/icons/payment-method/160/payment_method_card_visa-512.png);
+}
+
+.card {
+  max-width: 200px;
+  padding: 10px 15px 10px 60px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 10px 13px;
+  background-color: rgba(211, 211, 211, 0.24);
+  border-radius: 5px;
+  margin: 5px 0;
+}

@@ -302,7 +302,7 @@ foreach ($results['node'] as $result){
       '<label>Payment of 9.00€ will be processed.</label>' +
       '<div><p>You understand that your will be charged. We will hold your money in escrow until the supplier has done their work.</p>' +
       '<p>We make sure that they will do what they are promising.</p></div>' +
-      ' <small> <i class="fa fa-lock" aria-hidden="true"></i>Payments secured by HTTPS and Stripe </small>' +
+      '<?php print formatted_card(); ?><small> <i class="fa fa-lock" aria-hidden="true"></i>Payments secured by HTTPS and Stripe </small>' +
       ' </div>');
   });
 
