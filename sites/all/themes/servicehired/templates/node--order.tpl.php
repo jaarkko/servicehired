@@ -91,6 +91,12 @@ $query->entityCondition('entity_type', 'node')
 $results = $query->execute();
 $comment_html = '';
 
+$author = 0;
+global $user;
+if ($user->uid == $node->uid){
+  $author = 1;
+}
+
 foreach ($results['node'] as $result){
   $quote = node_load($result->nid);
   $comments = comment_load_multiple(comment_get_thread($quote, '', 100));
@@ -157,8 +163,13 @@ foreach ($results['node'] as $result){
                 </div>
                 <?php endif; ?>
                 <div class="actions">
+                  <?php if($node->field_status['und'][0]['value'] == '0' && $author == 0): ?>
+                      <div class="confirm btn confirm-<?php print $node->field_status['und'][0]['value']; ?>">Confirm</div>
+                  <?php endif; ?>
+                  <?php if($node->field_status['und'][0]['value'] == '1' && $author): ?>
+                      <div class="confirm btn confirm-<?php print $node->field_status['und'][0]['value']; ?>">Pay Now</div>
+                  <?php endif; ?>
                     <?php if($node->field_status['und'][0]['value'] !== '4'): ?>
-                        <div class="confirm btn confirm-<?php print $node->field_status['und'][0]['value']; ?>">Confirm</div>
                         <a href="/developers/cancel/<?php print $node->nid; ?>"><div class="canceled btn">Cancel service</div></a>
                     <?php endif; ?>
                 </div>
