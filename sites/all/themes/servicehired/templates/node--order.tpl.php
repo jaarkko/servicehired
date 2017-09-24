@@ -171,6 +171,7 @@ foreach ($results['node'] as $result){
                         <label class="radio-inline"><input type="radio" name="optradio">Pay deposit of € <?php print $quote->field_price['und'][0]['value']/1000; ?></label>
                         <small>
                             <i class="fa fa-lock" aria-hidden="true"></i>
+                            <?php print formatted_card(); ?>
                             Payments secured by HTTPS and Stripe
                         </small>
                     </div>
@@ -297,12 +298,13 @@ foreach ($results['node'] as $result){
   });
 
   $('.confirm-1').click(function(){
+    var card = $('.card').html();
     $(this).html('<a href="/developers/api/payment/<?php print $node->nid; ?>/1/<?php print $quote->nid; ?>"><div class="confirm btn confirm-1">Confirm payment of 9.00€</div></a>');
     $('.payment').html('<div class="payment">' +
       '<label>Payment of 9.00€ will be processed.</label>' +
       '<div><p>You understand that your will be charged. We will hold your money in escrow until the supplier has done their work.</p>' +
-      '<p>We make sure that they will do what they are promising.</p></div>' +
-      '<?php print formatted_card(); ?><small> <i class="fa fa-lock" aria-hidden="true"></i>Payments secured by HTTPS and Stripe </small>' +
+      '<p>We make sure that they will do what they are promising.</p></div>' + card +
+      '<small> <i class="fa fa-lock" aria-hidden="true"></i>Payments secured by HTTPS and Stripe </small>' +
       ' </div>');
   });
 
