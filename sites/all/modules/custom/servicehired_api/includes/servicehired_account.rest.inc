@@ -85,6 +85,43 @@ function create_order($order_title, $uid) {
   node_save($node);
 }
 
+function servicehired_payment (){
+  $order_id = arg(2);
+  $type = arg(3);
+  $quote_id = arg(4);
+
+  $order = node_load($order_id);
+  $quote = node_load($quote_id);
+  global $user;
+  $users = user_load($user->uid);
+  $stripe_token = $users->field_stripe_customer_token['und'][0]['value'];
+
+  if ($type == 1) {
+    $payment_amount = (int)$quote->field_price['und'][0]['value'];
+    $payment_amount = $payment_amount*100;
+  } else {
+    $payment_amount = (int)$quote->field_price['und'][0]['value']/10*20;
+  }
+
+  // Create a charge in Stripe.
+  $charge = array(
+    'amount' => $payment_amount,
+    'currency' => 'eur',
+    'customer' => $stripe_token,
+    'description' => 'Charge for '.$user->mail.' of '.$order->title
+  );
+
+  $call = stripe_api_call('Charge', 'Create', $charge);
+
+  // Decode response from Stripe.
+  $account_json = $call->__toJSON();
+  $account_array = json_decode($account_json);
+  dsm($account_array);
+
+  create_comment($order_id,$user,'User has just paid the deposit');
+  drupal_goto('node/'.$order_id);
+}
+
 function servicehired_update_status(){
   // Get data from ajax post.
   $postdata = file_get_contents("php://input");
@@ -112,6 +149,24 @@ function servicehired_update_status(){
   $status = $node->field_status['und'][0]['value'] + 1;
   $node->field_status['und'][0]['value'] = $status;
   node_save($node);
+}
+
+// Helper to create comment.
+function create_comment($nid,$user,$text){
+  $comment = new stdClass();
+  $comment->nid = $nid;
+  $comment->cid = 0;
+  $comment->pid = 0;
+  $comment->uid = $user->uid;
+  $comment->mail = $user->mail;
+  $comment->name = $user->name;
+  $comment->created = time();
+  $comment->is_anonymous = 0;
+  $comment->status = COMMENT_PUBLISHED;
+  $comment->language = LANGUAGE_NONE;
+  $comment->comment_body['und'][0]['value'] = $text;
+  $comment->comment_body['und'][0]['format'] = 'plain_text';
+  comment_save($comment);
 }
 
 function servicehired_cancel(){

@@ -22,6 +22,14 @@ function servicehired_api_menu() {
   );
 
   // Creates comments through api.
+  $items['developers/api/payment/%/%/%'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' => 'servicehired_payment',
+    'file' => 'includes/servicehired_account.rest.inc',
+    'access arguments' => array('access content')
+  );
+
+  // Creates comments through api.
   $items['developers/api/create_comment'] = array(
     'type' => MENU_CALLBACK,
     'page callback' => 'servicehired_create_comment',

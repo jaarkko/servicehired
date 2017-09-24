@@ -297,7 +297,7 @@ foreach ($results['node'] as $result){
   });
 
   $('.confirm-1').click(function(){
-    $(this).html('<a href="/developers/api/orderid/deposit/quoteid"><div class="confirm btn confirm-1">Confirm payment of 9.00€</div></a>');
+    $(this).html('<a href="/developers/api/payment/<?php print $node->nid; ?>/1/<?php print $quote->nid; ?>"><div class="confirm btn confirm-1">Confirm payment of 9.00€</div></a>');
     $('.payment').html('<div class="payment">' +
       '<label>Payment of 9.00€ will be processed.</label>' +
       '<div><p>You understand that your will be charged. We will hold your money in escrow until the supplier has done their work.</p>' +
