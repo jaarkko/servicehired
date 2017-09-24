@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html>
-<?php
-global $user;
-$anon = $user->roles[1];
-$logged = 1;
-if ($anon == 'anonymous user'){
-  $logged = 0;
-}
-?>
 <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -676,18 +668,17 @@ if ($anon == 'anonymous user'){
     <div class="leftmenu">
       <a href="https://www.inventshift.com/blog">Blog</a>
     </div>
-    <?php if($logged === 0): ?>
-    <div class="rightmenu">
-        <a class="listyourbusiness" href="/list-your-business">List your business</a>
-      <a href="/user">Sign In</a>
-    </div>
-      <?php endif; ?>
-    <?php if($logged === 1): ?>
+    <?php if (user_is_logged_in()): ?>
         <div class="rightmenu">
             <a class="right-padding" href="/user/logout">Log out</a>
             <a class="listyourbusiness" href="/dash">Dashboard</a>
         </div>
-    <?php endif; ?>
+    <?php else:?>
+        <div class="rightmenu">
+            <a class="listyourbusiness" href="/list-your-business">List your business</a>
+            <a href="/user">Sign In</a>
+        </div>
+    <?php endif;?>
   </div>
   <div class="bottom-menu">
     <ul>
