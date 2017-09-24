@@ -296,4 +296,15 @@ foreach ($results['node'] as $result){
     $(this).val(value);
   });
 
+  $('.confirm-1').click(function(){
+    $(this).html('<a href="/developers/api/orderid/deposit/quoteid"><div class="confirm btn confirm-1">Confirm payment of 9.00€</div></a>');
+    $('.payment').html('<div class="payment">' +
+      '<label>Payment of 9.00€ will be processed.</label>' +
+      '<div><p>You understand that your will be charged. We will hold your money in escrow until the supplier has done their work.</p>' +
+      '<p>We make sure that they will do what they are promising.</p></div>' +
+      ' <small> <i class="fa fa-lock" aria-hidden="true"></i>Payments secured by HTTPS and Stripe </small>' +
+      ' </div>');
+  });
+
+
 </script>
