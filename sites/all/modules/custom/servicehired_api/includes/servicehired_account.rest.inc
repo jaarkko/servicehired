@@ -116,9 +116,14 @@ function servicehired_payment (){
   // Decode response from Stripe.
   $account_json = $call->__toJSON();
   $account_array = json_decode($account_json);
-  dsm($account_array);
 
-  create_comment($order_id,$user,'User has just paid the deposit');
+  create_comment($quote_id,$user,'User has just paid the deposit');
+
+  $status = $order->field_status['und'][0]['value'] + 1;
+  $order->field_status['und'][0]['value'] = $status;
+
+  node_save($order);
+
   drupal_goto('node/'.$order_id);
 }
 
