@@ -766,7 +766,7 @@
     </div>
 </div>
 
-
+<!--
 <div class="marketing row cities">
     <div class="col-sm-12 in_and_around">
         <h3>Most popular cities for services</h3>
@@ -956,7 +956,7 @@
         </div>
     </div>
 </div>
-
+-->
 <footer class="footer container-fluid">
     <div class="region region-footer">
         <section id="block-block-1" class="block block-block clearfix">
