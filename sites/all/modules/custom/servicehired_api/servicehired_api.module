@@ -57,8 +57,6 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
-
-
   // Creates comments through api.
   $items['developers/get_orders'] = array(
     'access arguments' => array('access content'),
