@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html<?php print $html_attributes;?><?php print $rdf_namespaces;?>>
 <head>
-  <meta charset="utf-8">
+    <link rel="profile" href="<?php print $grddl_profile; ?>" />
+    <?php print $head; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="google-site-verification" content="bEFC0Jbc6hIVdp6QtiZOAdiExxTG_f_4IN5L8K06wFo" />
     <title>ServiceHired - Find, compare and book local services</title>
