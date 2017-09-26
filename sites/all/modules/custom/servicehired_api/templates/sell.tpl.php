@@ -30,7 +30,22 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.js"></script>
-
+<style>
+    .left-col, .right-col {
+        width: 50%;
+        float: left;
+        padding-right: 10%;
+    }
+    .right-col .tabbable {
+        display: none;
+    }
+    .form-textarea {
+        max-height: 100px;
+    }
+    .filter-wrapper,.help-block {
+        display: none;
+    }
+</style>
 <script>
     $=jQuery;
   $('#edit-field-business-tags-und-0-value').tagsInput();
