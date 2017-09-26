@@ -213,3 +213,36 @@ function servicehired_api_menu_alter(&$items) {
   $items['system/ajax']['file path'] = drupal_get_path('module', 'node');
   $items['system/ajax']['file'] = 'node.pages.inc';
 }
+
+function get_businesses_of_user(){
+  global $user;
+  $query = new EntityFieldQuery;
+  $result = $query
+    ->entityCondition('entity_type', 'node')
+    ->propertyCondition('status', 1)
+    ->propertyCondition('type', 'supplier')
+    ->propertyCondition('uid', $user->uid)
+    ->execute();
+
+  if ($result){
+    return $result['node'];
+  } else {
+    return null;
+  }
+}
+
+function format_businesses(){
+  $businesses = get_businesses_of_user();
+  $html = '';
+
+  if($businesses){
+    $businesses = $businesses['node'];
+    foreach ($businesses as $business) {
+      $loaded = node_load($business->nid);
+      $html .= '<li>'.$loaded->title.'</li>';
+    }
+  } else {
+    return drupal_render($form);
+  }
+  return($html);
+}

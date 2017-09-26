@@ -11,21 +11,9 @@
     </div>
     <div class="right-col">
   <h3>Add your business</h3>
-      <?php
 
-      global $user;
-      module_load_include('inc', 'node', 'node.pages');
-      $node = (object) array(
-        'uid' => $user->uid,
-        'name' => (isset($user->name) ? $user->name : ''),
-        'type' => 'supplier',
-        'language' => LANGUAGE_NONE,
-      );
-      $form = drupal_get_form('supplier_node_form', $node);
 
-      print drupal_render($form)
-
-      ?>
+      <?php print format_businesses(); ?>
 </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.css" />
