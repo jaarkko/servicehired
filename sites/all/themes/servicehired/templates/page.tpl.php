@@ -91,6 +91,9 @@
                 <a href="/billing">Billing</a>
             </li>
             <li>
+                <a href="/sell">Sell</a>
+            </li>
+            <li>
                 <a href="/contribution">Contributions</a>
             </li>
         </ul>
