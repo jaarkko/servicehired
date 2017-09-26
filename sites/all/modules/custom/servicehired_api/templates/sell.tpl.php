@@ -11,3 +11,19 @@
     <div class="btn btn-change">Add your business</div>
     </div>
 </div>
+
+<?php
+
+global $user;
+module_load_include('inc', 'node', 'node.pages');
+$node = (object) array(
+  'uid' => $user->uid,
+  'name' => (isset($user->name) ? $user->name : ''),
+  'type' => 'supplier',
+  'language' => LANGUAGE_NONE,
+);
+$form = drupal_get_form('supplier_node_form', $node);
+
+print drupal_render($form)
+
+?>

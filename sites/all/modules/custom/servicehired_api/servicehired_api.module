@@ -206,3 +206,10 @@ function get_user_billing (){
   }
   return($list);
 }
+
+function servicehired_api_menu_alter(&$items) {
+  $items['file/ajax']['file path'] = drupal_get_path('module', 'node');
+  $items['file/ajax']['file'] = 'node.pages.inc';
+  $items['system/ajax']['file path'] = drupal_get_path('module', 'node');
+  $items['system/ajax']['file'] = 'node.pages.inc';
+}
