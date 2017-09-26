@@ -27,3 +27,10 @@ $form = drupal_get_form('supplier_node_form', $node);
 print drupal_render($form)
 
 ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.js"></script>
+
+<script>
+    $=jQuery;
+  $('#edit-field-business-tags-und-0-value').tagsInput();
+</script>
