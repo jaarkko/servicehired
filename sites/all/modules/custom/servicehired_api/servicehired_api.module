@@ -266,7 +266,7 @@ function format_businesses(){
   if($businesses){
     foreach ($businesses as $business) {
       $loaded = node_load($business->nid);
-      $html .= '<li>'.$loaded->title.'</li>';
+      $html .= '<a href="node/'.$business->nid.'><li>'.$loaded->title.'</li></a>';
     }
     $html .= '</div>';
   } else {
