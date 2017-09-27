@@ -80,7 +80,23 @@
  */
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-    <div>
-        <?php ddl($node); ?>
+    <div class="overflow">
+        <div class="overflow-left">
+            <div class="image">
+              <?php
+              $img_url = $node->field_business_profile_image['und'][0]['uri'];
+              print '<img src="'. image_style_url("thumbnail", $img_url).'" />';
+              ?>
+            </div>
+        </div>
+        <div class="overflow-left">
+          <?php ddl($node); ?>
+            <div class="description">
+              <?php print $node->title; ?>
+            </div>
+            <div class="description">
+              <?php print $node->body['und'][0]['value']; ?>
+            </div>
+        </div>
     </div>
 </article>
