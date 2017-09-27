@@ -1126,16 +1126,25 @@ a.right-padding {
   margin: 5px 0;
 }
 .overflow-left {
-  width: 50%;
+  width: 47.5%;
   float: left;
+  padding-right: 2.5%;
 }
 .overflow-right {
-  width: 50%;
+  width: 47.5%;
   float: left;
+  padding-left: 2.5%;
 }
 .overflow {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 42px 0;
+  color: white;
+}
+.desc {
+  float: left;
+  font-weight: 200;
+  font-size: 16px;
 }
 article#node-1 {
   background: #1f212f;

@@ -91,12 +91,14 @@
         </div>
         <div class="overflow-right">
           <?php ddl($node); ?>
-            <div class="description">
+            <div class="title">
               <h1><?php print $node->title; ?></h1>
             </div>
-            <div class="description">
+            <div class="desc">
               <p><?php print $node->body['und'][0]['value']; ?></p>
             </div>
         </div>
+        <div class="clearfix"></div>
+
     </div>
 </article>
