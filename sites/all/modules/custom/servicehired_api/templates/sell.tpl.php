@@ -1,5 +1,5 @@
 <h2>
-  Start selling on Servicehired.com
+  Selling your services
 </h2>
 
 <div class="order-flow">

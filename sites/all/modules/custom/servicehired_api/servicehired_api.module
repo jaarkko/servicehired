@@ -245,15 +245,15 @@ function get_businesses_of_user(){
 function format_businesses(){
   $businesses = get_businesses_of_user();
   $html = '<div class="left-col"><h3>How to get more bookings?</h3>
-    <h4>Improve your business profile</h4>
+    <h4>1. Improve your business profile</h4>
     <p>We want your business details. This allows our thousands
       of visitors to see and find you. Make sure to add a few
       high quality images.</p>
-       <h4>Share your profile on social media</h4>
+       <h4>2. Share your profile on social media</h4>
     <p>The more people know about us, the more will also be able
     to find you and book you through us. The more clicks your page gets
     the better you rank against your peers.</p>
-       <h4>Raise your visibility</h4>
+       <h4>3. Raise your visibility</h4>
     <p>Not getting bookings? Try raised visibility for free
     for a one week period. This is normally a cost of 50€ per.
     month. Our premium suppliers are verified and rank higher in our 
