@@ -85,17 +85,17 @@
             <div class="image">
               <?php
               $img_url = $node->field_business_profile_image['und'][0]['uri'];
-              print '<img src="'. image_style_url("thumbnail", $img_url).'" />';
+              print '<img src="'. image_style_url("carousel-front", $img_url).'" />';
               ?>
             </div>
         </div>
-        <div class="overflow-left">
+        <div class="overflow-right">
           <?php ddl($node); ?>
             <div class="description">
-              <?php print $node->title; ?>
+              <h1><?php print $node->title; ?></h1>
             </div>
             <div class="description">
-              <?php print $node->body['und'][0]['value']; ?>
+              <p><?php print $node->body['und'][0]['value']; ?></p>
             </div>
         </div>
     </div>
