@@ -1146,6 +1146,12 @@ a.right-padding {
   font-weight: 200;
   font-size: 16px;
 }
+.image img {
+  max-width: 100%;
+}
+.overflow-right h1 {
+  margin-top: 0;
+}
 article#node-1 {
   background: #1f212f;
 }
