@@ -3,16 +3,7 @@
 </h2>
 
 <div class="order-flow">
-  <div class="left-col"><h3>How does Servicehired work?</h3>
-    <p>1. Lets start with the basics</p>
-    <p>We want your business details. This allows our thousands
-      of visitors to see and find you. Make sure to add a few
-      high quality images.</p>
-  </div>
-  <div class="right-col">
-    <h3>Add your business</h3>
     <?php print format_businesses(); ?>
-  </div>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.js"></script>
@@ -30,6 +21,23 @@
     }
     .filter-wrapper,.help-block {
       display: none;
+    }
+    .right-col li {
+      list-style: none;
+      border: 1px solid;
+      text-align: left;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      max-width: 100%;
+      margin-bottom: 40px;
+      background: #1b1e2e;
+      color: white;
+      font-size: 20px;
+      padding-left: 30px;
+    }
+    .right-col li:hover {
+      opacity: 0.8;
+      cursor: pointer;
     }
   </style>
   <script>

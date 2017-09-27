@@ -244,15 +244,27 @@ function get_businesses_of_user(){
 
 function format_businesses(){
   $businesses = get_businesses_of_user();
-  $html = '';
+  $html = '<div class="left-col"><h3>How to get more bookings?</h3>
+    <p>Improve your business profiles</p>
+    <p>We want your business details. This allows our thousands
+      of visitors to see and find you. Make sure to add a few
+      high quality images.</p>
+  </div>
+  <div class="right-col">';
 
   if($businesses){
     foreach ($businesses as $business) {
       $loaded = node_load($business->nid);
       $html .= '<li>'.$loaded->title.'</li>';
     }
+    $html .= '</div>';
   } else {
-    $html = '<li><a href="create-business">Start by adding your business</a></li>';
+    $html = '<div class="left-col"><h3>How does Servicehired work?</h3><p>1. Lets start with the basics</p>
+<p>We want your business details. This allows our thousands
+      of visitors to see and find you. Make sure to add a few
+      high quality images.</p></div>
+  <div class="right-col"><a href="create-business">Start by adding your business</a></div>
+<li></li>';
   }
   return($html);
 }
