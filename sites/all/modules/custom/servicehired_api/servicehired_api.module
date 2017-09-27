@@ -259,7 +259,9 @@ function format_businesses(){
     month. Our premium suppliers are verified and rank higher in our 
     search.</p>
   </div>
-  <div class="right-col">';
+  <div class="right-col">
+  <a href="/create-business"><button class="btn btn-primary">Create a new business</button></a>
+  ';
 
   if($businesses){
     foreach ($businesses as $business) {
