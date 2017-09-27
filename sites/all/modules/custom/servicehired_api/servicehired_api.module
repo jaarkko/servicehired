@@ -62,6 +62,10 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
+  $items['create-business'] = array(
+    'page callback' => 'create_business',
+    'access arguments' => array('access content')
+  );
 
   // Creates comments through api.
   $items['developers/get_orders'] = array(
@@ -81,6 +85,9 @@ function billing_page(){
 function sell_page(){
   return theme('sell_page');
 }
+function create_business(){
+  return theme('create_business');
+}
 
 /**
  * Implements hook_theme()
@@ -98,6 +105,10 @@ function servicehired_api_theme() {
     'sell_page' => array(
       'render element' => 'elements',
       'template' => 'templates/sell',
+    ),
+    'create_business' => array(
+      'render element' => 'elements',
+      'template' => 'templates/create_business',
     ),
   );
 }
@@ -241,7 +252,7 @@ function format_businesses(){
       $html .= '<li>'.$loaded->title.'</li>';
     }
   } else {
-    return drupal_render($form);
+    $html = '<li><a href="create-business">Start by adding your business</a></li>';
   }
   return($html);
 }
