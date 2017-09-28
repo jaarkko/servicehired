@@ -104,11 +104,14 @@
     </div>
 
     <div class="down">
-        <a class="button btn btn-primary href="/create-product/<?php print $node->nid; ?>">Create a product</a>
+        <a class="button btn btn-primary" href="/create-product/<?php print $node->nid; ?>">Create a product</a>
         <?php print format_supplier_products($node->nid); ?>
     </div>
     <style>
-
+        a.btn-primary {
+            display: block;
+            margin-left:15px;
+        }
         footer li a {
             text-decoration: none;
             font-size: 0.8em !important;
