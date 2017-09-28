@@ -62,6 +62,13 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
+  $items['create-product/%'] = array(
+    'page callback' => 'create_product',
+    'page arguments' => array(1),
+    'access arguments' => array('access content')
+  );
+
+
   $items['create-business'] = array(
     'page callback' => 'create_business',
     'access arguments' => array('access content')
@@ -88,6 +95,9 @@ function sell_page(){
 function create_business(){
   return theme('create_business');
 }
+function create_product(){
+  return theme('create_product');
+}
 
 /**
  * Implements hook_theme()
@@ -109,6 +119,10 @@ function servicehired_api_theme() {
     'create_business' => array(
       'render element' => 'elements',
       'template' => 'templates/create_business',
+    ),
+    'create_product' => array(
+      'render element' => 'elements',
+      'template' => 'templates/create_product',
     ),
   );
 }
