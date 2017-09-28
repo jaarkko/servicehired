@@ -299,7 +299,7 @@ function format_supplier_products($nid){
   foreach($products as $product){
     $loaded = node_load($product->nid);
     $img_url = $loaded->field_business_profile_image['und'][0]['uri'];
-    $html .= '<div class="product"><div class="title">'.$loaded->title.'</div><div class="image"><img src="'.$img_url.'"></div><div class="description">'.$loaded->body['und'][0]['value'].'</div></div>';
+    $html .= '<div class="product"><div class="prinsides"><div class="title">'.$loaded->title.'</div><div class="image"><img src="'.$img_url.'"></div><div class="description">'.$loaded->body['und'][0]['value'].'</div></div></div>';
   }
   return $html;
 }
