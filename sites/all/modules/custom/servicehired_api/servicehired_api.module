@@ -279,3 +279,25 @@ function format_businesses(){
   }
   return($html);
 }
+
+function get_supplier_products($nid){
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'product')
+    ->fieldCondition('field_supplier_id', 'value', $nid, '=')
+    ->addMetaData('account', user_load(1));
+
+  $result = $query->execute();
+
+  return($result['node']);
+}
+
+function format_supplier_products($nid){
+  $html = '';
+  $products = get_supplier_products($nid);
+  foreach($products as $product){
+    $loaded = node_load($product->nid);
+    $html .= '<div class="product"><div class="title">'.$loaded->title.'</div><div class="image"></div><div class="description">'.$loaded->body['und'][0]['value'].'</div></div>';
+  }
+  return $html;
+}

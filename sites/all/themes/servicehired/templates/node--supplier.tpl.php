@@ -101,4 +101,8 @@
         <div class="clearfix"></div>
 
     </div>
+
+    <div class="down">
+        <?php print format_supplier_products($node->nid); ?>
+    </div>
 </article>
