@@ -104,7 +104,7 @@
     </div>
 
     <div class="down">
-        <a href="/create-product/<?php print $node->nid; ?>"><div class="button btn btn-primary"></div></a>
+        <a class="button btn btn-primary href="/create-product/<?php print $node->nid; ?>">Create a product</a>
         <?php print format_supplier_products($node->nid); ?>
     </div>
     <style>
