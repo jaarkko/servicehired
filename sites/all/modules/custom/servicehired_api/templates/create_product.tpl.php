@@ -28,7 +28,7 @@
       $node = (object) array(
         'uid' => $user->uid,
         'name' => (isset($user->name) ? $user->name : ''),
-        'type' => 'supplier',
+        'type' => 'product',
         'language' => LANGUAGE_NONE,
       );
       $form = drupal_get_form('product_node_form', $node);
