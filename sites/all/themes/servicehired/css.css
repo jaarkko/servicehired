@@ -1156,3 +1156,7 @@ a.right-padding {
   margin-top: 0;
 }
 
+.down {
+  max-width: 1400px;
+  margin: 0 auto;
+}
