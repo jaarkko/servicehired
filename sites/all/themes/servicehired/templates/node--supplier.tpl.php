@@ -81,25 +81,26 @@
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
     <div class="overflow">
-        <div class="overflow-left">
-            <div class="image">
-              <?php
-              $img_url = $node->field_business_profile_image['und'][0]['uri'];
-              print '<img src="'. image_style_url("carousel-front", $img_url).'" />';
-              ?>
+        <div class="inside">
+            <div class="overflow-left">
+                <div class="image">
+                  <?php
+                  $img_url = $node->field_business_profile_image['und'][0]['uri'];
+                  print '<img src="'. image_style_url("carousel-front", $img_url).'" />';
+                  ?>
+                </div>
             </div>
+            <div class="overflow-right">
+              <?php ddl($node); ?>
+                <div class="title">
+                    <h1><?php print $node->title; ?></h1>
+                </div>
+                <div class="desc">
+                    <p><?php print $node->body['und'][0]['value']; ?></p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
         </div>
-        <div class="overflow-right">
-          <?php ddl($node); ?>
-            <div class="title">
-              <h1><?php print $node->title; ?></h1>
-            </div>
-            <div class="desc">
-              <p><?php print $node->body['und'][0]['value']; ?></p>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-
     </div>
 
     <div class="down">

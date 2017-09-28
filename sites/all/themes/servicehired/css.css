@@ -1135,11 +1135,14 @@ a.right-padding {
   float: left;
   padding-left: 2.5%;
 }
-.overflow {
+.overflow .inside {
   max-width: 1400px;
   margin: 0 auto;
   padding: 42px 0;
   color: white;
+}
+.overflow {
+  background: #1f212f;
 }
 .desc {
   float: left;
@@ -1151,8 +1154,5 @@ a.right-padding {
 }
 .overflow-right h1 {
   margin-top: 0;
-}
-article#node-1 {
-  background: #1f212f;
 }
 
