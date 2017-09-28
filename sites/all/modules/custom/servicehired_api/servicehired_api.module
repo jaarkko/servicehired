@@ -292,14 +292,29 @@ function get_supplier_products($nid){
   return($result['node']);
 }
 
-function format_supplier_products($nid){
+function format_supplier_products($nid) {
   $html = '';
   $products = get_supplier_products($nid);
 
-  foreach($products as $product){
-    $loaded = node_load($product->nid);
-    $img_url = $loaded->field_business_profile_image['und'][0]['uri'];
-    $html .= '<div class="product"><div class="prinsides"><div class="title">'.$loaded->title.'</div><div class="image"><img src="'.$img_url.'"></div><div class="description">'.$loaded->body['und'][0]['value'].'</div></div></div>';
+  foreach ($products as $product) {
+    $node = node_load($product->nid);
+    $img_url = $node->field_product_image['und'][0]['uri'];
+    $image1 = image_style_url("carousel-front", $img_url);
+
+    $html .= '<li id="row-1" class="box col-sm-6 col-xs-12 box-74 col-md-5">
+<div class="hidden dataid">'.$node->nid.'</div>
+<div style="background-image:url('.$image1.') !important" firstimage="/sites/default/files/styles/carousel-front/public/7M2A2389.jpg?itok=f5YPuHQx" secondimage="undefined" thirdimage="undefined" class="text">
+<div class="arrow-left">&lt;</div>
+<div class="arrow-right">&gt;</div>
+<div class="inside"><span class="product">'.$node->title.'</span>
+</div>
+<div class="description">
+<span class="hidden title">'.$node->title.'</span>
+<div class="pricing"><span class="currency">£</span><span class="price">'.$node->field_minimum_price['und'][0]['value'].'</span>
+<span class="vat">Incl. Vat</span></div>
+<div class="descript"></div><span class="tags">
+<div class="actions">
+<div class="btn btn-primary enquiry" typeform="">Buy now</div></div><div class="close">x</div></div></li>';
   }
   return $html;
 }

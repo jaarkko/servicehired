@@ -1155,6 +1155,9 @@ a.right-padding {
 .overflow-right h1 {
   margin-top: 0;
 }
+.product {
+  width: 33%;
+}
 
 .down {
   max-width: 1400px;
