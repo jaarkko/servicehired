@@ -6,7 +6,7 @@
     <div class="left-col"><h3>Tips for the best profile</h3>
 
         <p>We need your business details so we can send customers your way, and can verify that you are a real business. This allows our thousands
-            of visitors to see and find you. .</p>
+            of visitors to see and find you.</p>
 
         <h4>1. Use high quality images</h4>
 
@@ -21,7 +21,7 @@
         <p>The better the tags, the more the sales. If you want to be found with odd keywords, remember to add all these in, as our search is based on them.</p>
     </div>
     <div class="right-col">
-  <h3>Add your business</h3>
+  <h3>Add a product</h3>
       <?php
       global $user;
       module_load_include('inc', 'node', 'node.pages');
