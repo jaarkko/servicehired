@@ -68,6 +68,10 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
+  $items['edit_user'] = array(
+    'page callback' => 'edit_user',
+    'access arguments' => array('access content')
+  );
 
   $items['create-business'] = array(
     'page callback' => 'create_business',
@@ -98,6 +102,9 @@ function create_business(){
 function create_product(){
   return theme('create_product');
 }
+function edit_user(){
+  return theme('edit_user');
+}
 
 /**
  * Implements hook_theme()
@@ -119,6 +126,10 @@ function servicehired_api_theme() {
     'create_business' => array(
       'render element' => 'elements',
       'template' => 'templates/create_business',
+    ),
+    'edit_user' => array(
+    'render element' => 'elements',
+    'template' => 'templates/edit_user',
     ),
     'create_product' => array(
       'render element' => 'elements',
@@ -331,4 +342,6 @@ function format_supplier_products($nid) {
 <div class="btn btn-primary enquiry" typeform="">Buy now</div></div><div class="close">x</div></div></li>';
   }
   return $html;
+
 }
+
