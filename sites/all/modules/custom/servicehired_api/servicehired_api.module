@@ -68,7 +68,7 @@ function servicehired_api_menu() {
     'access arguments' => array('access content')
   );
 
-  $items['edit_user'] = array(
+  $items['account'] = array(
     'page callback' => 'edit_user',
     'access arguments' => array('access content')
   );
