@@ -1160,6 +1160,7 @@
   var client = algoliasearch(applicationID, apiKey);
   var helper = algoliasearchHelper(client, index, {
     hitsPerPage: 12,
+    facets: ['field_product_price']
   });
 
   initialize2(helper);
