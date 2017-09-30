@@ -1234,6 +1234,9 @@
         });
       }
 
+      pipsRange.noUiSlider.unbind('update');
+      pipsRange.noUiSlider.unbind('change');
+
       pipsRange.noUiSlider.on('update', function () {
         var results = pipsRange.noUiSlider.get();
         var rangemin = results[0];
