@@ -712,6 +712,8 @@
     <div class="facets">
         <div id="pricerange" class="pricerange">
         </div>
+        <div id="pipssteps">
+        </div>
     </div>
     <div class="types">
         <ul id="searchinsides" class="">
