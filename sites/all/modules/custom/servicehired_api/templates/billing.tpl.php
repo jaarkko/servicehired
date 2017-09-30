@@ -7,7 +7,7 @@
         <p>We charge donations and bookings that are directly paid to the business owners after they have completed their job with you.</p>
 
         <h3>Payment history</h3>
-        <ul><?php print get_user_billing(); ?></ul>
+        <ul class="paymenthistory"><?php print get_user_billing(); ?></ul>
     </div>
     <div class="right-col">
   <h3>Your default payment method</h3>
