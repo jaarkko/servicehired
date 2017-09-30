@@ -1245,6 +1245,8 @@
         var rangemin = results[0];
         var rangemax = results[1];
 
+        console.log(rangemin);
+        console.log(rangemax);
 
         var state = helper.getState();
         var latlng1 = state.aroundLatLng;
