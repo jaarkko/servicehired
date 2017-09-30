@@ -709,6 +709,10 @@
             <li class="future servicebread">Choose a service</li>
             <li class="future checkoutbread hidden">Add details to continue</li>
         </ul></div>
+    <div class="facets">
+        <div id="pricerange" class="pricerange">
+        </div>
+    </div>
     <div class="types">
         <ul id="searchinsides" class="">
         </ul>
@@ -1076,6 +1080,9 @@
 <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD-tXblrfyR3thTR8DGuM3NreZ9qGLtT8&libraries=places"></script>
+<script src="/sites/all/libraries/noui/nouislider.min.js"></script>
+<script src="/sites/all/libraries/noui/nouislider.min.js"></script>
+<link rel="stylesheet" href="/sites/all/libraries/noui/nouislider.min.css">
 <!-- Initialize autocomplete menu -->
 <!-- Latest compiled and minified CSS -->
 
@@ -1185,6 +1192,7 @@
     console.log(content);
 
     renderHits(content);
+    renderSlider(content);
 
     $('.showing').remove();
     var html = '<div class="col-md-12 text-right showing">Found '+ content.nbHits +' results in '+ content.processingTimeMS +' ms</div>';
