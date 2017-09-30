@@ -1191,6 +1191,78 @@
   helper.setQueryParameter('aroundLatLngViaIP', true);
   helper.setQueryParameter('aroundRadius', radius);
 
+  function renderSlider(content){
+    if (content.facets[0]) {
+      var min = content.facets[0].stats.min;
+      var max = content.facets[0].stats.max;
+      var avg = content.facets[0].stats.avg;
+    }
+
+    var pipsRange = document.getElementById('pipssteps');
+
+    var range_all_sliders = {
+      'min': [min],
+      //'25%': [ avg / 2 ],
+      '10%': [avg],
+      //'75%': [ avg * 2 ],
+      'max': [max]
+    };
+
+    function updateSliderRange(min, max, avg) {
+      pipsRange.noUiSlider.updateOptions({
+        range: {
+          'min': min,
+          '50%': [avg],
+          'max': max
+        }
+      });
+    }
+    // If max = no results.
+    if (max == 0) {
+    } else {
+      // Render slider if results.
+      if (!$('.noUi-base')[0]) {
+        noUiSlider.create(pipsRange, {
+          range: range_all_sliders,
+          connect: true,
+          behaviour: 'tap',
+          pips: {
+            mode: 'range',
+            density: 3,
+            format: wNumb({
+              decimals: 0,
+              prefix: '$ '
+            })
+          },
+          start: [min, max]
+        });
+      }
+
+      pipsRange.noUiSlider.on('update', function () {
+        var results = pipsRange.noUiSlider.get();
+        var rangemin = results[0];
+        var rangemax = results[1];
+      });
+
+      pipsRange.noUiSlider.on('change', function () {
+        var results = pipsRange.noUiSlider.get();
+        var rangemin = results[0];
+        var rangemax = results[1];
+
+        // placeholder for price values
+        $('.price-min').html((rangemin * 0.01).toFixed(0) + searching);
+        $('.price-max').html((rangemax * 0.01).toFixed(0) + searching);
+
+        var state = helper.getState();
+        var latlng1 = state.aroundLatLng;
+        fitMapToMarkersAutomatically = true;
+
+        helper.removeNumericRefinement('field_product_price').addNumericRefinement('field_product_price', '>=', rangemin).addNumericRefinement('field_product_price', '<=', rangemax).setQueryParameter('aroundLatLng', latlng1).setQueryParameter('aroundRadius', radius).search();
+
+      });
+    }
+  }
+
   helper.on('result', function(content) {
     console.log(content);
 
