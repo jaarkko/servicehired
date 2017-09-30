@@ -1245,9 +1245,6 @@
         var rangemin = results[0];
         var rangemax = results[1];
 
-        // placeholder for price values
-        $('.price-min').html((rangemin * 0.01).toFixed(0) + searching);
-        $('.price-max').html((rangemax * 0.01).toFixed(0) + searching);
 
         var state = helper.getState();
         var latlng1 = state.aroundLatLng;
