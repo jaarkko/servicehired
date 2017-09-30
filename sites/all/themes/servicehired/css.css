@@ -248,8 +248,9 @@ img.ft-logo {
   left: -6px;
   top: -5px;
 }
+
 .col-sm-2.col-sm-offset-1 {
-  padding-left: 10%;
+  margin-left: 10%;
 }
 
 .col-sm-1 {
