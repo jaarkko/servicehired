@@ -246,17 +246,16 @@ img.ft-logo {
   width: 40px;
   position: absolute;
   left: -6px;
-  top: -19px;
+  top: -5px;
 }
 
+
+
 li.footer-logo {
-  padding-left: initial;
-  padding: 5px 26px 30px 38px;
-  display: block;
-  background-size: 38px;
-  background-position: left top;
-  background-repeat: no-repeat;
-  color: white;
+  font-size: 24px !important;
+  padding: 0px !important;
+  padding-left: 35px !important;
+  padding-bottom: 10px !important;
 }
 .col-sm-3.col-sm-offset-1 {
   padding-right: 15%;
