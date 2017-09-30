@@ -377,12 +377,6 @@
       li.box .text {
           background-size: cover !important;
       }
-      li.box .text {
-          background: #0097ab;
-          height: 230px;
-          width: 100%;
-          cursor: pointer;
-      }
       .text .inside {
           position: absolute;
           padding: 15px 15px 15px 15px;
