@@ -1005,38 +1005,35 @@
         <section id="block-block-1" class="block block-block clearfix">
             <div class="footer-width">
                 <div class="row">
-                    <div class="col-sm-3 col-sm-offset-1">
-                        <ul>
-                            <li class="footer-logo"><img class="ft-logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png">ServiceHired</li>
+                    <div class="col-sm-2">
+                        <ul><li class="footer-logo"><img class="ft-logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png">ServiceHired</li>
                             <li class="small">ServiceHired makes booking services online simple. Find, compare and book. Simple as that.</li>
-                        </ul>
-                    </div>
+                        </ul></div>
+                    <div class="col-sm-2 col-sm-offset-1">
+                        <ul><li> Finding a service</li>
+                            <li><a href="/browse-services">Browse services</a></li>
+                            <li><a href="/how-it-works">How it works</a></li>
+                            <li><a href="/success-stories">Success stories</a></li>
+                        </ul></div>
                     <div class="col-sm-2">
-                        <ul>
-                            <li> Finding a service</li>
-                            <li><a href="/social-enterprise-jobs">How it works</a></li>
-                            <li><a href="/social-enterprise-jobs">Browse suppliers</a></li>
-                            <li><a href="/social-enterprise-jobs">Sustainable business</a></li>
-                            <li><a href="/contact-us">Contact Us</a></li>
-                        </ul>
-                    </div>
+                        <ul><li> Finding customers</li>
+                            <li><a href="/list-your-service">List your service</a></li>
+                            <li><a href="/find-customers/how-service-hired-works">How it works</a></li>
+                            <li><a href="/business-tools">Tools for business</a></li>
+                            <li><a href="/claim-your-business">Claim your business</a></li>
+                        </ul></div>
                     <div class="col-sm-2">
-                        <ul>
-                            <li> Finding customers</li>
-                            <li><a href="/social-enterprise-jobs">List your business</a></li>
-                            <li><a href="/social-enterprise-jobs">How it works</a></li>
-                            <li><a href="/social-enterprise-jobs">Tools for business</a></li>
-                            <li><a href="/social-enterprise-jobs">Sustainable business</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2">
-                        <ul>
-                            <li> Company</li>
+                        <ul><li> Company</li>
                             <li></li>
-                            <li><a href="/about-us">About Us</a></li>
-                            <li><a href="/faq">FAQ</a></li>
-                            <li><a href="/press">Press & Media</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/faq">Sustainable business</a></li>
+                            <li><a href="/press">Press</a></li>
                             <li><a href="/contact">Contact</a></li>
+                        </ul></div>
+                    <div class="col-sm-1">
+                        <ul><li> Support</li>
+                            <li></li>
+                            <li><a href="/help-center">Help center</a></li>
                         </ul>
                     </div>
                 </div>
