@@ -1085,6 +1085,8 @@
 <script src="/sites/all/libraries/noui/nouislider.min.js"></script>
 <script src="/sites/all/libraries/noui/nouislider.min.js"></script>
 <link rel="stylesheet" href="/sites/all/libraries/noui/nouislider.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script>
 <!-- Initialize autocomplete menu -->
 <!-- Latest compiled and minified CSS -->
 
