@@ -318,7 +318,7 @@
       }
 
       li.box .text {
-          background: #0097ab;
+          background: #1c1f2f;
           height: 230px;
           width: 100%;
           cursor: pointer;
