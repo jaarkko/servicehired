@@ -1229,10 +1229,6 @@
           pips: {
             mode: 'range',
             density: 3,
-            format: wNumb({
-              decimals: 0,
-              prefix: '$ '
-            })
           },
           start: [min, max]
         });
