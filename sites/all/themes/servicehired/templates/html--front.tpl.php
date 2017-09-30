@@ -1234,9 +1234,6 @@
         });
       }
 
-      pipsRange.noUiSlider.unbind('update');
-      pipsRange.noUiSlider.unbind('change');
-
       pipsRange.noUiSlider.on('update', function () {
         var results = pipsRange.noUiSlider.get();
         var rangemin = results[0];
@@ -1251,11 +1248,7 @@
         console.log(rangemin);
         console.log(rangemax);
 
-        var state = helper.getState();
-        var latlng1 = state.aroundLatLng;
-        fitMapToMarkersAutomatically = true;
-
-        helper.removeNumericRefinement('field_product_price').addNumericRefinement('field_product_price', '>=', rangemin).addNumericRefinement('field_product_price', '<=', rangemax).setQueryParameter('aroundLatLng', latlng1).setQueryParameter('aroundRadius', radius).search();
+        helper.removeNumericRefinement('field_product_price').addNumericRefinement('field_product_price', '>=', rangemin).addNumericRefinement('field_product_price', '<=', rangemax).search();
 
       });
     }
