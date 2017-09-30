@@ -1165,8 +1165,11 @@ a.right-padding {
 }
 .paymenthistory li {
   list-style: none;
-  border-bottom: 1px lightgray;
-  padding: 15px 0;
+  border-bottom: 1px solid lightgray;
+  padding: 15px;
+}
+.paymenthistory li:nth-child(even) {
+  background: #f4f4f4;
 }
 .down {
   max-width: 1400px;
