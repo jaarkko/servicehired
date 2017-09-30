@@ -1203,7 +1203,7 @@
     var range_all_sliders = {
       'min': [min],
       //'25%': [ avg / 2 ],
-      '10%': [avg],
+      '50%': [avg],
       //'75%': [ avg * 2 ],
       'max': [max]
     };
