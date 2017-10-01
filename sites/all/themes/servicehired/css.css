@@ -586,6 +586,11 @@ a.name.navbar-brand {
   display: none;
 }
 
+.overthefold.searched {
+  height: 140px;
+  padding-top: 0;
+  background: #1E5A68;
+}
 .checkout .overthefold {
   height: 50px;
 }

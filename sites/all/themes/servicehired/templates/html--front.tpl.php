@@ -56,6 +56,9 @@
       h3 {
           font-weight: 400;
       }
+      .checkout .internal {
+          display: none;
+      }
       .open .close {
           position: absolute;
           top: 30px;
@@ -322,6 +325,7 @@
           height: 230px;
           width: 100%;
           cursor: pointer;
+          border-radius: 5px;
       }
 
       li.box {
@@ -410,6 +414,7 @@
           height: calc(100% - 40px);
           background: #f7f7f7;
           border: 1px solid #d1d1d1;
+          border-radius: 5px;
       }
       .btn {
           display: inline-block;
@@ -596,16 +601,9 @@
     .searched .selection-category {
         display: none;
     }
-
-    .overthefold.searched {
-        height: 140px;
-        padding-top: 0;
-        background: #1E5A68;
-    }
-
     .searched .topbar {
         background: #1C2131;
-        padding-bottom: 25px;
+        margin-bottom: 25px;
     }
 
     .internal {

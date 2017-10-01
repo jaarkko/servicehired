@@ -7,6 +7,7 @@
     <list default="true" id="c5e7f914-9776-41bd-b385-00fa1b7129d9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" afterPath="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +27,8 @@
       <file leaf-file-name="css.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="933">
-              <caret line="1218" column="25" lean-forward="false" selection-start-line="1218" selection-start-column="25" selection-end-line="1218" selection-end-column="25" />
+            <state relative-caret-position="411">
+              <caret line="592" column="1" lean-forward="false" selection-start-line="592" selection-start-column="1" selection-end-line="592" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -64,14 +65,14 @@
       <file leaf-file-name="html--front.tpl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="1224" column="21" lean-forward="false" selection-start-line="1224" selection-start-column="21" selection-end-line="1224" selection-end-column="21" />
+            <state relative-caret-position="351">
+              <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="17" />
               <folding>
-                <marker date="1506852258000" expanded="true" signature="51793:51862" ph="..." />
-                <marker date="1506852258000" expanded="true" signature="52069:52073" ph="&lt;" />
-                <marker date="1506852258000" expanded="true" signature="52121:52125" ph="&gt;" />
-                <marker date="1506852258000" expanded="true" signature="53943:54006" ph="..." />
-                <marker date="1506852258000" expanded="true" signature="58527:58586" ph="..." />
+                <marker date="1506856138000" expanded="true" signature="52744:52813" ph="..." />
+                <marker date="1506856138000" expanded="true" signature="53020:53024" ph="&lt;" />
+                <marker date="1506856138000" expanded="true" signature="53072:53076" ph="&gt;" />
+                <marker date="1506856138000" expanded="true" signature="54894:54957" ph="..." />
+                <marker date="1506856138000" expanded="true" signature="59478:59537" ph="..." />
               </folding>
             </state>
           </provider>
@@ -158,12 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Add your details to continue</find>
-      <find>user</find>
-      <find>contributions</find>
-      <find>post</find>
-      <find>billing_pagesell_page</find>
-      <find>sell</find>
       <find>sell_page</find>
       <find>Add your business</find>
       <find>create</find>
@@ -181,13 +176,19 @@
       <find>searching</find>
       <find>radius</find>
       <find>price</find>
-      <find>renderSlider</find>
       <find>data</find>
       <find>fact</find>
       <find>;p</find>
       <find>h3</find>
       <find>pipssteps</find>
       <find>facets</find>
+      <find>text.ct-label</find>
+      <find>renderSlider</find>
+      <find>internal</find>
+      <find>.searched .topbar</find>
+      <find>li.box .text</find>
+      <find>.open .description</find>
+      <find>.overthefold.searched</find>
     </findStrings>
     <replaceStrings>
       <replace>/sites/all/themes/servicehired/icons2/</replace>
@@ -454,12 +455,12 @@
       <workItem from="1506439038961" duration="3056000" />
       <workItem from="1506531923008" duration="3747000" />
       <workItem from="1506627191167" duration="5581000" />
-      <workItem from="1506807001848" duration="7499000" />
+      <workItem from="1506807001848" duration="9043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64091000" />
+    <option name="totallyTimeSpent" value="65635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -872,22 +873,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="1224" column="21" lean-forward="false" selection-start-line="1224" selection-start-column="21" selection-end-line="1224" selection-end-column="21" />
+        <state relative-caret-position="351">
+          <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="17" />
           <folding>
-            <marker date="1506852258000" expanded="true" signature="51793:51862" ph="..." />
-            <marker date="1506852258000" expanded="true" signature="52069:52073" ph="&lt;" />
-            <marker date="1506852258000" expanded="true" signature="52121:52125" ph="&gt;" />
-            <marker date="1506852258000" expanded="true" signature="53943:54006" ph="..." />
-            <marker date="1506852258000" expanded="true" signature="58527:58586" ph="..." />
+            <marker date="1506856138000" expanded="true" signature="52744:52813" ph="..." />
+            <marker date="1506856138000" expanded="true" signature="53020:53024" ph="&lt;" />
+            <marker date="1506856138000" expanded="true" signature="53072:53076" ph="&gt;" />
+            <marker date="1506856138000" expanded="true" signature="54894:54957" ph="..." />
+            <marker date="1506856138000" expanded="true" signature="59478:59537" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="933">
-          <caret line="1218" column="25" lean-forward="false" selection-start-line="1218" selection-start-column="25" selection-end-line="1218" selection-end-column="25" />
+        <state relative-caret-position="411">
+          <caret line="592" column="1" lean-forward="false" selection-start-line="592" selection-start-column="1" selection-end-line="592" selection-end-column="1" />
           <folding />
         </state>
       </provider>
