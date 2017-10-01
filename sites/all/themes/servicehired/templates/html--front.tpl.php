@@ -710,7 +710,8 @@
     </div>
     <div id="pipssteps">
     </div>
-
+    </div>
+</div>
 </div>
 <div class="marketing row">
     <div class="breadcrumb"><ul>
