@@ -68,7 +68,6 @@
         background: #f9f9f9;
         border-radius: 5px;
         border: 1px solid #d2d2d2;
-        margin-top: 20px;
         font-size: 16px;
     }
     .order-flow .col-md-12 {

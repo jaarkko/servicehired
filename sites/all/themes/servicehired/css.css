@@ -1343,7 +1343,6 @@ text.ct-label {
 /*progressbar*/
 
 #progressbar {
-  margin-bottom: 30px !important;
   overflow: hidden !important;
   counter-reset: step !important;
   margin: 0;
