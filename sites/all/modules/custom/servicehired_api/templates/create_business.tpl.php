@@ -1,10 +1,9 @@
 <h2>
-  Step 1: Add your business
+  Add your business
 </h2>
 
 <div class="order-flow">
     <div class="left-col">
-        <h3>Add your business</h3>
       <?php
       global $user;
       module_load_include('inc', 'node', 'node.pages');
@@ -55,14 +54,23 @@
     .filter-wrapper,.help-block {
         display: none;
     }
-    .pac-container {
-        margin-top: -30px;
-        border-radius: 5px;
-    }
     .control-label {
         font-size: 18px;
         margin-bottom: 10px;
         font-weight: 400;
+    }
+    .required-fields {
+        margin: 20px 0px;
+        display: block;
+        background: #f9f9f9;
+        padding: 5px 20px 20px 20px;
+        border-radius: 5px;
+        color: #1c2232;
+        width: 46%;
+        float: left;
+        margin-right: 3%;
+        height: 556px;
+        border: 1px solid #d2d2d2;
     }
 </style>
 <script>
