@@ -212,8 +212,8 @@
           list-style: none;
           display: inline-block;
           padding: 0;
-          width: 32.5%;
-          width: calc(98.5%/3);
+          width: 49%;
+          width: calc(99.3%/2);
       }
       .selection-category ul {
           padding: 0;
@@ -608,53 +608,15 @@
   <h2>Find, compare and book local services anywhere.</h2>
   <div class="selection-category">
     <ul>
-        <li class="businesses">
-        <a href="#">Businesses</a>
-      </li>
         <li class="packages active">
             <a href="#">Packages</a>
         </li>
-      <li class="categories">
-        <a href="#">Categories</a>
-      </li>
+        <li class="businesses">
+            <a href="#">Businesses</a>
+         </li>
     </ul>
 
   </div>
-    <div class="icons row hidden">
-        <div class="front-icon catering">
-            <div class="tooltiptext">Catering</div>
-        </div>
-        <div class="front-icon music">
-            <div class="tooltiptext">Musicians & Bands</div>
-        </div>
-        <div class="front-icon photographers">
-            <div class="tooltiptext">Photographers</div>
-        </div>
-        <div class="front-icon removals">
-            <div class="tooltiptext">Movers & Removalists</div>
-        </div>
-        <div class="front-icon foodtruck">
-            <div class="tooltiptext">Food trucks</div>
-        </div>
-        <div class="front-icon plumber">
-            <div class="tooltiptext">Plumbers</div>
-        </div>
-        <div class="front-icon petcare">
-            <div class="tooltiptext">Pet Care & Pet Boarding</div>
-        </div>
-        <div class="front-icon cleaning">
-            <div class="tooltiptext">Cleaning</div>
-        </div>
-        <div class="front-icon entertainment">
-            <div class="tooltiptext">Entertainers</div>
-        </div>
-        <div class="front-icon florist">
-            <div class="tooltiptext">Florists</div>
-        </div>
-        <div class="front-icon funerals">
-            <div class="tooltiptext">Funeral Assistance</div>
-        </div>
-    </div>
   <!-- HTML Markup -->
   <div class="two-boxes">
     <div class="box-search box-left" id="aa-input-container">
