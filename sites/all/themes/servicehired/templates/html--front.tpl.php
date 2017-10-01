@@ -1203,6 +1203,7 @@
       console.log(data);
 
       var keys = Object.keys(data);
+      console.log(keys);
 
       for (var key in data) {
         console.log(data[key]);
@@ -1215,7 +1216,7 @@
         donutWidth: 50,
         donutSolid: true,
         startAngle: 270,
-        total: total,
+        total: total*2,
         showLabel: true
       });
 
