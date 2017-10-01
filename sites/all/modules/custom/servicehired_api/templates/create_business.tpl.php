@@ -24,10 +24,10 @@
     </div>
     <div class="right-col">
         <ul id="progressbar">
-            <li class="active">Business details</li>
-            <li>Business images</li>
-            <li>Tags & Search</li>
-            <li>Contact information</li>
+            <li class="pro1 active">Business details</li>
+            <li class="pro2">Business images</li>
+            <li class="pro3">Tags & Search</li>
+            <li class="pro4">Contact information</li>
         </ul>
       <?php
       global $user;
@@ -122,6 +122,7 @@
       $('html, body').animate({
         scrollTop: $("#step2").offset().top
       }, 200);
+      $('.pro2').addClass('active');
     });
 
     $('.step2').click(function(){
@@ -129,6 +130,7 @@
       $('html, body').animate({
         scrollTop: $("#step3").offset().top
       }, 200);
+      $('.pro3').addClass('active');
     });
 
     $('.step3').click(function(){
@@ -137,5 +139,6 @@
         scrollTop: $("#step4").offset().top
       }, 200);
       $('button#edit-submit').show();
+      $('.pro4').addClass('active');
     });
 </script>

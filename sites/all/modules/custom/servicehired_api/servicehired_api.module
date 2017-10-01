@@ -178,14 +178,18 @@ function servicehired_orders_format() {
   $key = servicehired_get_orders();
   $html = '';
 
-  foreach ($key as $res){
-    $html .= '<a href="'.$res['url'].'">
+  if($key) {
+    foreach ($key as $res) {
+      $html .= '<a href="' . $res['url'] . '">
     <div class="result">
     <div class="insider">
-    <div class="res-title">'.$res['title'].'</div>
-    <div class="status">'.status_bar_format($res['status']).'</div>
-    <div class="created">'.$res['created'].'</div>
+    <div class="res-title">' . $res['title'] . '</div>
+    <div class="status">' . status_bar_format($res['status']) . '</div>
+    <div class="created">' . $res['created'] . '</div>
     </div></div></a>';
+    }
+  } else {
+    $html = '<p>You have no orders yet.</p>';
   }
   return $html;
 }
