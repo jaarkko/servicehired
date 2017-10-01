@@ -107,8 +107,24 @@
         border: 1px solid #d2d2d2;
         margin-left: 7%;
     }
+    .field-type-markup .btn {
+        float: right;
+        font-size: 16px;
+        padding: 10px 30px;
+    }
 </style>
 <script>
     $=jQuery;
   $('#edit-field-business-tags-und-0-value').tagsInput();
+    $('.step1').click(function(){
+      $('.step2').removeClass('hidden');
+    });
+
+    $('.step2').click(function(){
+      $('.step3').removeClass('hidden');
+    });
+
+    $('.step3').click(function(){
+      $('.step4').removeClass('hidden');
+    });
 </script>
