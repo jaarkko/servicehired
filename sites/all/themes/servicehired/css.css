@@ -621,6 +621,7 @@ div#pricerange {
   clear: both;
   margin: 6px 24px;
   height: 150px;
+  position: relative;
 }
 div#pipssteps {
   width: 75%;
