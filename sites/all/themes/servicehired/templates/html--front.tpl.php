@@ -1223,7 +1223,6 @@
       console.log(i);
 
       var total = i;
-      console.log(string);
 
       var chart = new Chartist.Pie('#pricerange', {
         series: myarray,
