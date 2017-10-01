@@ -1335,6 +1335,7 @@
       //'75%': [ avg * 2 ],
       'max': [max]
     };
+    var pipsRange = document.getElementById('pipssteps');
 
     function updateSliderRange(min, max, avg) {
       pipsRange.noUiSlider.updateOptions({
@@ -1345,6 +1346,7 @@
         }
       });
     }
+
     // If max = no results.
     if (max == 0) {
     } else {

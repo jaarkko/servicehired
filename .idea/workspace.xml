@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5e7f914-9776-41bd-b385-00fa1b7129d9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" afterPath="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" />
@@ -24,11 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="css.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="css.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="592" column="1" lean-forward="false" selection-start-line="592" selection-start-column="1" selection-end-line="592" selection-end-column="1" />
+            <state relative-caret-position="642">
+              <caret line="866" column="26" lean-forward="false" selection-start-line="866" selection-start-column="26" selection-end-line="866" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -65,14 +76,14 @@
       <file leaf-file-name="html--front.tpl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="17" />
+            <state relative-caret-position="300">
+              <caret line="1331" column="9" lean-forward="true" selection-start-line="1331" selection-start-column="9" selection-end-line="1331" selection-end-column="9" />
               <folding>
-                <marker date="1506856138000" expanded="true" signature="52744:52813" ph="..." />
-                <marker date="1506856138000" expanded="true" signature="53020:53024" ph="&lt;" />
-                <marker date="1506856138000" expanded="true" signature="53072:53076" ph="&gt;" />
-                <marker date="1506856138000" expanded="true" signature="54894:54957" ph="..." />
-                <marker date="1506856138000" expanded="true" signature="59478:59537" ph="..." />
+                <marker date="1506858167000" expanded="true" signature="52803:52872" ph="..." />
+                <marker date="1506858167000" expanded="true" signature="53079:53083" ph="&lt;" />
+                <marker date="1506858167000" expanded="true" signature="53131:53135" ph="&gt;" />
+                <marker date="1506858167000" expanded="true" signature="54953:55016" ph="..." />
+                <marker date="1506858167000" expanded="true" signature="59537:59596" ph="..." />
               </folding>
             </state>
           </provider>
@@ -103,16 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_user.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/edit_user.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -159,8 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sell_page</find>
-      <find>Add your business</find>
       <find>create</find>
       <find>node</find>
       <find>overflow</find>
@@ -183,12 +182,14 @@
       <find>pipssteps</find>
       <find>facets</find>
       <find>text.ct-label</find>
-      <find>renderSlider</find>
       <find>internal</find>
       <find>.searched .topbar</find>
       <find>li.box .text</find>
       <find>.open .description</find>
       <find>.overthefold.searched</find>
+      <find>.checkout .overthef</find>
+      <find>renderSlider</find>
+      <find>max-width</find>
     </findStrings>
     <replaceStrings>
       <replace>/sites/all/themes/servicehired/icons2/</replace>
@@ -235,6 +236,7 @@
         <option value="$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/html.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -455,12 +457,12 @@
       <workItem from="1506439038961" duration="3056000" />
       <workItem from="1506531923008" duration="3747000" />
       <workItem from="1506627191167" duration="5581000" />
-      <workItem from="1506807001848" duration="9043000" />
+      <workItem from="1506807001848" duration="9776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65635000" />
+    <option name="totallyTimeSpent" value="66368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -505,13 +507,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/inventshift/templates/inventshift-front-page-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/libraries/algolia/src/AlgoliaSearch/Json.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -873,22 +868,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="17" />
+        <state relative-caret-position="300">
+          <caret line="1331" column="9" lean-forward="true" selection-start-line="1331" selection-start-column="9" selection-end-line="1331" selection-end-column="9" />
           <folding>
-            <marker date="1506856138000" expanded="true" signature="52744:52813" ph="..." />
-            <marker date="1506856138000" expanded="true" signature="53020:53024" ph="&lt;" />
-            <marker date="1506856138000" expanded="true" signature="53072:53076" ph="&gt;" />
-            <marker date="1506856138000" expanded="true" signature="54894:54957" ph="..." />
-            <marker date="1506856138000" expanded="true" signature="59478:59537" ph="..." />
+            <marker date="1506858167000" expanded="true" signature="52803:52872" ph="..." />
+            <marker date="1506858167000" expanded="true" signature="53079:53083" ph="&lt;" />
+            <marker date="1506858167000" expanded="true" signature="53131:53135" ph="&gt;" />
+            <marker date="1506858167000" expanded="true" signature="54953:55016" ph="..." />
+            <marker date="1506858167000" expanded="true" signature="59537:59596" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="592" column="1" lean-forward="false" selection-start-line="592" selection-start-column="1" selection-end-line="592" selection-end-column="1" />
+        <state relative-caret-position="642">
+          <caret line="866" column="26" lean-forward="false" selection-start-line="866" selection-start-column="26" selection-end-line="866" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
           <folding />
         </state>
       </provider>
