@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5e7f914-9776-41bd-b385-00fa1b7129d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" afterPath="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,17 +22,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="css.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="css.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="866" column="26" lean-forward="false" selection-start-line="866" selection-start-column="26" selection-end-line="866" selection-end-column="26" />
+            <state relative-caret-position="867">
+              <caret line="881" column="3" lean-forward="false" selection-start-line="881" selection-start-column="3" selection-end-line="881" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="735">
@@ -235,8 +232,8 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/billing.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/html.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" />
       </list>
     </option>
   </component>
@@ -457,12 +454,12 @@
       <workItem from="1506439038961" duration="3056000" />
       <workItem from="1506531923008" duration="3747000" />
       <workItem from="1506627191167" duration="5581000" />
-      <workItem from="1506807001848" duration="9776000" />
+      <workItem from="1506807001848" duration="9969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66368000" />
+    <option name="totallyTimeSpent" value="66561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -880,18 +877,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="866" column="26" lean-forward="false" selection-start-line="866" selection-start-column="26" selection-end-line="866" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="881" column="3" lean-forward="false" selection-start-line="881" selection-start-column="3" selection-end-line="881" selection-end-column="3" />
           <folding />
         </state>
       </provider>

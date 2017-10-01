@@ -868,6 +868,18 @@ div#pipssteps {
     float: right;
     padding: 0 5%;
   }
+  div#pricerange {
+    right: 0%;
+    z-index: 99999;
+    width: 100%;
+    top: 105px;
+    height: 180px;
+    text-align: center;
+  }
+  .internal {
+    height: 183px;
+    max-width: 1375px;
+  }
 }
 
 .main-container.container-fluid {
