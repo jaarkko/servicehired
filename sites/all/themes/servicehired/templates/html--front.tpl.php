@@ -1173,6 +1173,7 @@
       var avg = content.facets[0].stats.avg;
       var total = content.facets[0].stats.sum;
       var data = content.facets[0].data;
+      var currency = content.hits["0"].currency;
 
       range = 0;
       range2 = 0;
@@ -1226,7 +1227,7 @@
 
       var chart = new Chartist.Pie('#pricerange', {
         series: myarray,
-        labels: ['50','50-100','100-200','200-500','500-1000','1000+']
+        labels: ['0-50 ' + currency,'50-100 ' + currency,'100-200' + currency,'200-500' + currency,'500-1000' + currency,'1000+' + currency]
       }, {
         donut: true,
         donutWidth: 80,
