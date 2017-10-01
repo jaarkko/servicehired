@@ -1404,3 +1404,52 @@ text.ct-label {
   color: white;
 }
 
+
+p.large {
+  font-size: 22px;
+  color: white;
+}
+
+.node-type-basic-page .inside h4 {
+  color: white;
+  font-size: 34px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-top: 123px;
+}
+
+.inside img {
+  max-width: 100%;
+}
+
+.node-type-basic-page .inside {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.darkblue {
+  background: #0098ac;
+  height: 480px;
+}
+
+.lighterblue {
+  background: #17b4c5;
+  height: 446px;
+}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  background: #1c2232;
+  color: white;
+  font-weight: bolder;
+  padding: 34px;
+}
+
+.node-type-basic-page .main-container.container-fluid {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
