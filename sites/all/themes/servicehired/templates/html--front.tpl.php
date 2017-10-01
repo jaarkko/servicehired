@@ -1228,7 +1228,7 @@
 
       var chart = new Chartist.Pie('#pricerange', {
         series: myarray,
-        labels: '50','50-100','100-200','200-500','500-1000','1000+'
+        labels: ['50','50-100','100-200','200-500','500-1000','1000+']
       }, {
         donut: true,
         donutWidth: 80,
