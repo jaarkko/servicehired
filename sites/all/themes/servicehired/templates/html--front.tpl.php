@@ -605,6 +605,7 @@
 
     .searched .topbar {
         background: #1C2131;
+        padding-bottom: 25px;
     }
 
     .internal {
@@ -624,7 +625,6 @@
     .searched .box-left, .searched .box-right {
         width: calc(33% - 15px);
     }
-
     div#pipssteps {
         width: 63.6%;
         margin: 20px;
