@@ -704,10 +704,13 @@
   </div>
 </div>
 <div class="facets">
+    <h3>Price range for photographers</h3>
+    <div class="internal">
     <div id="pricerange" class="pricerange">
     </div>
     <div id="pipssteps">
     </div>
+
 </div>
 <div class="marketing row">
     <div class="breadcrumb"><ul>
@@ -1201,7 +1204,7 @@
       var total = content.facets[0].stats.sum;
       var data = content.facets[0].data;
       console.log(data);
-      
+
       keys2 = [];
       for(var k in data) keys2.push(k + ' €');
 
