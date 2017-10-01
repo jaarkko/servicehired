@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/servicehired_api.module" line="345" mnemonic="9" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c5e7f914-9776-41bd-b385-00fa1b7129d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/servicehire.iml" afterPath="$PROJECT_DIR$/.idea/servicehire.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/servicehired_api.module" afterPath="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/servicehired_api.module" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" afterPath="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/servicehired/templates/node--supplier.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/servicehired/templates/node--supplier.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,21 +26,9 @@
       <file leaf-file-name="css.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="723">
-              <caret line="1139" column="17" lean-forward="true" selection-start-line="1139" selection-start-column="17" selection-end-line="1139" selection-end-column="17" />
+            <state relative-caret-position="933">
+              <caret line="1218" column="25" lean-forward="false" selection-start-line="1218" selection-start-column="25" selection-end-line="1218" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding>
-                <element signature="e#6#62#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -48,42 +36,102 @@
       <file leaf-file-name="servicehired_api.module" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/servicehired_api.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="723">
-              <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="302" column="11" lean-forward="true" selection-start-line="302" selection-start-column="11" selection-end-line="302" selection-end-column="11" />
               <folding>
-                <marker date="1506628251000" expanded="true" signature="6716:7451" ph="..." />
-                <marker date="1506628251000" expanded="true" signature="6804:6953" ph="..." />
-                <marker date="1506628251000" expanded="true" signature="7015:7192" ph="..." />
-                <marker date="1506628251000" expanded="true" signature="7241:7442" ph="..." />
-                <marker date="1506628251000" expanded="true" signature="7477:7576" ph="..." />
-                <marker date="1506628251000" expanded="true" signature="7842:8073" ph="..." />
-                <marker date="1506628251000" expanded="true" signature="7918:8067" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="7356:8091" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="7444:7593" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="7655:7832" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="7881:8082" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="8117:8216" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="8482:8713" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="8558:8707" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="9545:10369" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="9607:9651" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="9802:10364" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="9828:9832" ph="&lt;" />
+                <marker date="1506693828000" expanded="true" signature="9864:9868" ph="&gt;" />
+                <marker date="1506693828000" expanded="true" signature="9894:9946" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="9972:10364" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="10045:10193" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="10241:10358" ph="..." />
+                <marker date="1506693828000" expanded="true" signature="10263:10332" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="node--order.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/node--order.tpl.php">
+      <file leaf-file-name="html--front.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-246">
-              <caret line="149" column="37" lean-forward="false" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
+            <state relative-caret-position="334">
+              <caret line="1224" column="21" lean-forward="false" selection-start-line="1224" selection-start-column="21" selection-end-line="1224" selection-end-column="21" />
               <folding>
-                <marker date="1506359725000" expanded="true" signature="5029:5270" ph="..." />
-                <marker date="1506359725000" expanded="true" signature="5078:5137" ph="..." />
-                <marker date="1506359725000" expanded="true" signature="5311:5728" ph="..." />
-                <marker date="1506359725000" expanded="true" signature="5360:5436" ph="..." />
-                <marker date="1506359725000" expanded="true" signature="5482:5705" ph="..." />
+                <marker date="1506852258000" expanded="true" signature="51793:51862" ph="..." />
+                <marker date="1506852258000" expanded="true" signature="52069:52073" ph="&lt;" />
+                <marker date="1506852258000" expanded="true" signature="52121:52125" ph="&gt;" />
+                <marker date="1506852258000" expanded="true" signature="53943:54006" ph="..." />
+                <marker date="1506852258000" expanded="true" signature="58527:58586" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="servicehired_account.rest.inc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/includes/servicehired_account.rest.inc">
+      <file leaf-file-name="nouislider.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/libraries/noui/nouislider.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="137" column="13" lean-forward="true" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loading-spinner.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/images/loading-spinner.svg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="html.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/html.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_user.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/edit_user.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_business.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/create_business.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1170">
+              <caret line="78" column="5" lean-forward="false" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="billing.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/billing.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,48 +147,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="node--supplier.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/node--supplier.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="83" column="26" lean-forward="false" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_front.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/scss/_front.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/page.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="93" column="36" lean-forward="false" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page--supplier.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/page--supplier.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#3287#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -152,26 +158,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>checkout</find>
-      <find>done</find>
-      <find>servicebread</find>
-      <find>border</find>
-      <find>Name</find>
-      <find>card-holder</find>
-      <find>stripe</find>
-      <find>.stripeform .success, .error</find>
-      <find>getdata</find>
-      <find>servicehired_account</find>
-      <find>developers</find>
-      <find>token</find>
-      <find>create_customer</find>
-      <find>name navbar-brand</find>
-      <find>listyou</find>
-      <find>?php</find>
-      <find>login</find>
       <find>Add your details to continue</find>
       <find>user</find>
-      <find>index</find>
       <find>contributions</find>
       <find>post</find>
       <find>billing_pagesell_page</find>
@@ -180,8 +168,26 @@
       <find>Add your business</find>
       <find>create</find>
       <find>node</find>
-      <find>image</find>
       <find>overflow</find>
+      <find>image</find>
+      <find>.searched .bottom-menu</find>
+      <find>create_business</find>
+      <find>footer-logo</find>
+      <find>ft-logo</find>
+      <find>.text</find>
+      <find>li.box</find>
+      <find>index</find>
+      <find>getState</find>
+      <find>searching</find>
+      <find>radius</find>
+      <find>price</find>
+      <find>renderSlider</find>
+      <find>data</find>
+      <find>fact</find>
+      <find>;p</find>
+      <find>h3</find>
+      <find>pipssteps</find>
+      <find>facets</find>
     </findStrings>
     <replaceStrings>
       <replace>/sites/all/themes/servicehired/icons2/</replace>
@@ -213,7 +219,6 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/includes/servicehired_account.rest.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/dashboard.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/servicehired/templates/node--order.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/servicehired/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/servicehired_stripe/servicehired.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/sell.tpl.php" />
@@ -222,7 +227,12 @@
         <option value="$PROJECT_DIR$/sites/all/themes/servicehired/templates/page--supplier.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/servicehired/template.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/servicehired/templates/node--supplier.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/create_product.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/edit_user.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/servicehired_api.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/billing.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/html.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/servicehired/css.css" />
       </list>
     </option>
@@ -253,6 +263,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,15 +287,33 @@
               <item name="servicehire" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="servicehire" type="b2602c69:ProjectViewProjectNode" />
               <item name="servicehire" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="noui" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="servicehire" type="b2602c69:ProjectViewProjectNode" />
+              <item name="servicehire" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="noui" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nouislider.css" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="servicehire" type="b2602c69:ProjectViewProjectNode" />
+              <item name="servicehire" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libraries" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="noui" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nouislider.js" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="servicehire" type="b2602c69:ProjectViewProjectNode" />
@@ -315,7 +344,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,11 +356,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sites/all/themes/servicehired/templates" />
+      <recent name="$PROJECT_DIR$/sites/all/libraries/noui" />
+      <recent name="$PROJECT_DIR$/sites/all/themes/servicehired/images" />
       <recent name="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates" />
+      <recent name="$PROJECT_DIR$/sites/all/themes/servicehired/templates" />
       <recent name="$PROJECT_DIR$/sites/all/modules/custom/servicehired_api" />
-      <recent name="$PROJECT_DIR$/sites/all/modules/custom" />
-      <recent name="$PROJECT_DIR$/sites/all/modules/custom/servicehired_stripe" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sites/all/modules/custom" />
@@ -425,20 +453,22 @@
       <workItem from="1506074323764" duration="386000" />
       <workItem from="1506439038961" duration="3056000" />
       <workItem from="1506531923008" duration="3747000" />
-      <workItem from="1506627191167" duration="824000" />
+      <workItem from="1506627191167" duration="5581000" />
+      <workItem from="1506807001848" duration="7499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51835000" />
+    <option name="totallyTimeSpent" value="64091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26677316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26943558" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -462,30 +492,18 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/servicehired_api.module</url>
+          <line>281</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/icons/014-rectangles.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/icons/017-gestures.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/icons/funerals.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/icons/008-technology.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/inventshift/templates/inventshift-front-page-template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -675,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/html.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="77" column="7" lean-forward="false" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -691,32 +702,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/dashboard.tpl.php" />
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/README.md" />
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/billing.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="1171" column="32" lean-forward="false" selection-start-line="1171" selection-start-column="32" selection-end-line="1171" selection-end-column="32" />
-          <folding>
-            <marker date="1506371955000" expanded="true" signature="46583:46652" ph="..." />
-            <marker date="1506371955000" expanded="true" signature="46859:46863" ph="&lt;" />
-            <marker date="1506371955000" expanded="true" signature="46911:46915" ph="&gt;" />
-            <marker date="1506371955000" expanded="true" signature="48733:48796" ph="..." />
-            <marker date="1506371955000" expanded="true" signature="53317:53376" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/dashboard.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,15 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/create_business.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="78" column="5" lean-forward="false" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -741,7 +721,7 @@
         <state relative-caret-position="150">
           <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding>
-            <element signature="e#6#62#0#PHP" expanded="true" />
+            <element signature="e#6#62#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -750,64 +730,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
           <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/page.tpl.php">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/includes/servicehired_account.rest.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="93" column="36" lean-forward="false" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="-177">
+          <caret line="137" column="13" lean-forward="false" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/page--supplier.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state relative-caret-position="1150">
+          <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
           <folding>
             <element signature="e#6#3287#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_stripe/servicehired.module">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="885">
+          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/includes/servicehired_account.rest.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="137" column="13" lean-forward="true" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/servicehired_api.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
-          <folding>
-            <marker date="1506628251000" expanded="true" signature="6716:7451" ph="..." />
-            <marker date="1506628251000" expanded="true" signature="6804:6953" ph="..." />
-            <marker date="1506628251000" expanded="true" signature="7015:7192" ph="..." />
-            <marker date="1506628251000" expanded="true" signature="7241:7442" ph="..." />
-            <marker date="1506628251000" expanded="true" signature="7477:7576" ph="..." />
-            <marker date="1506628251000" expanded="true" signature="7842:8073" ph="..." />
-            <marker date="1506628251000" expanded="true" signature="7918:8067" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/node--order.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-246">
-          <caret line="149" column="37" lean-forward="false" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
+        <state relative-caret-position="405">
+          <caret line="105" column="20" lean-forward="false" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
           <folding>
             <marker date="1506359725000" expanded="true" signature="5029:5270" ph="..." />
             <marker date="1506359725000" expanded="true" signature="5078:5137" ph="..." />
@@ -820,16 +774,120 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/node--supplier.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="83" column="26" lean-forward="false" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="26" />
+        <state relative-caret-position="450">
+          <caret line="108" column="10" lean-forward="false" selection-start-line="108" selection-start-column="10" selection-end-line="108" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/create_product.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/edit_user.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_stripe/servicehired.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/create_business.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="5" lean-forward="false" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/templates/billing.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/html.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/images/loading-spinner.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/libraries/noui/nouislider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/servicehired_api/servicehired_api.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="302" column="11" lean-forward="true" selection-start-line="302" selection-start-column="11" selection-end-line="302" selection-end-column="11" />
+          <folding>
+            <marker date="1506693828000" expanded="true" signature="7356:8091" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="7444:7593" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="7655:7832" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="7881:8082" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="8117:8216" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="8482:8713" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="8558:8707" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="9545:10369" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="9607:9651" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="9802:10364" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="9828:9832" ph="&lt;" />
+            <marker date="1506693828000" expanded="true" signature="9864:9868" ph="&gt;" />
+            <marker date="1506693828000" expanded="true" signature="9894:9946" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="9972:10364" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="10045:10193" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="10241:10358" ph="..." />
+            <marker date="1506693828000" expanded="true" signature="10263:10332" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/templates/html--front.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="1224" column="21" lean-forward="false" selection-start-line="1224" selection-start-column="21" selection-end-line="1224" selection-end-column="21" />
+          <folding>
+            <marker date="1506852258000" expanded="true" signature="51793:51862" ph="..." />
+            <marker date="1506852258000" expanded="true" signature="52069:52073" ph="&lt;" />
+            <marker date="1506852258000" expanded="true" signature="52121:52125" ph="&gt;" />
+            <marker date="1506852258000" expanded="true" signature="53943:54006" ph="..." />
+            <marker date="1506852258000" expanded="true" signature="58527:58586" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/servicehired/css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="1139" column="17" lean-forward="true" selection-start-line="1139" selection-start-column="17" selection-end-line="1139" selection-end-column="17" />
+        <state relative-caret-position="933">
+          <caret line="1218" column="25" lean-forward="false" selection-start-line="1218" selection-start-column="25" selection-end-line="1218" selection-end-column="25" />
           <folding />
         </state>
       </provider>

@@ -606,10 +606,11 @@ a.name.navbar-brand {
 
 div#pricerange {
   position: absolute;
-  height: 400px;
+  height: 600px;
   right: 0;
   z-index: 99999;
-  top: -70px;
+  top: -130px;
+  width: 350px;
 }
 .checkout .stripeform {
   display: block ;
@@ -1213,4 +1214,7 @@ a.right-padding {
 .down {
   max-width: 1400px;
   margin: 0 auto;
+}
+text.ct-label {
+  fill: white !important;
 }
