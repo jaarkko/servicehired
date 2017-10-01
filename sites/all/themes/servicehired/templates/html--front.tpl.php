@@ -704,14 +704,12 @@
   </div>
 </div>
 <div class="facets">
-    <h3>Price range for photographers</h3>
     <div class="internal">
-    <div id="pricerange" class="pricerange">
+        <h3>Price range for photographers</h3>
+        <div id="pricerange" class="pricerange"></div>
+        <div id="pipssteps">
+        </div>
     </div>
-    <div id="pipssteps">
-    </div>
-    </div>
-</div>
 </div>
 <div class="marketing row">
     <div class="breadcrumb"><ul>
