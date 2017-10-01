@@ -43,11 +43,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.js"></script>
 <style>
-    .left-col, .right-col {
-        width: 50%;
+    .right-col {
+        width: 65%;
         float: left;
-        padding-right: 10%;
     }
+    .left-col.row {
+        width: 34%;
+        margin-right: 2%;
+        float: left;
+        padding: 10px;
+        background: #f9f9f9;
+        border-radius: 5px;
+        border: 1px solid #d2d2d2;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
     .left-col .tabbable {
         display: none;
     }
