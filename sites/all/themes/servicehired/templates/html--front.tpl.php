@@ -1186,7 +1186,7 @@
       for (var key in data) {
         console.log(data[key]);
         console.log(key);
-        i = i + temp1[key];
+        i = i + data[key];
         if(key < 50) {
           range = range + data[key];
         }
@@ -1219,7 +1219,6 @@
       myarray.push(range4);
       myarray.push(range5);
       myarray.push(range6);
-
 
       console.log(i);
 
