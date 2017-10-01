@@ -55,10 +55,11 @@
         display: none;
     }
     button#edit-submit {
-        width: 95%;
+        width: 88%;
         font-size: 16px;
-        margin-right: 5%;
+        margin-left: 7%;
         text-align: center;
+        display: none;
     }
     .left-col.row {
         width: 34%;
@@ -135,5 +136,6 @@
       $('html, body').animate({
         scrollTop: $("#step4").offset().top
       }, 200);
+      $('button#edit-submit').show();
     });
 </script>
