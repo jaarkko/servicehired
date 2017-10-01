@@ -1203,7 +1203,11 @@
       console.log(data);
 
       var keys = Object.keys(data);
-      console.log(keys);
+
+
+      keys2 = [];
+      for(var k in data) keys2.push(k);
+      console.log(keys2);
 
       for (var key in data) {
         console.log(data[key]);
