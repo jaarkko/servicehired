@@ -1201,12 +1201,9 @@
       var total = content.facets[0].stats.sum;
       var data = content.facets[0].data;
       console.log(data);
-
-      var keys = Object.keys(data);
-
+      
       keys2 = [];
-      for(var k in data) keys2.push(k);
-      console.log(keys2);
+      for(var k in data) keys2.push(k + ' €');
 
       myarray = [];
       total = 0;
@@ -1218,16 +1215,15 @@
       console.log(total);
       console.log(myarray);
 
-
       var chart = new Chartist.Pie('#pricerange', {
         series: myarray,
-        labels: keys,
+        labels: keys2,
       }, {
         donut: true,
         donutWidth: 50,
         donutSolid: true,
         startAngle: 270,
-        total: total,
+        total: total*2,
         showLabel: true
       });
 
