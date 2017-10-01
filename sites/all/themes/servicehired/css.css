@@ -615,7 +615,7 @@ div#pricerange {
   right: 0;
   z-index: 99999;
   top: -130px;
-  width: 350px;
+  width: 30%;
 }
 .checkout .stripeform {
   display: block ;
