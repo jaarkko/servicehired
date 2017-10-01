@@ -1211,9 +1211,13 @@
       myarray = [];
       total = 0;
       for (var key in data) {
-        total = data[key];
+        total = total + parseInt(data[key]);
         myarray.push(data[key]);
       }
+
+      console.log(total);
+      console.log(myarray);
+
 
       var chart = new Chartist.Pie('#pricerange', {
         series: myarray,
