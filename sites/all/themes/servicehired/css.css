@@ -777,11 +777,14 @@ div#pipssteps {
 
 div#pricerange {
   position: absolute;
-  height: 600px;
+  max-height: 400px;
   right: 0;
   z-index: 99999;
-  top: -168px;
-  width: 450px;
+  top: -68px;
+  width: 30%;
+}
+.selection-category {
+  display: none;
 }
 
 @media all and (max-width: 768px) {
