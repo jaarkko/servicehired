@@ -3,24 +3,26 @@
 </h2>
 
 <div class="order-flow">
-    <div class="left-col">
-        <h3>Tips for the best profile</h3>
+    <div class="left-col row">
+        <div class="col-md-12">
+            <h3>Tips for the best profile</h3>
+            <p>We need your business details so we can send customers your way, and can verify that you are a real business. This allows our thousands
+                of visitors to see and find you.</p>
+        </div>
+        <div class="col-md-4">
+            <h4>1. Use high quality images</h4>
+            <p>The better the images, the more the sales. We have seen that people are drawn to nice colorful pictures. Remember this when adding your profile.</p>
+        </div>
+        <div class="col-md-4">
 
-        <p>We need your business details so we can send customers your way, and can verify that you are a real business. This allows our thousands
-            of visitors to see and find you. .</p>
+            <h4>2. Create a long description</h4>
+            <p>A long description (not just two sentences) will be able to help people to find your content, as our search is based on it. Also, it helps the customer to make an educated decision.</p>
+        </div>
+        <div class="col-md-4">
 
-        <h4>1. Use high quality images</h4>
-
-        <p>The better the images, the more the sales. We have seen that people are drawn to nice colorful pictures. Remember this when adding your profile.</p>
-
-        <h4>2. Create a long description</h4>
-
-        <p>A long description (not just two sentences) will be able to help people to find your content, as our search is based on it. Also, it helps the customer to make an educated decision.</p>
-
-        <h4>3. Add many specific tags</h4>
-
-        <p>The better the tags, the more the sales. If you want to be found with odd keywords, remember to add all these in, as our search is based on them.</p>
-
+            <h4>3. Add many specific tags</h4>
+            <p>The better the tags, the more the sales. If you want to be found with odd keywords, remember to add all these in, as our search is based on them.</p>
+        </div>
     </div>
     <div class="right-col">
       <?php
