@@ -1222,7 +1222,7 @@
         labels: keys2,
       }, {
         donut: true,
-        donutWidth: 50,
+        donutWidth: 80,
         donutSolid: true,
         startAngle: 270,
         total: total*2,
