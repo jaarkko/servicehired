@@ -1199,8 +1199,9 @@
       var max = content.facets[0].stats.max;
       var avg = content.facets[0].stats.avg;
       var total = content.facets[0].stats.sum;
-
       var data = content.facets[0].data;
+      console.log(data);
+
       new Chartist.Pie('#pricerange', {
         series: [data]
       }, {
