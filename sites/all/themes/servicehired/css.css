@@ -787,6 +787,15 @@ div#pricerange {
   display: none;
 }
 
+.aa-dropdown-menu {
+  background-color: #fff;
+  border: 1px solid rgba(228, 228, 228, 0.6);
+  min-width: 100%;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
 @media all and (max-width: 768px) {
   .not-front a.listyourbusiness {
     display: none;
