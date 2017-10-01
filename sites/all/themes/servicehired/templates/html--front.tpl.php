@@ -1225,7 +1225,7 @@
         donutWidth: 50,
         donutSolid: true,
         startAngle: 290,
-        total: total*2-20,
+        total: total*2,
         showLabel: true
       });
 
