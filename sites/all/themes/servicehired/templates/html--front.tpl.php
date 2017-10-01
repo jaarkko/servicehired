@@ -707,7 +707,7 @@
 </div>
 <div class="facets">
     <div class="internal">
-        <h3>Price range for photographers</h3>
+        <h3>Price range</h3>
         <div id="pricerange" class="pricerange"></div>
         <div id="pipssteps">
         </div>
