@@ -23,6 +23,12 @@
         </div>
     </div>
     <div class="right-col">
+        <ul id="progressbar">
+            <li class="active">Business details</li>
+            <li>Business images</li>
+            <li>Tags & Search</li>
+            <li>Contact information</li>
+        </ul>
       <?php
       global $user;
       module_load_include('inc', 'node', 'node.pages');
