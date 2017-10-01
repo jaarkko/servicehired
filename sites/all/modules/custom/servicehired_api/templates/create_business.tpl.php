@@ -104,7 +104,6 @@
         width: 88%;
         float: left;
         margin-right: 3%;
-        height: 556px;
         border: 1px solid #d2d2d2;
         margin-left: 7%;
     }
