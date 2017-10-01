@@ -4,21 +4,6 @@
 
 <div class="order-flow">
     <div class="left-col">
-      <?php
-      global $user;
-      module_load_include('inc', 'node', 'node.pages');
-      $node = (object) array(
-        'uid' => $user->uid,
-        'name' => (isset($user->name) ? $user->name : ''),
-        'type' => 'supplier',
-        'language' => LANGUAGE_NONE,
-      );
-      $form = drupal_get_form('supplier_node_form', $node);
-
-      print drupal_render($form)
-      ?>
-    </div>
-    <div class="right-col">
         <h3>Tips for the best profile</h3>
 
         <p>We need your business details so we can send customers your way, and can verify that you are a real business. This allows our thousands
@@ -35,6 +20,22 @@
         <h4>3. Add many specific tags</h4>
 
         <p>The better the tags, the more the sales. If you want to be found with odd keywords, remember to add all these in, as our search is based on them.</p>
+
+    </div>
+    <div class="right-col">
+      <?php
+      global $user;
+      module_load_include('inc', 'node', 'node.pages');
+      $node = (object) array(
+        'uid' => $user->uid,
+        'name' => (isset($user->name) ? $user->name : ''),
+        'type' => 'supplier',
+        'language' => LANGUAGE_NONE,
+      );
+      $form = drupal_get_form('supplier_node_form', $node);
+
+      print drupal_render($form)
+      ?>
 </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.css" />
@@ -47,6 +48,9 @@
     }
     .left-col .tabbable {
         display: none;
+    }
+    div#edit-field-agree-to-terms-and-conditi {
+        clear: both;
     }
     .form-textarea {
         max-height: 100px;
