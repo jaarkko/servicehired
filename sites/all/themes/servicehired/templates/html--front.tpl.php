@@ -702,7 +702,7 @@
               <a href="/list-your-service">List your service</a>
           </li>
           <li>
-              <a href="/sustainable-business">Sustainable business</a>
+              <a target="_blank" href="https://www.inventshift.com">Sustainable business</a>
           </li>
       </ul>
   </div>
