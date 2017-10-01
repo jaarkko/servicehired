@@ -118,13 +118,22 @@
   $('#edit-field-business-tags-und-0-value').tagsInput();
     $('.step1').click(function(){
       $('.step2').removeClass('hidden');
+      $('html, body').animate({
+        scrollTop: $("#step2").offset().top
+      }, 200);
     });
 
     $('.step2').click(function(){
       $('.step3').removeClass('hidden');
+      $('html, body').animate({
+        scrollTop: $("#step3").offset().top
+      }, 200);
     });
 
     $('.step3').click(function(){
       $('.step4').removeClass('hidden');
+      $('html, body').animate({
+        scrollTop: $("#step4").offset().top
+      }, 200);
     });
 </script>
