@@ -490,6 +490,10 @@
           margin: 0;
           font-size: 12px !important;
       }
+      a.right-padding {
+          margin-right: 1em;
+          font-size: 0.8em;
+      }
       @media all and (max-width: 768px) {
           a.listyourbusiness {
               display: none;
