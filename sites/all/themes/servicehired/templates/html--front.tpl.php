@@ -703,18 +703,18 @@
 
   </div>
 </div>
+<div class="facets">
+    <div id="pricerange" class="pricerange">
+    </div>
+    <div id="pipssteps">
+    </div>
+</div>
 <div class="marketing row">
     <div class="breadcrumb"><ul>
             <li class="done searchbread">Search </li>
             <li class="future servicebread">Choose a service</li>
             <li class="future checkoutbread hidden">Add details to continue</li>
         </ul></div>
-    <div class="facets">
-        <div id="pricerange" class="pricerange">
-        </div>
-        <div id="pipssteps">
-        </div>
-    </div>
     <div class="types">
         <ul id="searchinsides" class="">
         </ul>
