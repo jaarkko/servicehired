@@ -59,24 +59,6 @@
         margin-top: -30px;
         border-radius: 5px;
     }
-    .left-col {
-        background: #333644;
-        border-radius: 5px;
-        width: 45%;
-        margin-right: 5%;
-        padding: 30px;
-        font-size: 18px;
-        color: white;
-        padding-top: 15px;
-        margin-top: 10px;
-    }
-    .left-col h3 {
-        color: white;
-    }
-    .left-col h4 {
-        color: #FDB834;
-        margin-top: 30px;
-    }
     .control-label {
         font-size: 18px;
         margin-bottom: 10px;
