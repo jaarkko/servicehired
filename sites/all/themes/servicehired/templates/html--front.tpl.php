@@ -1181,6 +1181,7 @@
       range5 = 0;
       range6 = 0;
       i = 0;
+      myarray = [];
 
       for (var key in data) {
         console.log(data[key]);
@@ -1212,14 +1213,21 @@
       console.log(range4);
       console.log(range5);
       console.log(range6);
+      myarray.push(range);
+      myarray.push(range2);
+      myarray.push(range3);
+      myarray.push(range4);
+      myarray.push(range5);
+      myarray.push(range6);
+
+
       console.log(i);
 
-      var string = range + ','+ range2 + ','+ range3 + ',' + range4 + ','+ range5 + ','+ range6;
       var total = i;
       console.log(string);
 
       var chart = new Chartist.Pie('#pricerange', {
-        series: string,
+        series: myarray,
         labels: '50','50-100','100-200','200-500','500-1000','1000+'
       }, {
         donut: true,
