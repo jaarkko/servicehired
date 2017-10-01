@@ -576,7 +576,7 @@
               right: unset !important;
               bottom: unset !important;
           }
-          .pricing {
+          .open .pricing {
               max-width: 110px;
               padding: 18px !important;
               background: #1d2331;
