@@ -1211,8 +1211,8 @@
       myarray = [];
       total = 0;
       for (var key in data) {
-        total = obj[key];
-        myarray.push(obj[key]);
+        total = data[key];
+        myarray.push(data[key]);
       }
 
       var chart = new Chartist.Pie('#pricerange', {
