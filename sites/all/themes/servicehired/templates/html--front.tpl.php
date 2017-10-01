@@ -1224,8 +1224,8 @@
         donut: true,
         donutWidth: 50,
         donutSolid: true,
-        startAngle: 270,
-        total: total*2,
+        startAngle: 290,
+        total: total*2-20,
         showLabel: true
       });
 
@@ -1274,7 +1274,6 @@
           clearTimeout(window.__anim21278907124);
           window.__anim21278907124 = null;
         }
-        window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
       });
     }
 
