@@ -956,6 +956,13 @@ div.tagsinput {
   border-radius: 5px;
   text-align: center;
 }
+.grid {
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+
 .grid .result {
   float: left;
   width: 25%;
