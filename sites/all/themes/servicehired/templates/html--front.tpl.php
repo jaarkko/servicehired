@@ -583,6 +583,7 @@
               float: left !important;
               margin: 5px 20px 5px 0px;
               color: white;
+              border-radius: 5px;
           }
           .open .actions {
               position: inherit;
@@ -594,9 +595,7 @@
               height: 45px;
           }
       }
-
   </style>
-    <link rel="stylesheet" type="text/css" href="/sites/all/themes/servicehired/css.css"/>
 </head>
 <body>
 <div class="overthefold">
@@ -1064,6 +1063,7 @@
     </div>
 </footer>
 <noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="/sites/all/themes/servicehired/css.css"/>
 </noscript>
 <script>
   var loadDeferredStyles = function() {
