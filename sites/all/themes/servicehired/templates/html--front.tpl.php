@@ -1173,24 +1173,54 @@
       var avg = content.facets[0].stats.avg;
       var total = content.facets[0].stats.sum;
       var data = content.facets[0].data;
-      console.log(data);
 
-      keys2 = [];
-      for(var k in data) keys2.push(k + ' €');
+      range = 0;
+      range2 = 0;
+      range3 = 0;
+      range4 = 0;
+      range5 = 0;
+      range6 = 0;
+      i = 0;
 
-      myarray = [];
-      total = 0;
       for (var key in data) {
-        total = total + parseInt(data[key]);
-        myarray.push(data[key]);
+        console.log(data[key]);
+        console.log(key);
+        i = i + temp1[key];
+        if(key < 50) {
+          range = range + data[key];
+        }
+        if(key <= 100 && key >= 50) {
+          range2 = range2 + data[key];
+        }
+        if(key <= 200 && key > 101) {
+          range3 = range3 + data[key];
+        }
+        if(key <= 500 && key > 201) {
+          range4 = range4 + data[key];
+        }
+        if(key <= 1000 && key > 501) {
+          range5 = range5 + data[key];
+        }
+        if(key > 1001) {
+          range6 = range6 + data[key];
+        }
       }
 
-      console.log(total);
-      console.log(myarray);
+      console.log(range);
+      console.log(range2);
+      console.log(range3);
+      console.log(range4);
+      console.log(range5);
+      console.log(range6);
+      console.log(i);
+
+      var string = range + ','+ range2 + ','+ range3 + ',' + range4 + ','+ range5 + ','+ range6;
+      var total = i;
+      console.log(string);
 
       var chart = new Chartist.Pie('#pricerange', {
-        series: myarray,
-        labels: keys2,
+        series: string,
+        labels: '50','50-100','100-200','200-500','500-1000','1000+'
       }, {
         donut: true,
         donutWidth: 80,
@@ -1199,6 +1229,8 @@
         total: total*2,
         showLabel: true
       });
+
+
 
       chart.on('draw', function(data) {
         if(data.type === 'slice') {
@@ -1257,7 +1289,6 @@
       //'75%': [ avg * 2 ],
       'max': [max]
     };
-    var pipsRange = document.getElementById('pipssteps');
 
     function updateSliderRange(min, max, avg) {
       pipsRange.noUiSlider.updateOptions({
