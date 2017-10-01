@@ -1202,12 +1202,14 @@
       var data = content.facets[0].data;
       console.log(data);
 
+      var keys = Object.keys(data);
+
       for (var key in data) {
         console.log(data[key]);
       }
 
       new Chartist.Pie('#pricerange', {
-        series: [data]
+        series: keys,
       }, {
         donut: true,
         donutWidth: 50,
