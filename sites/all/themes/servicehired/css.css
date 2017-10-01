@@ -622,6 +622,13 @@ div#pricerange {
   position: relative;
   background: #1c2030;
 }
+.facets h3 {
+  font-size: 20px;
+  color: white;
+  font-weight: 100;
+}
+
+
 .internal {
   max-width: 1350px;
   margin: 0 auto;
