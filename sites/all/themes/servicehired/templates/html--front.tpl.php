@@ -1204,27 +1204,30 @@
 
       var keys = Object.keys(data);
 
-
       keys2 = [];
       for(var k in data) keys2.push(k);
       console.log(keys2);
 
+      myarray = [];
+      total = 0;
       for (var key in data) {
-        console.log(data[key]);
+        total = obj[key];
+        myarray.push(obj[key]);
       }
 
-      var Chart = new Chartist.Pie('#pricerange', {
-        series: keys,
+      var chart = new Chartist.Pie('#pricerange', {
+        series: myarray,
+        labels: keys,
       }, {
         donut: true,
         donutWidth: 50,
         donutSolid: true,
         startAngle: 270,
-        total: total*2,
+        total: total,
         showLabel: true
       });
 
-      Chart.on('draw', function(data) {
+      chart.on('draw', function(data) {
         if(data.type === 'slice') {
           // Get the total path length in order to use for dash array animation
           var pathLength = data.element._node.getTotalLength();
@@ -1238,7 +1241,7 @@
           var animationDefinition = {
             'stroke-dashoffset': {
               id: 'anim' + data.index,
-              dur: 500,
+              dur: 300,
               from: -pathLength + 'px',
               to:  '0px',
               easing: Chartist.Svg.Easing.easeOutQuint,
@@ -1263,9 +1266,15 @@
         }
       });
 
+      // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
+      chart.on('created', function() {
+        if(window.__anim21278907124) {
+          clearTimeout(window.__anim21278907124);
+          window.__anim21278907124 = null;
+        }
+        window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
+      });
     }
-
-
 
     var pipsRange = document.getElementById('pipssteps');
 
