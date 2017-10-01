@@ -755,7 +755,7 @@
   </div>
 </div>
 <div class="facets">
-    <div class="internal">
+    <div class="internal hidden">
         <h3>Price range</h3>
         <div id="pricerange" class="pricerange"></div>
         <div id="pipssteps">
@@ -1363,19 +1363,24 @@
         });
       }
 
+      pipsRange.noUiSlider.off();
+
       pipsRange.noUiSlider.on('update', function () {
         var results = pipsRange.noUiSlider.get();
         var rangemin = results[0];
         var rangemax = results[1];
       });
 
-      pipsRange.noUiSlider.on('change', function () {
+
+        pipsRange.noUiSlider.on('change', function () {
         var results = pipsRange.noUiSlider.get();
         var rangemin = results[0];
         var rangemax = results[1];
 
         console.log(rangemin);
         console.log(rangemax);
+
+        $('.internal').removeClass('hidden');
 
         helper.removeNumericRefinement('field_product_price').addNumericRefinement('field_product_price', '>=', rangemin).addNumericRefinement('field_product_price', '<=', rangemax).search();
 
@@ -1387,7 +1392,10 @@
     console.log(content);
 
     renderHits(content);
-    renderSlider(content);
+
+    if($('.searched')[0]){
+      renderSlider(content);
+    }
 
     $('.showing').remove();
     var html = '<div class="col-md-12 text-right showing">Found '+ content.nbHits +' results in '+ content.processingTimeMS +' ms</div>';
