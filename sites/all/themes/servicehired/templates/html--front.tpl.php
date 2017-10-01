@@ -592,7 +592,56 @@
 
   </style>
     <link rel="stylesheet" type="text/css" href="/sites/all/themes/servicehired/css.css"/>
+<style>
+    .searched .selection-category {
+        display: none;
+    }
 
+    .overthefold.searched {
+        height: 140px;
+        padding-top: 0;
+        background: #1E5A68;
+    }
+
+    .searched .topbar {
+        background: #1C2131;
+    }
+
+    .internal {
+        height: 120px;
+        max-width: 1375px;
+    }
+
+    .internal h3 {
+        font-size: 15px;
+    }
+
+    .searched .two-boxes {
+        max-width: 1375px;
+        margin: 20px auto;
+    }
+
+    .searched .box-left, .searched .box-right {
+        width: calc(33% - 15px);
+    }
+
+    div#pipssteps {
+        width: 63.6%;
+        margin: 20px;
+        height: 19px;
+    }
+
+    div#pricerange {
+        position: absolute;
+        height: 600px;
+        right: 0;
+        z-index: 99999;
+        top: -168px;
+        width: 450px;
+    }
+
+
+</style>
 </head>
 <body>
 <div class="overthefold">
