@@ -1198,7 +1198,22 @@
       var min = content.facets[0].stats.min;
       var max = content.facets[0].stats.max;
       var avg = content.facets[0].stats.avg;
+      var total = content.facets[0].stats.sum;
+
+      var data = content.facets[0].data;
+      new Chartist.Pie('#pricerange', {
+        series: [data]
+      }, {
+        donut: true,
+        donutWidth: 50,
+        donutSolid: true,
+        startAngle: 270,
+        total: total,
+        showLabel: true
+      });
     }
+
+
 
     var pipsRange = document.getElementById('pipssteps');
 
