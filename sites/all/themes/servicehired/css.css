@@ -1218,3 +1218,21 @@ a.right-padding {
 text.ct-label {
   fill: white !important;
 }
+
+.noUi-value.noUi-value-horizontal.noUi-value-large {
+  color: white;
+  top: 10px;
+  font-size: 12px;
+}
+.noUi-marker-horizontal.noUi-marker-normal {
+  margin-left: -1px;
+  width: 1px;
+  height: 2px;
+  color: white;
+}
+.noUi-marker-horizontal.noUi-marker-large {
+  margin-left: -1px;
+  width: 1px;
+  height: 5px;
+  color: white;
+}

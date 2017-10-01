@@ -591,6 +591,8 @@
       }
 
   </style>
+    <link rel="stylesheet" type="text/css" href="/sites/all/themes/servicehired/css.css"/>
+
 </head>
 <body>
 <div class="overthefold">
@@ -1058,7 +1060,6 @@
     </div>
 </footer>
 <noscript id="deferred-styles">
-  <link rel="stylesheet" type="text/css" href="/sites/all/themes/servicehired/css.css"/>
 </noscript>
 <script>
   var loadDeferredStyles = function() {
