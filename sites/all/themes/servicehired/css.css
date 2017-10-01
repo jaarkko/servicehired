@@ -604,7 +604,13 @@ a.name.navbar-brand {
   float: left;
 }
 
-
+div#pricerange {
+  position: absolute;
+  height: 400px;
+  right: 0;
+  z-index: 99999;
+  top: -70px;
+}
 .checkout .stripeform {
   display: block ;
   width: 40%;
@@ -614,7 +620,10 @@ a.name.navbar-brand {
 .facets {
   clear: both;
   margin: 6px 24px;
-  height: 50px;
+  height: 150px;
+}
+div#pipssteps {
+  width: 75%;
 }
 .noUi-connect {
   background: #f14e24 !important;
