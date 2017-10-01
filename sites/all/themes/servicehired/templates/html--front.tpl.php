@@ -1247,6 +1247,7 @@
 
   function renderSlider(content){
     if (content.facets[0]) {
+      $('.internal').removeClass('hidden');
       var min = content.facets[0].stats.min;
       var max = content.facets[0].stats.max;
       var avg = content.facets[0].stats.avg;
@@ -1371,7 +1372,6 @@
         var rangemax = results[1];
       });
 
-
         pipsRange.noUiSlider.on('change', function () {
         var results = pipsRange.noUiSlider.get();
         var rangemin = results[0];
@@ -1379,8 +1379,6 @@
 
         console.log(rangemin);
         console.log(rangemax);
-
-        $('.internal').removeClass('hidden');
 
         helper.removeNumericRefinement('field_product_price').addNumericRefinement('field_product_price', '>=', rangemin).addNumericRefinement('field_product_price', '<=', rangemax).search();
 
