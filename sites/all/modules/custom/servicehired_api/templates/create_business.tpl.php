@@ -101,11 +101,12 @@
         padding: 5px 20px 20px 20px;
         border-radius: 5px;
         color: #1c2232;
-        width: 46%;
+        width: 88%;
         float: left;
         margin-right: 3%;
         height: 556px;
         border: 1px solid #d2d2d2;
+        margin-left: 7%;
     }
 </style>
 <script>
