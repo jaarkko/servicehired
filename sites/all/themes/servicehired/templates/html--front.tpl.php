@@ -707,6 +707,10 @@
                   <span>Phone</span>
                   <input name="cardholder-phone" class="field" placeholder="09853398021">
               </label>
+              <label class="hidden">
+                  <span>Package</span>
+                  <input class="package" name="package" placeholder="94110">
+              </label>
               <h4> Billing details</h4>
               <div class="card-details">
                   <?php print formatted_card(); ?>
