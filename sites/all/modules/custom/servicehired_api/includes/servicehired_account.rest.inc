@@ -21,6 +21,9 @@ function servicehired_order_create() {
 
   if ($user == FALSE) {
     $uid = create_customer($first_name, $last_name, $token, $email);
+  } else {
+    global $user;
+    $uid = $user->uid;
   }
 
   create_order($offer->title, $uid);
