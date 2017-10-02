@@ -1541,6 +1541,10 @@
       var parent = $(this).closest('.box');
       parent.addClass('buy');
       $('body').addClass('checkout');
+
+      var dataid = $('.buy .dataid').text();
+      $('.package').val(dataid);
+
       $('.overthefold').addClass('searched');
       $('.checkoutbread').removeClass('hidden');
       $('.servicebread').removeClass('future');
@@ -1731,11 +1735,8 @@
       $('.package').val(dataid);
 
       successElement.querySelector('.token').textContent = result.token.id;
-
       successElement.classList.add('visible');
-
       document.getElementById('stripeform').submit();
-
 
     } else if (result.error) {
       errorElement.textContent = result.error.message;
