@@ -27,7 +27,13 @@ function servicehired_order_create() {
     $uid = $user->uid;
   }
 
-  create_order($offer->title, $uid);
+  $field_price = $offer->field_product_price['und'][0]['value'];
+  $body = $offer->body['und'][0]['value'];
+
+
+  $field_order_id = create_order($offer->title, $uid);
+  create_quote('', $field_price, $field_order_id, $body, $uid);
+
   drupal_goto('/dash');
 }
 
@@ -71,6 +77,27 @@ function create_customer($first_name, $last_name, $token, $email) {
   }
 }
 
+function create_quote($title, $field_price, $field_order_id, $body, $uid) {
+  $node = new stdClass();
+  $node->type = 'quote';
+  $node->language = LANGUAGE_NONE;
+  node_object_prepare($node);
+
+  $node->title = $title;
+  $node->status = 1;
+  $node->promote = 0;
+  $node->sticky = 0;
+  $node->comment = 2;
+  $node->uid = $uid;
+
+  $node->field_order_id['und'][0]['value'] = $field_order_id;
+  $node->field_price['und'][0]['value'] = $field_price;
+  $node->body['und'][0]['value'] = $body;
+
+  // Save the node
+  node_save($node);
+}
+
 function create_order($order_title, $uid) {
   $node = new stdClass();
   $node->type = 'order';
@@ -86,6 +113,8 @@ function create_order($order_title, $uid) {
 
   // Save the node
   node_save($node);
+
+  return $node->nid;
 }
 
 function servicehired_payment (){
