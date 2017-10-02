@@ -6,5 +6,6 @@
   <h3>Your orders</h3>
   <div class="grid">
     <?php print servicehired_orders_format(); ?>
+      <div class="clearfix"></div>
   </div>
 </div>
