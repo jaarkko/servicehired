@@ -16,18 +16,18 @@ function servicehired_order_create() {
   $order = node_load($package);
   $offer = node_load($order->field_supplier_id['und'][0]['value']);
 
-  $user = user_load_by_mail($email);
-  $uid = $user->uid;
-
-  if ($user == FALSE) {
-    $uid = create_customer($first_name, $last_name, $token, $email);
+  if ($email) {
+    $user = user_load_by_mail($email);
+    $uid = $user->uid;
+    if ($user == FALSE) {
+      $uid = create_customer($first_name, $last_name, $token, $email);
+    }
   } else {
     global $user;
     $uid = $user->uid;
   }
 
   create_order($offer->title, $uid);
-
   drupal_goto('/dash');
 }
 

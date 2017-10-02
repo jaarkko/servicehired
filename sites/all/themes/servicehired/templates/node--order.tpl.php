@@ -219,6 +219,7 @@ foreach ($results['node'] as $result){
                         <div class="actions">
                             <button class="btn send-comment">Send</button>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
