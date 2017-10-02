@@ -30,9 +30,8 @@ function servicehired_order_create() {
   $field_price = $offer->field_product_price['und'][0]['value'];
   $body = $offer->body['und'][0]['value'];
 
-
   $field_order_id = create_order($offer->title, $uid);
-  create_quote('', $field_price, $field_order_id, $body, $uid);
+  create_quote($offer->title, $field_price, $field_order_id, $body, $uid);
 
   drupal_goto('/dash');
 }
