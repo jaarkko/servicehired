@@ -15,7 +15,6 @@ function servicehired_order_create() {
 
   $order = node_load($package);
   $offer = node_load($order->field_supplier_id['und'][0]['value']);
-  ddl($offer);
 
   if ($email) {
     $user = user_load_by_mail($email);
@@ -28,8 +27,7 @@ function servicehired_order_create() {
     $uid = $user->uid;
   }
 
-  $field_price = $order->field_product_price['und'][0]['value'];
-  ddl($field_price);
+  $field_price = $order->field_product_price['und'][0]['value']*100;
   $body = $order->body['und'][0]['value'];
 
   $field_order_id = create_order($offer->title, $uid);
