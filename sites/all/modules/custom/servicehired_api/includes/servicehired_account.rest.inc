@@ -28,9 +28,9 @@ function servicehired_order_create() {
     $uid = $user->uid;
   }
 
-  $field_price = $offer->field_product_price['und'][0]['value'];
+  $field_price = $order->field_product_price['und'][0]['value'];
   ddl($field_price);
-  $body = $offer->body['und'][0]['value'];
+  $body = $order->body['und'][0]['value'];
 
   $field_order_id = create_order($offer->title, $uid);
   create_quote($offer->title, $field_price, $field_order_id, $body, $uid);
