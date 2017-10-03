@@ -809,7 +809,7 @@ div#field-list-of-terms-and-conditio-add-more-wrapper {
   border: 1px solid #d2d2d2;
   font-size: 0.9em;
 }
-h1.page-header {
+.node-type-basic-page h1.page-header {
   background: transparent;
   color: black;
 }

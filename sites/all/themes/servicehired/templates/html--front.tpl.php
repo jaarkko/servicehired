@@ -1444,7 +1444,7 @@
             '<div class="descript">' + hit.venue_summary + '</div>' +
             '<span class="tags"><label>Tags:</label> Coffee cart, peppermint, coffee, cart</span></span>' +
             '<div class="actions">' +
-            '<div class="btn btn-primary enquiry" typeform="">Buy now</div></div>' +
+            '<div class="btn btn-primary enquiry">Buy now</div></div>' +
             '<div class="close">x</div>' +
             '</div>' +
             '</li>';
@@ -1464,16 +1464,24 @@
             backgroundimg = 'background-image:url(' + hit.imageurl + ') !important';
           }
           i++;
+
           return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
             '<div class="hidden dataid">' + hit.objectID + '</div>' +
-            '<div style="background-image:url(' + hit.optimized_image[1] + ') !important" class="text">' +
-            '<div class="inside">' + hit._highlightResult.title.value +
+            '<div style="background-image:url(' + hit.optimized_large_image[1] + ') !important" firstimage="' + hit.optimized_large_image[1] + '" secondimage="' + hit.optimized_large_image[2] + '" thirdimage="' + hit.optimized_large_image[3] + '" class="text">' +
+            '<div class="arrow-left">&lt;</div>' +
+            '<div class="arrow-right">&gt;</div>' +
+            '<div class="inside">' +
+            '<span class="product">'+ hit._highlightResult.title.value +'</span>' +
             '</div>' +
             '</div>' +
-            '<div class="description">' + hit.venue_summary + '' +
-            '<div class="list"><ul class="tags"><h5>Categories:</h5></ul></div>' + reviews +
-            '<div class="actions"><a href="' + hit.url + '"><div class="btn btn-info portfolio">Portfolio & More information</div></a>' +
-            '<div class="btn btn-primary enquiry" typeform="' + typeform(hit) + '" >Quick Enquiry</div></div></div>' +
+            '<div class="description">' +
+            '<span class="hidden title">'+ hit._highlightResult.title.value +'</span>' +
+            '<div class="descript">' + hit.venue_summary + '</div>' +
+            '<span class="tags"><label>Tags:</label> Coffee cart, peppermint, coffee, cart</span></span>' +
+            '<div class="actions">' +
+            '<div class="btn btn-primary enquiry">Buy now</div></div>' +
+            '<div class="close">x</div>' +
+            '</div>' +
             '</li>';
         }
       });
@@ -1535,6 +1543,7 @@
       scrollTop: $('body').offset().top - 15
     }, 50);
   });
+
   function initAction(){
     $('.box .enquiry').click(function(){
       console.log('here');
