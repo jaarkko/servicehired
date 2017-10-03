@@ -311,7 +311,11 @@ function format_businesses(){
 <p>We want your business details. This allows our thousands
       of visitors to see and find you. Make sure to add a few
       high quality images.</p></div>
-  <div class="right-col"><a href="create-business">Start by adding your business</a></div>
+  <div class="right-col">
+  <div class="text-right">
+  <a href="create-business">Start by adding your business</a>
+  </div>
+  </div>
 <li></li>';
   }
   return($html);
