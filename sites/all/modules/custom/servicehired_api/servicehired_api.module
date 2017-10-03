@@ -296,7 +296,14 @@ function format_businesses(){
 
     foreach ($businesses as $business) {
       $loaded = node_load($business->nid);
-      $html .= '<a href="node/'.$business->nid.'"><li>'.$loaded->title.'</li></a>';
+      $img_url = $loaded->field_business_profile_image['und'][0]['uri'];
+      $image1 = image_style_url("carousel-front", $img_url);
+      $html .= '<a href="node/'.$business->nid.'">
+<div class="bus"><div class="image"><img src="'.$image1.'"></div>
+    <div class="business">'.$loaded->title.'</div>
+<div class="clearfix"></div></div>
+
+</a>';
     }
     $html .= '</div>';
   } else {

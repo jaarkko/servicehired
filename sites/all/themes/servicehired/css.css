@@ -1453,6 +1453,32 @@ p.large {
   height: 446px;
 }
 
+.bus .image {
+  width: 50%;
+  float: left;
+}
+
+.bus img {
+  max-width: 100%;
+  float: left;
+}
+.bus {
+  border: 1px solid #D2D2D2;
+  border-radius: 5px;
+  background: #F9F9F9;
+}
+
+.bus .business {
+  height: 100%;
+  width: 50%;
+  float: right;
+  font-size: 17px;
+  padding: 70px 15px;
+  color: black;
+  text-align: center;
+}
+
+
 .node-type-basic-page .page-header {
   padding-bottom: 9px;
   margin: 0;
