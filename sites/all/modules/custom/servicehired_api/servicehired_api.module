@@ -291,8 +291,9 @@ function format_businesses(){
   <div class="right-col">
   <a href="/create-business"><button class="btn btn-primary">Create a new business</button></a>
   ';
-
   if($businesses){
+    $html .= '<h3>Your businesses</h3>';
+
     foreach ($businesses as $business) {
       $loaded = node_load($business->nid);
       $html .= '<a href="node/'.$business->nid.'"><li>'.$loaded->title.'</li></a>';

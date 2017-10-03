@@ -1443,17 +1443,17 @@ p.large {
   margin: 0 auto;
 }
 
-.darkblue {
+.node-type-basic-page .darkblue {
   background: #0098ac;
   height: 480px;
 }
 
-.lighterblue {
+.node-type-basic-page .lighterblue {
   background: #17b4c5;
   height: 446px;
 }
 
-.page-header {
+.node-type-basic-page .page-header {
   padding-bottom: 9px;
   margin: 0;
   border-bottom: 1px solid #eee;
