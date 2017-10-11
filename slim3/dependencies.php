@@ -8,7 +8,8 @@ $container = $app->getContainer();
 // Register component on container
 $container['view'] = function ($container) {
     $view = new \Slim\Views\Twig('slim3/templates', [
-        'cache' => 'data/cache/twig'
+        //'cache' => 'data/cache/twig'
+        'cache' => false,
     ]);
 
     // Instantiate and add Slim specific extension
