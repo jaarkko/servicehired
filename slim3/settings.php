@@ -1,5 +1,11 @@
 <?php
 
+// Load Drupal settings
+include 'sites/default/settings.php';
+
+// Drupal default DB
+$db_config = $databases['default']['default'];
+
 return [
     'settings' => [
         'displayErrorDetails' => true, // set to false in production
@@ -11,10 +17,10 @@ return [
         ],
 
         'db' => [
-            'host' => (isset($_SERVER['RDS_HOSTNAME']) ? $_SERVER['RDS_HOSTNAME'] : '172.16.44.194'),
-            'dbname' => 'dcapp',
-            'user' => (isset($_SERVER['RDS_USERNAME']) ? $_SERVER['RDS_USERNAME'] : 'dcapp'),
-            'pass' => (isset($_SERVER['RDS_PASSWORD']) ? $_SERVER['RDS_PASSWORD'] : 'dcapp'),
+            'host' => $db_config['host'],
+            'dbname' => $db_config['database'],
+            'user' => $db_config['username'],
+            'pass' => $db_config['password'],
         ],
 
     ],
