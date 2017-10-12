@@ -7,6 +7,8 @@ use Slim\Http\Response as Response;
 
 class ServiceController
 {
+    private $countries_json = 'http://country.io/names.json';
+    private $files_path = 'sites/default/files/';
     private $db;
 
     private $view;
@@ -59,23 +61,11 @@ class ServiceController
     public function citiesByCountry(Request $request, Response $response, $args)
     {
         $country = $request->getAttribute('country');
-        $sql = "SELECT DISTINCT(field_location_locality) as city FROM field_data_field_location WHERE field_location_country = :country";
-        $stmt = $this->db->prepare($sql);
-        $result = $stmt->execute(["country" => $country]);
-        $cities = [];
-
-        if ($result) {
-            $rows = $stmt->fetchAll();
-            foreach ($rows as $row) {
-                $city = $this->tech($row['city']);
-                $cities[$city] = $row['city'];
-            }
-        }
 
         return $this->view->render($response, 'country.html', [
             'country' => $country,
             'country_name' => $this->getCountryName($country),
-            'cities' => $cities,
+            'cities' => $this->getCities($country),
             'uri' => $request->getUri(),
         ]);
     }
@@ -91,27 +81,16 @@ class ServiceController
      */
     public function categories(Request $request, Response $response, $args)
     {
-        $sql = "SELECT name FROM taxonomy_term_data WHERE vid = :vid";
-        $stmt = $this->db->prepare($sql);
-        $result = $stmt->execute(["vid" => 2]);
-        $categories = [];
-
-        if ($result) {
-            $rows = $stmt->fetchAll();
-            foreach ($rows as $row) {
-                $category = $this->tech($row['name']);
-                $categories[$category] = $row['name'];
-            }
-        }
-
         $country = $request->getAttribute('country');
+        $city = $request->getAttribute('city');
 
         return $this->view->render($response, 'city.html', [
             'country' => $country,
             'country_name' => $this->getCountryName($country),
-            'city' => $request->getAttribute('city'),
+            'city' => $city,
+            'city_name' => $this->getCityName($city, $country),
             'service' => $request->getAttribute('service'),
-            'categories' => $categories,
+            'categories' => $this->getCategories(),
             'uri' => $request->getUri(),
         ]);
     }
@@ -128,12 +107,16 @@ class ServiceController
     public function services(Request $request, Response $response, $args)
     {
         $country = $request->getAttribute('country');
+        $category_name = $request->getAttribute('category');
+        $city = $request->getAttribute('city');
 
         return $this->view->render($response, 'service.html', [
             'country' => $country,
             'country_name' => $this->getCountryName($country),
-            'city' => $request->getAttribute('city'),
-            'category' => $request->getAttribute('category'),
+            'city' => $city,
+            'city_name' => $this->getCityName($city, $country),
+            'category' => $category_name,
+            'category_name' => $this->getCategoryName($category_name),
             'uri' => $request->getUri(),
         ]);
     }
@@ -145,12 +128,72 @@ class ServiceController
         return $string;
     }
 
-    private function getCountryName($country)
+    private function getCategories()
     {
-        $file = 'sites/default/files/country_names.json';
+        $file = $this->files_path . 'service_categories.json';
+        $sql = "SELECT name FROM taxonomy_term_data WHERE vid = :vid";
+        $stmt = $this->db->prepare($sql);
+        $result = $stmt->execute(["vid" => 2]);
+        $categories = [];
+
+        if ($result) {
+            $rows = $stmt->fetchAll();
+            foreach ($rows as $row) {
+                $category = $this->tech($row['name']);
+                $categories[$category] = $row['name'];
+            }
+        }
 
         if (!file_exists($file)) {
-            $contents = file_get_contents("http://country.io/names.json");
+            $contents = json_encode($categories);
+            file_put_contents($file, $contents);
+        }
+
+        return $categories;
+    }
+
+    private function getCategoryName($tech)
+    {
+        $categories = $this->getCategories();
+        return $categories[$tech];
+    }
+
+    private function getCities($country)
+    {
+        $file = $this->files_path . 'cities_'. $country .'.json';
+        $sql = "SELECT DISTINCT(field_location_locality) as city FROM field_data_field_location WHERE field_location_country = :country";
+        $stmt = $this->db->prepare($sql);
+        $result = $stmt->execute(["country" => $country]);
+        $cities = [];
+
+        if ($result) {
+            $rows = $stmt->fetchAll();
+            foreach ($rows as $row) {
+                $city = $this->tech($row['city']);
+                $cities[$city] = $row['city'];
+            }
+        }
+
+        if (!file_exists($file)) {
+            $contents = json_encode($cities);
+            file_put_contents($file, $contents);
+        }
+
+        return $cities;
+    }
+
+    private function getCityName($city, $country)
+    {
+        $cities = $this->getCities($country);
+        return $cities[$city];
+    }
+
+    private function getCountryName($country)
+    {
+        $file = $this->files_path . 'country_names.json';
+
+        if (!file_exists($file)) {
+            $contents = file_get_contents($this->countries_json);
             file_put_contents($file, $contents);
         }
 

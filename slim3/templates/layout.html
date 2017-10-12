@@ -3,7 +3,10 @@
 <head>
     <title>{% block title %}{% endblock %}</title>
 
-    <meta name="description" content="TODO">
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{% endblock %}">
+
+    <meta name="robots" content="index,follow">
 
     <link rel="canonical" href="{{ uri }}" />
 
