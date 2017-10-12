@@ -1,10 +1,13 @@
 {% extends "layout.html" %}
 
-{% block title %}{{ category }} - {{ city }} - {{ country_name }} - ServiceHired{% endblock %}
+{% block title %}{{ category_name }} - {{ city_name }} - {{ country_name }} - ServiceHired{% endblock %}
+
+{% block description %}Find, compare and book local {{ category_name }} services from {{ city_name }}, {{ country_name }} with ServiceHired.
+Simple as that. ServiceHired makes booking services online simple.{% endblock %}
+
+{% block keywords %}ServiceHired,{{ country_name }},{{ city_name }},{{ category_name }}{% endblock %}
 
 {% block body %}
-
-{{ category }} services in {{ city }}, {{ country }}
 
 TODO
 
