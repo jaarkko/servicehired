@@ -984,22 +984,20 @@
                         </ul></div>
                     <div class="col-sm-2 col-sm-offset-1">
                         <ul><li> Finding a service</li>
-                            <li><a href="/browse-services">Browse services</a></li>
+                            <li><a href="/">Browse services</a></li>
                             <li><a href="/how-it-works">How it works</a></li>
-                            <li><a href="/success-stories">Success stories</a></li>
                         </ul></div>
                     <div class="col-sm-2">
                         <ul><li> Finding customers</li>
                             <li><a href="/list-your-business">List your service</a></li>
                             <li><a href="/find-customers/how-service-hired-works">How it works</a></li>
                             <li><a href="/business-tools">Tools for business</a></li>
-                            <li><a href="/claim-your-business">Claim your business</a></li>
                         </ul></div>
                     <div class="col-sm-2">
                         <ul><li> Company</li>
                             <li></li>
                             <li><a href="/about">About</a></li>
-                            <li><a href="/faq">Sustainable business</a></li>
+                            <li><a target="_blank" href="https://www.inventshift.com">Sustainable business</a></li>
                             <li><a href="/press">Press</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul></div>
