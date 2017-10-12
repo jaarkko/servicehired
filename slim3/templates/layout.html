@@ -10,7 +10,6 @@
 
     <link rel="canonical" href="{{ uri }}" />
 
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/ldpi.png" sizes="32x32" />
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/xhdpi.png" sizes="96x96" />
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/xxxhdpi.png" sizes="192x192" />
@@ -29,6 +28,7 @@
     <style>
         body {
             margin: 0;
+            font-family: 'Rubik', sans-serif;
         }
         a {
             color: white;
@@ -60,7 +60,7 @@
 
     <div class="topbar">
         <a href="/">
-            <img class="logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png">
+            <img class="logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png" alt="ServiceHired logo">
         </a>
     </div>
 
@@ -69,6 +69,15 @@
     {% block body %}{% endblock %}
 
 </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Rubik:300,400,500,700']
+    }
+  });
+</script>
 
 </body>
 </html>
