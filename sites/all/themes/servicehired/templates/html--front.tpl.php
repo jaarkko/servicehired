@@ -1014,8 +1014,6 @@
                         <ul>
                             <li><a href="/terms">Terms</a></li>
                             <li><a href="/terms">Privacy policy</a></li>
-                            <li><a href="/terms">Terms of use</a></li>
-
                         </ul>
                     </div>
                     <div class="col-sm-4">
