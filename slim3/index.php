@@ -1,12 +1,12 @@
 <?php
 
-require 'slim3/vendor/autoload.php';
+use Slim\App;
 
-$app = new \Slim\App;
+require 'slim3/vendor/autoload.php';
 
 // Instantiate the app
 $settings = require 'slim3/settings.php';
-$app = new \Slim\App($settings);
+$app = new App($settings);
 
 // Set up dependencies
 require 'slim3/dependencies.php';
