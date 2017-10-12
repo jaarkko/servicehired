@@ -14,7 +14,7 @@ if (isset($databases['default'])) {
 if (defined('PANTHEON_ENVIRONMENT')) {
     $db_config = [
         'host' => getenv('DB_HOST'),
-        'database' => getenv('DB_HOST'),
+        'database' => getenv('DB_NAME'),
         'username' => getenv('DB_USER'),
         'password' => getenv('DB_PASSWORD'),
         'port' => getenv('DB_PORT'),
