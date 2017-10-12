@@ -1,15 +1,17 @@
 <?php
 // DIC configuration
 
-//use App\Controller\ApiController;
+use App\Controller\ServiceController;
 
 $container = $app->getContainer();
 
 // Register component on container
 $container['view'] = function ($container) {
+
+    $cache = (getenv('AMAZEEIO_SITE_ENVIRONMENT')) ? false : 'sites/default/files/twig';
+
     $view = new \Slim\Views\Twig('slim3/templates', [
-        //'cache' => 'data/cache/twig'
-        'cache' => false,
+        'cache' => $cache,
     ]);
 
     // Instantiate and add Slim specific extension
@@ -29,6 +31,6 @@ $container['db'] = function ($c) {
 };
 
 // API Controller
-$container['App\Controller\ApiController'] = function ($c) {
-    //return new ApiController($c->get('db'), $c->get('logger'));
+$container['App\Controller\ServiceController'] = function ($c) {
+    return new ServiceController($c->get('db'), $c->get('view'));
 };

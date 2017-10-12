@@ -1,9 +1,13 @@
 {% extends "layout.html" %}
 
-{% block title %}{{ city}} - {{ country }} - ServiceHired{% endblock %}
+{% block title %}{{ city}} - {{ country_name }} - ServiceHired{% endblock %}
 
 {% block body %}
 
-{{ city}}, {{ country }}
+<ul>
+    {% for category, name in categories %}
+    <li><a href="{{ path_for('services', { 'country': country, 'city': city, 'category': category }) }}">{{ name }}</a></li>
+    {% endfor %}
+</ul>
 
 {% endblock %}
