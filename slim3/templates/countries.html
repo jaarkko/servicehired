@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Countries - ServiceHired{% endblock %}
+
+{% block body %}
+
+index - list of countries
+
+<ul>
+    {% for country, name in countries %}
+    <li><a href="{{ path_for('country', { 'country': country }) }}">{{ name }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

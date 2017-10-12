@@ -10,6 +10,6 @@
 $components = explode('/', trim($_SERVER['REQUEST_URI'], '/'));
 
 if ($components[0] === 'services') {
-  include 'services/index.php';
+  include 'slim3/index.php';
   exit();
 }
