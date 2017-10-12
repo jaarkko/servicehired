@@ -641,9 +641,10 @@
       </div>
   </div>
   <div class="menu">
+      <!--
     <div class="leftmenu">
       <a href="https://www.inventshift.com/blog">Blog</a>
-    </div>
+    </div> -->
     <?php if (user_is_logged_in()): ?>
         <div class="rightmenu">
             <a class="right-padding" href="/user/logout">Log out</a>
@@ -665,7 +666,7 @@
               <a href="/contact">Contact</a>
           </li>
           <li>
-              <a href="/list-your-service">List your service</a>
+              <a href="/list-your-business">List your service</a>
           </li>
           <li>
               <a target="_blank" href="https://www.inventshift.com">Sustainable business</a>
@@ -989,7 +990,7 @@
                         </ul></div>
                     <div class="col-sm-2">
                         <ul><li> Finding customers</li>
-                            <li><a href="/list-your-service">List your service</a></li>
+                            <li><a href="/list-your-business">List your service</a></li>
                             <li><a href="/find-customers/how-service-hired-works">How it works</a></li>
                             <li><a href="/business-tools">Tools for business</a></li>
                             <li><a href="/claim-your-business">Claim your business</a></li>

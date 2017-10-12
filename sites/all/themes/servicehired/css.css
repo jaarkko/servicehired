@@ -1495,3 +1495,29 @@ p.large {
   margin: 0;
   max-width: 100%;
 }
+
+.panel-pane.pane-views.pane-our-team.marketing {
+  background: #19202f;
+  color: white;
+  margin: 2em 0;
+  padding: 2em;
+}
+
+.panel-pane.pane-views.pane-our-team.marketing img {
+  border-radius: 5px;
+}
+
+.panel-pane.pane-views.pane-our-team.marketing .col-md-6 {
+  margin-top: 20px;
+}
+
+.panel-pane.pane-views.pane-our-team.marketing h3 {
+  color: white;
+}
+
+.col-md-12.text-center.hero {
+  margin: 1em;
+  text-align: center;
+  font-size: 16px;
+}
+
