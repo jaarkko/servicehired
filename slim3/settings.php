@@ -3,8 +3,12 @@
 // Load Drupal settings
 include 'sites/default/settings.php';
 
+$db_config = [];
+
 // Drupal default DB
-$db_config = $databases['default']['default'];
+if (isset($databases['default'])) {
+    $db_config = $databases['default']['default'];
+}
 
 // Pantheon
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -15,6 +19,10 @@ if (defined('PANTHEON_ENVIRONMENT')) {
         'password' => getenv('DB_PASSWORD'),
         'port' => getenv('DB_PORT'),
     ];
+}
+
+if (empty($db_config)) {
+    die('No valid database settings available!');
 }
 
 return [
