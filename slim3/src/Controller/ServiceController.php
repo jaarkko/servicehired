@@ -7,6 +7,8 @@ use Slim\Http\Response as Response;
 
 class ServiceController
 {
+    private $countries_json = 'http://country.io/names.json';
+    private $files_path = 'sites/default/files/';
     private $db;
 
     private $view;
@@ -128,7 +130,7 @@ class ServiceController
 
     private function getCategories()
     {
-        $file = 'sites/default/files/service_categories.json';
+        $file = $this->files_path . 'service_categories.json';
         $sql = "SELECT name FROM taxonomy_term_data WHERE vid = :vid";
         $stmt = $this->db->prepare($sql);
         $result = $stmt->execute(["vid" => 2]);
@@ -158,7 +160,7 @@ class ServiceController
 
     private function getCities($country)
     {
-        $file = 'sites/default/files/cities_'. $country .'.json';
+        $file = $this->files_path . 'cities_'. $country .'.json';
         $sql = "SELECT DISTINCT(field_location_locality) as city FROM field_data_field_location WHERE field_location_country = :country";
         $stmt = $this->db->prepare($sql);
         $result = $stmt->execute(["country" => $country]);
@@ -188,10 +190,10 @@ class ServiceController
 
     private function getCountryName($country)
     {
-        $file = 'sites/default/files/country_names.json';
+        $file = $this->files_path . 'country_names.json';
 
         if (!file_exists($file)) {
-            $contents = file_get_contents("http://country.io/names.json");
+            $contents = file_get_contents($this->countries_json);
             file_put_contents($file, $contents);
         }
 
