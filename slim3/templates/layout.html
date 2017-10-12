@@ -3,6 +3,10 @@
 <head>
     <title>{% block title %}{% endblock %}</title>
 
+    <meta name="description" content="TODO">
+
+    <link rel="canonical" href="{{ uri }}" />
+
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/ldpi.png" sizes="32x32" />
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/xhdpi.png" sizes="96x96" />
@@ -19,10 +23,42 @@
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-76@2x.png" sizes="152x152" />
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-60@3x.png" sizes="180x180" />
 
+    <style>
+        body {
+            margin: 0;
+        }
+        .overthefold {
+            background: #191F33;
+            text-align: center;
+            height: 85vh;
+            color: white;
+            position: relative;
+            padding-top: 15vh;
+            background-image: url(/sites/all/themes/servicehired/images/ocean-glass-ripple.jpg);
+            background-size: cover;
+        }
+        .logo {
+            padding: 0 !important;
+            margin: 0;
+            max-height: 15vh;
+        }
+    </style>
 </head>
 <body>
 
-{% block body %}{% endblock %}
+<div class="overthefold">
+
+    <div class="topbar">
+        <a href="/">
+            <img class="logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png">
+        </a>
+    </div>
+
+    <h1>{{ block('title') }}</h1>
+
+    {% block body %}{% endblock %}
+
+</div>
 
 </body>
 </html>
