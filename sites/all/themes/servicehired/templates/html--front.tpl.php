@@ -999,11 +999,11 @@
                             <li><a href="/about">About</a></li>
                             <li><a target="_blank" href="https://www.inventshift.com">Sustainable business</a></li>
                             <li><a href="/press">Press</a></li>
-                            <li><a href="/contact">Contact</a></li>
                         </ul></div>
                     <div class="col-sm-1">
                         <ul><li> Support</li>
                             <li></li>
+                            <li><a href="/contact">Contact</a></li>
                             <li><a href="/help-center">Help center</a></li>
                         </ul>
                     </div>
