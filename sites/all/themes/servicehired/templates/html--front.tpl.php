@@ -33,6 +33,9 @@
     </script>
 
     <style>
+        .suppliers {
+            margin: 20px 20px 55px 15px;
+        }
       footer li a {
           text-decoration: none;
           font-size: 0.8em !important;
@@ -778,7 +781,84 @@
       <?php endif;?>
     </div>
     <div class="suppliers">
+        <div class="col-sm-12 in_and_around">
+            <h3>Book services instantly in</h3>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active row" id="tab_0"><div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/services/gb" title="Book services in United Kingdom">United Kingdom</a>
+                        </p>
+                        <p class="in_and_around_subtext">421 Service products</p>
+                    </div>
 
+                    <div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/services/us" title="Book services in United States">United States</a>
+                        </p>
+                        <p class="in_and_around_subtext">305 Service products</p>
+                    </div><div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/services/fi" title="Book services in Finland">Finland</a>
+                        </p>
+                        <p class="in_and_around_subtext">39 Service products</p>
+                    </div>
+                    <div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/services/se" title="Book services in Sweden">Sweden</a>
+                        </p>
+                        <p class="in_and_around_subtext">69 Service products</p>
+                    </div>
+                    <div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/services/au" title="Book services in Australia">Australia</a>
+                        </p>
+                        <p class="in_and_around_subtext">421 Service products</p>
+                    </div>
+                    <div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/services/ca" title="Book services in Canada">Canada</a>
+                        </p>
+                        <p class="in_and_around_subtext">32 Service products</p>
+                    </div>
+                    <div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/services/ie" title="Book services in Ireland">Ireland</a>
+                        </p>
+                        <p class="in_and_around_subtext">29 Service products</p>
+                    </div>
+                    <div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/services/it" title="Book services in Italy">Italy</a>
+                        </p>
+                        <p class="in_and_around_subtext">74 Service products</p>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/services/de" title="Book services in Germany">Germany</a>
+                        </p>
+                        <p class="in_and_around_subtext">15 Service products</p>
+                    </div><div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/services/nl" title="Book services in Netherlands">Netherlands</a>
+                        </p>
+                        <p class="in_and_around_subtext">21 Service products</p>
+                    </div>
+                    <div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/best-photographers-london" title="Book services in India">India</a>
+                        </p>
+                        <p class="in_and_around_subtext">52 Service products</p>
+                    </div>
+                    <div class="col-md-2 col-sm-4 p-0">
+                        <p class="in_and_around_text">
+                            <a href="/best-photographers-london" title="Book services in New Zealand">New Zealand</a>
+                        </p>
+                        <p class="in_and_around_subtext">121 Service products</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
