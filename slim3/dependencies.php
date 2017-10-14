@@ -11,7 +11,7 @@ $container = $app->getContainer();
 $container['view'] = function ($container) {
 
     $cache = (getenv('AMAZEEIO_SITE_ENVIRONMENT')) ? false : 'sites/default/files/twig';
-
+    $cache = false;
     $view = new Twig('slim3/templates', [
         'cache' => $cache,
     ]);
