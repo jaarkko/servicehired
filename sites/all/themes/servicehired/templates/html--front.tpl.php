@@ -34,7 +34,7 @@
 
     <style>
         .suppliers {
-            margin: 20px 20px 55px 15px;
+            margin: 20px 20px 5px 15px;
         }
       footer li a {
           text-decoration: none;
@@ -691,7 +691,7 @@
             <li class="future servicebread">Choose a service</li>
             <li class="future checkoutbread hidden">Add details to continue</li>
         </ul></div>
-    <div class="types">
+    <div class="types row">
         <ul id="searchinsides" class="">
         </ul>
       <?php if (user_is_logged_in()): ?>
