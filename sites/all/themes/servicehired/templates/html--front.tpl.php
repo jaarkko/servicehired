@@ -151,7 +151,7 @@
           display: none;
       }
       .two-boxes {
-          max-width: 720px;
+          max-width: 680px;
           margin: 20px auto;
       }
       .box-search {
@@ -314,13 +314,13 @@
           display: block !important;
       }
       .box-left, .box-right {
-          width: calc(50% - 15px);
+          width: calc(50%);
       }
-      .box-left {
-          margin-right: 15px;
+      .box-left input{
+          border-radius: 5px 0 0 5px;
       }
-      .box-right {
-          margin-left: 15px;
+      .box-right input {
+          border-radius: 0 5px 5px 0;
       }
 
       li.box .text {
@@ -613,17 +613,6 @@
     </div>
   <h1>ServiceHired</h1>
   <h2>Find, compare and book local services anywhere.</h2>
-  <div class="selection-category">
-    <ul>
-        <li class="packages active">
-            <a href="#">Packages</a>
-        </li>
-        <li class="businesses">
-            <a href="#">Businesses</a>
-         </li>
-    </ul>
-
-  </div>
   <!-- HTML Markup -->
   <div class="two-boxes">
     <div class="box-search box-left" id="aa-input-container">
@@ -1501,69 +1490,32 @@
     $('#searchinsides').html(function() {
       return $.map(content.hits, function(hit) {
 
-        if ($('.packages').hasClass('active')) {
-          console.log(hit);
-          i++;
+        console.log(hit);
+        i++;
 
-          hit.price = hit.field_product_price.toFixed(2);
+        hit.price = hit.field_product_price.toFixed(2);
 
-          return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
-            '<div class="hidden dataid">' + hit.objectID + '</div>' +
-            '<div style="background-image:url(' + hit.optimized_large_image[1] + ') !important" firstimage="' + hit.optimized_large_image[1] + '" secondimage="' + hit.optimized_large_image[2] + '" thirdimage="' + hit.optimized_large_image[3] + '" class="text">' +
-            '<div class="arrow-left">&lt;</div>' +
-            '<div class="arrow-right">&gt;</div>' +
-            '<div class="inside">' +
-            '<span class="product">'+ hit._highlightResult.title.value +'</span>' +
-            '<span class="business">'+ hit._highlightResult.business_name.value +'</span>' +
-            '</div>' +
-            '</div>' +
-            '<div class="description">' +
-            '<span class="hidden title">'+ hit._highlightResult.title.value +'</span>' +
-            '<div class="pricing"><span class="currency">'+ hit.currency +'</span><span class="price">'+ hit.price +'</span>' +
-            '<span class="vat">Incl. Vat</span></div>' +
-            '<div class="descript">' + hit.venue_summary + '</div>' +
-            '<span class="tags"><label>Tags:</label> Coffee cart, peppermint, coffee, cart</span></span>' +
-            '<div class="actions">' +
-            '<div class="btn btn-primary enquiry">Buy now</div></div>' +
-            '<div class="close">x</div>' +
-            '</div>' +
-            '</li>';
-        } else {
-          hit.rating = 0;
-          if (hit.field_organisation_rating) {
-            hit.rating = hit.field_organisation_rating;
-          }
-
-          var reviews = '<div class="rating rating-' + hit.rating + '"> ' +
-            '<span class="rating-count">' + hit.field_organisation_review_count + ' Reviews</span> ' +
-            '<span class="stars-container stars-' + hit.rating + '">★★★★★</span> ' +
-            '</div>';
-
-          var backgroundimg = '';
-          if (hit.imageurl !== '') {
-            backgroundimg = 'background-image:url(' + hit.imageurl + ') !important';
-          }
-          i++;
-
-          return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
-            '<div class="hidden dataid">' + hit.objectID + '</div>' +
-            '<div style="background-image:url(' + hit.optimized_large_image[1] + ') !important" firstimage="' + hit.optimized_large_image[1] + '" secondimage="' + hit.optimized_large_image[2] + '" thirdimage="' + hit.optimized_large_image[3] + '" class="text">' +
-            '<div class="arrow-left">&lt;</div>' +
-            '<div class="arrow-right">&gt;</div>' +
-            '<div class="inside">' +
-            '<span class="product">'+ hit._highlightResult.title.value +'</span>' +
-            '</div>' +
-            '</div>' +
-            '<div class="description">' +
-            '<span class="hidden title">'+ hit._highlightResult.title.value +'</span>' +
-            '<div class="descript">' + hit.venue_summary + '</div>' +
-            '<span class="tags"><label>Tags:</label> Coffee cart, peppermint, coffee, cart</span></span>' +
-            '<div class="actions">' +
-            '<div class="btn btn-primary enquiry">Buy now</div></div>' +
-            '<div class="close">x</div>' +
-            '</div>' +
-            '</li>';
-        }
+        return '<li id="row-' + i + '" class="box col-sm-6 col-xs-12 box-' + hit.objectID + ' ' + getSize(i) + '">' +
+          '<div class="hidden dataid">' + hit.objectID + '</div>' +
+          '<div style="background-image:url(' + hit.optimized_large_image[1] + ') !important" firstimage="' + hit.optimized_large_image[1] + '" secondimage="' + hit.optimized_large_image[2] + '" thirdimage="' + hit.optimized_large_image[3] + '" class="text">' +
+          '<div class="arrow-left">&lt;</div>' +
+          '<div class="arrow-right">&gt;</div>' +
+          '<div class="inside">' +
+          '<span class="product">'+ hit._highlightResult.title.value +'</span>' +
+          '<span class="business">'+ hit._highlightResult.business_name.value +'</span>' +
+          '</div>' +
+          '</div>' +
+          '<div class="description">' +
+          '<span class="hidden title">'+ hit._highlightResult.title.value +'</span>' +
+          '<div class="pricing"><span class="currency">'+ hit.currency +'</span><span class="price">'+ hit.price +'</span>' +
+          '<span class="vat">Incl. Vat</span></div>' +
+          '<div class="descript">' + hit.venue_summary + '</div>' +
+          '<span class="tags"><label>Tags:</label> Coffee cart, peppermint, coffee, cart</span></span>' +
+          '<div class="actions">' +
+          '<div class="btn btn-primary enquiry">Buy now</div></div>' +
+          '<div class="close">x</div>' +
+          '</div>' +
+          '</li>';
       });
     });
 
