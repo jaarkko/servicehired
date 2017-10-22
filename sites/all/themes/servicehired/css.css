@@ -838,24 +838,6 @@ div#field-list-of-terms-and-conditio-add-more-wrapper {
 .searched .options {
   display: block;
 }
-.searched .siteintro {
-  display: none;
-}
-
-.siteintro {
-  display: block;
-  color: #aeb1b6;
-  font-size: 0.9em;
-  margin-top: 3em;
-  margin: 3em auto;
-  text-align: center;
-  max-width: 977px;
-}
-.col-md-4 {
-  width: 33.33%;
-  float: left;
-}
-
 @media all and (max-width: 768px) {
   .not-front a.listyourbusiness {
     display: none;
@@ -1418,6 +1400,7 @@ text.ct-label {
   letter-spacing: 1px;
   text-align: center;
 }
+
 
 #progressbar li:before {
   content: counter(step);
