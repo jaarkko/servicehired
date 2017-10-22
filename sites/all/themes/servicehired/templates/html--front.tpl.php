@@ -34,7 +34,7 @@
 
     <style>
         .suppliers {
-            margin: 20px 20px 5px 15px;
+            margin: 70px 0;
         }
       footer li a {
           text-decoration: none;
@@ -661,6 +661,8 @@
       <div class="search-buttons">
           <div class="btn">Search now</div>
       </div>
+      <div class="options"><div class="filter">Show me results: <div class="selected">Near Me</div></div> <div class="filter">Show me results: <div class="selected">Near Me</div></div><div class="filter">Show me results: <div class="selected">Near Me</div></div></div>
+
   </div>
     <div class="siteintro row">
         <div class="col-md-4">
@@ -671,8 +673,8 @@
             <h4>Instant Bookings</h4>Instead of going back and forth with a business, you can do instant bookings on the time of your choosing. Your service provider has simple availability that you can check.</div>
         <div class="col-md-4">
             <img src="/sites/all/themes/servicehired/images/001-winner.png">
-            <h4>Guaranteed Results</h4>We hold your payment in escrow until the supplier has done their job. That makes sure that you get the job done properly before releasing payment. No more work half-done.</div></div>
-    <div class="options"><div class="filter">Show me results: <div class="selected">Near Me</div></div> <div class="filter">Show me results: <div class="selected">Near Me</div></div><div class="filter">Show me results: <div class="selected">Near Me</div></div></div>
+            <h4>Guaranteed Results</h4>We hold your payment in escrow until the supplier has done their job. That makes sure that you get the job done properly before releasing payment. No more work half-done.</div>
+    </div>
   <div class="menu">
       <!--
     <div class="leftmenu">
