@@ -519,7 +519,7 @@
             position: absolute;
             text-align: center;
             background: rgba(0, 0, 0, 0.26);
-            padding: 3em;
+            padding: 3em 0;
             width: 100%;
             bottom: 52px;
         }
