@@ -151,7 +151,7 @@
           display: none;
       }
       .two-boxes {
-          max-width: 680px;
+          max-width: 560px;
           margin: 20px auto;
       }
       .box-search {
@@ -166,13 +166,13 @@
       .box-search input {
           width: 100%;
           border: 1px solid rgba(228, 228, 228, 0.6);
-          padding: 10px 30px 10px 15px;
+          padding: 12px 30px 12px 15px;
           box-sizing: border-box;
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
           font-family: 'Rubik', sans-serif;
-          font-size: 15px;
+          font-size: 16px;
           border-radius: 5px;
       }
       .aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button, .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
