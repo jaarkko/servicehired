@@ -40,6 +40,9 @@
           text-decoration: none;
           font-size: 0.8em !important;
       }
+      .options {
+          display:none;
+      }
       li.small {
           font-size: 13px;
           font-weight: lighter;
@@ -1771,9 +1774,7 @@
       helper.setQuery(suggestion.Keyword).search();
     });
   });
-
-  helper.search();
-
+  
   var stripe = Stripe('pk_test_37TKfr9SUQ8MF3qxotmJaa4f');
   var elements = stripe.elements();
 
