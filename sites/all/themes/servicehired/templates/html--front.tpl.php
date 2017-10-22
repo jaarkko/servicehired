@@ -36,6 +36,10 @@
         .suppliers {
             margin: 70px 0;
         }
+        .maxwidth {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
       footer li a {
           text-decoration: none;
           font-size: 0.8em !important;
