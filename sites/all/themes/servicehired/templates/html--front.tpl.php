@@ -643,6 +643,7 @@
           <div class="btn">Search now</div>
       </div>
   </div>
+    <div class="options"><div class="filter">Show me results: <div class="selected">Near Me</div></div> <div class="filter">Show me results: <div class="selected">Near Me</div></div><div class="filter">Show me results: <div class="selected">Near Me</div></div></div>
   <div class="menu">
       <!--
     <div class="leftmenu">
