@@ -813,6 +813,12 @@ div#field-list-of-terms-and-conditio-add-more-wrapper {
   background: transparent;
   color: black;
 }
+.breadcrumb {
+  display: none;
+}
+.searched .breadcrumb {
+  display: block;
+}
 .options {
   padding-top: 15px;
   max-width: 1375px;

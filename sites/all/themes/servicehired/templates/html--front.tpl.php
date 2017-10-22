@@ -1774,7 +1774,7 @@
       helper.setQuery(suggestion.Keyword).search();
     });
   });
-  
+
   var stripe = Stripe('pk_test_37TKfr9SUQ8MF3qxotmJaa4f');
   var elements = stripe.elements();
 
