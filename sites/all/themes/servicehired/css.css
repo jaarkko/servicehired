@@ -1007,6 +1007,18 @@ h3 {
     height: 240px;
     max-width: 1375px;
   }
+  .suggestion {
+    width: 90%;
+    display: inline-block;
+    height: auto;
+    background: #fdb835;
+    margin-right: 0;
+    padding: 5%;
+    margin-bottom: 15px;
+  }
+  .siteintro .col-md-4 {
+    margin-bottom: 15px;
+  }
 }
 
 .main-container.container-fluid {
