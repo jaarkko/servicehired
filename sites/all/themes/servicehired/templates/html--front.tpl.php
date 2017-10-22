@@ -1660,6 +1660,7 @@
   $('.searchbread, .servicebread').click(function(){
     $('.buy').removeClass('buy');
     $('body').removeClass('checkout');
+    $('body').removeClass('searched');
     $('.overthefold').removeClass('searched');
     $('.checkoutbread').addClass('hidden');
     $('.servicebread').addClass('future');
@@ -1679,7 +1680,7 @@
 
       var dataid = $('.buy .dataid').text();
       $('.package').val(dataid);
-
+      $('body').addClass('searched');
       $('.overthefold').addClass('searched');
       $('.checkoutbread').removeClass('hidden');
       $('.servicebread').removeClass('future');
@@ -1807,11 +1808,14 @@
   $('.search-buttons .btn').click(function(){
     helper.setQuery($('#search-box').val()).search();
     $('.overthefold').addClass('searched');
+    $('body').addClass('searched');
+
     $(this).hide();
   });
 
   $('.front-icon').click(function(){
     $('.overthefold').addClass('searched');
+    $('body').addClass('searched');
     $('.search-buttons').hide();
   });
 
