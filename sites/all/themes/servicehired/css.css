@@ -839,6 +839,10 @@ div#field-list-of-terms-and-conditio-add-more-wrapper {
   display: block;
 }
 @media all and (max-width: 768px) {
+  .col-md-4 {
+    width: 100%;
+    float: none;
+  }
   .not-front a.listyourbusiness {
     display: none;
   }
