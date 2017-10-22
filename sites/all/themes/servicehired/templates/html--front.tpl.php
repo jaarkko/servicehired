@@ -717,6 +717,27 @@
         </div>
     </div>
 </div>
+<div class="gray">
+    <div class="marketing row searchedhide">
+        <div class="suppliers row">
+            <div class="col-md-4 in_and_around other">
+                <h3>New Standard of Buying Services</h3>
+                <p class="p">ServiceHired.com allows you to browse and instantly book the service you are after. No more back-and-forths with the suppliers that you dread. It often takes weeks for them to come back to you with a quote.</p>
+                <p class="p">Browse our database of thousands of business with tens of thousands of service products, and start booking.</p>
+            </div>
+            <div class="col-md-4 in_and_around other">
+                <h3>What Services can I find?</h3>
+                <p class="p">From ServiceHired.com you can find a long range of services from Photographers to Caterers to Plumbers and anything in between. To browse our services, just start typing in our search form.</p>
+                <p class="p">We are not restricting any service out of the system. The only rule is that we generally don't approve physical products that require shipping.</p>
+            </div><div class="col-md-4 in_and_around other">
+                <h3>Complete Toolkit for Service Businesses</h3>
+                <p class="p">We have built a toolkit that allows you to easily productise the service you sell. This allows you to create a product for each offering, and sell it simply as a instantly bookable package.</p>
+                <p class="p">There is a new form of customer looking for service products like this. We've seen this wont affect your existing business, but only bring more customers.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
 <div class="marketing row">
     <div class="breadcrumb"><ul>
             <li class="done searchbread">Search </li>
