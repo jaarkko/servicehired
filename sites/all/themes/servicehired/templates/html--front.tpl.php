@@ -583,7 +583,25 @@
               padding-top: 150px !important;
               height: 150px !important;
           }
-
+            .overthefold {
+                background:#191F33;
+                text-align: center;
+                height: auto;
+                color: white;
+                position: relative;
+                padding-top: 30px;
+                background-image: url(/sites/all/themes/servicehired/images/ocean-glass-ripple.jpg);
+                background-size: cover;
+            }
+            .suggestion {
+                width: 90%;
+                display: inline-block;
+                height: auto;
+                background: #fdb835;
+                margin-right: 0;
+                padding: 5%;
+                margin-bottom: 15px;
+            }
           .open .pricing {
               position: absolute;
               right: 183px;
