@@ -497,7 +497,34 @@
           margin-right: 1em;
           font-size: 0.8em;
       }
-      @media all and (max-width: 768px) {
+
+        .siteintro img {
+            width: 50px;
+        }
+        .searched .siteintro {
+            display: none;
+        }
+
+        .siteintro {
+            display: block;
+            color: #aeb1b6;
+            font-size: 0.9em;
+            margin: 4em auto auto auto;
+            text-align: center;
+            max-width: 977px;
+        }
+        .col-md-4 {
+            width: 33.33%;
+            float: left;
+        }
+        .siteintro h4 {
+            font-size: 15px;
+            color: white;
+            font-weight: 500;
+            margin: 9px;
+        }
+
+        @media all and (max-width: 768px) {
           a.listyourbusiness {
               display: none;
           }
@@ -549,32 +576,6 @@
               width: 100%;
               padding: 0;
           }
-          .siteintro img {
-              width: 50px;
-          }
-          .searched .siteintro {
-              display: none;
-          }
-
-          .siteintro {
-              display: block;
-              color: #aeb1b6;
-              font-size: 0.9em;
-              margin: 4em auto auto auto;
-              text-align: center;
-              max-width: 977px;
-          }
-          .col-md-4 {
-              width: 33.33%;
-              float: left;
-          }
-          .siteintro h4 {
-              font-size: 15px;
-              color: white;
-              font-weight: 500;
-              margin: 9px;
-          }
-
           .open .arrow-right {
               padding-top: 150px !important;
               height: 150px !important;
