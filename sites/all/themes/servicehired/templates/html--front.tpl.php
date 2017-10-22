@@ -717,8 +717,32 @@
         </div>
     </div>
 </div>
-<div class="gray">
+<div class="instances searchedhide">
     <div class="marketing row searchedhide">
+        <h3>Featured Service Locations</h3>
+
+        <div class="suggestion">
+            <h4>Photographers in London</h4>
+        </div><div class="suggestion">
+            <h4>Photographers in Birmingham</h4>
+        </div>
+
+        <div class="suggestion">
+            <h4>Photographers in Nottingham</h4>
+        </div>
+
+        <div class="suggestion">
+            <h4>Photographers in Bradford</h4>
+        </div>
+        <div class="suggestion">
+            <h4>Photographers in Bristol</h4>
+        </div><div class="suggestion">
+            <h4>Photographers in Edinbourgh</h4>
+        </div>
+    </div>
+</div>
+<div class="gray searchedhide">
+    <div class="marketing row ">
         <div class="suppliers row">
             <div class="col-md-4 in_and_around other">
                 <h3>New Standard of Buying Services</h3>

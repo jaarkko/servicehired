@@ -826,6 +826,22 @@ div#field-list-of-terms-and-conditio-add-more-wrapper {
   background: #f1f1f1;
   padding: 1em 0;
 }
+.instances {
+  padding: 1em;
+  margin-bottom: 4em;
+}
+h3 {
+  font-size: 20px !important;
+  font-weight: 400;
+}
+.suggestion {
+  width: 13%;
+  display: inline-block;
+  height: 285px;
+  background: #fdb835;
+  margin-right: 5px;
+  padding: 20px;
+}
 .options {
   padding-top: 15px;
   max-width: 1375px;
