@@ -512,9 +512,12 @@
             display: block;
             color: #aeb1b6;
             font-size: 0.9em;
-            margin: 4em auto auto auto;
+            position: absolute;
             text-align: center;
-            max-width: 977px;
+            background: rgba(0, 0, 0, 0.26);
+            padding: 3em;
+            width: 100%;
+            bottom: 52px;
         }
         .col-md-4 {
             width: 33.33%;
@@ -674,15 +677,17 @@
 
   </div>
     <div class="siteintro row">
-        <div class="col-md-4">
-            <img src="/sites/all/themes/servicehired/images/003-price-tag.png">
-            <h4>Services With Clear Prices</h4>Compare thousands of services with clear pricing. Instead of calling, waiting for a price, you get your price and availability immediately. Welcome to the future of booking services.</div>
-        <div class="col-md-4">
-            <img src="/sites/all/themes/servicehired/images/002-bolt.png">
-            <h4>Instant Bookings</h4>Instead of going back and forth with a business, you can do instant bookings on the time of your choosing. Your service provider has simple availability that you can check.</div>
-        <div class="col-md-4">
-            <img src="/sites/all/themes/servicehired/images/001-winner.png">
-            <h4>Guaranteed Results</h4>We hold your payment in escrow until the supplier has done their job. That makes sure that you get the job done properly before releasing payment. No more work half-done.</div>
+        <div class="maxwidth">
+            <div class="col-md-4">
+                <img src="/sites/all/themes/servicehired/images/003-price-tag.png">
+                <h4>Services With Clear Prices</h4>Compare thousands of services with clear pricing. Instead of calling, waiting for a price, you get your price and availability immediately. Welcome to the future of booking services.</div>
+            <div class="col-md-4">
+                <img src="/sites/all/themes/servicehired/images/002-bolt.png">
+                <h4>Instant Bookings</h4>Instead of going back and forth with a business, you can do instant bookings on the time of your choosing. Your service provider has simple availability that you can check.</div>
+            <div class="col-md-4">
+                <img src="/sites/all/themes/servicehired/images/001-winner.png">
+                <h4>Guaranteed Results</h4>We hold your payment in escrow until the supplier has done their job. That makes sure that you get the job done properly before releasing payment. No more work half-done.</div>
+        </div>
     </div>
   <div class="menu">
       <!--
