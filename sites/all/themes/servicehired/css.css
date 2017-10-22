@@ -1016,19 +1016,8 @@ h3 {
     padding: 5%;
     margin-bottom: 15px;
   }
-  .siteintro .col-md-4 {
-    margin-bottom: 15px;
-  }
-  .siteintro {
-    display: block;
-    color: #aeb1b6;
-    font-size: 0.9em;
-    position: relative !important;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.26);
-    padding: 3em;
-    width: auto !important;
-    bottom: 0 !important;
+  .box-left input {
+    border-radius: 5px;
   }
 }
 

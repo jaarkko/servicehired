@@ -535,7 +535,21 @@
         }
 
         @media all and (max-width: 768px) {
-          a.listyourbusiness {
+            .siteintro .col-md-4 {
+                margin-bottom: 15px;
+            }
+            .siteintro {
+                display: block;
+                color: #aeb1b6;
+                font-size: 0.9em;
+                position: relative !important;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.26);
+                padding: 3em;
+                width: auto !important;
+                bottom: 0 !important;
+            }
+            a.listyourbusiness {
               display: none;
           }
           li.categories {
@@ -647,6 +661,7 @@
           .description {
               height: 45px;
           }
+
       }
   </style>
 </head>
