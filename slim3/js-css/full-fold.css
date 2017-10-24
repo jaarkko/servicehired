@@ -702,6 +702,9 @@ div#pipssteps {
 .in_and_around p {
   padding-right: 3em;
 }
+.checkout h1 {
+  display: none !important;
+}
 .not-front .rightmenu {
   position: absolute;
   top: 15px;
