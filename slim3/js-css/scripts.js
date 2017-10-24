@@ -350,7 +350,7 @@ $(document).ready(function() {
     return 'zoNsrr';
   }
 
-  helper.search(searchterm);
+  helper.search($('.searchterm').text());
 
   function renderHits(content) {
     var i = 0;
