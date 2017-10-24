@@ -17,7 +17,6 @@ $(document).ready(function() {
       }
     });
 
-
   function initialize2(helper) {
     var geocoder = {},
       autocomplete = {};
@@ -350,6 +349,8 @@ $(document).ready(function() {
 
     return 'zoNsrr';
   }
+
+  helper.search(searchterm);
 
   function renderHits(content) {
     var i = 0;
