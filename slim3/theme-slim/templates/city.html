@@ -4,7 +4,7 @@
   <link rel="stylesheet" type-="text/css" href="/slim3/theme-slim/dist/css/styles.css">
 {% endblock %}
 
-{% block title %}{{ city_name }} - {{ country_name }} - ServiceHired{% endblock %}
+{% block title %}Results for {{ city_name }} - {{ country_name }} - ServiceHired{% endblock %}
 
 {% block description %}Find, compare and book local services from {{ city_name }}, {{ country_name }} with ServiceHired.
 Simple as that. ServiceHired makes booking services online simple.{% endblock %}
@@ -13,9 +13,11 @@ Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 
 {% block overthefold %}
 
-<div class="list-wrapper">
-  <div class="list-wrapper__letter"></div>
-  <ul class="list-wrapper__tiles tile-wrapper tile-wrapper--category">
+<h2><span>Step 3</span> What service are you looking for in {{ city_name }}?</h2>
+
+<div class="tile-wrapper">
+  <div class="tile-wrapper__letter"></div>
+  <ul class="tile-wrapper__group tile-group tile-group--category">
   {% for category, name in categories %}
     <li class="tile tile--category">
       <h2 class="tile__title tile__title--category">

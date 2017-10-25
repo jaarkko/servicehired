@@ -4,7 +4,7 @@
   <link rel="stylesheet" type-="text/css" href="/slim3/theme-slim/dist/css/styles.css">
 {% endblock %}
 
-{% block title %}{{ country_name }} - ServiceHired{% endblock %}
+{% block title %}Results for {{ country_name }} - ServiceHired{% endblock %}
 
 {% block description %}Find, compare and book local services from {{ country_name }} with ServiceHired.
 Simple as that. ServiceHired makes booking services online simple.{% endblock %}
@@ -13,16 +13,20 @@ Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 
 {% block overthefold %}
 
-{{ country_name }}
+<h2><span>Step 2</span> In what city are you looking?</h2>
 
-<ul class="tile-wrapper tile-wrapper--city">
-  {% for city, name in cities %}
-  <li class="tile tile--city">
-    <h2 class="tile__title tile__title--city">
-      <a class="tile__link tile__link--city" href="{{ path_for('city', { 'country': country, 'city': city }) }}">{{ name }}</a>
-    </h2>
-  </li>
-  {% endfor %}
-</ul>
+<!-- {{ country_name }} -->
+
+<div class="tile-wrapper">
+  <ul class="tile-wrapper__group tile-group tile-group--city">
+    {% for city, name in cities %}
+    <li class="tile tile--city">
+      <h2 class="tile__title tile__title--city">
+        <a class="tile__link tile__link--city" href="{{ path_for('city', { 'country': country, 'city': city }) }}">{{ name }}</a>
+      </h2>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 
 {% endblock %}
