@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google-site-verification" content="bEFC0Jbc6hIVdp6QtiZOAdiExxTG_f_4IN5L8K06wFo" />
+
     <title>{% block title %}{% endblock %}</title>
 
     <meta name="description" content="{% block description %}{% endblock %}">
@@ -25,50 +28,45 @@
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-76@2x.png" sizes="152x152" />
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-60@3x.png" sizes="180x180" />
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Rubik', sans-serif;
-        }
-        a {
-            color: white;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        .overthefold {
-            background: #191F33;
-            text-align: center;
-            height: 85vh;
-            color: white;
-            position: relative;
-            padding-top: 15vh;
-            background-image: url(/sites/all/themes/servicehired/images/ocean-glass-ripple.jpg);
-            background-size: cover;
-        }
-        .logo {
-            padding: 0 !important;
-            margin: 0;
-            max-height: 15vh;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/slim3/js-css/before-fold.css">
+    <link rel="stylesheet" type="text/css" href="/slim3/js-css/full-fold.css"/>
+
+    {% block head %}{% endblock %}
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107186115-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-107186115-1');
+    </script>
+
 </head>
 <body>
 
-<div class="overthefold">
+{% if category_name is defined %}
+<div class="searchterm hidden">{{ category_name }}</div>
+{% endif %}
 
-    <div class="topbar">
-        <a href="/">
-            <img class="logo" src="/sites/all/themes/servicehired/images/inventshift-icon.png" alt="ServiceHired logo">
-        </a>
-    </div>
+<div class="overthefold{% if category_name is defined %} searched{% endif %}">
+
+    {% include 'common/topbar.html' %}
 
     <h1>{{ block('title') }}</h1>
 
-    {% block body %}{% endblock %}
+    {% block overthefold %}{% endblock %}
+
+    {% include 'common/menu.html' %}
+
+    {% include 'common/bottom-menu.html' %}
 
 </div>
+
+{% block after_the_fold %}{% endblock %}
+
+{% include 'common/footer.html' %}
 
 <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
 <script>
@@ -78,6 +76,8 @@
     }
   });
 </script>
+
+{% block js_footer %}{% endblock %}
 
 </body>
 </html>

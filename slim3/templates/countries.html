@@ -7,14 +7,10 @@ booking services online simple.{% endblock %}
 
 {% block keywords %}ServiceHired{% endblock %}
 
-{% block body %}
+{% block overthefold %}
 
-index - list of countries
-
-<ul>
-    {% for country, name in countries %}
-    <li><a href="{{ path_for('country', { 'country': country }) }}">{{ name }}</a></li>
-    {% endfor %}
-</ul>
+{% for country, name in countries %}
+<a href="{{ path_for('country', { 'country': country }) }}">{{ name }}</a>
+{% endfor %}
 
 {% endblock %}
