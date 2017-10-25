@@ -12,6 +12,7 @@ $base-line-height: 24px; // absolute line-height. For relative line-height (1.38
 
 // Font families
 $helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$rubik: 'Rubik', sans-serif;
 
 $heading-font-family: $helvetica;
 
@@ -23,5 +24,4 @@ $font-size-heading-5: $base-font-size-rem;
 
 // Vertical Rythm
 $rhythm-unit: 'rem';
-$rem-with-px-fallback: false;
 $round-to-nearest-half-line: true;

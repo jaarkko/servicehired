@@ -13,15 +13,19 @@ booking services online simple.{% endblock %}
 
 {% block overthefold %}
 
-<ul class="tile-wrapper tile-wrapper--country">
-  {% for country, name in countries %}
-  <li class="tile tile--country">
-    <h2 class="tile__title tile__title--country">
-      <a class="tile__link tile__link--country" href="{{ path_for('country', { 'country': country }) }}">{{ name }}</a>
-    </h2>
-  </li>
-  {% endfor %}
-</ul>
+<h2><span>Step 1</span> In what country are you looking?</h2>
+
+<div class="tile-wrapper">
+  <ul class="tile-wrapper__group tile-group tile-group--country">
+    {% for country, name in countries %}
+    <li class="tile tile--country">
+      <h2 class="tile__title tile__title--country">
+        <a class="tile__link tile__link--country" href="{{ path_for('country', { 'country': country }) }}">{{ name }}</a>
+      </h2>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 
 
 {% endblock %}

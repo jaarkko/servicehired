@@ -15,12 +15,15 @@ $status-dark: #62922d;
 $warning-light: #f6813e;
 $warning-dark: #cf4b00;
 
-$primary-color: $black;
+$default-color: $black;
+$default-contrast-color: $white;
 
-$link-color: $primary-color;
-$link-color-hover: lighten($primary-color, 15%);
+$primary-color: #f04e23;
 
-$body-color: $primary-color;
-$body-background: $white;
+$link-color: $white;
+$link-color-hover: $primary-color;
+
+$body-color: $default-color;
+$body-background: $default-contrast-color;
 
 $heading-color: $primary-color;
