@@ -83,6 +83,8 @@ class ServiceController
     {
         $country = $request->getAttribute('country');
         $city = $request->getAttribute('city');
+        $categories = $this->getCategories();
+        $letters = array_keys($categories);
 
         return $this->view->render($response, 'city.html', [
             'country' => $country,
@@ -90,7 +92,8 @@ class ServiceController
             'city' => $city,
             'city_name' => $this->getCityName($city, $country),
             'service' => $request->getAttribute('service'),
-            'categories' => $this->getCategories(),
+            'categories' => $categories,
+            'letters' => $letters,
             'uri' => $request->getUri(),
         ]);
     }
@@ -135,18 +138,13 @@ class ServiceController
         $stmt = $this->db->prepare($sql);
         $result = $stmt->execute(["vid" => 2]);
         $categories = [];
-        $letters = [];
 
         if ($result) {
             $rows = $stmt->fetchAll();
             foreach ($rows as $row) {
                 $name = $row['name'];
-                $letter = substr($name, 0, 1);
-                $letters[$letter] = $letter;
-                $categories[$letter] = [
-                    'tech' => $this->tech($name),
-                    'name' => $name,
-                ];
+                $letter = strtolower(substr($name, 0, 1));
+                $categories[$letter][$this->tech($name)] = $name;
             }
         }
 
