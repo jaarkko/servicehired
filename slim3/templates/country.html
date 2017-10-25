@@ -7,14 +7,12 @@ Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 
 {% block keywords %}ServiceHired,{{ country_name }}{% endblock %}
 
-{% block body %}
+{% block overthefold %}
 
 {{ country_name }}
 
-<ul>
-    {% for city, name in cities %}
-    <li><a href="{{ path_for('city', { 'country': country, 'city': city }) }}">{{ name }}</a></li>
-    {% endfor %}
-</ul>
+{% for city, name in cities %}
+<a href="{{ path_for('city', { 'country': country, 'city': city }) }}">{{ name }}</a>
+{% endfor %}
 
 {% endblock %}
