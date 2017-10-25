@@ -1,0 +1,27 @@
+//
+// @file
+// This file includes all extendables related to whitespace
+// Increase $interval-extendable if to low
+//
+
+$interval-extendable: 50;
+$whitespace-extendable: 0;
+@while $interval-extendable >= 0 {
+  %margin-top-#{$interval-extendable} {
+    margin-top: ($whitespace-extendable + $interval-extendable) * 1px;
+  }
+
+  %margin-bottom-#{$interval-extendable} {
+    margin-bottom: ($whitespace-extendable + $interval-extendable) * 1px;
+  }
+
+  %padding-top-#{$interval-extendable} {
+    padding-top: ($whitespace-extendable + $interval-extendable) * 1px;
+  }
+
+  %padding-bottom-#{$interval-extendable} {
+    padding-bottom: ($whitespace-extendable + $interval-extendable) * 1px;
+  }
+
+  $interval-extendable: $interval-extendable - 5 !global;
+}

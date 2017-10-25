@@ -1,0 +1,19 @@
+//
+// @file
+// This file includes all mixins related to the box shapes
+//
+
+@mixin circle($size, $size) {
+  border-radius: $size / 2;
+  height: $size;
+  width: $size;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+@mixin rect($width, $height) {
+  height: $height;
+  width: $width;
+}

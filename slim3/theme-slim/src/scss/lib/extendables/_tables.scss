@@ -1,0 +1,20 @@
+//
+// @file
+// This file includes all extendables related to tables
+//
+
+// Responsive horizontal shows a horizontal scroll bar when the item-width
+// is larger than the browser / content width.
+// Use both the parent and child
+//
+%responsive-horizontal-parent {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  white-space: nowrap;
+}
+
+%responsive-horizontal-child {
+  @extend %inline-block;
+}
