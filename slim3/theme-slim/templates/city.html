@@ -1,3 +1,15 @@
+{#
+
+Variables:
+
+city:         URL safe version of city name e.g. "st-kilda"
+city_name:    Name of the city e.g. "Helsinki"
+country:      County code e.g. "fi"
+country_name: Name of the country e.g. "Finland"
+letters:      Array of first letters of existing categories
+categories:   Categories indexed with letter
+
+#}
 {% extends "layout.html" %}
 {% block head %}
   <link rel="stylesheet" type-="text/css" href="/slim3/theme-slim/dist/css/styles-lib.css">
@@ -16,10 +28,10 @@ Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 <div class="list-wrapper">
   <div class="list-wrapper__letter"></div>
   <ul class="list-wrapper__tiles tile-wrapper tile-wrapper--category">
-  {% for category, name in categories %}
+  {% for letter, category in categories %}
     <li class="tile tile--category">
       <h2 class="tile__title tile__title--category">
-        <a class="tile__link tile__link--category" href="{{ path_for('services', { 'country': country, 'city': city, 'category': category }) }}">{{ name }}</a>
+        <a class="tile__link tile__link--category" href="{{ path_for('services', { 'country': country, 'city': city, 'category': category.tech }) }}">{{ category.name }}</a>
       </h2>
     </li>
     {% endfor %}

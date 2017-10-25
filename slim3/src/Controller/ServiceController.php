@@ -135,12 +135,18 @@ class ServiceController
         $stmt = $this->db->prepare($sql);
         $result = $stmt->execute(["vid" => 2]);
         $categories = [];
+        $letters = [];
 
         if ($result) {
             $rows = $stmt->fetchAll();
             foreach ($rows as $row) {
-                $category = $this->tech($row['name']);
-                $categories[$category] = $row['name'];
+                $name = $row['name'];
+                $letter = substr($name, 0, 1);
+                $letters[$letter] = $letter;
+                $categories[$letter] = [
+                    'tech' => $this->tech($name),
+                    'name' => $name,
+                ];
             }
         }
 
