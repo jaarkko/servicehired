@@ -61,11 +61,14 @@ class ServiceController
     public function citiesByCountry(Request $request, Response $response, $args)
     {
         $country = $request->getAttribute('country');
+        $cities = $this->getCities($country);
+        $letters = array_keys($cities);
 
         return $this->view->render($response, 'country.html', [
             'country' => $country,
             'country_name' => $this->getCountryName($country),
-            'cities' => $this->getCities($country),
+            'cities' => $cities,
+            'letters' => $letters,
             'uri' => $request->getUri(),
         ]);
     }
@@ -173,8 +176,10 @@ class ServiceController
         if ($result) {
             $rows = $stmt->fetchAll();
             foreach ($rows as $row) {
-                $city = $this->tech($row['city']);
-                $cities[$city] = $row['city'];
+                $name = $row['city'];
+                $letter = strtolower(substr($name, 0, 1));
+                $city = $this->tech($name);
+                $cities[$letter][$city] = $name;
             }
         }
 
