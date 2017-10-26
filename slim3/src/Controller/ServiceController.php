@@ -162,7 +162,8 @@ class ServiceController
     private function getCategoryName($tech)
     {
         $categories = $this->getCategories();
-        return $categories[$tech];
+        $letter = strtolower(substr($tech, 0, 1));
+        return $categories[$letter][$tech];
     }
 
     private function getCities($country)
