@@ -17,11 +17,11 @@ Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 
 <!-- {{ country_name }} -->
 <div class="tiles">
-    {% for letter in letters %}
+    {% for letter in letters|sort %}
     <div class="tile-wrapper">
         <div class="tile-wrapper__letter">{{ letter }}</div>
         <ul class="tile-wrapper__group tile-group tile-group--city">
-            {% for city, name in cities[letter] %}
+            {% for city, name in cities[letter]|sort %}
             <li class="tile tile--city">
                 <h2 class="tile__title tile__title--city">
                   <a class="tile__link tile__link--city" href="{{ path_for('city', { 'country': country, 'city': city }) }}">{{ name }}</a>
