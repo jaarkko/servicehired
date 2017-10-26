@@ -172,19 +172,22 @@ class ServiceController
         $stmt = $this->db->prepare($sql);
         $result = $stmt->execute(["country" => $country]);
         $cities = [];
-
+        $cities_to_file = [];
+        
         if ($result) {
             $rows = $stmt->fetchAll();
             foreach ($rows as $row) {
                 $name = $row['city'];
-                $letter = strtolower(substr($name, 0, 1));
-                $city = $this->tech($name);
-                $cities[$letter][$city] = $name;
+                if ($name != '') {
+                    $letter = strtolower(substr($name, 0, 1));
+                    $cities[$this->tech($name)][$letter] = $name;
+                    $cities_to_file[$this->tech($name)] = $name;
+                }
             }
         }
 
         if (!file_exists($file)) {
-            $contents = json_encode($cities);
+            $contents = json_encode($cities_to_file);
             file_put_contents($file, $contents);
         }
 
@@ -194,7 +197,8 @@ class ServiceController
     private function getCityName($city, $country)
     {
         $cities = $this->getCities($country);
-        return $cities[$city];
+        $letter = strtolower(substr($city, 0, 1));
+        return $cities[$city][$letter];
     }
 
     private function getCountryName($country)
