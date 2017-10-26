@@ -1,6 +1,18 @@
+body {
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 85vh;
+}
+
 .container {
   @include responsive-whitespace;
   margin-right: auto;
   margin-left: auto;
   max-width: 1400px;
+}
+
+.page-main {
+  padding: 3rem 0;
 }

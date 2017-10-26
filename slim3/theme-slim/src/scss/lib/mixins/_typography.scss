@@ -14,3 +14,11 @@
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
   }
 }
+
+@mixin font-size-responsive($size) {
+  font-size: $size;
+
+  @media screen and (max-width: 599px) {
+    font-size: ($size / 1.14285);
+  }
+}

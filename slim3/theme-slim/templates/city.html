@@ -25,24 +25,22 @@ Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 
 {% block overthefold %}
 
-<h2><span>Step 3</span> What service are you looking for in {{ city_name }}?</h2>
+<!-- <h2 class="progression progression--3"><span>Step 3</span> What service are you looking for in {{ city_name }}?</h2> -->
 
-<div class="tile-wrapper">
-
+<div class="tiles">
     {% for letter in letters %}
-    <div class="tile-wrapper__letter">{{ letter }}</div>
-
-    <ul class="tile-wrapper__group tile-group tile-group--category">
-        {% for category, name in categories[letter] %}
-        <li class="tile tile--category">
-            <h2 class="tile__title tile__title--category">
-                <a class="tile__link tile__link--category" href="{{ path_for('services', { 'country': country, 'city': city, 'category': category }) }}">{{ name }}</a>
-            </h2>
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="tile-wrapper">
+        <div class="tile-wrapper__letter">{{ letter }}</div>
+        <ul class="tile-wrapper__group tile-group tile-group--category">
+            {% for category, name in categories[letter] %}
+            <li class="tile tile--category">
+                <h2 class="tile__title tile__title--category">
+                    <a class="tile__link tile__link--category" href="{{ path_for('services', { 'country': country, 'city': city, 'category': category }) }}">{{ name }}</a>
+                </h2>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
     {% endfor %}
-
 </div>
-
 {% endblock %}

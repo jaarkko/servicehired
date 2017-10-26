@@ -13,20 +13,23 @@ Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 
 {% block overthefold %}
 
-<h2><span>Step 2</span> In what city are you looking?</h2>
+<!-- <h2 class="progression progression--2"><span>Step 2</span> In what city are you looking?</h2> -->
 
 <!-- {{ country_name }} -->
-
-<div class="tile-wrapper">
-  <ul class="tile-wrapper__group tile-group tile-group--city">
-    {% for city, name in cities %}
-    <li class="tile tile--city">
-      <h2 class="tile__title tile__title--city">
-        <a class="tile__link tile__link--city" href="{{ path_for('city', { 'country': country, 'city': city }) }}">{{ name }}</a>
-      </h2>
-    </li>
+<div class="tiles">
+    {% for letter in letters %}
+    <div class="tile-wrapper">
+        <div class="tile-wrapper__letter">{{ letter }}</div>
+        <ul class="tile-wrapper__group tile-group tile-group--city">
+            {% for city, name in cities[letter] %}
+            <li class="tile tile--city">
+                <h2 class="tile__title tile__title--city">
+                  <a class="tile__link tile__link--city" href="{{ path_for('city', { 'country': country, 'city': city }) }}">{{ name }}</a>
+                </h2>
+              </li>
+            {% endfor %}
+        </ul>
+    </div>
     {% endfor %}
-  </ul>
 </div>
-
 {% endblock %}

@@ -50,11 +50,11 @@ h3 {
 }
 .overthefold {
   background:#191F33;
-  text-align: center;
-  height: 85vh;
+  /*text-align: center;*/
+  /*height: 85vh;*/
   color: white;
   position: relative;
-  padding-top: 15vh;
+  padding-top: 8vh;
   background-image: url(/sites/all/themes/servicehired/images/ocean-glass-ripple.jpg);
   background-size: cover;
 }
