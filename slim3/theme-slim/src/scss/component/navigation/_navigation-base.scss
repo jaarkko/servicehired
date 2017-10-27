@@ -1,6 +1,14 @@
 .menu {
   list-style: none;
-  text-align: center;
+}
+
+.menu__title {
+  @include font-size-responsive($base-font-size-rem);
+  color: $secondary-color;
+}
+
+.menu__link {
+  text-decoration: none;
 }
 
 .menu__item--branding {
@@ -10,6 +18,7 @@
 .navigation--bottom {
   .menu {
     margin: 1rem 0;
+    text-align: center;
   }
 
   .menu__item {
