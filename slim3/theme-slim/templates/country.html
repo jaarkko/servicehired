@@ -8,6 +8,7 @@ Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 <li class="breadcrumb__item">{{ country_name}}</li>
 {% endblock %}
 {% block overthefold %}
+{% if cities %}
 <div class="tiles">
     {% for letter in letters|sort %}
     <div class="tile-wrapper">
@@ -24,4 +25,7 @@ Simple as that. ServiceHired makes booking services online simple.{% endblock %}
     </div>
     {% endfor %}
 </div>
+{% else %}
+<div class="no-results">Sorry, No results were found</div>
+{% endif %}
 {% endblock %}

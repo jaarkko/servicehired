@@ -7,8 +7,11 @@
 
   // own styling
   font-size: .875rem;
-}
 
+  a {
+    text-decoration: underline;
+  }
+}
 
 .breadcrumb__item {
   display: inline-block;

@@ -1,34 +1,24 @@
 {#
-
 Variables:
-
 city:         URL safe version of city name e.g. "st-kilda"
 city_name:    Name of the city e.g. "Helsinki"
 country:      County code e.g. "fi"
 country_name: Name of the country e.g. "Finland"
 letters:      Array of first letters of existing categories
 categories:   Categories indexed with letter
-
 #}
 {% extends "layout.html" %}
-
 {% block title %}Services in {{ city_name }} - {{ country_name }} - ServiceHired{% endblock %}
-
 {% block description %}Find, compare and book local services in {{ city_name }}, {{ country_name }} with ServiceHired.
 Simple as that. ServiceHired makes booking services online simple.{% endblock %}
-
 {% block keywords %}ServiceHired,services,{{ country_name }},{{ city_name }}{% endblock %}
-
 {% block breadcrumb %}
 <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Home</a></li>
 <li class="breadcrumb__item"><a class="breadcrumb__link" href="/services/{{country}}">{{ country_name}}</a></li>
 <li class="breadcrumb__item">{{ city_name}}</li>
 {% endblock %}
-
 {% block overthefold %}
-
-<!-- <h2 class="progression progression--3"><span>Step 3</span> What service are you looking for in {{ city_name }}?</h2> -->
-
+{% if categories %}
 <div class="tiles">
     {% for letter in letters|sort %}
     <div class="tile-wrapper">
@@ -45,4 +35,7 @@ Simple as that. ServiceHired makes booking services online simple.{% endblock %}
     </div>
     {% endfor %}
 </div>
+{% else %}
+<div class="no-results">Sorry, No results were found</div>
+{% endif %}
 {% endblock %}
