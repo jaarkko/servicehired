@@ -13,6 +13,17 @@ categories:   Categories indexed with letter
 Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 {% block keywords %}ServiceHired,services,{{ country_name }},{{ city_name }}{% endblock %}
 {% block head%}<link rel="stylesheet" type-="text/css" href="/slim3/theme-slim/dist/css/styles.css">{% endblock %}
+{% block breadcrumb %}
+<div id="breadcrumb" class="page-breadcrumb">
+     <div class="container container--breadcrumb">
+        <ul class="menu breadcrumb">
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Home</a></li>
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="/services/{{country}}">{{ country_name}}</a></li>
+            <li class="breadcrumb__item">{{ city_name}}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
 {% block overthefold %}
 {% if categories %}
 <div class="tiles">

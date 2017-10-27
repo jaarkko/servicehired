@@ -3,6 +3,7 @@ body {
 }
 
 .page:not(.searched) {
+  text-align: left;
   @media screen and (min-width: $tablet-portrait) {
     min-height: 85vh;
     padding-top: 15vh
