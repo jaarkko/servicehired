@@ -1,0 +1,16 @@
+//
+// @file
+// This file includes all classes related to clearfix
+//
+
+.clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

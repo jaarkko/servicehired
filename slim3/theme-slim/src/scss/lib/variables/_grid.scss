@@ -1,0 +1,19 @@
+//
+// @file
+// This file includes all variables related to the grid
+//
+@import "../../bower_components/susy/sass/susy";
+
+// susy one
+$susy: (
+  columns: 12,
+  container: 87.5rem,
+  container-position: center,
+  gutters: .6,
+  column-width: false,
+  math: fluid,
+  output: float,
+  gutter-position: after
+);
+
+$container-gutter: 1rem;

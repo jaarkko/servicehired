@@ -1,0 +1,54 @@
+.button {
+  border: 1px solid;
+  border-radius: $default-border-radius;
+  display: inline-block;
+  line-height: inherit;
+  padding: .4375rem 1.25rem .5rem;
+  font-size: $base-font-size-rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button--default {
+  background-color: $default-color-medium-dark;
+  border-color: $default-color-medium-dark;
+
+  &:hover,
+  &:focus {
+    background-color: $default-color;
+    border-color: $default-color;
+  }
+}
+
+.button--primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color-darker;
+    border-color: $primary-color-darker;
+  }
+}
+
+.button--secondary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-color-darker;
+    border-color: $secondary-color-darker;
+  }
+}
+
+@media screen and (max-width: 23.75em - $max-width-deduction) {
+  .button {
+    width: 100%;
+  }
+
+  .button + .button {
+    margin-top: 1rem;
+  }
+}

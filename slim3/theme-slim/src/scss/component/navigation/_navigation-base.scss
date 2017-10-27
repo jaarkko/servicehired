@@ -1,0 +1,28 @@
+.menu {
+  list-style: none;
+}
+
+.menu__title {
+  @include font-size-responsive($base-font-size-rem);
+  color: $secondary-color;
+}
+
+.menu__link {
+  text-decoration: none;
+}
+
+.menu__item--branding {
+  text-align: center;
+}
+
+.navigation--bottom {
+  .menu {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .menu__item {
+    display: inline;
+    padding: 0 1.875rem;
+  }
+}

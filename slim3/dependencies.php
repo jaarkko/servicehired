@@ -12,13 +12,14 @@ $container['view'] = function ($container) {
 
     $cache = (getenv('AMAZEEIO_SITE_ENVIRONMENT')) ? false : 'sites/default/files/twig';
     $cache = false;
-    $view = new Twig('slim3/templates', [
+    $view = new Twig('slim3/theme-slim/templates', [
         'cache' => $cache,
     ]);
 
     // Instantiate and add Slim specific extension
     $basePath = rtrim(str_ireplace('index.php', '', $container['request']->getUri()->getBasePath()), '/');
     $view->addExtension(new TwigExtension($container['router'], $basePath));
+    $view->addExtension(new Twig_Extension_Debug());
 
     return $view;
 };

@@ -1,0 +1,64 @@
+//
+// @file
+// This file includes everything related to the basic setup
+// Below the typography and wysiwyg styles are imported
+//
+
+// Set all dom nodes to border-box
+@if $default-border-box {
+  *,
+  *:after,
+  *:before {
+    box-sizing: inherit;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+}
+
+// Use font-smoothing
+@if $default-font-smoothing {
+  html,
+  html a {
+    @include fontsmoothing();
+  }
+}
+
+// Disable outlining
+@if $default-disable-outline {
+  *:active,
+  *:hover {
+    outline: 0;
+  }
+}
+
+// clean menu items
+@if $default-clean-menus {
+  .menu,
+  ul,
+  ol,
+  dl {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $body-background;
+  color: $body-color;
+  font-size: $base-font-size-rem;
+  font-family: $default-font-family;
+  line-height: 1.5;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}

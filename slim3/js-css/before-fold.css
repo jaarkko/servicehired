@@ -50,8 +50,8 @@ h3 {
 }
 .overthefold {
   background:#191F33;
-  text-align: center;
-  height: 85vh;
+  /*text-align: center;*/
+  /*height: 85vh;*/
   color: white;
   position: relative;
   padding-top: 15vh;
@@ -633,5 +633,35 @@ a.right-padding {
   .description {
     height: 45px;
   }
+}
 
+.overthefold a:hover,
+.overthefold a:focus,
+.region-footer a:hover,
+.region-footer a:focus {
+  color: white;
+}
+
+.invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+}
+
+.focusable:focus {
+  position: static !important;
+  clip: auto;
+  overflow: visible;
+  height: auto;
+}
+
+.menu {
+  margin: 0;
+  list-style: none;
+}
+
+.branding {
+  text-align: center;
 }

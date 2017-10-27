@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}Results for {{ country_name }} - ServiceHired{% endblock %}
+{% block description %}Find, compare and book local services in {{ country_name }} with ServiceHired.
+Simple as that. ServiceHired makes booking services online simple.{% endblock %}
+{% block keywords %}ServiceHired,{{ country_name }}{% endblock %}
+{% block head%}<link rel="stylesheet" type-="text/css" href="/slim3/theme-slim/dist/css/styles.css">{% endblock %}
+{% block overthefold %}
+{% if cities %}
+<div class="tiles">
+    {% for letter in letters|sort %}
+    <div class="tile-wrapper">
+        <div class="tile-wrapper__letter">{{ letter }}</div>
+        <ul class="tile-wrapper__group tile-group tile-group--city">
+            {% for city, name in cities[letter]|sort %}
+            <li class="tile tile--city">
+                <h2 class="tile__title tile__title--city">
+                  <a class="tile__link tile__link--city" href="{{ path_for('city', { 'country': country, 'city': city }) }}">{{ name }}</a>
+                </h2>
+              </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="no-results">Sorry, No results were found</div>
+{% endif %}
+{% endblock %}

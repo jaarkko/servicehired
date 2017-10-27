@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="google-site-verification" content="bEFC0Jbc6hIVdp6QtiZOAdiExxTG_f_4IN5L8K06wFo" />
-
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{% block title %}{% endblock %}</title>
-
+    <meta name="google-site-verification" content="bEFC0Jbc6hIVdp6QtiZOAdiExxTG_f_4IN5L8K06wFo" />
     <meta name="description" content="{% block description %}{% endblock %}">
     <meta name="keywords" content="{% block keywords %}{% endblock %}">
-
     <meta name="robots" content="index,follow">
-
     <link rel="canonical" href="{{ uri }}" />
-
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/ldpi.png" sizes="32x32" />
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/xhdpi.png" sizes="96x96" />
     <link rel="icon" href="/sites/all/themes/servicehired/icons2/xxxhdpi.png" sizes="192x192" />
@@ -27,12 +26,9 @@
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-72@2x.png" sizes="144x144" />
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-76@2x.png" sizes="152x152" />
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-60@3x.png" sizes="180x180" />
-
     <link rel="stylesheet" type="text/css" href="/slim3/js-css/before-fold.css">
     <link rel="stylesheet" type="text/css" href="/slim3/js-css/full-fold.css"/>
-
     {% block head %}{% endblock %}
-
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107186115-1"></script>
     <script>
@@ -42,32 +38,34 @@
 
       gtag('config', 'UA-107186115-1');
     </script>
-
 </head>
 <body>
-
+<a href="#main-content" class="invisible focusable">Skip to main content</a>
 {% if category_name is defined %}
 <div class="searchterm hidden">{{ category_name }}</div>
 {% endif %}
-
-<div class="overthefold{% if category_name is defined %} searched{% endif %}">
-
-    {% include 'common/topbar.html' %}
-
-    <h1>{{ block('title') }}</h1>
-
-    {% block overthefold %}{% endblock %}
-
-    {% include 'common/menu.html' %}
-
-    {% include 'common/bottom-menu.html' %}
-
+<div class="page overthefold{% if category_name is defined %} searched{% endif %}">
+    <header id="header" class="page-header">
+        <div class="container container--header">
+            <!-- {% include 'common/topbar.html' %} -->
+            {% include 'common/menu.html' %}
+        </div>
+    </header>
+    <main id="main" class="page-main">
+        <a id="main-content" tabindex="-1"></a>
+        <div class="container container--main">
+            <header class="page-header">
+                <h1 class="page-header__title">{{ block('title') }}</h1>
+            </header>
+            <section id="content" class="content">
+                {% block overthefold %}{% endblock %}
+            </section>
+        </div>
+    </main>
+    <!-- {% include 'common/bottom-menu.html' %} -->
 </div>
-
 {% block after_the_fold %}{% endblock %}
-
 {% include 'common/footer.html' %}
-
 <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
 <script>
   WebFont.load({
@@ -76,8 +74,6 @@
     }
   });
 </script>
-
 {% block js_footer %}{% endblock %}
-
 </body>
 </html>

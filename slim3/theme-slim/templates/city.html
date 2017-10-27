@@ -1,0 +1,37 @@
+{#
+Variables:
+city:         URL safe version of city name e.g. "st-kilda"
+city_name:    Name of the city e.g. "Helsinki"
+country:      County code e.g. "fi"
+country_name: Name of the country e.g. "Finland"
+letters:      Array of first letters of existing categories
+categories:   Categories indexed with letter
+#}
+{% extends "layout.html" %}
+{% block title %}Services in {{ city_name }} - {{ country_name }} - ServiceHired{% endblock %}
+{% block description %}Find, compare and book local services in {{ city_name }}, {{ country_name }} with ServiceHired.
+Simple as that. ServiceHired makes booking services online simple.{% endblock %}
+{% block keywords %}ServiceHired,services,{{ country_name }},{{ city_name }}{% endblock %}
+{% block head%}<link rel="stylesheet" type-="text/css" href="/slim3/theme-slim/dist/css/styles.css">{% endblock %}
+{% block overthefold %}
+{% if categories %}
+<div class="tiles">
+    {% for letter in letters|sort %}
+    <div class="tile-wrapper">
+        <div class="tile-wrapper__letter">{{ letter }}</div>
+        <ul class="tile-wrapper__group tile-group tile-group--category">
+            {% for category, name in categories[letter]|sort %}
+            <li class="tile tile--category">
+                <h2 class="tile__title tile__title--category">
+                    <a class="tile__link tile__link--category" href="{{ path_for('services', { 'country': country, 'city': city, 'category': category }) }}">{{ name }}</a>
+                </h2>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="no-results">Sorry, No results were found</div>
+{% endif %}
+{% endblock %}

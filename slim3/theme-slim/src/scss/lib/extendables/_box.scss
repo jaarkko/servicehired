@@ -1,0 +1,29 @@
+//
+// @file
+// This file includes all extendables related to the box model
+//
+
+%pos-relative {
+  position: relative;
+}
+
+%el-before,
+%el-after {
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+%inline-block {
+  display: inline-block;
+}
+
+%inline-block--middle {
+  @extend %inline-block;
+  vertical-align: middle;
+}
+
+%inline-block--top {
+  @extend %inline-block;
+  vertical-align: top;
+}

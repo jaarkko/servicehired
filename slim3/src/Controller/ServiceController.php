@@ -61,11 +61,14 @@ class ServiceController
     public function citiesByCountry(Request $request, Response $response, $args)
     {
         $country = $request->getAttribute('country');
+        $cities = $this->getCities($country);
+        $letters = array_keys($cities);
 
         return $this->view->render($response, 'country.html', [
             'country' => $country,
             'country_name' => $this->getCountryName($country),
-            'cities' => $this->getCities($country),
+            'cities' => $cities,
+            'letters' => $letters,
             'uri' => $request->getUri(),
         ]);
     }
@@ -83,6 +86,8 @@ class ServiceController
     {
         $country = $request->getAttribute('country');
         $city = $request->getAttribute('city');
+        $categories = $this->getCategories();
+        $letters = array_keys($categories);
 
         return $this->view->render($response, 'city.html', [
             'country' => $country,
@@ -90,7 +95,8 @@ class ServiceController
             'city' => $city,
             'city_name' => $this->getCityName($city, $country),
             'service' => $request->getAttribute('service'),
-            'categories' => $this->getCategories(),
+            'categories' => $categories,
+            'letters' => $letters,
             'uri' => $request->getUri(),
         ]);
     }
@@ -139,8 +145,9 @@ class ServiceController
         if ($result) {
             $rows = $stmt->fetchAll();
             foreach ($rows as $row) {
-                $category = $this->tech($row['name']);
-                $categories[$category] = $row['name'];
+                $name = $row['name'];
+                $letter = strtolower(substr($name, 0, 1));
+                $categories[$letter][$this->tech($name)] = $name;
             }
         }
 
@@ -155,7 +162,8 @@ class ServiceController
     private function getCategoryName($tech)
     {
         $categories = $this->getCategories();
-        return $categories[$tech];
+        $letter = strtolower(substr($tech, 0, 1));
+        return $categories[$letter][$tech];
     }
 
     private function getCities($country)
@@ -169,8 +177,11 @@ class ServiceController
         if ($result) {
             $rows = $stmt->fetchAll();
             foreach ($rows as $row) {
-                $city = $this->tech($row['city']);
-                $cities[$city] = $row['city'];
+                $name = $row['city'];
+                if ($name != '') {
+                    $letter = strtolower(substr($name, 0, 1));
+                    $cities[$letter][$this->tech($name)] = $name;
+                }
             }
         }
 
@@ -185,8 +196,9 @@ class ServiceController
     private function getCityName($city, $country)
     {
         $cities = $this->getCities($country);
-        return $cities[$city];
-    }
+        $letter = strtolower(substr($city, 0, 1));
+        return $cities[$letter][$city];
+    } 
 
     private function getCountryName($country)
     {
