@@ -26,10 +26,9 @@
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-72@2x.png" sizes="144x144" />
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-76@2x.png" sizes="152x152" />
     <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/servicehired/icons2/Icon-60@3x.png" sizes="180x180" />
-    {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/slim3/js-css/before-fold.css">
     <link rel="stylesheet" type="text/css" href="/slim3/js-css/full-fold.css"/>
-    <link rel="stylesheet" type-="text/css" href="/slim3/theme-slim/dist/css/styles.css">
+    {% block head %}{% endblock %}
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107186115-1"></script>
     <script>
@@ -52,20 +51,12 @@
             {% include 'common/menu.html' %}
         </div>
     </header>
-    <div id="breadcrumb" class="page-breadcrumb">
-        <div class="container container--breadcrumb">
-            <ul class="menu breadcrumb">
-            {% block breadcrumb %}{% endblock %}
-            </ul>
-        </div>
-    </div>
     <main id="main" class="page-main">
         <a id="main-content" tabindex="-1"></a>
         <div class="container container--main">
             <header class="page-header">
                 <h1 class="page-header__title">{{ block('title') }}</h1>
             </header>
-
             <section id="content" class="content">
                 {% block overthefold %}{% endblock %}
             </section>

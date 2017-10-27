@@ -2,7 +2,7 @@ body {
   min-height: 100vh;
 }
 
-.page {
+.page:not(.searched) {
   @media screen and (min-width: $tablet-portrait) {
     min-height: 85vh;
     padding-top: 15vh

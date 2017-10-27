@@ -1,27 +1,27 @@
-.breadcrumb {
-  // override full-fold.css
-  display: block;
-  float: none;
-  margin: 0;
-  min-width: auto;
+// .breadcrumb {
+//   // override full-fold.css
+//   display: block;
+//   float: none;
+//   margin: 0;
+//   min-width: auto;
 
-  // own styling
-  font-size: .875rem;
+//   // own styling
+//   font-size: .875rem;
 
-  a {
-    text-decoration: underline;
-  }
-}
+//   a {
+//     text-decoration: underline;
+//   }
+// }
 
-.breadcrumb__item {
-  display: inline-block;
+// .breadcrumb__item {
+//   display: inline-block;
 
-  &::after {
-    margin: 0 .125rem 0 .375rem;
-    content: '/';
-  }
+//   &::after {
+//     margin: 0 .125rem 0 .375rem;
+//     content: '/';
+//   }
 
-  &:last-child::after {
-    display: none;
-  }
-}
+//   &:last-child::after {
+//     display: none;
+//   }
+// }
