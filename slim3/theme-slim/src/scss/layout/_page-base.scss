@@ -3,7 +3,10 @@ body {
 }
 
 .page {
-  min-height: 85vh;
+  @media screen and (min-width: $tablet-portrait) {
+    min-height: 85vh;
+    padding-top: 15vh
+  }
 }
 
 .container {
@@ -13,6 +16,16 @@ body {
   max-width: 1400px;
 }
 
+.page-breadcrumb {
+  padding: 2rem 0;
+}
+
 .page-main {
   padding: 3rem 0;
+}
+
+.page-breadcrumb {
+  + .page-main {
+    padding-top: 1rem;
+  }
 }
