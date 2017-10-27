@@ -4,6 +4,16 @@
 Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 {% block keywords %}ServiceHired,{{ country_name }}{% endblock %}
 {% block head%}<link rel="stylesheet" type-="text/css" href="/slim3/theme-slim/dist/css/styles.css">{% endblock %}
+{% block breadcrumb %}
+<div id="breadcrumb" class="page-breadcrumb">
+     <div class="container container--breadcrumb">
+        <ul class="menu breadcrumb">
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Home</a></li>
+            <li class="breadcrumb__item">{{ country_name}}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
 {% block overthefold %}
 {% if cities %}
 <div class="tiles">
