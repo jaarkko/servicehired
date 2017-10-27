@@ -1,17 +1,14 @@
 {% extends "layout.html" %}
-
 {% block title %}Results for {{ country_name }} - ServiceHired{% endblock %}
-
-{% block description %}Find, compare and book local services from {{ country_name }} with ServiceHired.
+{% block description %}Find, compare and book local services in {{ country_name }} with ServiceHired.
 Simple as that. ServiceHired makes booking services online simple.{% endblock %}
-
 {% block keywords %}ServiceHired,{{ country_name }}{% endblock %}
-
+{% block breadcrumb %}
+<li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Home</a></li>
+<li class="breadcrumb__item"><a class="breadcrumb__link" href="/services">Countries</a></li>
+<li class="breadcrumb__item">{{ country_name}}</li>
+{% endblock %}
 {% block overthefold %}
-
-<!-- <h2 class="progression progression--2"><span>Step 2</span> In what city are you looking?</h2> -->
-
-<!-- {{ country_name }} -->
 <div class="tiles">
     {% for letter in letters|sort %}
     <div class="tile-wrapper">

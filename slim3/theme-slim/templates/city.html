@@ -12,12 +12,19 @@ categories:   Categories indexed with letter
 #}
 {% extends "layout.html" %}
 
-{% block title %}Results for {{ city_name }} - {{ country_name }} - ServiceHired{% endblock %}
+{% block title %}Services in {{ city_name }} - {{ country_name }} - ServiceHired{% endblock %}
 
-{% block description %}Find, compare and book local services from {{ city_name }}, {{ country_name }} with ServiceHired.
+{% block description %}Find, compare and book local services in {{ city_name }}, {{ country_name }} with ServiceHired.
 Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 
-{% block keywords %}ServiceHired,{{ country_name }},{{ city_name }}{% endblock %}
+{% block keywords %}ServiceHired,services,{{ country_name }},{{ city_name }}{% endblock %}
+
+{% block breadcrumb %}
+<li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Home</a></li>
+<li class="breadcrumb__item"><a class="breadcrumb__link" href="/services">Countries</a></li>
+<li class="breadcrumb__item"><a class="breadcrumb__link" href="/services/{{country}}">{{ country_name}}</a></li>
+<li class="breadcrumb__item">{{ city_name}}</li>
+{% endblock %}
 
 {% block overthefold %}
 
