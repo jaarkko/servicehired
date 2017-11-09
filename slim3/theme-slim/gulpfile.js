@@ -6,6 +6,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var chalk = require('chalk');
 var gutil = require('gulp-util');
+var useref = require('gulp-useref');
 var rename = require('gulp-rename');
 var gulpif = require('gulp-if');
 
@@ -26,7 +27,7 @@ var imagemin = require('gulp-imagemin');
 var basePath = {
   src: './src/',
   dist: './dist/',
-  templates: './templates/'
+  //templates: './templates/'
 };
 var path = {
   styles: {
@@ -42,7 +43,8 @@ var path = {
     dist: basePath.dist + 'image/'
   },
   templates: {
-    dist: basePath.templates
+    src: basePath.src + 'templates/',
+    dist: basePath.dist + 'templates/'
   },
   env : {
     dev: !!gutil.env.development,
@@ -59,8 +61,6 @@ var path = {
 var changeEvent = function(evt) {
     gutil.log('File', gutil.colors.cyan(evt.path.replace(new RegExp('/.*(?=/' + basePath.src + ')/'), '')), 'was', gutil.colors.magenta(evt.type));
 };
-
-console.log(gutil.env.production);
 
 // BrowserSync task
 gulp.task('browserSync', function() {
@@ -124,10 +124,18 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest(path.images.dist));
 });
 
+// concat file
+gulp.task('concat', function() {
+  return gulp.src(path.templates.src + '*.html')
+    .pipe(useref())
+    .pipe(cleanCss())
+    .pipe(gulp.dest('./'));
+});
+
 // Default tasks
 gulp.task('default', ['sass', 'watch', 'scripts'], function() {
   console.log('Running default tasks');
 });
 
-gulp.task('production', ['sass', 'scripts', 'imagemin']);
+gulp.task('production', ['sass', 'scripts', 'imagemin', 'concat']);
   console.log('Running production tasks');

@@ -3,7 +3,12 @@
 {% block description %}Find, compare and book local services in {{ country_name }} with ServiceHired.
 Simple as that. ServiceHired makes booking services online simple.{% endblock %}
 {% block keywords %}ServiceHired,{{ country_name }}{% endblock %}
-{% block head%}<link rel="stylesheet" type-="text/css" href="/slim3/theme-slim/dist/css/styles.css">{% endblock %}
+{% block head%}
+<!-- build:css /dist/css/final-styles.css -->
+<link rel="stylesheet" type-="text/css" href="../../dist/css/styles-lib.css">
+<link rel="stylesheet" type-="text/css" href="../../dist/css/styles.css">
+<!-- endbuild -->
+{% endblock %}
 {% block breadcrumb %}
 <div id="breadcrumb" class="page-breadcrumb">
      <div class="container container--breadcrumb">

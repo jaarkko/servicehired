@@ -12,7 +12,7 @@ $container['view'] = function ($container) {
 
     $cache = (getenv('AMAZEEIO_SITE_ENVIRONMENT')) ? false : 'sites/default/files/twig';
     $cache = false;
-    $view = new Twig('slim3/theme-slim/templates', [
+    $view = new Twig('slim3/theme-slim/dist/templates', [
         'cache' => $cache,
     ]);
 
